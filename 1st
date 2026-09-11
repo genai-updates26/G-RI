@@ -1,93 +1,175 @@
-Hima (User): Hello Anju. Morning.
+Kartikeya (KTK): There won't be one team, I believe there will be a digital team and a strategic deployment team, right?
 
-Anju (VP): Hey, hey Hima. Can you, can you send, okay let me share this. I'm trying to understand this a little bit. And then I wanted to simplify this. Okay. So if I look at this right, there are three teams.
+Hima: Hm, yes. So I'm not sure. As you asked, currently for that thing, I'm not sure.
 
-Hima (User): Yes.
+Kartikeya (KTK): So I think then we need to understand which teams those are. Okay. Now, there is a bit of a time crunch; I have a flight at 11:00. So I need to drop by 7:30, and I have two meetings at 7:00. Okay, so that's why.
 
-Anju (VP): So the first is the digital deployment. I wanted to keep under the team only what we are doing. So you can adjust how you want to change the look and feel of the thing because you can always make some changes here. So for example, let's look at the digital deployment. So what we are saying in Q1 2027, so suppose the way I structure it, I'll move this item and this item under this. So then it shows that within this under this team how AIM is partnering.
+Hima: Oh, okay.
 
-Hima (User): Okay. Got it.
+Hima: Oh no, I didn't know.
 
-Anju (VP): We are not doing anything under this one. Correct? Nothing on strategic deployment team.
+Kartikeya (KTK): So probably I will take some calls in the cab as well. But okay, my point is that there is a digital team and a strategic team. For both teams, we want to correspondingly understand what the journey would be so that we can better define the signals, right? Until and unless we know, we cannot clearly define the signals.
 
-Hima (User): Yeah. Okay.
+Hima: Hm.
 
-Anju (VP): Not even in the future, like even like H2 2027 onwards, nothing for this team?
+Kartikeya (KTK): So you told me that digital... did they give you a walkthrough on exactly how things happen? Oh man... one second, my laptop is about to restart. This is very bad timing. It says 3 minutes. I need to restart right now, and I'll call you via my phone over Slack. Okay. Bye.
 
-Hima (User): Uh, for SDT that's what we have to actually talk with them what is the thing happening. But initial Q1 thing that's completely for DD. So we are only focusing on DD right now. So digital deployment only.
+Hima: Okay, okay.
 
-Anju (VP): Okay.
+(Call resumes)
 
-Hima (User): So I'm not very sure but for Q2 27 that was the plan, but I'm not sure what is the thing that moving forward what would happen like that.
+Hima: Yeah, Kartikeya.
 
-Anju (VP): Got it. Okay. Because I wanted to move these items under that team. So maybe if the majority of them is under this, then you can have it like for example, you can have say for Q1 27, I'm just doing this. So we are creating, so what we are doing is we are creating activation-based triggers.
+Kartikeya (KTK): Yeah, hi Hima. You can hear me properly, right?
 
-Hima (User): Yes.
+Hima: Yes, I can hear you.
 
-Anju (VP): So we are, what does it mean?
+Kartikeya (KTK): Okay. So yeah Hima, my point is... the first thing is we need to understand how the digital team and the strategic DM team work, right? Like, what is currently happening in @Work? We need to understand that. Because why is it needed?
 
-Hima (User): So activation-based trigger meaning like, it would be like for product what you call the initial phase of the product let's say Nova for incorporation they need to understand what are all the features. And are they using all the features? So for that activation, meaning they are activating cards, are they setting up the configurations or the workflows, approval processes, everything. That set up those triggers if they haven't set up that or any triggers that we set like the cards are not being added or like the workflow is not being updated or not added. So those are the adoption triggers for the initial phase, are they using all the product correctly or not. It's mostly focused on the product, the Nova.
+Hima: Yeah.
 
-Anju (VP): Got it. So what we are saying is, we are saying that we are just in terms of who's activating, how they are using, all that usage is basically we are then if, if they start using we send a trigger to the team saying this is how they are doing usage.
+Kartikeya (KTK): Because it will help us whenever we move to @Work apart from Nova; we will need it there, right? How do they work? We can understand what kind of triggers they have, and so on. Okay. So that is why it's important. We also need to understand that right now, the KPIs they have provided us—I believe those KPIs are more or less the same for both Nova customers and @Work customers. But we need to confirm that. You can just write it down if required, okay?
 
-Hima (User): Yes.
+Hima: Yeah, yeah, yes.
 
-Anju (VP): It's a post factor. It's nothing predictive. It's just what their actions are.
+Kartikeya (KTK): And I probably won't be able to join the meeting that you have set up in an hour, right? So I want you to record that meeting as well, just in case I need to go through it. Okay? So my point is, we need to understand: are the KPIs going to be different across teams for Nova customers versus @Work customers? If yes, then we need those; otherwise, my hunch is that they are going to be the same, okay? They're not going to be different.
 
-Hima (User): Yeah, it's what their actions are. Based on the actions we trigger something that they have not met this requirement like that.
+Hima: Okay.
 
-Anju (VP): But what's the call to action? So give me an example of maybe what trigger we'll put. I think that is what we want to say. So basically we are going to implement triggers based on how they are using.
+Kartikeya (KTK): Now, when it comes to the digital team, we need to understand how it works in @Work, like what the different checkpoints are and what the checkpoints are in Nova. Okay? We need both. Why? Because we will have to move to @Work eventually, right? But as of now, I would suggest we should not focus our connection with them on understanding the @Work part. Right now, we can focus on Nova. But we should just let them know that we will also need @Work. So for @Work, first of all, we will need that PA journey—the product journey for PAs and for CMs, right? That one was for Nova. We need similar kinds of journeys for @Work as well. So you can ask, "Okay, if you have similar journeys for @Work customers, that would be helpful."
 
-Hima (User): Yes.
+Hima: Okay Kartikeya, I just want to—sorry—so both @Work and Nova will be present even after the Nova launch?
 
-Anju (VP): Suppose if they are not using, if they are under usage, then we'll trigger it. That's what we are saying, correct?
+Kartikeya (KTK): Exactly.
 
-Hima (User): Yeah. Yeah level yes, yeah.
+Hima: Okay. Then Nova is not launched yet, right?
 
-Anju (VP): Got it. So that is for the digital deployment. And maybe you should give an example like in terms of triggers to drive usage, correct?
+Kartikeya (KTK): Nova has only been launched on a very pilot basis. The proper launch is September 30.
 
-Hima (User): Yeah.
+Hima: Okay. Okay. That is a good thing because in yesterday's call I didn't actually differentiate whether it was for @Work or Nova. I never clarified that actually, so that's a good point you brought up. Yeah, okay.
 
-Anju (VP): Example could be this in terms of if they are not. Now in the software engagement and then you can put Q3, Q3 is again Q3 27 is again under digital deployment. So I would put those two items under the same team. So maybe you can keep it such a way that you can make it broader this and this is like really small. So that is mostly it's just how you do the real estate.
+Kartikeya (KTK): Alright? So we need to know what the customer journey is for @Work specifically. And let me tell you very honestly, you cannot cover everything in this one meeting, okay? We have a lot of things to do. We'll need to have a couple of meetings with them to go through it. But I'm just giving you a list of everything we need, okay? We need to understand how it works in @Work and how it works in Nova from the customer's standpoint. That way, we'll understand the product roadmap and get a product tour. Once we know that, then let me focus on Nova. Regarding Nova, whatever discussion you had, right? We need to have clarity on what the different steps are. You mentioned there was a kickoff, right? I was very happy that you created those signals, but the only thing I wasn't clear about was how that journey exists. I still have no idea about it.
 
-Hima (User): Got it.
+Hima: Okay.
 
-Anju (VP): When I go to Q3, Q3 is again now we are saying growth-based triggers. So what would that be?
+Kartikeya (KTK): I'm still not clear on what that journey looks like. So hear me out, we only have about 9 minutes, so I will mostly talk, okay? My point is that we need to understand what that journey looks like end-to-end. When you said "kickoff", what do you mean by kickoff? If we say something else, what does it mean? We need to have that clarity.
 
-Hima (User): Yeah, so that is something, so what move once is with at-work utilization, so the growth-based triggers is basically for what you say there's a potential for the customer to spend more. So but he's not reaching it. So that stage. So initially let's say adoption is first, activation is first initial stage. Then next is utilization are they utilizing it up to their potential like let's say they are the spend or like the line utilization it comes under utilization. And after these two things, growth is basically when we're trying to expand their usage or when we're trying to you know push them more towards like the spend increase or cards increase like those. For the development of this thing. To increase the spend like that.
+Hima: Okay.
 
-Anju (VP): Got it. And then, and then we'll have a lead prioritization in terms of who to, how to prioritize that.
+Kartikeya (KTK): Because at the very end, using those trigger points themselves, we will be defining our triggers, and then with respect to those triggers, we will align with them: "Look, do these triggers look okay to you?" And then we will reach out to data partners to understand whether these triggers are even possible, right? So this is the entire thing that we have to do. And I would say let's try to have this done by the end of next week. That should be our goal.
 
-Hima (User): Yes.
+Hima: Okay. Okay.
 
-Anju (VP): We are strategic deployment team, we are not doing anything for them. That's what it is.
+Kartikeya (KTK): So this is one set of information that we will be needing. Right now, I would focus only on the digital part, the digital team. I won't go into the strategic team. Why? Because we don't have to do anything for the strategic team right now in the Q1 launch.
 
-Hima (User): Mm-hmm.
+Hima: Yeah, okay. Okay.
 
-Anju (VP): And the software engagement team, we do the same thing. So what's the difference between the software engagement team and the digital deployment team?
+Kartikeya (KTK): So ask all the questions related to the digital team. Now, once everything is done, what is the next step that we want?
 
-Hima (User): So before that we didn't have a software engagement team but as like this just the initial phase is handled by the strategic deployment team for the more than 10 million revenue and after that for the 13 months, after initial three months, they get handed over to the software engagement team. I mean it would be like the entire face of like setting up everything for the Nova and everything would be done. And after that everything needs to be tracked by the software engagement team whether it's like usage or cards in force or whether it's the spend are they meeting it or not or the growth triggers. Mostly SCT would focus on assume it's like usability and like are they what you called activation. So basically growth, more focus on growth and utilization triggers, that would be mostly software engagement team.
+Kartikeya (KTK): We want to know... well, first of all, I have updated that Word document, whatever I shared with you. I created more structure in it so that we know exactly what is pending, what information we have to put in, and so on. Alright? But we want that list of triggers as a hypothesis, okay? By the end of next week. Apart from that, what else do we need...
 
-Anju (VP): Okay, I think, I think you just fix the layout like Q1 and Q3 comes under digital deployment and then whatever is software engagement goes under software engagement. So just I want to know that how we are partnering for which particular team. And maybe the greater than 10 million if the strategic deployment is just like a smaller thing you can shrink it and maybe give the real estate that way. That's it. Just so that because when I was trying to link Q1 to this, Q2 to this, and Q3 to this, but logically not.
+Hima: List of triggers as a hypothesis meaning?
 
-Hima (User): Okay, got it. Yeah, yeah, yeah.
+Kartikeya (KTK): The triggers that we want to create.
 
-Anju (VP): It's just visually then basically what we the way we speak this is basically how they are engaging with them. We will be working partnering on two specific teams, digital deployment and software engagement where we will start with activation triggers, then prioritization, growth triggers, and then eventually even on the software engagement we will do growth triggers but no prioritization. Going forward in H2 for them?
+Hima: Okay, okay. Got it. Yeah.
 
-Hima (User): So no, so for the software engagement team they are asking for prioritization. I mean Q3, Q3 they are asking for.
+Kartikeya (KTK): So that once the data starts flowing in, we can continue to track it. Right?
 
-Anju (VP): No, but Q3 is only for this digital deployment, that's what you wrote.
+Hima: Okay, okay, got it, yeah.
 
-Hima (User): Yeah digital deployment, yes, yes, yes.
+Kartikeya (KTK): This is easy. There's no problem with this. One second, I'm just thinking out loud here. Yes, so the journey... the roadmap that she gave yesterday... there was a strange thing I noticed. In quarter 3, she is saying that we should only focus on utilization-based triggers and growth triggers for @Work customers. That's where I wasn't very clear on why exactly we are not adding adoption triggers for @Work as well. Okay? We ideally should be having those too. Fair?
 
-Anju (VP): Not for the software engagement.
+Hima: Yeah.
 
-Hima (User): Oh no, not for the software engagement.
+Kartikeya (KTK): So we need to get that clarity on why.
 
-Anju (VP): I think once we put this let's send it to her and let her sign off if this is what she wants.
+Hima: Okay. Okay, @Work... why they're not...
 
-Hima (User): Okay.
+Kartikeya (KTK): There are two reasons why... there are two things which they want to delay. The first thing is, they said the @Work data was not available as of now, right? There were some concerns with respect to it. Yesterday she mentioned that, right?
 
-Anju (VP): Cool. That's it. Thank you.
+Hima: Yes, yes, yes, yeah.
 
-Hima (User): Thank you, thank you.
+Kartikeya (KTK): Then she also mentioned she doesn't want to tackle the growth-based triggers right away because for growth triggers, they need to align with the AD partners on how exactly the responsibilities will flow, right?
+
+Hima: Okay, yeah.
+
+Kartikeya (KTK): You remember that conversation, right? Or you don't?
+
+Hima: Yes, yes, yes, correct.
+
+Kartikeya (KTK): So these are the two things she doesn't want to solve right now. Hence, right now we are only focusing on Nova customers, and there, only on the utilization or activation-based triggers. Okay. So I'm just giving you an idea—we need clarity on why the adoption-based triggers are missing. Okay. And as for the rest of these things, you will just have to understand them, right? You need to have a very clear discussion with Nicole. Tell her, "Okay, can you give us a product tour? Can you explain how you decide when to reach out?" We need to get a proper understanding. Right now, you are my only hope. You're based in the US, right? That's it.
+
+Hima: Yes, yes. I have a meeting, I'll definitely bring it up, yeah.
+
+Kartikeya (KTK): Now, any questions from your side on this piece?
+
+Hima: Uh... I'll ask for clarity and the walkthrough and everything, but one thing—maybe I'm getting a little bit... fundamentally, I don't want to be wrong. So I was under the assumption that @Work would not be continued. Like, for new customers it would be Nova, and @Work would be used by the old customers who are already in the corporate system.
+
+Kartikeya (KTK): No, no, no, no. @Work is still active. So let's say the sales team is having a conversation, right? It can still happen that we onboard a customer onto @Work because they prefer MR points rather than cash back.
+
+Hima: Okay, okay, so...
+
+Kartikeya (KTK): So we are still going to give them the option to go ahead with that route.
+
+Hima: Okay, got it. Okay then...
+
+Kartikeya (KTK): Okay? And yeah, the third thing. Sorry, I forgot about it; I wrote it down but forgot. What exactly does she mean by response scores? I think we should get clarity on this from them. Nicole probably knows about this too, but we need to understand exactly what she means when she says she needs response scores. Yesterday I had a discussion with you and we interpreted it in a specific way, right? But what if...
+
+Hima: Response... response scores for... you're asking?
+
+Kartikeya (KTK): Hello? You can hear me, right?
+
+Hima: Yeah, I can hear you, yeah.
+
+Kartikeya (KTK): My point is, we still need to confirm what exactly she meant by response scores so that our expectations are clear.
+
+Hima: Okay.
+
+Kartikeya (KTK): Alright? So we are good on this piece. Now let's discuss something else which is even more important, which is...
+
+Hima: Kartikeya, your voice is very low; I actually can't hear you clearly.
+
+Kartikeya (KTK): Is it better now?
+
+Hima: Yeah, it's better now.
+
+Kartikeya (KTK): Okay. My point is that there was an ICMV issue, right? There was an ICMV deck which she shared, saying they are having a meeting with those folks. Those folks are from marketing, and eventually, they want to show this. I went through their deck. I realized they did something different compared to us. Okay? And they didn't tell us about this at all. The first thing they did was compute... they said that for the first year they are giving...
+
+Hima: Oh, sorry, you're breaking up again.
+
+Kartikeya (KTK): Yeah, am I audible?
+
+Hima: You're audible now, but previously your voice was breaking. You're audible now, yeah.
+
+Kartikeya (KTK): Okay. So they were using the fee revenue... it was 0.17%, but they were using 0.2%. It will be different for their channel, probably. Only for year one. For the remaining years, they are actually using a standard fee which is 2950, right?
+
+Hima: Okay.
+
+Kartikeya (KTK): Which is something we have never used, right? So they have changed this.
+
+Hima: No, no, no.
+
+Kartikeya (KTK): They also said that with the Nova cash back and everything, there will be an improvement in the spend by 20%. They just assumed it.
+
+Hima: Oh, how did they assume that without any...
+
+Kartikeya (KTK): Okay, these are the two things they did, and they didn't tell us that this had been done. So I have asked Megan for a quick connect right now so that we can discuss it. I'm not sure exactly when I'll be able to have that connect, but I think this is a very serious thing. You can also go through their deck.
+
+Hima: Okay.
+
+Kartikeya (KTK): Go through that deck. There's only one slide. I was able to decode what they meant on the top part of the slide, but I'm still not very clear on the bottom part. So we need to go through it and understand what they have done. Once we have proper clarity, then we should have a discussion with Anju as well and say: "Look, this is how they have done it, and this is how we did it previously. We did not account for this, right?" If it goes to Jeff without us accounting for this, it will be a bad look, right?
+
+Hima: Yes, yes, yes, correct.
+
+Kartikeya (KTK): That's all. Cool, alright. Did you send me the file already?
+
+Hima: The deck?
+
+Kartikeya (KTK): The deck, yeah.
+
+Hima: The deck is already shared, right? Megan shared it with us over email.
+
+Kartikeya (KTK): Okay, okay, I'll just check. The deck is in there. Open that deck, and you will see this piece. Alright then, I'll connect with you later man, I have to log off.
+
+Hima: Okay, Kartikeya, thank you. Bye.
