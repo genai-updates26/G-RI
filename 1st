@@ -1,175 +1,374 @@
-Kartikeya (KTK): There won't be one team, I believe there will be a digital team and a strategic deployment team, right?
+Part 1: Discussion with Megan
+Hima: Hello.
 
-Hima: Hm, yes. So I'm not sure. As you asked, currently for that thing, I'm not sure.
+Kartikeya (KTK): Yeah, hi Hima. Can you hear me?
 
-Kartikeya (KTK): So I think then we need to understand which teams those are. Okay. Now, there is a bit of a time crunch; I have a flight at 11:00. So I need to drop by 7:30, and I have two meetings at 7:00. Okay, so that's why.
+Hima: Yeah, I was asking whether she will be joining or not, let me just confirm. Okay, I think Megan is also joining. Hi Megan.
 
-Hima: Oh, okay.
+Megan: Hi, how are you?
 
-Hima: Oh no, I didn't know.
+Kartikeya (KTK): Hi Megan. Doing good, how about you?
 
-Kartikeya (KTK): So probably I will take some calls in the cab as well. But okay, my point is that there is a digital team and a strategic team. For both teams, we want to correspondingly understand what the journey would be so that we can better define the signals, right? Until and unless we know, we cannot clearly define the signals.
+Megan: Doing well.
 
-Hima: Hm.
+Kartikeya (KTK): So Megan, I was trying to update the deck you shared, and I realized something unique. Let me share my screen. I realized your numbers... you kind of used something else on the prospect side. You tried to use the fee component on the prospect for the new Nova program?
 
-Kartikeya (KTK): So you told me that digital... did they give you a walkthrough on exactly how things happen? Oh man... one second, my laptop is about to restart. This is very bad timing. It says 3 minutes. I need to restart right now, and I'll call you via my phone over Slack. Okay. Bye.
+Megan: Yeah, this is for cashback specifically.
+
+Kartikeya (KTK): Exactly. So for your prospect cross-sell CMV, essentially you are saying for year 1 you used the fees provided by the P&NL team, and for the remaining years you actually used a standard direct fee of 2950 per acquisition, right?
+
+Megan: So in year 1... sorry, I think this is a little confusing. The left, when it says year 1, this is an example of what the fees look like on the MR side. And then for the cashback product, they are not charging a year 1 fee. So the reason it says year 2 through 5 is because that's their program fee for the whole thing. But the left is MR, the right is cashback on the fee.
+
+Kartikeya (KTK): Okay, so what I'm trying to understand is, are you assuming that the customers we are going to acquire will be in @Work for one year and after that they will go to Nova? Is that how you are planning?
+
+Megan: No, no. This is completely separate. These are even different strings in T1. Like, this is new customer acquisitions, and they will sign onto Nova, they'll get a cashback card, and in that first year, they are not going to be charged a fee. It will be zero. And then year 2 through 5, it will be 2950. The left is strictly a comparison to the other product, but there will be no year 1 fee on the cash value.
+
+Kartikeya (KTK): So are you computing two different types of CMVs? One for the Nova product, one for the regular corp product?
+
+Megan: The reason there's two here is because there's talks of not having this fee waived, or having it, or having an offer. So it's just for the sales team to see the impact of having a year 1 fee on it or not. The only reported numbers are the ones highlighted in blue. The other side was like with the program fee, what the numbers...
+
+Kartikeya (KTK): Highlighted in blue... you mean to say this one.
+
+Megan: Yeah.
+
+Kartikeya (KTK): Okay, so this we have computed assuming that the product will remain as MR only, is that how it is?
+
+Megan: No, this is... this page is literally very fresh. It's based on Nova financials.
+
+Kartikeya (KTK): Okay, I understand what's there on the top right. Like for all the customers, you are saying after the Nova launch, their I-spend is going to increase by 20%. That makes sense.
+
+Megan: For only Nova customers. Not for any existing back book. This is new Nova customers.
+
+Kartikeya (KTK): For the new Nova customers, the I-spend is going to be this, and their cashback CMV will be... their fees will be this one, right?
+
+Megan: Correct.
+
+Kartikeya (KTK): Okay, now when it comes to the bottom table, I'm still trying to understand what this bottom table represents, Megan.
+
+Megan: You can ignore the line that says "with year 1 program fee," that's really just for the sales team's own knowledge and nothing that's actually going into anything. The bottom tables on the left—actually both of these follow the same order. Whatever metric and channel we are looking for, the second line is the MR product.
+
+Kartikeya (KTK): The second line is MR product... you mean to say this one is... no, sorry. This one is MR?
+
+Megan: No, to the... what says "2027 BUP." By 2027 BUP, I mean what the existing corporate product is in the 2027 BUP. So existing field sales, existing whatever... non-Nova. Which maybe I'll change it to say non-Nova.
+
+Kartikeya (KTK): Okay, this number is non-Nova, right? This number is Nova. And this number is Nova without the fee.
+
+Megan: Correct. And Nova without the fee is what they're going with.
+
+Kartikeya (KTK): Okay, my point is like when you say Nova without the fee, why is the CMV coming out to be on the lower side? If they don't have a fee, then ideally the CMV should be on the higher side, right?
+
+Megan: Um, think of it the other way. The fee is what we get from the customers.
+
+Kartikeya (KTK): Okay, okay, okay, got it. So that's why when you are adding the fee, we are having much more. Got it.
+
+Megan: Yeah, because we're getting a year 1 fee from them, which in the other case we're not. We only get year 2 through 5.
+
+Kartikeya (KTK): Come again, what's the second point you mentioned?
+
+Megan: We get fees from the customer in year 2 through 5 and in perpetuity, but we just don't get the fee in year 1.
+
+Kartikeya (KTK): That's how it is for Nova customers?
+
+Megan: Yeah, for right now. I think this might change halfway through the year, but for this reporting, yeah, that's the assumption.
+
+Kartikeya (KTK): So if I try to understand what is the difference between this column and this column, it should be more or less 20% only, right? Like there should be a gap of 20%?
+
+Megan: No, because if you go to the table to the left of this, the GCM... Nova financial assumptions are built based on the CBA, which is off of the value proposition of the new product. And...
+
+Kartikeya (KTK): Megan, sorry to interrupt. Can we... can I discuss with you after 15 minutes if that's okay? I have a hard stop right now.
+
+Megan: Oh sorry, you need to hop off?
+
+Kartikeya (KTK): Yeah, there's someone else on the meeting right now, so what I'm saying is can we have a discussion after 15 minutes if that's okay?
+
+Megan: Sure, yeah, that's fine.
+
+Kartikeya (KTK): Okay, thank you.
+
+Megan: Thank you.
+
+Part 2: Discussion with Rajiv
+Kartikeya (KTK): Hi Rajiv.
+
+Rajiv: Hi.
+
+Kartikeya (KTK): Okay, so Rajiv, I just wanted to discuss the responsibilities part with you because the meeting with Ashish is supposed to happen next week. Prior to that, there are primarily two things we need to align on. The first one is the articulation part, like what are the factors for each of the treatments. And the second part is about the sizing. Sizing basically means how many insights will go out, those sorts of things. I wanted to check what the responsibilities are.
+
+Rajiv: Just one second, so if you are saying I have to calculate how many MAs will come in AD, if they are in the plan... whatever math would have gone there, let's assume that. I'm not questioning that. Right now, we have to do sizing on eligibility, or out of the eligible ones we are stating, how many MAs will come from that?
+
+Kartikeya (KTK): From the ones we are calling eligible, how many will come from that? Because we want to see, now that the model is built, we can make the previous estimates even better with the new model, right? That's the fundamental idea.
+
+Rajiv: There are two assumptions here. How I am estimating NRR using propensity scores is, say you call 100 leads in AD, and currently only 2% convert using an existing product. My propensity score is adjusting for that event rate. Now if you use that NRR to predict what the Nova event rate will be, it is not logical.
+
+Kartikeya (KTK): It's not logical, I'll apply a factor as well. Because of the product refresh, how much...
+
+Rajiv: You'll do that, that is not my headache. My point is you just need to estimate from the eligible ones how many you will be able to drive. But how you would approach doing the uplift on top of the existing conversion rate prediction for existing corp cross-sell, that you wouldn't be bothered with.
+
+Kartikeya (KTK): Regarding the existing ones, how much incremental... like that is not required. POD versus POE with respect to sizing, I'm not doing it. I'm just trying to understand with this new product refresh, what is the possibility of MAs coming in with the new model?
+
+Rajiv: So one question for these MAs, man. I'm not able to understand one more thing... who is defining the eligibility for Nova?
+
+Kartikeya (KTK): The eligibility for Nova... meaning right now it's happening within our codes itself, right? That revenue should be 4 million plus, there should not be any corporate relationship, and the propensity has to be greater than zero.
+
+Rajiv: Wait a minute, can't an existing corp customer go onto Nova?
+
+Kartikeya (KTK): No. That will be considered in the back book. A separate launch will happen for them, but as of now, we are not considering how they will be handled.
+
+Rajiv: Okay. The corporate eligible piece... did we get any guidance on eligibility from someone else? So as an example, in the AD portfolio, there are 100 customers, 20 are corp, 80 are SBS, let's say. For AD customers, can we sell Nova to those 20? Or for the 80, who exactly should we sell it to? Is there already a set guideline, and we just have to sell the product based on that?
+
+Kartikeya (KTK): Okay, so we definitely can't sell to the 20 because they already have a corporate relationship. For the remaining 80, only channel-level filters are applied. The only other filter we are applying—when I say channel-level filters, I mean the basic filters like their revenue should be 4 million plus, because right now we are only targeting those customers. That's the only major filter being applied. Apart from this, the customers in the "do not call" list will automatically be removed. Other than that, the only filter we are applying is that propensity has to be greater than zero. Those are the customers for whom we will show insights, and those are the ones we are calling corp eligible.
+
+Rajiv: Propensity has to be greater than zero... that will naturally happen, right? What case would there be where the propensity is less than zero? Logically speaking.
+
+Kartikeya (KTK): It can be zero, right? But I mean, because segmentation scores are coming in. Due to segmentation scores, it can be zero.
+
+Rajiv: Oh, okay. I see. So then even in eligibility, you are applying a targeting criteria, right? So maybe in a way, if you have built a segmentation, it could be a chance that 30% of your population would have zeros, right? If nodes are forming like that, that it's exactly like that.
+
+Kartikeya (KTK): That can happen, you are right.
+
+Rajiv: Then on the 80 who are SBS customers, let's say 4 million, you got 70 customers. Out of 70, assume all basic suppressions are going, 4 million and everything. For the remaining 70, your propensity score might only be providing a score for 40.
+
+Kartikeya (KTK): That's true, we can cross-sell to those 30 as well, you are not defining eligibility, but we won't give them insights or treatments for cross-selling. They can still do it, but when we give insights, we won't give it to them.
+
+Rajiv: Okay, clear. I'm clear. So, what are the inputs that you would need from me, tell me that so that I can plan accordingly.
+
+Kartikeya (KTK): So the first thing is, what should go into arbitration? I want to know that part. In the arbitration equations, what factor should I assume for each treatment while computing the top two NRRs for the customer? So that I can assign which treatment it belongs to. Okay, that's the first thing. Once we know basically we just need the factors. After getting the factors, we can do everything else.
+
+Rajiv: So there are five rank order scores which are being used to come up with a treatment. Top two treatments.
+
+Kartikeya (KTK): Right. I am trying to create...
+
+Rajiv: You need first all the five rank order scores latest. Their eligibility... Don't tell me that you need scores for this, right? Tell me the final view that you probably need. I need to size the total eligibility customers on which insights will go, whether it is in the top two or not it doesn't matter. Then in the top tiers, how many people do we prioritize? Within the top tiers, for corporate cross-sell, how many people see the best treatment? Tell me in that sense, then I can break it down.
+
+Kartikeya (KTK): Okay, got it. Let me open... can you see my screen here? Yeah. Okay, so it's something like... I want to create something where we show the number of total customers in POD versus POE. POE meaning whatever existing NRR model we were using in any given month. In POD, we just have the new model for corp cross-sell. The new propensity model. In that, who will be the corp cross-sell eligible customers? The eligibility will be different because the NRR models are different. We are applying the greater than zero filter, so that's why. Once we know how many corp cross-sell customers have insights available, then the thing is, out of all the eligible ones, how many are getting the treatment, and out of the ones with the treatment, how many are getting the insight. We want this sort of table. This will help us understand how many customers we are recommending the cross-sell treatment to. This will give me an entire view.
+
+Rajiv: Okay.
+
+Kartikeya (KTK): And then the idea is, once we know this information, we have to understand that the customers we are listing here who are in the eligibility, let's say 30,000, what is the average NRR for these 30,000? We already have the factor, we can convert propensity to NRR and see how much NRR we get. And then we can say for this many customers, out of these, I know I'm showing the best two treatments to them, so there's a possibility that for these customers, let's assume a factor that at least their performance will increase by more than 50%. So that way I can try to see how many estimated NAs I can have, and then I can also see if there's a product refresh, there will be a 40% improvement, and that's how I am planning to calculate the total signings. That's the high-level idea.
+
+Rajiv: Okay, then there are two things I feel you are dependent on me for. One, you need the updated NRR factor for the corp cross-sell propensity score.
+
+Kartikeya (KTK): Yes.
+
+Rajiv: As well as for all the other treatments too. Because to make your table, you're doing the arbitration math for all the older treatments as well, right?
+
+Kartikeya (KTK): Arbitration math is happening, that's why it will show how many...
+
+Rajiv: Exactly, arbitration math you are doing, right? In POE, how is your rule number 62 getting created? It's based on arbitration.
+
+Kartikeya (KTK): Right.
+
+Rajiv: Then whatever treatments we are computing arbitration for, you will use the latest one, right?
+
+Kartikeya (KTK): Right. Exactly.
+
+Rajiv: So my only question is, in POD, the factors that are being formed for each treatment, assume they are not super sound. First of all, the factors for all treatments are changing, right? There is a factor coming for the corp cross-sell new propensity score as well, right?
+
+Kartikeya (KTK): Right, right.
+
+Rajiv: So when you compare it with POD, are you comparing with POD without whatever actually has gone in, or POD with all the factors updated, but the corp cross-sell is from the old model?
+
+Kartikeya (KTK): The first one actually. So that it's a very clear picture that previously it used to be this, now we are changing everything and we are arriving at this piece.
+
+Rajiv: Okay, I'm clear. So I can give you the factors for each of the treatments by end of the day most likely, or Monday AM. Most likely end of the day, because I think Dan has already completed that, so it should be available. The next question is, go back to your NRR simulation view, I have questions there.
+
+Kartikeya (KTK): NRR simulation view...
+
+Rajiv: You are simulating NRR, right, average NRR?
+
+Kartikeya (KTK): Here, right?
+
+Rajiv: For AD so far, whatever NRR I'm doing, it is not like a TSC campaign where I know the NRR campaign is built in a certain way with a maximum 3-month window. AD is not like that. Say for example, you have categorized a lead as propense on day 1 in the portfolio. Do you measure NRR till day 360, or do you measure NRR till day 180 or day 90? How do you consider that is the question.
+
+Kartikeya (KTK): So right now, when we initially thought about the NRR, when we tried to create it on our own, we created the data at a DHU-cross-month level. Month meaning whether it was attempted or not basically. We try to see what is the propensity across DHU-cross-month, and the idea was from there we could find out for each attempt whether the customer is getting converted or not. Let me show you, I think that's better.
+
+Rajiv: No, no, my only point is, what is the conversion window?
+
+Kartikeya (KTK): The conversion window is basically that within the next 30 days if a customer attempt has happened, an opportunity is created for the customer, and that opportunity can convert into a closed win, into a signing, anytime after that. It doesn't really matter. But if the attempt happened in month 1, we will check from 30 days whether an opportunity was created or not. Then whether that opportunity later resulted in effective signing related to corp cross-sell or not. That's how the linkage has been created. Does it make sense?
+
+Rajiv: So but my NRR, when I'm doing the rank ordering for best treatments, right, is not that.
+
+Kartikeya (KTK): Okay, so then what is the definition of the NRR that you are creating? But why do you need to use that, is what I'm thinking. My point is you might not even need to use that as such, because for me, I need to define one factor, like this monthly event rate... I cannot do that right now because whatever you are tagging as propense, whether it got converted after an omnichannel attempt in a 6-month period is what I'm measuring.
+
+Kartikeya (KTK): Sorry, sorry Rajiv, I got a ping. Can you please come again? Last thing.
+
+Rajiv: Imagine, forget about my NRR, whatever I am using. Mine is different from this. So imagine my NRR is only giving you that first table, which treatments go in the top two.
+
+Kartikeya (KTK): Exactly, okay.
+
+Rajiv: Whatever you are doing, right? You would have a raw propensity score, no?
+
+Kartikeya (KTK): Right.
+
+Rajiv: You can directly use that logic to estimate how many NRRs you are getting, right? With whatever logic you are getting. Let's say...
+
+Kartikeya (KTK): No, that directly won't be possible, right? That propensity score is, right, it doesn't even have that attempted population in it.
+
+Rajiv: No, no, no... so you said the logic you will be using is opportunity created in the 30 days of attempt, and after that whether it got converted or not, is what your logic is. That is how I created... so basically the entire table is being built like this: how many customers will come in our different segments? Within those customers, I know what their non-email attempt rates are. Then I know what the average NRR will be for the attempted customers. I'm using a conversion factor, right? We used some conversion, we tried to see what their average NRR is, and then what is the monthly non-email attempt rate, and eventually we compute the NRR, NAA, which is essentially the multiplication of these three things: how many customers, out of those how many attempts, and then out of that what is their average NRR.
+
+Rajiv: Then you don't even need... whatever you are computing as average NRR here, right, is different. You are saying I'll replace this with my NRR.
+
+Kartikeya (KTK): I was initially thinking that only, but it looks like your NRR can be different compared to this, so probably I can just take the raw scores.
+
+Rajiv: Exactly, whatever you would compute an NRR based on your logic, right? Let's say you have propensity scores. In Jan 2025, whoever had high propense attempts, how many corp opportunities got created among them? How many corp opportunities got created and eventually how many converted is what you are measuring, right?
+
+Kartikeya (KTK): Right, exactly. Which means that in the AR report, you will have the date of the opportunity ID that got affected, and whether it was created in the same month or not is what you are evaluating in the next 1 month.
+
+Rajiv: You're absolutely right. But there's a slight difference. Right now, these NRR are not effective signings. These are actual signings. So that's the difference as well. These are signings. These are not effective signings. Because we were initially thinking that any... how can you do that man, those signings will give a considerably overstated event rate.
+
+Kartikeya (KTK): But eventually, whatever we reported everywhere, right, that is the overall number of signings. We never reported effective signing. Like I saw an email where Anju...
+
+Rajiv: But you don't even know... okay, now clarify this thing for me. There is a signing and there is an effective signing. Whether a corp signing happened or not, you will only know when it's effective. In normal signing, whether it's corp or not, you won't know.
+
+Kartikeya (KTK): No, Madhurima provided that data. They have that data on which signing occurred. They track it across channels, including TSC and AD as well. I do have that exact file.
+
+Rajiv: So they basically give you at what level? Which opportunities became a corp signing?
+
+Kartikeya (KTK): Let me show you this one. One second. So they have given me like, which team, what is the corp ID which got created, whether they became an effective signing or not, and what is the opportunity ID associated.
+
+Rajiv: Oh, so this is also effective doing it, right?
+
+Kartikeya (KTK): No, effective is only when column D is not filled. This is not an effective signing where there are blanks. Oh. So these are not effective signings, these are actual signings. And these signings are... this is the exact number which Anju has reported to Peter previously. Not the effective signings. So that's where I'm saying my NRR computed here is based on this, the entire table.
+
+Rajiv: Then it is still fine. I mean, you are basically estimating close-wins.
+
+Kartikeya (KTK): Ha, in a way very close to close-wins, you're absolutely right. Yes.
+
+Rajiv: Fine, I'm fine. I think then you can use this. And then I just need to send you the updated factors.
+
+Kartikeya (KTK): Updated factors, right. Okay, clear. And we are doing it for one month, I believe that should be fine too, right?
+
+Rajiv: Yeah, yeah, that's fine. If we run it for each month.
+
+Kartikeya (KTK): Okay. I think that is all. You were saying you will be able to provide this by Monday EOD? End of the day I'll be able to send it. You have all the scores, right, for all the treatments?
+
+Rajiv: All the scores... I have the Smriti score for the month of February.
+
+Kartikeya (KTK): Then you would have had February's propensity score, all that stuff, right?
+
+Rajiv: Yeah, I have the scores for all customers, all treatments.
+
+Kartikeya (KTK): Okay, perfect, good. If you can provide me the equation itself, right, what is the score for each treatment, that would be very helpful so there's no miscommunication on that part.
+
+Rajiv: What is the equation for the score? Like I can give you, let's say EC cross-sell, you would have had some data on these AD portfolios... let's say 140k DHUs, these are eligible and these are the rank order scores for that treatment. For each of that rank order score, I just need to give you a conversion factor, right?
+
+Kartikeya (KTK): Right. I think that would work. Like there shouldn't be any additional factor. That's what I'm saying, right now let's say for one particular treatment the factor is 4. It's not like we are adding any additional factor to that 4, it's more about replacing that 4 with a new factor, right?
+
+Rajiv: No, no, what I'm asking is, you even in the current state in the POD, there are certain factors being applied on top of your raw score. Imagine the raw score is rank order score, nothing else. From a different channel for that treatment. On top of that raw score, some factor is being computed. I don't know what you have in your table, is it the raw NRR score, or is it the raw NRR with the POD factor?
+
+Kartikeya (KTK): Okay, is it possible that even like, since I do not have the code with me, I can ask Jeff to connect with Dan on this?
+
+Rajiv: No, Smriti has already created a table and sent it to everyone.
+
+Kartikeya (KTK): I don't think I'm part of it, but let me confirm. From each month eligibility and the raw score as well.
+
+Rajiv: No, I don't have any emails from Smriti.
+
+Kartikeya (KTK): Okay, maybe you can ask someone to reach out to Smriti and she can share the raw score, not the adjusted score.
+
+Rajiv: Okay, cool. And then on top of those raw scores only you will be providing me those factors, right?
+
+Kartikeya (KTK): Exactly, we are computing on that. Okay, on the raw scores. Cool.
+
+Rajiv: Okay, that's all then. Cool Kartikeya. Thank you.
+
+Part 3: Continuation of Megan's Topic
+Kartikeya (KTK): Hi Hima, sorry man, just back-to-back meetings.
+
+Hima: Yeah, it's okay.
+
+Kartikeya (KTK): So yaar Hima, my question is very simple here. It looks like what they have done is they have created two scenarios...
+
+(Sharing screen)
+
+Kartikeya (KTK): Here, this is one scenario where it's just the 2027 BUP and this is the cashback scenario, right?
+
+Hima: Yes.
+
+Kartikeya (KTK): One thing I am not able to understand is that this I-spend has increased by 20% here, right?
+
+Hima: Hm-mm.
+
+Kartikeya (KTK): So the I-spend is going to increase by 20%, so this should also be around 20% right?
+
+Hima: Yeah, that's what I also wanted... I was trying to make sense of the numbers, whether they are making sense or not.
+
+Kartikeya (KTK): Yeah. So why is this 20% not here? What is the problem?
+
+Hima: What is this number? It looks like 10% only.
+
+Kartikeya (KTK): Yeah, it's like 20, 18, 2000... 10% only, yes. Like close to 10 only.
+
+Hima: 10% for some, yeah, that's what.
+
+Kartikeya (KTK): Why is that the case? Here it became 20%. We need to understand why what they have done versus what we have done... we need a little clarity here.
+
+Hima: Yes.
+
+Kartikeya (KTK): So if I open the Excel which we have, right?
+
+(Opening Excel)
+
+Kartikeya (KTK): What is happening... where is the Excel? Sorry man. My laptop got restarted, so everything closed. Okay, this one. When you look at the clock, things don't go as planned. Okay, cool. Yar, here if you look, this was our original, right? I'll try to create something like here.
+
+Hima: Okay.
+
+Kartikeya (KTK): So if the 147 PMA... our PTI margin was this, right? 1.63%. Here it's 1.63... 1.71. Okay, my point is here we add C6... meaning I can just say that this number, I have removed C6 from it. So I basically removed C6 from everywhere. Then the PTI coming out here, where did I subtract it... why is it coming out to be negative now? 2414, 599, 657... okay, 1815, 1993, 1815... what is this? Okay, this is tax. Right now it's coming to 9078. Yeah, I don't know what I did, I have to delete this, one second. Let me create it once again here.
+
+Hima: Hmm.
+
+Kartikeya (KTK): I would say that meeting you have with sales, right, you could postpone it please. I think I need you till here.
 
 Hima: Okay, okay.
 
-(Call resumes)
+Kartikeya (KTK): Anyway, I won't be able to join, so it's okay.
 
-Hima: Yeah, Kartikeya.
+Hima: Okay.
 
-Kartikeya (KTK): Yeah, hi Hima. You can hear me properly, right?
+Kartikeya (KTK): So I removed the C6 from here, and I added 2950, right?
 
-Hima: Yes, I can hear you.
+Hima: Yeah, understood.
 
-Kartikeya (KTK): Okay. So yeah Hima, my point is... the first thing is we need to understand how the digital team and the strategic DM team work, right? Like, what is currently happening in @Work? We need to understand that. Because why is it needed?
+Kartikeya (KTK): The ICMV becomes 21,000, right? Basically in PTI we added 2950, right, which is the standard fee. They are saying in year 1 there will be no fee, in year 2, 3, 4, 5 there is a fee, so the ICMV increases to 21,000.
+
+Hima: Okay.
+
+Kartikeya (KTK): So we also created this... this is for Nova, right? Now inside Nova, whether a 20% increase should happen or not, that is something we have to think through. Because we don't have to do 20%. Now my point is, my ICMV became 21,000, right? And if I remove the fee part... I have no idea why theirs isn't happening like that. Why it's not the same. What is GCM? 1.73, 1.69... what is this? With program fee? With program fee, it's actually on the lower side. Why is it on the lower side? How can it be on the lower side?
+
+Hima: With year 1 program fee...
+
+Kartikeya (KTK): With year 1 program fee only. Just the year 1 program fee is missing. Okay, in this one the year 1 program fee is missing. It's not like the program fee is missing in all years. That's what they are saying. They are saying if the program fee is not there for year 1 only... this one says they are having the program fee for all the months.
+
+Hima: Yes.
+
+Kartikeya (KTK): Then here they are saying what is their... this is very counterintuitive. They said they increased the I-spend, right? For cashback CMV.
 
 Hima: Yeah.
 
-Kartikeya (KTK): Because it will help us whenever we move to @Work apart from Nova; we will need it there, right? How do they work? We can understand what kind of triggers they have, and so on. Okay. So that is why it's important. We also need to understand that right now, the KPIs they have provided us—I believe those KPIs are more or less the same for both Nova customers and @Work customers. But we need to confirm that. You can just write it down if required, okay?
+Kartikeya (KTK): So if they increased it by 20%, then how come their revenue margins have gone down? This is the average of year 1 and year 2 GCM, right? GCM means Gross Contribution Margin, which is revenue in some way.
 
-Hima: Yeah, yeah, yes.
+Hima: Yeah. It's revenue, right? I think GCM.
 
-Kartikeya (KTK): And I probably won't be able to join the meeting that you have set up in an hour, right? So I want you to record that meeting as well, just in case I need to go through it. Okay? So my point is, we need to understand: are the KPIs going to be different across teams for Nova customers versus @Work customers? If yes, then we need those; otherwise, my hunch is that they are going to be the same, okay? They're not going to be different.
+Kartikeya (KTK): So revenue minus that expense, that's what margin is, yeah. Then how come this is lower than this? If their 20% increased... it should ideally be more.
 
-Hima: Okay.
+Hima: They're getting more spend, they're having more program fee... how can you have both things here? 2027 BUP they are not assuming this thing, so yeah... what is this percentage they calculated? They calculated only this...
 
-Kartikeya (KTK): Now, when it comes to the digital team, we need to understand how it works in @Work, like what the different checkpoints are and what the checkpoints are in Nova. Okay? We need both. Why? Because we will have to move to @Work eventually, right? But as of now, I would suggest we should not focus our connection with them on understanding the @Work part. Right now, we can focus on Nova. But we should just let them know that we will also need @Work. So for @Work, first of all, we will need that PA journey—the product journey for PAs and for CMs, right? That one was for Nova. We need similar kinds of journeys for @Work as well. So you can ask, "Okay, if you have similar journeys for @Work customers, that would be helpful."
-
-Hima: Okay Kartikeya, I just want to—sorry—so both @Work and Nova will be present even after the Nova launch?
-
-Kartikeya (KTK): Exactly.
-
-Hima: Okay. Then Nova is not launched yet, right?
-
-Kartikeya (KTK): Nova has only been launched on a very pilot basis. The proper launch is September 30.
-
-Hima: Okay. Okay. That is a good thing because in yesterday's call I didn't actually differentiate whether it was for @Work or Nova. I never clarified that actually, so that's a good point you brought up. Yeah, okay.
-
-Kartikeya (KTK): Alright? So we need to know what the customer journey is for @Work specifically. And let me tell you very honestly, you cannot cover everything in this one meeting, okay? We have a lot of things to do. We'll need to have a couple of meetings with them to go through it. But I'm just giving you a list of everything we need, okay? We need to understand how it works in @Work and how it works in Nova from the customer's standpoint. That way, we'll understand the product roadmap and get a product tour. Once we know that, then let me focus on Nova. Regarding Nova, whatever discussion you had, right? We need to have clarity on what the different steps are. You mentioned there was a kickoff, right? I was very happy that you created those signals, but the only thing I wasn't clear about was how that journey exists. I still have no idea about it.
+Kartikeya (KTK): So my point is, is there something else they have taken? Okay, they told us this is the financial assumption. Financial assumptions is this one, and here they wrote this... so it's a bit unclear. "Corporate cashback CMV is built on CBA portfolio assumptions plus a 20% volume lift from existing prospect corporate channels."
 
 Hima: Okay.
 
-Kartikeya (KTK): I'm still not clear on what that journey looks like. So hear me out, we only have about 9 minutes, so I will mostly talk, okay? My point is that we need to understand what that journey looks like end-to-end. When you said "kickoff", what do you mean by kickoff? If we say something else, what does it mean? We need to have that clarity.
+Kartikeya (KTK): Not very clear here. I think we should have a discussion on how they derived this.
 
-Hima: Okay.
+Hima: Yes.
 
-Kartikeya (KTK): Because at the very end, using those trigger points themselves, we will be defining our triggers, and then with respect to those triggers, we will align with them: "Look, do these triggers look okay to you?" And then we will reach out to data partners to understand whether these triggers are even possible, right? So this is the entire thing that we have to do. And I would say let's try to have this done by the end of next week. That should be our goal.
+Kartikeya (KTK): Because the numbers are not adding up. How can you have lower numbers here when compared to this? It's showing behavioral assumptions are the same everywhere. All other things are the same, only the fee thing changes, right? So yeah. Can you have a small connect with Anju on this?
 
-Hima: Okay. Okay.
+Hima: Okay, sure.
 
-Kartikeya (KTK): So this is one set of information that we will be needing. Right now, I would focus only on the digital part, the digital team. I won't go into the strategic team. Why? Because we don't have to do anything for the strategic team right now in the Q1 launch.
+Kartikeya (KTK): Thank you.
 
-Hima: Yeah, okay. Okay.
+Hima: Bye.
 
-Kartikeya (KTK): So ask all the questions related to the digital team. Now, once everything is done, what is the next step that we want?
+Kartikeya (KTK): Okay, I'll just have a connect with Anju, I'll just have to message... okay. So I'll leave for now?
 
-Kartikeya (KTK): We want to know... well, first of all, I have updated that Word document, whatever I shared with you. I created more structure in it so that we know exactly what is pending, what information we have to put in, and so on. Alright? But we want that list of triggers as a hypothesis, okay? By the end of next week. Apart from that, what else do we need...
-
-Hima: List of triggers as a hypothesis meaning?
-
-Kartikeya (KTK): The triggers that we want to create.
-
-Hima: Okay, okay. Got it. Yeah.
-
-Kartikeya (KTK): So that once the data starts flowing in, we can continue to track it. Right?
-
-Hima: Okay, okay, got it, yeah.
-
-Kartikeya (KTK): This is easy. There's no problem with this. One second, I'm just thinking out loud here. Yes, so the journey... the roadmap that she gave yesterday... there was a strange thing I noticed. In quarter 3, she is saying that we should only focus on utilization-based triggers and growth triggers for @Work customers. That's where I wasn't very clear on why exactly we are not adding adoption triggers for @Work as well. Okay? We ideally should be having those too. Fair?
-
-Hima: Yeah.
-
-Kartikeya (KTK): So we need to get that clarity on why.
-
-Hima: Okay. Okay, @Work... why they're not...
-
-Kartikeya (KTK): There are two reasons why... there are two things which they want to delay. The first thing is, they said the @Work data was not available as of now, right? There were some concerns with respect to it. Yesterday she mentioned that, right?
-
-Hima: Yes, yes, yes, yeah.
-
-Kartikeya (KTK): Then she also mentioned she doesn't want to tackle the growth-based triggers right away because for growth triggers, they need to align with the AD partners on how exactly the responsibilities will flow, right?
-
-Hima: Okay, yeah.
-
-Kartikeya (KTK): You remember that conversation, right? Or you don't?
-
-Hima: Yes, yes, yes, correct.
-
-Kartikeya (KTK): So these are the two things she doesn't want to solve right now. Hence, right now we are only focusing on Nova customers, and there, only on the utilization or activation-based triggers. Okay. So I'm just giving you an idea—we need clarity on why the adoption-based triggers are missing. Okay. And as for the rest of these things, you will just have to understand them, right? You need to have a very clear discussion with Nicole. Tell her, "Okay, can you give us a product tour? Can you explain how you decide when to reach out?" We need to get a proper understanding. Right now, you are my only hope. You're based in the US, right? That's it.
-
-Hima: Yes, yes. I have a meeting, I'll definitely bring it up, yeah.
-
-Kartikeya (KTK): Now, any questions from your side on this piece?
-
-Hima: Uh... I'll ask for clarity and the walkthrough and everything, but one thing—maybe I'm getting a little bit... fundamentally, I don't want to be wrong. So I was under the assumption that @Work would not be continued. Like, for new customers it would be Nova, and @Work would be used by the old customers who are already in the corporate system.
-
-Kartikeya (KTK): No, no, no, no. @Work is still active. So let's say the sales team is having a conversation, right? It can still happen that we onboard a customer onto @Work because they prefer MR points rather than cash back.
-
-Hima: Okay, okay, so...
-
-Kartikeya (KTK): So we are still going to give them the option to go ahead with that route.
-
-Hima: Okay, got it. Okay then...
-
-Kartikeya (KTK): Okay? And yeah, the third thing. Sorry, I forgot about it; I wrote it down but forgot. What exactly does she mean by response scores? I think we should get clarity on this from them. Nicole probably knows about this too, but we need to understand exactly what she means when she says she needs response scores. Yesterday I had a discussion with you and we interpreted it in a specific way, right? But what if...
-
-Hima: Response... response scores for... you're asking?
-
-Kartikeya (KTK): Hello? You can hear me, right?
-
-Hima: Yeah, I can hear you, yeah.
-
-Kartikeya (KTK): My point is, we still need to confirm what exactly she meant by response scores so that our expectations are clear.
-
-Hima: Okay.
-
-Kartikeya (KTK): Alright? So we are good on this piece. Now let's discuss something else which is even more important, which is...
-
-Hima: Kartikeya, your voice is very low; I actually can't hear you clearly.
-
-Kartikeya (KTK): Is it better now?
-
-Hima: Yeah, it's better now.
-
-Kartikeya (KTK): Okay. My point is that there was an ICMV issue, right? There was an ICMV deck which she shared, saying they are having a meeting with those folks. Those folks are from marketing, and eventually, they want to show this. I went through their deck. I realized they did something different compared to us. Okay? And they didn't tell us about this at all. The first thing they did was compute... they said that for the first year they are giving...
-
-Hima: Oh, sorry, you're breaking up again.
-
-Kartikeya (KTK): Yeah, am I audible?
-
-Hima: You're audible now, but previously your voice was breaking. You're audible now, yeah.
-
-Kartikeya (KTK): Okay. So they were using the fee revenue... it was 0.17%, but they were using 0.2%. It will be different for their channel, probably. Only for year one. For the remaining years, they are actually using a standard fee which is 2950, right?
-
-Hima: Okay.
-
-Kartikeya (KTK): Which is something we have never used, right? So they have changed this.
-
-Hima: No, no, no.
-
-Kartikeya (KTK): They also said that with the Nova cash back and everything, there will be an improvement in the spend by 20%. They just assumed it.
-
-Hima: Oh, how did they assume that without any...
-
-Kartikeya (KTK): Okay, these are the two things they did, and they didn't tell us that this had been done. So I have asked Megan for a quick connect right now so that we can discuss it. I'm not sure exactly when I'll be able to have that connect, but I think this is a very serious thing. You can also go through their deck.
-
-Hima: Okay.
-
-Kartikeya (KTK): Go through that deck. There's only one slide. I was able to decode what they meant on the top part of the slide, but I'm still not very clear on the bottom part. So we need to go through it and understand what they have done. Once we have proper clarity, then we should have a discussion with Anju as well and say: "Look, this is how they have done it, and this is how we did it previously. We did not account for this, right?" If it goes to Jeff without us accounting for this, it will be a bad look, right?
-
-Hima: Yes, yes, yes, correct.
-
-Kartikeya (KTK): That's all. Cool, alright. Did you send me the file already?
-
-Hima: The deck?
-
-Kartikeya (KTK): The deck, yeah.
-
-Hima: The deck is already shared, right? Megan shared it with us over email.
-
-Kartikeya (KTK): Okay, okay, I'll just check. The deck is in there. Open that deck, and you will see this piece. Alright then, I'll connect with you later man, I have to log off.
-
-Hima: Okay, Kartikeya, thank you. Bye.
+Hima: Yeah, yeah, you can leave.
