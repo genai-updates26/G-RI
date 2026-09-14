@@ -1,225 +1,28 @@
-**Kartikeya (KTK):** Finance assumptions and functional forms.
+Kartikeya (KTK) wants you to send a comprehensive email to Mo summarizing your team's current understanding of the Nova onboarding workflow and raising critical concerns about where AIM can actually add value.
 
-**Hima:** Yeah.
+Here is the exact breakdown of everything KTK wants you to include in the email so you can feed it to your email-generating AI:
 
-**Kartikeya (KTK):** Okay. So when it comes to finance assumptions, they are specific for each... like whether they correspond... like you opened that deck. You will realize that they have given us a discount rate, right?
+**1. Context & Current Understanding**
 
-**Hima:** Yeah.
+* **The Meeting:** State that you had a chat with Nicole and Christine (from the Digital Deployment/DD team) last week to understand the current onboarding workflow for Nova customers.
+* **The Onboarding Workflow:** Outline your understanding that there are four mandatory milestones/calls that the sales colleagues (MBDs) *must* complete for each customer. At the end of each call, they automatically set up the time for the next call until the customer is successfully deployed.
 
-**Kartikeya (KTK):** The discount rate—that is specific to corp cross-sell customers.
+**2. Concerns Regarding Q1 Adoption-Based Triggers (Low Value Add)**
 
-**Hima:** Hm-mm.
+* **The Problem:** Explain that if AIM launches adoption-based triggers in Q1 (e.g., highlighting that a customer hasn't achieved Milestone 2 within two weeks of Milestone 1), it will not add much value.
+* **The "Why":** Because the sales colleagues are *already* mandated to have these four calls with *every single customer* on a pre-scheduled basis.
+* **The Core Question:** Ask Mo: *Is AIM's goal to help identify WHICH customers to reach out to and WHEN?* Because with the current adoption workflow, AIM cannot prioritize "who" or "when"—it can only provide insights on what is missing, which doesn't change the fixed call schedule.
 
-**Kartikeya (KTK):** That is all specific. That is not like... for prospect, it will be the same or what.
+**3. The Pivot to Q2 Utilization/Growth Triggers**
 
-**Hima:** Oh.
+* **Where AIM Adds Value:** State that AIM's true value add (prioritization) comes into play with Utilization and Growth-based triggers, because there are no pre-scheduled calls for these stages. AIM can actually tell the sales colleagues *who* to reach out to and *when*.
+* **The Data Constraint:** Highlight that to build these utilization triggers, AIM will need at least 3 to 6 months of data post-launch (e.g., from October to December) to monitor usage and build the analysis. Therefore, impactful utilization triggers cannot be launched immediately.
 
-**Kartikeya (KTK):** Because it is dependent upon that international PV within USB, right?
+**4. Questions Regarding Software Engagement & Strategic Deployment**
 
-**Hima:** Okay. So... Yeah, yeah, yeah, getting it. But... Okay.
+* **The Unknowns:** Since Nicole and Christine are from the DD team, ask Mo to clarify how the workflow operates for the Strategic Deployment and Software Engagement teams.
+* **The Question:** Do these teams also have a pre-set, mandatory call cadence for *every* customer? Or does AIM have the flexibility to help them prioritize who to reach out to and when? (Note: If their workflow is also mandatory for everyone, AIM will face the same "low value add" issue).
 
-**Kartikeya (KTK):** So but what...
+**5. Call to Action**
 
-**Hima:** So what Megan is saying is basically...
-
-**Kartikeya (KTK):** Hello?
-
-**Hima:** So Megan was saying for all other assumptions...
-
-**Kartikeya (KTK):** What do you mean by all other assumptions?
-
-**Hima:** Like attrition, okay cost of funds, growth rates.
-
-**Kartikeya (KTK):** Oh, that will be following. Okay. That... okay. Now...
-
-**Hima:** That... so the behavioral attributes will remain as is?
-
-**Kartikeya (KTK):** Hm-mm. Your... at least... Even your write-off rate, right?
-
-**Hima:** Hm-mm.
-
-**Kartikeya (KTK):** No, write-off rate is... Like again, this is something which we need to check with her, right?
-
-**Hima:** Okay.
-
-**Kartikeya (KTK):** Which behavioral attributes you changed, or which finance assumptions you have changed? Because definitely, discount rate I can see is changed, right?
-
-**Hima:** Yeah.
-
-**Kartikeya (KTK):** Okay. Open that... Do you have that deck from them? That deck.
-
-**Hima:** Yes, yes, I do. Yeah, yeah.
-
-**Kartikeya (KTK):** The deck which they created... this was basically a compilation...
-
-**Hima:** Yeah, you have sent it.
-
-**Kartikeya (KTK):** Open the assumption sheet which they have. Open the assumption sheet which they have. For both the MR one, as well as the cashback one.
-
-**Hima:** Ah, okay, the last slide, one second. Yeah, the PUP and cashback, yes, I got it.
-
-**Kartikeya (KTK):** Do you have both assumptions? Now check whether the discount rate is the same or not between the two.
-
-**Hima:** Discount rate is not same. Okay. Discount rate is not same. Then they change the product; they change the discount rate accordingly. Check any other expense. Check the VC expense. Other revenue is also not same.
-
-**Kartikeya (KTK):** Exactly, so you see like they change the product, they change a lot of assumptions, right?
-
-**Hima:** Yes.
-
-**Kartikeya (KTK):** So it's not a simple thing saying that everything else will remain as is. They have changed the fee and this...
-
-**Hima:** No, no, no. I was thinking like... should we... I was considering we should be also following this assumptions of what have changed, like corp cashback portfolio assumptions. But you are saying like the discount rate... I mean, the discount rate, the other revenues, whatever the things that have changed. So previously we used the assumptions that they were using, right? The previous ones. With MR ones?
-
-**Kartikeya (KTK):** No, no, no, no, no. We were not using the ones which they were using. Open that one slide which Megan shared with us. Megan shared with us...
-
-**Hima:** Open that... shared it, right? Starting...
-
-**Kartikeya (KTK):** After Sonal's email.
-
-**Hima:** Okay, that...
-
-**Kartikeya (KTK):** Open that one page, one pager slide.
-
-**Hima:** One pager slide, okay, where is it?
-
-**Kartikeya (KTK):** One sec, you know, battery is very low actually, so it might switch off.
-
-**Hima:** Okay, okay.
-
-**Kartikeya (KTK):** Just send an email list. Okay, one second.
-
-*(Checking email)*
-
-**Kartikeya (KTK):** Did you open?
-
-**Hima:** Opening, one sec. Outlook is not loading. Yeah, I'm not finding it... the search bar.
-
-**Kartikeya (KTK):** Okay, so I'll just find it. So... in that specific thing...
-
-**Hima:** You open that now. Like what's the concern?
-
-**Kartikeya (KTK):** I mean, I am not able to find it, I'm searching from Megan... it's not coming. From an email...
-
-**Kartikeya (KTK):** Yes... that cannot be positive.
-
-**Hima:** No, no, yes...
-
-**Kartikeya (KTK):** Okay, if you open that now. There's a clear section on the left-hand side which states these assumptions that they are giving is for core cross-sell. That is not for core prospect.
-
-**Hima:** Hm.
-
-**Kartikeya (KTK):** All the assumptions which she has provided, the finance assumptions, those are for core cross-sell. So we are not extrapolating them from anywhere. We're using them the right way.
-
-**Hima:** Okay. Okay.
-
-**Kartikeya (KTK):** Okay? When it comes to the behavioral attributes, there things are different. We picked up their attrition rates, we picked up their I-spend functional forms, right?
-
-**Hima:** Hm.
-
-**Kartikeya (KTK):** That's a different thing altogether. But apart from it, we picked up the assumptions which they have given us for what—which are specific to core cross-sell.
-
-**Hima:** Okay, got it, got it, clear, clear now, sorry, yeah. My bad, I missed that.
-
-**Kartikeya (KTK):** No, you've got that right?
-
-**Hima:** Yeah, yeah.
-
-**Kartikeya (KTK):** So my concern is they should be giving us the finance assumptions for core prospect only, right?
-
-**Hima:** Yes, okay.
-
-**Kartikeya (KTK):** I can't say using directly for the prospect until and unless they specify to me no, for this, for cashback it's the same thing. Then I am okay. But they have to specify that fine.
-
-**Hima:** Okay. Got it. I'll clarify that.
-
-**Kartikeya (KTK):** Little battle happening here, right?
-
-**Hima:** Okay.
-
-**Kartikeya (KTK):** There's a battle going on, right, as you can see.
-
-**Hima:** Basically, they didn't list before, right?
-
-**Kartikeya (KTK):** Yeah, but I think they should have... like we had multiple discussions, right?
-
-**Hima:** Yes.
-
-**Kartikeya (KTK):** They didn't even tell us like, okay, this is something which is there. Alfredo is saying, but we just shared what... yeah, he's saying like we just shared what you wanted, no matter what you wanted like that.
-
-**Hima:** Okay. Everybody's planning in a real right.
-
-**Kartikeya (KTK):** I'll just confirm... I mean... address this with Megan then, one second.
-
-**Hima:** Okay, please confirm with Megan.
-
-**Kartikeya (KTK):** I included Anju in that slack as well. If they are not reverting that. But they have to revert them, and we need to have those results like today only, so that like we have updated numbers.
-
-**Hima:** Okay, okay, got it, yeah.
-
-**Kartikeya (KTK):** Because next week onwards, everything is going to be like this only. Kabhi kisi ka review hora hai, kabhi kisi cheez ka review hora hai and so on. We don't want to be in a situation where we don't have the numbers.
-
-**Hima:** Yes, yes. Okay.
-
-**Kartikeya (KTK):** And then we need to share this with Ashish, okay? So once you are done with this, I want you to reach out to Anju and ask her, "Look, this is the number, this is what we have confirmed. Do you think I should share it over email to Ashish for his alignment as well?" And then you can write an email to him as well, "Look, this is what has been done."
-
-**Hima:** Okay.
-
-**Kartikeya (KTK):** Get proper steering and ask for his approval.
-
-**Hima:** Sorry?
-
-**Kartikeya (KTK):** Just lightly ask.
-
-**Hima:** Ah, sorry, your voice got disconnected for a minute. Yeah.
-
-**Kartikeya (KTK):** My point is get alignment from... like basically at least write an email to Ashish today only about this list.
-
-**Hima:** Okay.
-
-**Kartikeya (KTK):** But align with Anju first that we should write an email to Ashish. Does this number look good to you? Like show it to her first. Get her alignment, and then write an email to Ashish.
-
-**Hima:** Got it, got it. Got it.
-
-**Kartikeya (KTK):** Even Anju understands that this is a very critical piece. We can't be delayed on this piece, right? That's why she emailed.
-
-**Hima:** Yeah, yeah, okay, got it. Got it. Okay, okay.
-
-**Kartikeya (KTK):** Alright. And you didn't reach out to Nicole?
-
-**Hima:** No.
-
-**Kartikeya (KTK):** I thought you were supposed to clarify, right?
-
-**Hima:** Yeah, so I was going through the deck, so I just wanted to make sure if any other question we had. So I completed the meeting with them, so...
-
-**Kartikeya (KTK):** Okay, okay.
-
-**Hima:** So they were telling they would need this specific... what you called... we discussed at work activation triggers also they would want, they are saying. So yeah, after that I've been on this, so I'm just going through this, so I'll message her.
-
-**Kartikeya (KTK):** No, at-work triggers you want, but in Q... later half, right? Not right now.
-
-**Hima:** Hm, okay, not right now, yeah. In Q1, it's only for Nova, right?
-
-**Kartikeya (KTK):** Yeah, she has already mentioned that. Like we are not going to align on this, like why... this is a piece... okay. I'm not gonna work with Nicole on this piece. Nicole is for us to understand what's there.
-
-**Hima:** Okay.
-
-**Kartikeya (KTK):** I hope you got all these answers.
-
-**Hima:** Yes, yes, almost everything I got, clear it here.
-
-**Kartikeya (KTK):** Very good, very good. So I would say like write a message to Mo as well that "Look, this is it, wanted to get an alignment like... at least two questions I know, right? Ek toh tumhara woh digital deployment, why it's not going to the strategy."
-
-**Hima:** "Like you should be okay with this." That's what the point is.
-
-**Kartikeya (KTK):** Okay, and the second thing is more about... why don't we have adoption triggers for at work in Q3.
-
-**Hima:** Yeah. Okay.
-
-**Kartikeya (KTK):** Those are the two questions which I know, but if you have any other questions, then you can put them and isolate them and put it in right away.
-
-**Hima:** Sure, sure, sure. Okay, thank you.
-
-**Kartikeya (KTK):** Then I'm logging off now, right?
-
-**Hima:** Yeah, okay sure, sure. Thank you.
+* **Meeting Request:** Conclude by asking for a 30-minute discussion with Mo sometime this week to discuss these points, align your understandings, and streamline the project requirements.
