@@ -1,28 +1,37 @@
-Kartikeya (KTK) wants you to send a comprehensive email to Mo summarizing your team's current understanding of the Nova onboarding workflow and raising critical concerns about where AIM can actually add value.
+The conversation between Hima and Kartikeya (KTK) revolves around defining the Nova onboarding workflow, identifying where the AIM team can actually provide value, and navigating misalignments with the marketing team.
 
-Here is the exact breakdown of everything KTK wants you to include in the email so you can feed it to your email-generating AI:
+**1. The Nova Onboarding Workflow & KPIs**
 
-**1. Context & Current Understanding**
+* **Team Structure:** The @Work product is supported by the Digital Deployment (DD) team for accounts under $10M, and the Strategic Deployment team for accounts over $10M. The Software Engagement team is not involved with @Work but will be working with the Nova product post-launch.
+* **The Four Milestones:** The Nova deployment process is managed by sales colleagues through four pre-scheduled calls.
+* *Kick-off Call (Week 1):* The primary milestone is to issue at least one card to the Program Administrator (PA) or an employee. The team also discusses roles, timelines, and business goals.
+* *Configuration and Setup (Week 2):* The team configures policies, approval workflows, and accounting. The goal is to have the first transaction (first dollar spent) occur by this call or within one week after it.
+* *Admin Validation and Training:* The team validates the setup and informally trains the PA over the phone.
+* *Check-in and Rollout Support:* The team resolves any outstanding setup items and answers remaining questions.
 
-* **The Meeting:** State that you had a chat with Nicole and Christine (from the Digital Deployment/DD team) last week to understand the current onboarding workflow for Nova customers.
-* **The Onboarding Workflow:** Outline your understanding that there are four mandatory milestones/calls that the sales colleagues (MBDs) *must* complete for each customer. At the end of each call, they automatically set up the time for the next call until the customer is successfully deployed.
 
-**2. Concerns Regarding Q1 Adoption-Based Triggers (Low Value Add)**
+* **KPIs Discussed:**
+* *90-Day Successful Deployment Rate:* Measured by completing the four milestones. Sales colleagues manually track this via notes in Salesforce.
+* *Stalled Inventory:* Refers to customers who pause the setup process due to internal business requirements, delaying their next scheduled call.
+* *13-Month Portfolio Growth & Time to First Dollar:* Metrics focused on tracking spend value increases and initial transactions.
 
-* **The Problem:** Explain that if AIM launches adoption-based triggers in Q1 (e.g., highlighting that a customer hasn't achieved Milestone 2 within two weeks of Milestone 1), it will not add much value.
-* **The "Why":** Because the sales colleagues are *already* mandated to have these four calls with *every single customer* on a pre-scheduled basis.
-* **The Core Question:** Ask Mo: *Is AIM's goal to help identify WHICH customers to reach out to and WHEN?* Because with the current adoption workflow, AIM cannot prioritize "who" or "when"—it can only provide insights on what is missing, which doesn't change the fixed call schedule.
 
-**3. The Pivot to Q2 Utilization/Growth Triggers**
 
-* **Where AIM Adds Value:** State that AIM's true value add (prioritization) comes into play with Utilization and Growth-based triggers, because there are no pre-scheduled calls for these stages. AIM can actually tell the sales colleagues *who* to reach out to and *when*.
-* **The Data Constraint:** Highlight that to build these utilization triggers, AIM will need at least 3 to 6 months of data post-launch (e.g., from October to December) to monitor usage and build the analysis. Therefore, impactful utilization triggers cannot be launched immediately.
+**2. The Strategic Pivot (Adoption vs. Utilization Triggers)**
 
-**4. Questions Regarding Software Engagement & Strategic Deployment**
+* **The "Zero Value Add" Realization:** KTK realized that because the DD team is already mandated to conduct the four onboarding calls with every customer on a fixed schedule, providing "Adoption Triggers" (e.g., flagging that a card hasn't been issued) offers no real value. AIM cannot help the sales team prioritize *who* to call or *when* to call because the schedule is already strictly enforced by the business.
+* **The Shift to Utilization:** KTK noted that AIM’s ability to prioritize customers will only be useful for Utilization and Growth-based triggers, as there are no pre-scheduled calls for those post-onboarding stages.
+* **The Data Constraint:** To build accurate utilization triggers, the AIM team needs at least three months of customer usage data. Because of this, KTK proposed that Q1 (October–December) should essentially be a data-gathering period, with actionable utilization triggers launching later.
 
-* **The Unknowns:** Since Nicole and Christine are from the DD team, ask Mo to clarify how the workflow operates for the Strategic Deployment and Software Engagement teams.
-* **The Question:** Do these teams also have a pre-set, mandatory call cadence for *every* customer? Or does AIM have the flexibility to help them prioritize who to reach out to and when? (Note: If their workflow is also mandatory for everyone, AIM will face the same "low value add" issue).
+**3. The Marketing Deck & Immediate Deliverables**
 
-**5. Call to Action**
+* **Frustration with Marketing:** KTK expressed frustration that the marketing team (Alfredo and Megan) shared a deck with incorrect assumptions, describing it as a "battle" to get the right information presented.
+* **Slide 41:** KTK created a slide (Slide 41) that includes a 20% uplift assumption to present in an upcoming meeting.
+* **Deliverables:** KTK asked Hima to provide updated Year 1, 2, and 3 spend numbers reflecting this 20% increase so their team doesn't look like the "bad guys".
 
-* **Meeting Request:** Conclude by asking for a 30-minute discussion with Mo sometime this week to discuss these points, align your understandings, and streamline the project requirements.
+**4. Areas Requiring Much More Clarity in Detail**
+
+* **Software Engagement Team Workflow:** KTK needs to know if the Software Engagement team also operates on a mandatory, pre-scheduled call cadence for every customer. If their calls are already fixed, AIM will not be able to add prioritization value for them either.
+* **Exact KPI Definitions:** The definitions for "CIF (Cards in Force) growth," "spend attainment," and "program utilization/client engagement" are still vague and lack exact mathematical definitions. KTK also needs clarification on what "Projects completed per quarter" means for the Strategic Deployment team.
+* **Alignment on Slide Presentation:** KTK needs clarity and alignment from Anju and Sonal before presenting Slide 41 to the marketing team tomorrow, as KTK does not want to present it without their explicit approval.
+* **Product Journey for @Work:** KTK asked Hima to find out if there is a clearly documented product journey mapping for the @Work product, similar to the one they currently have for Nova.
