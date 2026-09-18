@@ -1,173 +1,177 @@
-Hima: Tomorrow 11 I don't have anything scheduled. Am I not involved in the email?
+**Hima:** Hello
 
-Anju: I just forwarded it to you. Let's... why don't you bring up that page and I'll add it to it.
+**Seela:** Hey Hima.
 
-Hima: Which page?
+**Hima:** Hi, hi Seela. Thank you so much for helping me out. So sorry for creating trouble.
 
-Anju: Whatever page you are editing... for the ICMV calculation or is it...
+**Seela:** No, no problem. Tell me, how can I help you?
 
-Hima: No, no. The other page. Okay, Nova thing. EE and Nova thing.
+**Hima:** Yeah. So… Because we are not very clear on what we can do, we're just trying to test. I wanted to know whether we can test...
 
-Anju: Yeah. Let's see.
+**Seela:** I can... Let me give you something that will help you test it. Let me see if I have it.
 
-Hima: The early experience part. Just seeing it, this one. Let me open my... share my screen. This is looking for because there's an meeting for ICMV which I have to join as well, so I'll just... Are you able to see this?
+**Hima:** I tried to explore where to input these things, but I was not able to understand where to do it.
 
-Anju: Yes, yes, I am able to see it.
+**Seela:** Okay, that… That we have to do through a process. We have to keep a file in a location and from that location I will give you the path where you need to run the process to load the file. Okay? So, let me share my screen. There is an offline model, okay? Which mimics what is there in the system.
 
-Hima: This is now, nothing is here. Oh no, that... This is platform readiness.
+**Hima:** Okay.
 
-Anju: Content tone is this...
+**Seela:** Let me see. I have this offline model. I have it here... Okay, yeah. Suppose… okay? I'll give you this model. This is an offline model. Hm?
 
-Hima: This is not us.
+**Hima:** Okay.
 
-Anju: Go-to-market readiness. Sales and targeting to test actionable opportunities. Ready. Yeah.
+**Seela:** What you do... So, in this... the logic in this model TM1 has the exact replica of this.
 
-Hima: Yeah, that's done. Already ready. This is what it is.
+**Hima:** Okay.
 
-Anju: Why is camera getting on? Customer channel solution to target existing SBS customers is developed and planned to launch in TSE and AD in October.
+**Seela:** So what you do is you load your behaviors here. You load your NNA... Whatever NNA you have here... Here. Okay? You take out all these formulas... You will have to two IDs. Okay? Those two IDs you can paste it here. ID is not required if you're doing something offline, but it's just for your identification, okay?
 
-Hima: In September, right?
+**Hima:** Okay.
 
-Anju: The Nova thing is in September, right?
+**Seela:** For the first ID you load your NNA here...
 
-Hima: Correct.
+**Hima:** The number of NNA, right?
 
-Anju: Yes.
+**Seela:** Correct, correct. Till December you have it. And then here you load your fixed cost... Whatever cost you have. There are some fixed cost fields, you can load your fixed cost field. You can load it in one field itself so that you just have to see what the number coming up is, right?
 
-Hima: September 28th, correct?
+**Hima:** Oh yeah... If there are so many fields which I'm not sure of... okay.
 
-Anju: Yes.
+**Seela:** Here I will tell you. Let me see... It's not rocket science. Like this is your behavioral assumption. Voluntary attrition. Then you have voluntary... The last three will be your functional forms. Here, you see? Last three are your functional forms. Okay?
 
-Anju: And TSE is October, right?
+**Hima:** Okay... So we just entered the percentage value here? Or...
 
-Hima: Uh, that I'm not sure of.
+**Seela:** You have to enter whichever is a percentage. You will have to... like 0.00... something... you will have to load it like this.
 
-Anju: Okay. Analytics header... Currently... I'll keep the view item. Okay, this is done. So we are done on this. This page is done. So I don't think you have to worry about it. Now let's go to... the... let's go to the... PCMv. So we have a meeting with Ashish on... let's check this. We are meeting with him tomorrow. Correct?
+**Hima:** Okay.
 
-Hima: Yeah. And for that I am not added, but I have been told I'll be part of it. No, no... what's happening? Is my calendar getting... I am not updating my calendar or...
+**Seela:** And whichever is like your... your total balance, those are all dollar amount, right?
 
-Anju: No, no, no. I have to forward you this... this whole thing is like... I can't even forward to you. Let me forward this invite. Let me Hima, and Rajesh.
+**Hima:** Oh, yeah.
 
-Hima: This is with Jeff, right?
+**Seela:** Whichever is a percentage, you load it in 0.00 value and whichever is your this one... I can give you one export and see the format there. For some prospect, you can see the format there.
 
-Anju: No, this is with Ashish, where you are covering in terms of the Vidyut follow-up. And the CF... CR... CME. This is the Vidyut follow-up, I have put you on that. Now, with Jeff... Let me do this. With Jeff, it is on... 1:00 on Thursday. Are you there for that invite?
+**Hima:** Yeah, okay.
 
-Hima: Ah... no. I don't think so.
+**Seela:** And this is all average good spend, whatever information you have, load it here. Then, this one... this is your financial assumptions. Load the financial assumptions here. And you choose that one ID... You will have two IDs here in the drop down... You will have two IDs. Okay? Choose one ID and go to the CMv calc and you will see all the calculation here... how much that got... This is the easiest and the most transparent way of testing your numbers.
 
-Anju: Are you covering or is Sourav covering?
+**Hima:** Okay.
 
-Hima: Uh, it's him covering. I'm just as an additional support if in case anything additional questions are asked, if he doesn't have the context, so I'd be answering. Sourav is taking the lead.
+**Seela:** Here you will be able to see how the calculation is getting... how the calculation is turning into CMB.
 
-Anju: Okay. So I need to... Sourav is covering, so I need to do one thing. For tomorrow there's a team meeting... we're checking that 16th. Monthly sales... I need to cover TSE prep. Just trying to figure out how do I add to tomorrow discussion to understand what are the CMV pages. So, are you going to show me the CMV pages?
+**Hima:** Okay. So, total TU fee would be the CMB value, right?
 
-Hima: The current calculation for cross-sell? Actually, for tomorrow's meeting I have no idea, actually, so... I have not been notified or like I don't have any understanding of like what tomorrow's call or like this thing.
+**Seela:** Total to fee? No, no. Total to fee is your upfront investments that you're making. Your CMV will reflect here.
 
-Anju: Okay. Let me ask you... let me ask you... let me ask you, what... what are CMV pages you are putting for the Thursday meeting?
+**Hima:** Okay... okay.
 
-Hima: So it's only about like what is the CMV value we got for customer cross-sell and what was the approach and what assumptions we made for that calculation and the numbers... number, basically, the year 1 spend and the final ICMV value we got for cross-sell.
+**Seela:** Here you see, terminal value, it will be here. Your what is your base case, what is your eroded... This one is base case, this will be your eroded.
 
-Anju: But there has to be a page, right?
+**Hima:** Okay. Hmm. Do you want me to share this file with you?
 
-Hima: Yeah, okay. So that I'll share, one second.
+**Hima:** Yes, please, please share. That would be very helpful.
 
-Anju: Let's... that's for Thursday's meeting?
+**Seela:** Let me show you the format in which this behaviors are… Let me copy… I'll save this... Okay? This is supposed this is your internal ad and I give you the format… This will give you what are the current financial assumptions and behavioral assumptions that are there in the system.
 
-Hima: Yeah.
+**Hima:** Okay.
 
-Anju: Let's do the Thursday's meeting, okay?
+**Seela:** Okay. This is just an example for you to follow in case you want to see in which format it is, all those things.
 
-Hima: Yeah. So this is the page for Thursday's meeting. Can you see my screen?
+**Hima:** Okay.
 
-Anju: Yeah. Yeah.
+**Seela:** These are all the IDs that is there in the system. 9 + 3. And these are all the financial assumptions. This is a string information... what is a product channel all those things... Target segments and these are all the financial assumptions.
 
-Hima: So...
+**Hima:** Okay, so we can check for our case what are the assumptions that are specifically there in the system, right?
 
-Anju: Where is Sourav? Can you add Sourav to this invite too? Is Sourav covering this?
+**Seela:** Yeah, if it is there… but I checked I didn't find anything.
 
-Hima: Yes, Sourav will be covering this. So we had a call with Sourav, when me, Kartikeya and Sourav... so he got an understanding of what this entire thing is.
+**Hima:** Okay.
 
-Anju: Okay.
+**Seela:** Suppose... I see this is 9 + 3, maybe your ID is not there at all.
 
-Hima: So do you want me to invite Sourav for this?
+**Hima:** Oh. Should I take out the 2027 plan one?
 
-Anju: That's okay, you can join, okay. Let's go over this. So, corporate cashback cross-sell and we look on CV portfolio assumptions plus 20% incremental spend based on estimating some existing corporate. Okay, let's do this.
+**Seela:** Yeah. Is there anything... is there anything I don't know?
 
-Hima: Yeah. So we started with like first the ice-spend value. As we don't have any data, so we basically...
+**Hima:** We just wanted to know the underlying calculation assumptions like certain rates might be different for SBS and our side. We don't know if those are different, the calculation values would be different for ours.
 
-Anju: Go ahead, yeah.
+**Seela:** Yeah, so these are all the directly... these are all the inputs that are there for the calculation of CMB.
 
-Hima: Oh okay, sorry, yeah. So we basically... it's most on like assumptions from what we have from the prospects' data and what we have from SBS. So for the Year 1 value, the IBP/ice-spend value... so what we did was like within SBS, we do have like what is the ratio of the spend from the prospect side to the customer side. So we have taken that ratio, like let's say from... which is like 0.33. Multiplier, which is like 0.33. So we used the same multiplier to get the value what prospects have on their Year 1 spend to get the value for the customer's side. So for corporate cross-sell, for our initial BY1 value. So that's our assumption for like Year 1 spend, what it could be.
+**Hima:** Okay, these are like back-end calculations, what are the inputs there?
 
-Anju: But what spend? This is corporate spend? It's corporate spend.
+**Seela:** Yeah, these are the inputs. Not back-end calculations, these are the inputs that go into the back-end calculations. See, these are the voluntary attrition...
 
-Hima: Yeah, it's corporate spend.
+**Hima:** Okay.
 
-Anju: So we looked at all the prospects... corporate prospects... corporate spend which comes from prospect channels, and then we found out what is the customer segment spending on that. Is that what we did?
+**Seela:** These are the… this is the format that you have to give. As I said in decimals.
 
-Hima: So... so that was for previous year. So first Year 1 spend, like what is the intended spend for Year 1, it is basically like the ratio of like currently what SBS customers have like from prospects to customers' ratio. What is the spend for prospects and ratio is to the customers' ratio. So...
+**Hima:** Okay.
 
-Anju: But on what product?
+**Seela:** Okay? Do you want me to share this files with you?
 
-Hima: Uh... I think it's B-Plat.
+**Hima:** Yes, please do share. It would be helpful, yes.
 
-Anju: On B-Plat. And this is across all channels or only sales?
+**Seela:** Yeah, yeah. At least it will be helpful for you to check in which format it is, what are the current data that is there...
 
-Hima: Uh... it's across all channels, I assume.
+**Hima:** Yeah. I was thinking it would be just the 8 inputs we could enter and we could check it.
 
-Anju: Okay. Maybe ask Sourav to join, he did this right, he sent me the note on this, let me find that note.
+**Seela:** (laughs) You were thinking... so I tell you, this file, model that I showed you, that is the easiest way to do it.
 
-Hima: Okay.
+**Hima:** Okay.
 
-Anju: This point is not clear to you out standing... I think this, he had sent this long back before you came in. I just want to bring it up. Oh, I sent it to Ashish also. Found that...
+**Seela:** You load your… you load your data here, whatever average balance and whichever data you have.
 
-Hima: So...
+**Hima:** Yeah, yeah.
 
-Anju: Can you just walk through...
+**Seela:** And then… and then you load it in financial assumption, and then you will see what is your CMV calculation.
 
-Hima: Sorry?
+**Hima:** Okay.
 
-Anju: I'm trying to find the note.
+**Seela:** There's another also which you can directly paste... let me see. There was this one... This has got model in it. This has got formula in it. Let me see if I have one that doesn't have any formula. Yeah, okay. This is also formula one. This is also formula one. There's one where it's just paste value. Here I have just those that have formula in it... but you can take this also. You just have to take out that formula and put your number there.
 
-Hima: Okay.
+**Hima:** Okay.
 
-Anju: He sent this note... "Discussions updates... I have no idea. I can't remember, I can't find it."
+**Seela:** Okay. Let me share another one. Give me one second. I can let me give you one last try if I find that one. So what the users do, the file that I showed you, they just take it and copy and paste it in this model. Just starting from the first column itself they copy and paste it. It is in the exactly same structure in which your model is filled.
 
-Hima: Was it... maybe he wasn't handled... maybe Nikita sent it, so I think that's why I can't find it.
+**Hima:** Got it.
 
-Anju: What was the note regarding?
+**Seela:** Let's see it... Okay, so I am giving you this one.
 
-Hima: This entire calculation he had done. Okay. On this corporate.
+**Hima:** Okay.
 
-Anju: I was trying to find that note... maybe Madhurima did it. The problem is everyone, different people send the notes, it's very hard to find. Hima? Corporate... okay, this is what it is. Let me give this... Do you have the whole thing on how did they come up with this?
+**Seela:** You use it and load your data in that... take out the formula, just copy and paste your data in that, and you should be good.
 
-Hima: For this calculation, for the Year 1 thing, yes.
+**Hima:** Okay.
 
-Anju: Correct, you have that?
+**Seela:** Okay? Look, maybe this doesn't have any formatting... Let me see this one. This also has some formatting, right. It's okay. You just delete this formula like this.
 
-Hima: Ah, just a second, let's open the email. I think it's somewhere around... here to check... Let's check from Sourav.
+**Hima:** Okay.
 
-Anju: Okay. So I'll tell you what. So Hima, just let me explain. Tomorrow there's a meeting with Ashish on... so Vidyut is the product GM. She's the one who's running this corporate program. So we have on Monday a meeting with her and her VPs, which is a monthly meeting, or bimonthly. In that, one of the follow-ups was, I think when it came up when we talked about corporate cross-sell, her thing was "Oh, tell me how many are corporate cross-sell eligible in the customer portfolio. And what is the current attempt rate?" So we wanted to show what was the current state and what will be the new stage, next state. That is what it is. So Rajesh was working on the... the new state. Okay? But he wanted the treatment level NRR to be updated, right?
+**Seela:** And make it like no formula and just put your numbers here.
 
-Hima: Okay.
+**Hima:** Yes. For business unit... what is market?
 
-Anju: The teams are working on that. So that is what it is. So that's for tomorrow. Thursday is the discussion on CMV with Jeff, where you are there. Tomorrow... I'm just giving you, you can still be there. Because Kartikeya can't be there. It's in the afternoon, I think it's in the afternoon, so I've added Rajesh and you.
+**Seela:** All this what you... you don't need it actually.
 
-Hima: Okay.
+**Hima:** Okay, got it.
 
-Anju: So at least you are there, I'm just looping you in so you get the full context of it.
+**Seela:** Actually you... I don't know whether this… in the end you will see this result right. So better put everything, because I don't know which formula is picking what, we don't know. Just to reflect it in this basically here you have view. So whatever you write it, it will pick. The most important is your number.
 
-Hima: Yes, yes, yes, thank you.
+**Hima:** Okay.
 
-Anju: The only thing is we need to understand from Sourav, Sourav sent out a note to me. He forwarded the note, I did not read through it. Corporate cross-sell overview and results. Are you part of that?
+**Seela:** Okay. Got it. So I am sharing this model with you, this is the easiest and the most transparent way you can check your numbers.
 
-Hima: No. This won't work. Oh, she had sent out. I thought I'd find... Something is off in this... the way you view outlook, you can't find the mails from the bottom. I've been searching like... from... I don't know why I'm not able to find even... this thing...
+**Hima:** Got it, got it. Thank you, thank you.
 
-Anju: That's what my outlook is not working properly. The web version and my Slack is not working. It is so annoying I can't even tell you. I think there's some tech problem going on. I have to come again to the office today, for the laptop... I don't know. But anyhow, my phone... it's there on my phone, which is great. So I can, I can at least... that way I can keep a track. I just check my phone every half an hour on the Slack messages because I haven't put it on... otherwise it's too annoying. You lose your focus. So I'm good with you Hima, we have the CMV pages, tomorrow Rajesh is doing that, you will just join that conversation so you are aware of it. The one thing which I need to do is from the CMV what Sourav sent out, just understand that.
+**Seela:** Okay?
 
-Hima: Yes, got it.
+**Hima:** Yeah.
 
-Anju: That's it. Okay, good. Otherwise, good. Are you enjoying the work?
+**Seela:** These are the inputs... format of the inputs and these are the... this is the model. Okay?
 
-Hima: Yeah, it's good, it's good. So at least recovering...
+**Hima:** Okay.
 
-Anju: So now, I think Hima will get involved in the insights work, right?
+**Seela:** Let me know if you need anything else from me.
+
+**Hima:** Yeah, yeah. Sure, sure. Thank you, Seela. Thank you.
+
+**Seela:** Okay, bye.
