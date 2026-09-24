@@ -1,197 +1,85 @@
-**Rajiv:** The value for this customer is much higher compared to the mean or median. Variable 2 is also higher, but between variable 1 and variable 2, variable 1 is more important in the variable. So you might show an insight on that variable 1 as compared to variable 2.
+Hima: Yeah, I'm ready. Yesterday we were discussing the early experience and the aim collaboration, right?  
+M4A
++ 1
 
-**Kartikeya:** Okay.
+Anju: Correct, yeah.  
+M4A
 
-**Rajiv:** So imagine there are 10 independent variables in the treatment model and 10 independent variables in the incremental spend model. How do you rank these 10 in an order so that whenever the variable… for each customer whenever you score it, whatever that variable is higher compared to median, and that corresponding rank of that variable will be used to show which one should go first.
+Hima: Regarding the question of who owns the account, I didn't get a chance to talk with Mo, but I had a discussion with Nicole from the digital deployment (DD) team. She explained that the account owner would still be the salesperson. Once the sale is closed, they get a "close win" option and can assign it to the deployment team. Based on the revenue numbers, the accounts are divided and directed to the Deployment Manager (DM). For customers enrolled digitally, they act as self-serviced cardholders. We can confirm this again during our meeting with Mo on Monday. Moving to the triggers we are planning right now, everything is aligned, but do you have any questions?  
+M4A
++ 4
 
-**Anshit:** So, Rajiv, while this completely makes sense in terms of the situation, the idea is not for us to go into each of the treatment level models and all those things to find out variables right. Because that would be…
+Anju: No, I'm good. So the account is managed by both, but this is a digital deployment team where we have to start doing the triggering. From what I understand, they do a first attempt call with everybody today, and they want to know when to make the second attempt, correct?  
+M4A
++ 2
 
-**Rajiv:** We have only one model for EC. So, one model for treatment, one model for incremental spend. There are no multiple models for different types of.
+Hima: Yes, even they aren't very sure about the initial phase and whether they will only do one call. Previously, they had an onboarding schedule of four calls, but ideally, in the future, they don't want to have all these one-on-one calls. Initially, how the DM reaches out and how these triggers will be used totally depends on the customer.  
+M4A
++ 2
 
-**Anshit:** Okay, and those mean... And some of those variables which are there, the top variables, are already there. Like for that one model, right? Like you have prespend as a variable, that variable "high prespend" is already in your insight. We need to find out what is the...
+Anju: Got it. Before you go into this, Hima, I want to understand something. Have you asked the director to do a WebEx side-by-side with them to see exactly how they do digital deployment?  
+M4A
++ 2
 
-**Rajiv:** But what I mean... remember two insights are there. One is a tier insight, other is a treatment insight.
+Hima: What do you mean by a side-by-side regarding digital deployment?  
+M4A
 
-**Anshit:** Yes. Yes.
+Anju: With the team. You can ask to do a WebEx side-by-side to sit in and listen to exactly what they are doing during meetings with the customer. I was supposed to do one in Phoenix, but the appointment got changed. You or Karthik should ask for a WebEx link or a recording to get a full understanding of what screens they use and what information they are accessing. It will be very good to understand exactly what they do when they get a new corporate Nova account, how they decide who to call, what prep work they do, and what the objective function of the call is. After deployment, you want to know how that is tracking, correct?  
+M4A
++ 4
 
-**Rajiv:** I am prioritizing a lead because this lead is high revenue is an insight for a tier. I am prioritizing that lead for an EC cross-sell because that EC penetration on that account is very low is a treatment insight. Your EC penetration insight need not be an independent variable in your tier model.
+Hima: Correct.  
+M4A
 
-**Anshit:** Completely makes sense. My question is those variables which are present in the list right? For your model on NPD, NRR or Icepend, we don't need to further go and again find out any other variables. I am assuming that the list of those variables for your tier prioritization are already there. What we need to focus majorly on is when we say high revenue, what is that median value of high revenue or the threshold.
+Anju: If something is deviating, then you want to prioritize it, which is the trigger you are creating. If you have a lifecycle understanding, you can create a storyboard showing their workflow and where "aim" will come in to do prioritization.  
+M4A
++ 1
 
-**Rajiv:** Exactly, how do you… how do you determine that and then… let's say if three variables are on top. How do you rank those three, would you just use bases variable importance in the model. And if one variable in the NRR model is high, also the dollar IBB model one variable is coming out to be high, how do you select between these two?
+Hima: Yes, that brings it to life. It will show where I am and what triggers can be used to prioritize. If an account sits with you for 13 months and any deviating behaviors happen, we are going to track across this and prioritize.  
+M4A
++ 2
 
-**Kartikeya:** So…
+Anju: Yeah, right now they don't even know what they are doing. You mentioned triggers like the PA not logging in, no users added, no first card ordered, card issued but not activated, no first dollar, card controls not configured, expense policy not configured, expense submission setup incomplete, and approval workflow not configured. These are great. Did they give you these?  
+M4A
++ 3
 
-**Rajiv:** So your scope of variables is only the existing independent variables in the NRR or dollar IVP models.
+Hima: No, we created these signals. They had a demo showing the walkthrough of the Nova product's features, and we understood in detail what they do on each call. The first call is a kick-off call to set up the account, and the milestone is to issue at least one card. The second call is a configuration call where they take inputs for company-specific customizations. After that, there are two validation calls to check if everything is functioning right. If a customer wants to hold the process, they are moved to a "stalled" state with specific timelines for when to reach out again. They currently have five calls in their process.  
+M4A
++ 4
 
-**Kartikeya:** Okay, so Rajiv what I… I think for corporate if you listen what we did was like for take the existing insights…
+Anju: You articulated that beautifully. You should map out their current workflow and show where "aim" comes in to look at these signals. If the objective of the first call is issuing the card, and that isn't happening, you need to mine the call transcripts to find out why.  
+M4A
++ 2
 
-**Rajiv:** Karthikeya, that is corporate treatment insight. That is not corporate tier insight. There is… there is nothing we have done for corporate tier.
+Hima: Yes, call transcripts. Maybe during the first call they aren't expecting the card to be issued immediately, and the customer says they will order it later. We could track that if they enter it in the notes.  
+M4A
++ 2
 
-**Kartikeya:** Oh yeah, we didn't do it for tier, that's why I am… not this here…
+Anju: Then we can have a Gen AI systematically follow up. Another signal is if the card was issued but not activated within a certain time window. You mentioned we have close to 19 of these signals?  
+M4A
++ 2
 
-**Rajiv:** So whatever I am seeing right now is only for tier… tiering model, insights.
+Hima: Yes, we have close to 19 that we made right now. We aligned with you first before taking them to Mo.  
+M4A
++ 1
 
-**Kartikeya:** Hmm, okay.
+Anju: You should put that exact list on a page because it brings color to the roadmap. The roadmap shows we are partnering on activation triggers, then growth, and then tiering. You should create another page detailing these activation triggers and the utilization growth triggers for the Software Engineering Team (SCT).  
+M4A
++ 2
 
-**Rajiv:** So, think of it this way. Maybe I'll bring up the page so it will be easier for you to...
+Hima: For Q3, they want utilization and growth triggers for "at work" as well, but we don't fully understand the product features yet, so we have a walkthrough call scheduled for that.  
+M4A
 
-*(Pause)*
+Anju: For the Ashish update, you should add a list of KPIs like the 90-day successful deployment rate, time to first dollar, stalled inventory, and 13-month portfolio growth. We can group your 19 activation triggers into buckets like "time to first dollar" and "time to successful deployment" to make it more meaningful. We can rank and review them in our meeting with Mo on Monday. Since the team doesn't have a defined CTA (Call to Action) yet, we can let the Deployment Manager decide whether to send an email or set up a call based on these triggers. Are you covering the Ashish update tomorrow?  
+M4A
++ 4
 
-**Rajiv:** Give me one second.
+Hima: I'm not sure if I'm included in that meeting.  
+M4A
 
-*(Pause)*
+Anju: I'll forward the invite to you and Karthik. You can add this page showing the activation triggers to the roadmap. It looks really good. Thank you, Hima, good work. Bye.  
+M4A
++ 4
 
-**Rajiv:** And Hima and Annie, what you guys are doing is like at least you will go through the list, to get some understanding of what are those variables, etc. How it’s… Basically, Rajiv, one thing that probably also helps is like how those are shown. Is there a differentiation when a tier insight is shown.
-
-**Rajiv:** That is why I am bringing up that page so that you see the tiers right.
-
-**Anshit:** Yeah. Let me know if my screen is visible.
-
-**Annie:** Yup.
-
-**Hima:** Yeah.
-
-**Rajiv:** So this will be the new UI that will be shown to MBDs or even for TSC too. Now if you think through, for every account, there is... "why this lead is tier 0, why this lead is tier 1". This section of the UI shows why a lead is in a particular tier. This section shows what are the recommended treatments that we want in the descending order of propensity. So for this... When you click on this, why this treatment is nothing but call to action. Discuss this with the customer... so and so talk tracks can be leveraged, those talk tracks we can get from marketing. Now under this particular treatment recommendation, there is also this section which is why this treatment is suitable. This is where your top three insights for that treatment should come up. So the right side section is completely optimizing your treatment NRR based insights and your left side is tier NRR or dollar IBB based insights.
-
-**Anshit:** Clear?
-
-**Kartikeya:** Okay.
-
-**Anshit:** Hmm.
-
-**Rajiv:** Now let's go through the scoping, right?
-
-*(Pause)*
-
-**Rajiv:** We basically have divided... divided that there has to be a workstream that needs to be built for tier insights and workstream for treatment insights.
-
-**Kartikeya:** Hmm. Yes.
-
-**Rajiv:** Clear?
-
-**Kartikeya:** That's clear, yes.
-
-**Rajiv:** Now for each of the treatment insights, whatever we right now have, there are certain NRR models which are used, which is response rate for that treatment or likelihood that the customer will accept treatment if we approach. Hmm... Being used to prioritize which treatments would appear in the top in the ranking. Let's say there are ten treatments or eight treatments for the customer. First there will be eligibility, after that eligibility what should be the ranking of each of the treatment will be basis your NRR score for that treatment. That is the only place where a treatment NRR is being used, not in the tiering.
-
-**Kartikeya:** Okay.
-
-**Rajiv:** Because tiering, there is only one unified NRR, one unified incremental spend model. The combination gives me an NPV which is used for tracking.
-
-**Kartikeya:** Okay.
-
-**Rajiv:** Now, imagine there are eight treatments. Each treatment has some sort of an existing insights already computed.
-
-**Kartikeya:** Okay.
-
-**Rajiv:** Right? So let's say EC cross-sell, currently in this scope maybe Annie, in that excel that I have shared, there are certain existing insights, right?
-
-**Annie:** Yeah.
-
-**Rajiv:** EC cross-sell has 10 insights. Those 10 insights for EC cross-sell... the objective for you is to create a ranking. Which one should be appearing first, second, or third under that treatment. The max number of insights we can show for each treatment is not more than three.
-
-**Kartikeya:** Okay. Right.
-
-**Rajiv:** So, then the next step is how do we, how do we optimize for that insight.
-
-**Kartikeya:** Right.
-
-**Rajiv:** You can use multiple things, where let's say you take the eligible base of that treatment, let's say EC cross-sell is there. One insight is present and the lead is attempted versus not attempted. Oh sorry, one insight is present versus one insight is not present insight one let's assume. After that the lead is attempted, after that the insight is not present and the lead is attempted. What is the difference in my conversion rate for that treatment.
-
-**Anshit:** Why do I need to only look at your attempt rate in the sales channel. Why not it's an overall take up rate.
-
-**Rajiv:** That is something which you guys can decide, I am completely fine. Like...
-
-**Anshit:** So basically whether the differentiation, how do we control for the denominator, that's what...
-
-**Rajiv:** So whatever you are saying is propensity. Take up rate, when I say I'm not controlling for the attempt rate of the channel, I'll control for the take-up rate of that particular treatment anywhere across.
-
-**Anshit:** While controlling for the eligibility in the channel, definitely. Your denominator would be only ones who were eligible for the treatment. And the numerator would be of those with insight how many converted across any channel.
-
-**Rajiv:** And how do you, how do you control for like after that inside will you look into a certain time window all those nuances you guys can decide.
-
-**Anshit:** We'll, there would be some iteration involved there, how do we come up with that.
-
-**Rajiv:** My idea was to check it both, one is like where it was attempted and within the sales channel what is the close-win rate, because it should also hold true the differentiation. But at the same time if the rank ordering, if we have to do, can we also look at a treatment across the board. When the lead was triggered, so because your lead would be say in tier 0 or tier 1 or whatever right, and it has that EC treatment. Post that in the next one month or 60 days have they taken up that treatment, differentiating those who have taken up with insight without insight, is also one way, but we'll…
-
-**Anshit:** So that will be your... Yeah. That you can align, I am totally fine. Because anyway it is just a rank ordering thing, it is not your actual versus predicted conversion.
-
-**Rajiv:** Yeah, yeah, it's more about that because I think the idea… what I understand is for each treatment we don't want to give… Say even if there are 10 insights per treatment, and if customer has all 10 insights. Right, it would be becoming very confusing if I give all 10. So our idea would be to pick those top two, three which is making the most differentiation within those 10 for that customer. And in that lens, that rank ordering is what I was thinking about we can look… the overall take-up rate. There would be nuances, we'll have to figure it out.
-
-**Anshit:** So now we, we solved for treatment… we discussed about tier insight. Then there is another aspect... maybe across these two what you could also further think is... Now in the tiering, right, let's say I am prioritizing some account in tier 2 or tier 3. What does it mean? Naturally, most of the independent variables across both your NRR model and Dollar IBB model might be less than the mean value. So for those cases… the scoping of where exactly this this needs to be shown, right. Does this insight even need to be shown on tier 2 or tier 3 where there is no high opportunity? That is one thing. And even on this side, right, let's say your NRR model for a treatment ranks at high, but there is no insight available, then it doesn't make sense to show that, right? So your third category is kind of like… ensuring certain rules are there to maintain the sanity of these insights, how they appear. First and two are basically your math behind how do you solve for these. Third category has to be that sanity checks of which we should be excluding in showing these insights or even these recommendations. Now the fourth category is wherever we are showing these treatments, right, let's say there are nine or ten possible treatments in sales. Each treatment should have a specific call to action. That call to action... talk tracks or what... how that treatment can be discussed with a client, marketing maintains certain call to action guides, which are approved and are available to sales colleagues in their field resource center portal, which logs all that information. But what vision that we are having is that template of what they need to use should appear in this call to action only.
-
-**Kartikeya:** Okay.
-
-**Rajiv:** Clear?
-
-**Kartikeya:** Mmhmm. Yeah.
-
-**Rajiv:** Then the next thing, right, we discussed about fourth category. Fifth is basically where the verbiage of these insights itself, how they need to appear, is something which we might be working in collaboration with marketing or in collaboration with sales too. Let's assume you narrowed down to 70 or 60 whatever potential insights across tiers and across treatments. That 70, both with respect to the insight and the call to action for treatments, they should be... they should be reviewed in the way they... the verbiage itself is shown.
-
-**Kartikeya:** Okay. Hmm. Got it.
-
-**Rajiv:** So if I am thinking through, you might be able to solve math in one month. The other pieces will also take time. So this is not like a month's project, I'm just calling it out upfront.
-
-**Anshit:** Yeah, I think... I think we will sequence it out also. Probably, in my head, I will sequence it out by the treatment first, to look into like if we, if we can target treatment by treatment, like... first figure out for the treatment what is the best ranking, rank ordering the methodology and all those things, and then for that particular insights, those 10 insights what would... what should be the refined version.
-
-**Rajiv:** No, no, no, don't do it either… do all of those ones when you are refining the final inside. See, if for sales what would happen, they are first... forget about the verbiage of these insights. They are bogged down by the volume of insights appearing. So your ranking first needs to be solved for all so that the volume of insights get cut down. Hmm. Okay. The next step is only when I need you to actually solve for that verbiage.
-
-**Anshit:** One thing, one question is like for a salesperson when they decide to work on a lead, right, if I already know it's a tier 0 lead, what is more important, having the treatment inside or the tier insight?
-
-**Rajiv:** For tier 0, there is no treatment... The tier 0, the recommendation is reach out to them soon. I mean, this one is a demand gen that's why it has a specific call to action that reach out to them… like the customer responded to particular email campaign, reach out to them.
-
-**Anshit:** Okay, fine. So say tier 1 lead is there, right? Now whether my... whether the salesperson will attempt or try to attempt just because it's a tier 1 or like... why do they need an explanation why it's tier 1 and not focus on the treatment directly what is available within the tier 1? Like I'm just trying to go to the place or to to basically think about like what is more important, treatment level insights are more important or the tier... treatment is more important.
-
-**Rajiv:** The tier 0, why a lead is prioritized in tier 0, there needs a rationale which is already there.
-
-**Anshit:** Hmm. Because rationale is like… I would be surprised if their team still questions that why a lead is tier 0 or tier 1 and don't work on it. I think more important in my head also is the treatment insights, but yeah. Make sense. Cool, so okay... even within the treatments... within the treatment insights, alright? I think I agree with you, let's not think about verbiages right now. Rank ordering is the most important thing. Let... let us take a stab into the roadmap on how we can do it systematically, even come up with some methodology as a... like at a broad level... because what Anju said is like we won't start any work on this until she gets Ashish invested on it.
-
-**Rajiv:** Yeah, yeah, absolutely. So, first Ashish, the...
-
-**Anshit:** So what we will do is...
-
-**Rajiv:** We need to just prep for Ashish meeting on what is the alignment that we need to have from him.
-
-**Anshit:** Yes. The potential, potential approaches that we discussed. Those are the things that he needs to review first before even getting the work started. The moment you start, then it is all wasted effort is what I feel, without his alignment. Because if he has a different opinion, let's say "Why are we doing propensity ranking? Why are we not doing this?" then... then it will be you will be revisiting that entire analysis probably, which you already would have spent two weeks or so right. And then it doesn't make sense. So maybe I would say probably next week or within two weeks let's just lay out the scoping and the potential work that we think should be doing to address those. Hmm. In fact, your work streams have to be bases key user experiences that we are solving. First user experiences is "why a tier inside?" or "why a treatment?" There are a lot of insights which needs to be cut down, and there is currently no ranking for that inside. That basically solves for the amount of insights that are being shown. Second is that tier inside, we have it in the UI, but we can think through if this needs to be prioritized or not. Then the third methodology on how do you want to solve it and four is that verbiage itself, how that needs to be changed.
-
-**Anshit:** Yeah. Yup. If you can share that PDF or screenshot of how it appears or something as...
-
-**Annie:** Can someone take a screenshot? I think this is in the FRC, you might not have a link to it.
-
-**Anshit:** Yeah, or if you can... oh this is a portal.
-
-**Annie:** It will be portal.
-
-**Rajiv:** I think I just opened it… give me one second. Maybe you can just save here right on the top right. Give me one second let me see if this is in the… I think this has been downloaded let me send this. Upar, on... ah save as... you can save it. So Annie, Hima, right. Let's connect on Monday afternoon?
-
-**Kartikeya:** Okay. Sure.
-
-**Rajiv:** To have a... right? Whatever Rajiv just said, right? Those are the four problems we are solving for, and for each of those problems, specifically the rank ordering one, what are the methodology that we are thinking through. And some of this screenshot to refer so that you can tie it back when he speak to Ashish and Anju.
-
-**Kartikeya:** Yeah that will be better.
-
-**Anshit:** Right? So let's create those and then we can also put some examples of like how many insights we have per treatment on an average, what is the total number of insights, broadly list that I have shared right, should be... should be fine.
-
-**Kartikeya:** Yeah, yeah.
-
-**Anshit:** The one that I have shared might not have corporate propensity recent insights, but rest of the treatments is what you can use there.
-
-**Rajiv:** That anyways Kartikeya, Hima created, right? Hima, you should have it.
-
-**Kartikeya:** Yeah, yeah.
-
-**Rajiv:** The status...
-
-**Kartikeya:** Okay, cool, done. Thanks, Rajiv for time.
-
-**Annie:** Thank you.
-
-**Rajiv:** Thanks a lot.
-
-**Anshit:** Just start a shared deck also, guys, right?
-
-**Annie:** Oh yeah, okay.
-
-**Kartikeya:** Okay. Thanks guys.
-
-**Hima:** Okay.
+Hima: Thank you, bye.  
+M4A
