@@ -1,85 +1,166 @@
-Hima: Yeah, I'm ready. Yesterday we were discussing the early experience and the aim collaboration, right?  
-M4A
-+ 1
 
-Anju: Correct, yeah.  
-M4A
+**Anju**: Okay. We can finish this quickly. So let's see when we have this. We have this next week, right?
 
-Hima: Regarding the question of who owns the account, I didn't get a chance to talk with Mo, but I had a discussion with Nicole from the digital deployment (DD) team. She explained that the account owner would still be the salesperson. Once the sale is closed, they get a "close win" option and can assign it to the deployment team. Based on the revenue numbers, the accounts are divided and directed to the Deployment Manager (DM). For customers enrolled digitally, they act as self-serviced cardholders. We can confirm this again during our meeting with Mo on Monday. Moving to the triggers we are planning right now, everything is aligned, but do you have any questions?  
-M4A
-+ 4
+**Hima**: Yeah. On the 1st.
 
-Anju: No, I'm good. So the account is managed by both, but this is a digital deployment team where we have to start doing the triggering. From what I understand, they do a first attempt call with everybody today, and they want to know when to make the second attempt, correct?  
-M4A
-+ 2
+**Anju**: Okay. So I was trying to understand what did Patrick cover last time and I think we ran over. Were you there when we had that?
 
-Hima: Yes, even they aren't very sure about the initial phase and whether they will only do one call. Previously, they had an onboarding schedule of four calls, but ideally, in the future, they don't want to have all these one-on-one calls. Initially, how the DM reaches out and how these triggers will be used totally depends on the customer.  
-M4A
-+ 2
+**Hima**: Yeah, for the August one I was there. The team meeting, right?
 
-Anju: Got it. Before you go into this, Hima, I want to understand something. Have you asked the director to do a WebEx side-by-side with them to see exactly how they do digital deployment?  
-M4A
-+ 2
+**Anju**: Oh, August one. That's what I realized that I missed one in between. So he has this one... Okay, I thought I'm going to open up the deck. Do you have the deck?
 
-Hima: What do you mean by a side-by-side regarding digital deployment?  
-M4A
+**Hima**: Yeah, I have the deck. August and June one I have.
 
-Anju: With the team. You can ask to do a WebEx side-by-side to sit in and listen to exactly what they are doing during meetings with the customer. I was supposed to do one in Phoenix, but the appointment got changed. You or Karthik should ask for a WebEx link or a recording to get a full understanding of what screens they use and what information they are accessing. It will be very good to understand exactly what they do when they get a new corporate Nova account, how they decide who to call, what prep work they do, and what the objective function of the call is. After deployment, you want to know how that is tracking, correct?  
-M4A
-+ 4
+**Anju**: You have August and that's one. Good. Because I just want to see what was there and then there was something which we could not complete last time... So I'm opening up... I think we'll keep the same structure... If I look at VP updates, new joiners and promotions... I don't know if you'll have anything... But we could keep VP updates, that is going to be there. We had the major milestones which was... I don't think we need that. Anything on new joiners and promotions... If we have that, that stays. We'll do leaders recognition. So basically what you do is you create a table of leaders in action... All this... and ask the directors to put their names. And just in terms of at least what project so we can move fast... Maybe ask them to give you by tomorrow. Just say that they have to give the names... Give 2, 3 names and why for which project if they can say. So then I can read it. Then we can go.
 
-Hima: Correct.  
-M4A
+**Hima**: Okay.
 
-Anju: If something is deviating, then you want to prioritize it, which is the trigger you are creating. If you have a lifecycle understanding, you can create a storyboard showing their workflow and where "aim" will come in to do prioritization.  
-M4A
-+ 1
+**Anju**: Team recognitions... This we didn't have. We had GE... Competitive insights we didn't cover. It's okay. Because that just like that's a project which we'll pull. Okay. And then we had the team activity. Okay. I think, you tell me. I think leadership updates always takes 15-20 minutes, is that what happens?
 
-Hima: Yes, that brings it to life. It will show where I am and what triggers can be used to prioritize. If an account sits with you for 13 months and any deviating behaviors happen, we are going to track across this and prioritize.  
-M4A
-+ 2
+**Hima**: Yeah.
 
-Anju: Yeah, right now they don't even know what they are doing. You mentioned triggers like the PA not logging in, no users added, no first card ordered, card issued but not activated, no first dollar, card controls not configured, expense policy not configured, expense submission setup incomplete, and approval workflow not configured. These are great. Did they give you these?  
-M4A
-+ 3
+**Anju**: Correct?
 
-Hima: No, we created these signals. They had a demo showing the walkthrough of the Nova product's features, and we understood in detail what they do on each call. The first call is a kick-off call to set up the account, and the milestone is to issue at least one card. The second call is a configuration call where they take inputs for company-specific customizations. After that, there are two validation calls to check if everything is functioning right. If a customer wants to hold the process, they are moved to a "stalled" state with specific timelines for when to reach out again. They currently have five calls in their process.  
-M4A
-+ 4
+**Hima**: Yes.
 
-Anju: You articulated that beautifully. You should map out their current workflow and show where "aim" comes in to look at these signals. If the objective of the first call is issuing the card, and that isn't happening, you need to mine the call transcripts to find out why.  
-M4A
-+ 2
+**Anju**: And then I don't know if you have new joiners, but say recognition if I'm just taking 1, 2, 3... 14 into say if everybody talks for at least 2 minutes. 28 minutes are gone. That is gone. And then we'll just do a game then. I think we can't do... See it's time for you guys. You have to tell me. Maybe you what did you like in that and if you want to know other projects I don't know.
 
-Hima: Yes, call transcripts. Maybe during the first call they aren't expecting the card to be issued immediately, and the customer says they will order it later. We could track that if they enter it in the notes.  
-M4A
-+ 2
+**Hima**: Yeah, I would like to know like what things are going... If other than my team what are the things interesting things that are going on... But again...
 
-Anju: Then we can have a Gen AI systematically follow up. Another signal is if the card was issued but not activated within a certain time window. You mentioned we have close to 19 of these signals?  
-M4A
-+ 2
+**Anju**: Okay. Fair enough. So how we had this page which is major milestone which is page 5, I can say some things which is going on... Work which is happening... Something like that. I think all of this is happening only. Nothing is...
 
-Hima: Yes, we have close to 19 that we made right now. We aligned with you first before taking them to Mo.  
-M4A
-+ 1
+**Hima**: We'll definitely have a activity first, but activity, but I would also want to know like what's going on then. If we could cover.
 
-Anju: You should put that exact list on a page because it brings color to the roadmap. The roadmap shows we are partnering on activation triggers, then growth, and then tiering. You should create another page detailing these activation triggers and the utilization growth triggers for the Software Engineering Team (SCT).  
-M4A
-+ 2
+**Anju**: So you want to know just in terms of the project like for example what's going on across the teams, maybe put by director some of the 2 or 3 projects... 2 or 3 is not right, because then everybody say you didn't cover my share.
 
-Hima: For Q3, they want utilization and growth triggers for "at work" as well, but we don't fully understand the product features yet, so we have a walkthrough call scheduled for that.  
-M4A
+**Hima**: Yeah. So I was thinking like...
 
-Anju: For the Ashish update, you should add a list of KPIs like the 90-day successful deployment rate, time to first dollar, stalled inventory, and 13-month portfolio growth. We can group your 19 activation triggers into buckets like "time to first dollar" and "time to successful deployment" to make it more meaningful. We can rank and review them in our meeting with Mo on Monday. Since the team doesn't have a defined CTA (Call to Action) yet, we can let the Deployment Manager decide whether to send an email or set up a call based on these triggers. Are you covering the Ashish update tomorrow?  
-M4A
-+ 4
+**Anju**: Sorry.
 
-Hima: I'm not sure if I'm included in that meeting.  
-M4A
+**Hima**: So I was thinking like one interesting project and who is working on it, maybe some we you select some of the interesting things that are currently working with MX and...
 
-Anju: I'll forward the invite to you and Karthik. You can add this page showing the activation triggers to the roadmap. It looks really good. Thank you, Hima, good work. Bye.  
-M4A
-+ 4
+**Anju**: And one... And one page on it. Correct?
 
-Hima: Thank you, bye.  
-M4A
+**Hima**: Yeah. Yes. I mean a short brief would be good. That like what is the project about and who is working for it if someone is interested they can just talk about it while talking that's it.
+
+**Anju**: Okay, maybe what I'll cover, I'll cover a little bit on orchestra. I'll cover I don't know if you guys even if you know what is orchestra. And then do you know what is tier 1, tier 2, tier 3 treatments, some of that and then path to proven. Maybe that could be one of the page.
+
+**Hima**: Okay. Orchestra I'm not very I didn't hear of it much. Tier 1, tier division I know because of some insights work, not very clear but I know this division that goes how it divided.
+
+**Anju**: No but that's for sales. That's for sales. Not for the marketing channels.
+
+**Hima**: Okay then I don't know then. Yeah.
+
+**Anju**: I think we should have orchestra that would be interesting. Or the thing is... We could even have vox. Anshit could cover. I can ask Anshit to cover the same what he is covering on Amex U. Nobody is joining at least the same pages... I can ask him to cover. Vox.
+
+**Hima**: Any latest AI work that is going on Anju?
+
+**Anju**: That's vox. Vox is the only one. Okay. Last time also we covered vox I believe.
+
+**Hima**: In Ashish's staff meeting.
+
+**Anju**: Okay, okay, somewhere yes, yeah. We there's fine tuning work which is happening. Which is happening in account's team. Conversational skills we can cover in terms of the... Some of the work. I can ask Pranav and Aniban if he can put some something on conversational skills what is happening. Where where we are... Maybe that could be another one. Conversational skills in terms of... How we created the objection cluster. I think Sarin can talk about it. Let's do if 2 pages if they can talk about this is what we are doing, we are looking at this kind of dataset, this is what we are doing, just maybe make it more about how we looked at this. These are the approaches we did. Some of the things. Now that is what you want to know. Correct?
+
+**Hima**: Yeah, yeah that's it. Because major time would be if recognitions are there around half an hour would be taken by that.
+
+**Anju**: Yeah. Yeah. Recognitions yeah. I think we can cover one project on conversational skills. We did the demo but I think you you want to understand what is the AI piece which we are doing in that, right?
+
+**Hima**: Yeah, because we can't cover everything but what MX is currently focusing on Gen AI or AI thing, because that's what most of us are interested on I believe. Lately what we are covering like that. And maybe a demo of something that is when launched like that.
+
+**Anju**: Demo we already did in one of Ashish staff meeting. So but maybe we can cover in terms of this is what it is. Basically summary does this the objection, this is the objection, this is what it is. These many response clusters, so we are looking at different response strategies and then this is what you're figuring out. Since next week, so I don't want to give work to people to do, unless I can also give early tenure. The work which is happening on early tenure. Do you know about multipliers? Maybe that could be another thing. Like how do we identify what happens in the pub process.
+
+**Hima**: No. I I don't I don't know that.
+
+**Anju**: I think that also will be interesting. Something on the pub and the multipliers. Maybe multipliers we rationalize this. In terms of we look at look-alikes. That could be one thing. Okay. I could do that.
+
+**Hima**: Okay.
+
+**Anju**: Sounds good. And then you can think of a game. Whatever game you want. You want the same game last time? Last time also was good fun.
+
+**Hima**: Drawing, yes.
+
+**Anju**: Yeah. But you had each team doing differently. You need collectively I think.
+
+**Hima**: Yeah, they they but it was fun because if there are too many members it's like again the engagement won't be that long for that game we had, but yeah I'll try to find or else if we can. Some interesting one.
+
+**Anju**: Yeah. Okay. Team activity definitely we should do 20 minutes. I think that's lot of fun, because kind of get people's dynamics in terms of... Right. You'll get that. Okay. Sounds good. So this is next Thursday. So you have the deck. Only thing is the you send me the link of your deck and I'll put my leadership updates in that. If there's anything. This is from... This was in August. So I need to think about from August 2 to till next week. So let me write it down what is there. Okay. Sounds good. Thanks Hima.
+
+**Hima**: Yeah. So Anju I just wanted to show like one thing is... For tomorrow's Ashish slide, can I take a minute?
+
+**Anju**: Yeah. Yeah. Sure, sure, sure.
+
+**Hima**: Anju yeah. So... So I just made two slides. One with complete the activation triggers, if you can see.
+
+**Anju**: Okay.
+
+**Hima**: This is like... Again like what is the primary focus for Q1 '27. All related to success metric time to first dollar. What are the triggers that we have. And the successful deployment. And what is the success here? We have we are trying to reduce the time to first dollar and here we are trying to reduce the time to deployment. Got it. And next phase we have utilization and future phase is growth. So what some examples are like... Some it could be like low usage or log in activity, these are examples of utilization triggers and these are some examples of high like future growth triggers. But again these are just examples not definitions are not very clear.
+
+**Anju**: Yeah. Yeah. Yeah. Yeah. Yeah.
+
+**Hima**: Or I was thinking again like... Anything like to walk it through Ashish like whether what is the current journey of aim customers like they have this current journey and we are coming especially for the activation triggers where are we helping, where is aim helping. And why is it required. And then again we have like utilization and growth as a future. But mostly it talks about rather than mentioning each trigger, it talks about the flow why are we helping and what is that thing that we are focusing on. As and some examples are aim activation triggers. I think this is pretty good.
+
+**Anju**: So the way we'll do is we have page 2 which is basically how we are partnering on our road map. Okay. Then we are saying that this is you could you could bring this page in terms of what how is their current journey today and where we are coming. This is just more like a to understand, but really page 2 and 3 would good go in the deck. 3 we could refine I know we put a laundry list but that's for his comprehensiveness, we can always remove it. Because this is still TBT, correct? The time to successful deployment...
+
+**Hima**: Which one time... Yeah, this is all TBT, yeah.
+
+**Anju**: TBT, right? This is just still we are still talking about it, correct? Yes, yes. Okay. Yeah, because this is just maybe we can just put some examples in for the meeting. But for us it's there. And then let's go to page 4. Page 4 is how it's set up. This is more like an appendix how this works today, correct? And this I think this also is pretty good. Because what happens is 2 is... 2 is overall and this is specifically our focus is going to be on digital deployment team. So if I think of their team they have a kickoff process, they have a configuration, admin validation, roll out, and monthly month end deployment.
+
+**Hima**: Wait, digital deployment at the same time it is with the strategic deployment team also. The initial three 90 days it's both the same.
+
+**Anju**: Correct, correct, correct. This is the okay. And then you're saying this is a high touch process with planned one-on-one cost. More self-guided customer journey. DMs intervene based on customer...
+
+**Hima**: What is DMs intervene based on customer...
+
+**Anju**: Deployment managers.
+
+**Hima**: Oh, deployment managers. So the decision makers. Okay, that's what. Yeah.
+
+**Anju**: Reduce manual monitoring across 100 to 150 accounts per colleague. Why aim. So they don't want to have like managing multiple people they can't have it with every person one-on-one call. Deployment manager decides the treatment. Oh, so we don't know so they're not doing it. Customer progresses. Fast time to first... Oh so aim signal is basically we send an insight one source action center. There's no... It says an insight we are sending. But in the future we'll also give the call to action.
+
+**Hima**: Yes, yes. Call to action.
+
+**Anju**: Maybe you can just say... Okay, wait now we are just giving as an insight we'll say aim aim will send a signal inside and then later we'll add call to action. Okay. Correct? Something like that. Now. Utilization is next. So aim activation signals in Q1. Utilization is a customer successfully utilizing the progress. Growth is... I think this is pretty good. The only thing is what is the last one? Activate? So it's like after activating it's like completing the setup and reach first dollar.
+
+**Hima**: So it's like activate stage is basically it's mostly about like completing the setup and reaching the first dollar. Utilization it's about like driving ongoing product usage. So what the each the triggers... Main point is.
+
+**Anju**: Okay, okay. I get it. I think I think you could have done that only in the top only. So you're saying actually first is the activate stage. So if I pick if you look at this, right? The top is great, then bottom is basically how is the aim aim partnership, right? So first in the activate piece, then is utilize this and then grow is this. So this all could have gone there only.
+
+**Hima**: Okay. Should I should I tell you what I'm thinking?
+
+**Anju**: Yes, yes.
+
+**Hima**: You say complete setup and reach first dollar. Left can say this is the objective, right is this. So basically everything is like 3 buckets. I don't have to read this. Yeah. I think it's pretty good. And then your 3 is just a comprehensive list.
+
+**Anju**: Yes. So really I think 2 and 4 could also work. 3 is just for him. I think this is pretty good.
+
+**Hima**: Okay, sure.
+
+**Anju**: Very good. This is excellent. Excellent. It was very quick.
+
+**Hima**: Yeah, yeah, I just wanted to show you.
+
+**Anju**: So this format... So these are the new these is this is a page created through the AI tool?
+
+**Hima**: Yeah, I I mentioned like everything what's the format before that and what all things need to be gone everything. But coming to the design part it gets done by the copilot. AI.
+
+**Anju**: Can you run the prompt? Which prompt are you running? Because this looks very similar to what Patrick created the staff meetings. Curious to see.
+
+**Hima**: So I just let's say for this I give him the I already have this slide, right? So I don't have this prompt saved here, so I don't know. So I would tell like... I want to use the slide 2 format and completely in sense of design specifically the color palette and everything. And the contents should be placed here are basically a flow of how the current customer journey is, so current customer journey is the kickoff call and everything. I mention that clearly. So based on the document also I have like what is the current I paste that, what is the current state, what are we helping, what do we need. And based on the content I just give it like design is this. Then based on this design it actually organizes everything.
+
+**Anju**: So okay. Let me ask you on page 3. Page 3 you had a list in the excel sheet. The signals. You said this is my excel sheet of the signals, I want to structure this and put it here. So it just put it a dump here, that's what it did?
+
+**Hima**: Yeah, so I've asked like I want to have a list of time to first dollar and time to successful deployment separated. And also I want to include utilization which is for future and these are the examples of utilization triggers and these are some examples of growth phase triggers. So again that's it.
+
+**Anju**: So giving it what 10 10 minutes?
+
+**Hima**: For giving the context is the main important thing. So it takes like for you to understand like 10 15 minutes. Once it's done sometimes it takes reloading the slide it takes 10 minutes or like it's done in 5 minutes, yeah.
+
+**Anju**: Got it. Got it. Okay. Sounds good. Okay, that's good because I saw the format was the same and I was curious to know. Okay. Okay, okay then.
+
+**Hima**: Okay, sure Anju.
+
+**Anju**: Good. This is good. Let's do we have to cover tomorrow. But yeah, trying to figure out.
+
+**Hima**: Okay, sure. Thank you.
+
+**Anju**: Bye.
