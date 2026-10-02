@@ -1,323 +1,199 @@
-**Hima:** Hi Kartikeya.
+**Nitish:** It is a very straightforward thing, and I'll tell you what is needed. Let me share my screen and walk you through it. So, for example, were you able to select variables like this one—say, AutoPay or average high rock spend?
 
-**Kartikeya:** Yeah, hi Hima.
+**User (Me) / Uma:** The average high rock spend, that one, is not there.
 
-**Hima:** Hi, hi.
+**Nitish:** Is it not there?
 
-**Kartikeya:** Hima, something is not very clear to me regarding what you sent. We said that DDT has 18 DMs, right?
+**User (Me) / Uma:** Yeah, in the 48 variables.
 
-**Hima:** Yeah.
+**Nitish:** Okay, in the 48 variables. And that is because the list that was shared to you... let me go to the list, sample variables. Let me open that list. Because they had these binary indicators, 1 and 0, and they had selected those as the ones which need to be used, right? But what about this one? Were you able to get these, or were they only available for month 1?
 
-**Kartikeya:** Initially, we assumed there are 20, right?
+**User (Me) / Uma:** No, that 14 months of data is not available, maybe that's why we don't have that in the 48.
 
-**Hima:** Yeah, 20, yeah.
+**Nitish:** Okay, done. And then essentially, so you are saying whatever was zero, you haven't looked at it? Fair, because those were not selected. Makes sense, perfectly fine. So now let's take, for example, for your sanity, let me do this check. Out of the overall list of variables which you had, let me just do this check for you. I also did this clean-up at my end initially. What I did is, first of all, I removed everything which was a cumulative variable.
 
-**Kartikeya:** So that's fine. Then we talked about 100 to 150 accounts being there at any given time, and then we are saying 6 new accounts.
+**User (Me) / Uma:** Okay.
 
-**Hima:** Yeah.
+**Nitish:** And anything which was V1 and V2, I didn't select that initially. Now you have selected the V1 and V2 versions from that list. Fair?
 
-**Kartikeya:** Per DM per month.
+**User (Me) / Uma:** Yeah.
 
-**Hima:** Hmm hmm.
+**Nitish:** So that is taken care of. Now if I select anything which is 1 out of this one, you will see there is this AMEX app activation channel. Is this something that is there in your list?
 
-**Kartikeya:** How does that make sense? Assume I consider 125 active accounts per DM, okay?
+**User (Me) / Uma:** Yes, it is there.
 
-**Hima:** Okay.
+**Nitish:** What about B plat bonus category?
 
-**Kartikeya:** So it won't be that as many as are successfully deployed, there will also be newly added ones, right?
+**User (Me) / Uma:** B plat bonus category, I think, is also there, one second.
 
-**Hima:** Yeah, yeah.
+**Nitish:** What about this EC CM11?
 
-**Kartikeya:** So input and output will be more or less consistent, right, in a way?
+**User (Me) / Uma:** ... EC CM11 ...
 
-**Hima:** Yes, so on average they are saying they can get 6 per 100 DM per month. So slightly...
+**Nitish:** Okay, let me do one more thing here. Text filters contains M1 or it contains 1M. Now you will see, instead of one, I should have done two. Custom filter... let's take two here. Okay, so ideally these variables you can add into your dataset itself, all of this.
 
-**Kartikeya:** Yes, exactly, exactly, exactly. One second. Let's talk about the 125 accounts they will be servicing at any given point in time, okay? Their duration is 13 months.
+**User (Me) / Uma:** Okay.
 
-**Hima:** Yeah.
+**Nitish:** Okay? This is from that list itself, and if you look at the orange ones which I had, I added these because they had some numerical value in it. And why I said that is because I looked at the data, and my sample data when I collected these indicators, essentially looks something like this. For card member, AutoPay indicator was there, which you also have.
 
-**Kartikeya:** Let me assume 125 to be 130 for a moment.
+**User (Me) / Uma:** Yeah.
 
-**Hima:** Hmm hmm.
+**Nitish:** Then there was this high rock spend which was available. Then there is this TNE spend which was also available to me. Absolute values, numerical ones. Then there was this B2B spend which was also available, then this EC response which is a 0-1 indicator. Then number of enrollments a person did across offers; that is also available. And then I also had this B plat bonus category, this was the absolute amount that was there. So you can add these numerical variables into the list, and I can share this with you. Just for the sanity check and sample variables flat... let me pull this out. Hema and Uma. Done. See, I am also in the same boat on whether these variables, all of them make sense or not. That is a question for me as well. Now the two people who actually worked on it and the folks in India who worked on it, they are all not available. Yes. So right now we are trying to make the best judgment to see if we can create a structure for them and then send it. So now if I look at these variables, for example, the ones which I selected here. All we need to do is—although I'm saying all we need to do, but I know it's a tedious task—for one particular card member, CM11...
 
-**Kartikeya:** So basically, that's 10 accounts coming in per month, right?
+**User (Me) / Uma:** Yeah.
 
-**Hima:** Yeah. 6, okay. Hmm hmm.
+**Nitish:** Supposedly you selected eight variables here, for example. Now I want all of this to be represented, say, for one card member, what are the events that happened for the AutoPay indicator across months to be tagged into a single array. Essentially AutoPay across months should look something like this. The similar way we created this in this framework as well. Right? So essentially your AutoPay indicator happened across months. This activity happened. If I can create at a monthly level for card member month one, what are the events that happened together in a single JSON, that also works. Or if you can collate for one card member across months what exactly happened for this particular indicator. Say, for example, AutoPay across M1, M2, M3, M4 up till M14, what exactly happened.
 
-**Kartikeya:** So how is 6 matching up? Do you get my point? It's 130 accounts in 13 months, so we are saying 10 accounts per month, right, in a way? Because 10 accounts will be coming in and 10 accounts will be leaving, right?
+**User (Me) / Uma:** Okay.
 
-**Hima:** Yeah.
+**Nitish:** Okay? So that combination in itself will help us to create something like this: that in month one, what exactly happened across different features for that particular CM value.
 
-**Kartikeya:** So your number 6 does not relate to that. If we assume that every month 6 new customers are getting added...
+**User (Me) / Uma:** Yes, for that particular CM value.
 
-**Hima:** Hmm hmm.
+**Uma:** Nitish, can we select these because we have around a total of 48 now. How can we know if these should be or could be important ones?
 
-**Kartikeya:** So month 1 had 6 added, month 2 had 6 added, and it keeps happening like that.
+**Nitish:** Exactly, that's the right question that you are asking. So right now there is no governing principle to tell us whether we should select all of them or not. So what exactly we need to do is, first of all, ensure that there is a good fill rate in those variables. So for example, at a card member level, say for 1,000 card members you have these variables available. Now you look at, for a particular combination of variable, what is the total fill rate that you are getting. If that fill rate is very low, then you can negate that particular variable altogether. When I say fill rate, that should be across months.
 
-**Hima:** Yeah.
+**User (Me) / Uma:** Okay.
 
-**Kartikeya:** But I know that every month 6... okay, one second. You are saying that at any point in time they have 150 accounts, or 130 accounts.
+**Nitish:** Okay? So for example, if I say AutoPay... AutoPay is 1 across months. So essentially the fill rate would be good. But if I say email check-in, the majority across months would be zero, so I can negate that.
 
-**Hima:** Hmm.
+**User (Me) / Uma:** Okay.
 
-**Kartikeya:** So can it be 6?
+**Nitish:** Those are some decisions, some checks we can do. If you can't do it for all the variables, check in for a few and lay down those rules that we checked that these variables didn't have a good fill rate across months, hence we are not using it right now, and we are creating this embedding. And I'm not even saying go full-fledged with all the features. There would be some features which are important, some of them not. And let's do that culling here itself, at our end. I don't want you to get bogged down by this fact. Let's do one thing. These are the variable flags which we looked at. Now let me do one more check very simply. These are the variables; let me post them here. And let's do the sample data that we had. This one.
 
-**Hima:** Yeah, they won't all come at once, right? Initially, they won't be getting all the accounts. So they get 6 on average as new clients, so on a yearly basis on average, each deployment manager is like...
+**User (Me) / Uma:** Okay.
 
-**Kartikeya:** How come they have 130 accounts? I am not calling it 100 to 150, I'm just considering 130.
+**Nitish:** So this is the overall data, Uma, which Austin shared with us, right?
 
-**Hima:** Yeah, 130 active accounts, let's say...
+**Uma:** Yeah.
 
-**Kartikeya:** But how will they get them? Every month they must be getting some, which is how it's happening, right?
+**Nitish:** Okay. So let's do one thing. Paste special values. Done. Now let's do this flag. VLOOKUP of this variable from this one, comma one, comma zero. Let's see which are the ones which are getting populated. Data, filter, sort A to Z. So supposedly these are the feature set that we have selected. This is just for M2. I'm just doing it for the sake of checking here. So now for M2, the first one is account created indicator in M2. Now what is the value here across card members? What do you see? It is zero.
 
-**Hima:** Yeah, yeah. So 6 will keep getting added, then it would go up to 100 to 150. Let's assume 150 is the maximum. So 150 maximum per DM they can have.
+**User (Me) / Uma:** Yeah.
 
-**Kartikeya:** Yeah, first of all, let's just talk about 130. Okay. I only have three numbers with me: 18 digital DMs, 130 active accounts, and 6 new clients.
+**Nitish:** Okay? So let's do one more check. Let's do a simple sum of it. Whether does that add any value? It is zero. Okay? So now let's go up. So this one, account indicator, it shows that account created in month two is zero. First time indicator. Now, if I look at this account created indicator in month two... okay, this has value. For 19. Then account created num M2. Okay, number of accounts a person created in a month. So these are the absolute frequencies. So whether should I use this or this? Since this is a numerical feature, you can use this directly because it's just like a 1, 0 indicator, whereas this has the absolute value, right? So some of these calls can be taken by us on whether we should include this or just the indicator above it.
 
-**Hima:** Hmm.
+**User (Me) / Uma:** Okay. Okay.
 
-**Kartikeya:** I don't understand how these numbers 6 and 130 are matching up. I don't see my calculation matching with this. That's my problem.
+**Nitish:** Similarly, if I look at air base, reimburse, and everything, all of them are zero. Doesn't make any sense. This is app login... this is an indicator, this is the number of logins. Indicator, every card member would be logging in, right? And that's what we are seeing, the majority of them are doing it. Doesn't add value. But what adds value? The number of app logins. Can I use it? Yes. Answer is yes. Now average ATO spend. It's a very low value... it's an absolute spend volume but very low volume, right? Now you have this high rock which we selected. This makes sense. ISA spend makes sense. TNE looks good, B2B looks good, right? Average TNE spend looks good. All these email ones which I said doesn't make any sense.
 
-**Hima:** Yes, yes. So I am thinking of it like this... 18 digital DMs are the managers. Over a 13-month period, at the initial starting point, I am not expecting them to have the entire 130 accounts per DM.
+**User (Me) / Uma:** Yeah.
 
-**Kartikeya:** Exactly. In the beginning, they won't have it.
+**Nitish:** But then about this benefits enrollment. People are enrolling for the benefits, correct? These two can be added. Fair? Then this mica B lock impression, number of impressions that were shown. Bonus category spend which I selected, right? Numerical one. People are checking their spending power. It adds value. Cool? So these are the ones which you can select. So what your justification could be that we have selected the highest fill rate, or the variables which have a good fill rate across months, right? And those are the ones which we have selected. These ones can be offers enrolled. Yeah. So this is offer enrolled till count, till M2. So no need to use this, but offer enrolled in that month. Makes sense?
 
-**Hima:** Yeah. So over the period, as the months grow, on average 6 customers get added. So starting let's expect each DM to have 100. So 6 will keep getting added if we are expecting 100 each. That means initially we are starting with a very big population: 100 * 18, which is 1800 customers.
+**User (Me) / Uma:** Yeah.
 
-**Kartikeya:** Hmm hmm. Assume that every month 6 are getting added. So after 13 months, how many will there be? 13 * 6.
+**Uma:** Otherwise Nitish, can we do counts? Like suppose if we have one feature, can we do the counts for overall months and mention it under the one CM11, can we do that? Or...?
 
-**Hima:** 13 * 6 is 78 * 18.
+**Nitish:** Okay, so you are saying for one CM11 across months you want to combine.
 
-**Kartikeya:** I am talking per DM right now.
+**Uma:** Yeah.
 
-**Hima:** Okay, so 78.
+**Nitish:** If you do that, then essentially your time aspect would not come, right? That is the problem. See, if this would have been an overall point estimate exercise, then what you are suggesting, like across months if I sum it up, then that would work. No denial to it. But if I am looking at something like the sequence of events, then essentially I have to look at it monthly. Right?
 
-**Kartikeya:** So then you have 13 * 78 accounts, right? Then after that, in the 14th month, there will be 6 more coming up, and there will be 6 who will just go away.
+**Uma:** Got it. Yeah.
 
-**Hima:** Yeah. 6 may not be the number that goes away, right? After 13 months, those 13 that initially started on the first month would all go away.
+**Nitish:** Yeah. Similarly, you have this paperless enrollment, right? Number of mica logins. These ones. Let's do that very quickly. It's okay. We can spend 5 minutes here. Like number of points redemption.
 
-**Kartikeya:** Yes, assume that every month you are adding 6 people, and each customer will be there for 13 months. So in the 14th month, the starting 6 people will go away.
+**User (Me) / Uma:** Redemption. Yeah. Yes.
 
-**Hima:** Not only 6 people, right, I'm saying.
+**Nitish:** Yeah? Makes sense. Let's go down. Saving offers... sum ATO I don't know, sum of high rock spend. Oh, this is the total spend sum. Okay. F4. Sum of TNE spend, sum of B2B spend... What is the ISA spend?
 
-**Kartikeya:** Why not 6 people?
+**User (Me) / Uma:** Oh, ISA spend. Yeah.
 
-**Hima:** More than 6 people would leave on the 14th month, for each DM.
+**Nitish:** Good. Good catch. Okay. Then you can look at these are Amex flag... these are day zero ones, right? I don't care. Yeah. So the ones which... ah, see, our list is already complete. This is where till we had to look at where I had a VLOOKUP available. Correct? After that, these are day or activation cumulative ones that you had, right? This B plat bonus category we have already taken into account at the top, correct?
 
-**Kartikeya:** No. This is month 1. This is month 2, okay? You had 6 people coming in here, 6 people coming in here, and so on. Right? 6 people will come here as well?
+**User (Me) / Uma:** Yes, yeah.
 
-**Hima:** Yeah.
+**Nitish:** These are other months like for this one. So essentially you are covered with the majority of them. Like this TNE we have taken. Fair? So just look these up and essentially you can say, okay, we have selected these variables to start creating the feature set. We can add more based on our discussion on Monday or the India team can take that call on which features to include. We have the variable dictionary. So when you are creating this... obviously you are following some steps. Write down those steps what exactly are you doing. So in terms of steps, supposedly what was step one? Step one was you looked at the dictionary. Selected variables which were outlier. Selected spend-based features and enrollments etc. based on fill rates. Right?
 
-**Kartikeya:** So cumulatively, I can say that this plus this is happening?
+**User (Me) / Uma:** Okay.
 
-**Hima:** Yes. Okay.
+**Nitish:** After this, you cleaned up the data based on the best of the knowledge that you had, right? Then accumulating features across months for each card member. Right? Accumulating all those... so essentially you also did a check which had 14 months of data. Correct?
 
-**Kartikeya:** Right? So 72. Actually, this is 6. Okay? So it becomes 78 by month 13.
+**User (Me) / Uma:** Yes.
 
-**Hima:** Yeah.
+**Nitish:** That was the first check that you did. And then after this accumulating the features for month, so what should the final dataset look like? You will have a CM11, you will have feature or month one feature set. This can be one way. Another way could be CM11, then you have the feature set for month one... so we'll have month one feature set which will be similar to this only, right? If I do month two feature set. Right? So essentially what this will do is for CM11 month one all the features and their values, correct?
 
-**Kartikeya:** Here 6 new are added.
+**User (Me) / Uma:** Yes.
 
-**Hima:** Yeah, 6 leave, yeah.
+**Nitish:** CM month two all the features and their values. Fair? So this is what we need to achieve. Then essentially we will have to create a feature set dictionary. So for example, what is the overall universe of features that you have? Because there will be in month one, and if your overall selection is 100 variables, for example. Make sense? Out of those 100, 50 would have occurred in month one. 40 would have occurred in month two and so on. So your superset would be 100. Yeah. But some of them will be occurring across months. Correct?
 
-**Kartikeya:** Out of 78, these 6 will leave?
+**User (Me) / Uma:** Correct.
 
-**Hima:** Yes, yes, yes. Okay, initially if you are expecting 6 months, yeah.
+**Nitish:** Right? So you will create a feature set dictionary. Okay.
 
-**Kartikeya:** So then it's 78, 78, 78 only. It will remain 78 on average.
+**Uma:** Right. But that is the same dictionary we would be using at like... the 14 months of data right, the same...
 
-**Hima:** Yeah, on average.
+**Nitish:** Yes, yes, yes. The same set of dictionary. The same set of features, total set of features that you are looking, so from that if I remove the month prefix and suffix right, that is absolute feature. That is getting used. Got it. Done? Yes. So that is what we need to create. So this is where if we are able to create this, right? Then you send this feature and code set to India team. And ask them, okay, we have looked at these features. After this you can tell that based on whatever Shailendra has shared here, right in the group. So he has shared that there is this variable dictionary, total v1. You guys started looking at this only, right? Initially? Or you looked at something else?
 
-**Kartikeya:** But you are saying 130 accounts.
+**Uma:** I checked the one which Austin shared. Like the sample CM, it could be from these also.
 
-**Hima:** Yeah, because initially you are expecting 6. But I am saying in month 1, there may be more accounts that come in.
+**Nitish:** Okay. No harm. Do a simple check. He has some 1100 pointers mentioned out here. So these are all m1, m1, m1, m1, m1 that he has created. If these are all month one, then essentially we can't do much. We need till month 14. So we can ask them to put it till month 14 for all of them so that we will need this, and this can be created on Monday itself. Because we have both binary and continuous for month one. So he is saying that these are the simple variables, the spend variables are created for B plat population 70k customers. Master 14 e each customer, okay there is this table, then there is this table, spend variables, then spend batch two. I don't know what these are. I think these are the overall data sets that we need. So essentially you can reference this dictionary and see if you have already captured some of it in your data. If not, then essentially these are the new variables which we will ask India team or on Monday we can work to add. Make sense? Okay. Done? Cool. Now it is clear?
 
-**Kartikeya:** Okay, how many?
+**User (Me) & Uma:** Yeah, yeah, it's clear. Yeah, yeah.
 
-**Hima:** So that number is not yet clear, right? So let's say we are expecting 100...
+**Nitish:** Okay. So I would say don't run into bushes or hurdles here. If you have any questions, any doubts right, ask me directly what needs to be done. And right now I am completely honest with you, we are defining this process. Whether these features or the way we are constructing right, this is the best approach that we have right now. Yes. Now come Monday, we will have a discussion with Karthikeya also in India and other folks. Now supposedly they suggest that okay instead of having these features in this format let's have a different format, but at least the features will remain selected the same. Right? So that is something which we can do easily.
 
-**Kartikeya:** Even... let's say the 6 is 10, assume that. 10 new customers get added every month. But in the beginning, they are just adding, right? It's not like there's a sudden inflow. You are not opening the floodgates.
+**Uma:** Got it, got it, yeah. Shorten. And like from India team who all the members that we need to make Karthikeya and who all?
 
-**Hima:** So let's say 6 only, so it's like 78 customers. But actually, the capacity they are expected to handle is 100 to 150 accounts per DM. 130 is what they are expected to handle. So if for a DM it's like...
+**Nitish:** Ishan, Aanchal, and Karthikeya.
 
-**Kartikeya:** Is this the capacity or the expected volume?
+**Uma:** Okay.
 
-**Hima:** Number-wise, those numbers are not fixed. I assume they are saying this is the capacity because...
+**Nitish:** So when you are sending out a note or if you want to get anything reviewed with me, right? This channel is open. Ping me, tell me you want to meet, I'll come and join, we will connect, okay? But let's send this out today itself so that they can make progress on Monday.
 
-**Kartikeya:** Are you sure about this?
+**User (Me) / Uma:** Yeah, sure.
 
-**Hima:** Yeah. One second, she mentioned that DD has 18 DMs handling up at any given time on a rolling average. We expect 6 new clients per month for DDM, and STT is 22-25...
+**Nitish:** Done. Excellent guys. I like the josh here. Thank you so much.
 
-**Kartikeya:** I don't... I think we need more confirmation on this. Okay? You see my problem, right?
+**User (Me) & Uma:** Thank you, thank you, Nitish. Yeah. Thank you Nitish. Yeah.
 
-**Hima:** Yes, yes, yes, I understood. Yeah.
+**Nitish:** And one more thing. If you guys are ordering something for evening, let me know. I'll reimburse from my end, okay. So Friday night whatever drinks, food whatever you want let me know. I'll sponsor okay. Everything. But let's get this out. And I'm all in for any discussion that you want.
 
-**Kartikeya:** Because essentially we expect 6,000 customers to get in on average. That's what Ashish mentioned, and even she has a similar 6K number, right?
+**User (Me):** Sure, sure, I just wanted the ending output like what you cleared on, like month one we need to have the list in one cell like that. That's what I was confused on.
 
-**Hima:** That's why I asked about that... I am thinking whether they are calculating this number based on the number of DMs they have, because that divides into 3,000 and 3,000 based on the STT team and the DD team. I am assuming they expect the count to be 6,000 based on those numbers.
+**Nitish:** Correct. Okay. Cool, makes sense?
 
-**Kartikeya:** I believe the volume will be based on the CBA. Okay? They would have done some analysis and checked how many customers we expect, which is 6,000. Now within those 6,000, they are dividing it into two pieces: the STT team and the DDT team. Okay? And in order to handle that volume, we need to understand how many triggers we expect each MDT or sales rep to handle, right? I believe that number is around 130, which is double the volume you are saying.
+**User (Me):** Yes. Done. Thank you. Thank you.
 
-**Hima:** Sorry?
+***(Post-Call Discussion)***
 
-**Kartikeya:** It's making a difference of double the volume... it is a factor of 1 to 2 right now. I am saying it should be 130, you are saying it should be 78. So volume is a very big problem here, right?
+**User (Me):** Hello... Hello... Hello...
 
-**Hima:** Yeah, yeah, yeah.
+**Uma:** Ok sir, ok sir...
 
-**Kartikeya:** If I just multiply your calculation, which is 18 * 6 * 12... that is 1,500 accounts max.
+**User (Me):** *Nenu okasari idi ede chustunnanu ante summary tiyadaniki chustunnanu ee call nunchi vellipoyi occhesta.* (I am just looking at this once to pull a summary, I'll drop from this call and come back).
 
-**Hima:** Hmm hmm.
+**Uma:** *Aa em kaadu aa excel sheet lo sample columns ivviti icchesi ivanni nenu JSON format lo raayali ani cheppu.* (Oh, no problem. In that Excel sheet, give the sample columns and say I have to write all these in JSON format). *Aayana anni features include cheyamannadu.* (He asked to include all features). *Manam 48 chesamu migitavi vallaki icchedam.* (We did 48, let's give the rest to them).
 
-**Kartikeya:** Right? Then even the rest you are doing here at any given point in time—that 24 strategy... this also won't match yours. This 24 is... we had assumed 22, let's say.
+**User (Me):** 48 plus *aayana icchina* (the ones he gave) 20...
 
-**Hima:** Okay.
+**Uma:** *Avi kuda cheyyama?* (Shouldn't we do those too?) *Adey ga cheppindi aayana* (That's what he said, right?).
 
-**Kartikeya:** 22-25 accounts per colleague * 24... we had assumed 30... no, how many did we assume here? One second. Let me see the deck. We assumed 16... no, 22 colleagues we assumed. Right? So for 22, it's 24... I mean, a little clarity is needed man, you understand the calculation doesn't match here. Either you will do it again like 22, 25 is there, I will do 25 * 24... which we did last time as 30, so this became 25... they reduced this number. Let's make this 22 to 24, and this to 25. 25 * 24 is around 2,000. 2,000 right?
+**User (Me):** *Avi icchina mana manam 48 lo cover autai kada* (The ones he gave will be covered in our 48, right?)
 
-**Hima:** 24 * 25 is 600... 600? Okay, sorry. Yeah. My bad, yeah.
+**Uma:** *Aa unte extra manadantlo asalu binary ve unnai migitavi levu kada* (Yeah, if they are extra. In ours, we only have the binary ones, we don't have the rest, right?).
 
-**Kartikeya:** Wait, how could it be 600? Then we are talking about 600, and we are saying that they stay for 3 months, right? Let's double the volume, I'll multiply by 4.
+**User (Me):** *Aayana icchina sheet asalu aayana icchina sheet ippudu across four months ledu anuko, manam em cheyyali data ekkadaninchi techukovali?* (The sheet he gave... what if the sheet he gave doesn't have data across four months, what should we do? Where do we get the data from?) *Aa unde aa sample 1000 rows data manadaggara* (We have that sample 1000 rows of data).
 
-**Hima:** Yeah.
+**Uma:** *Ade artham kale naku koncham* (That's what I didn't understand a bit).
 
-**Kartikeya:** So that is strictly 2,400.
+**User (Me):** *Em le chuddam edokati ayyentha varaku chesi pedadaam* (It's nothing, let's see. Let's do whatever we can and send it).
 
-**Hima:** Yes.
+**Uma:** *Avvaleda?* (Didn't it happen?) *Update kuda avvaleda inka mevi* (Aren't yours updated yet?)
 
-**Kartikeya:** So it would be more than 2,400 because for some it would happen in 2 months as well, right? If it happens in 2 months, then multiply by 6... so 3,600. So somewhere around this number it could remain around 3,000.
+**User (Me):** *Avvaleda?* (Didn't it?) *Manakaithe aayana excel lo ledu.* (For us, it's not in his Excel). *Naggira kanipinchatle aayana sheet chesindantlo aayana highlight chesindi* (I can't see the highlights he made in his sheet).
 
-**Hima:** Yeah.
+**Uma:** *Ok sari message cheyi.* (Message him once). *Can you share the updated that we worked on it's not updated ani* ("Can you share the updated that we worked on, it's not updated").
 
-**Kartikeya:** But your other number doesn't make sense. So that's why I'm saying please work on this. You need to explain the 6 calculation to them, how we are calculating. Okay, so get clarity. But the other thing which is more interesting right now is... what happened, did something happen? Okay. The other thing which is more interesting is the email which I have created using this. Let me show you... on an email. So Hima, we have only one task, right? Trial experience.
+**User (Me):** *Neekayyinda chudu naakaithe avvala mari* (Check if yours is updated, mine hasn't).
 
-**Hima:** Ah, right now yes, other than the other one, yes.
+**Uma:** *Ok sari* (One second).
 
-**Kartikeya:** So your focus should just be to this, make sure that this is happening, okay? You have to make this happen. That's how you should think about it. The customer volume we can just... I'm just deleting it. You can just say that we are still figuring out the customer volume with the team. But this is what I'm trying to say, read through the email please.
+**User (Me):** *Chesinattunnadu ippudu chesadu update vacchindi* (Looks like he did, he just updated it now, the update came).
 
-**Kartikeya:** "At any point, customer would receive tier zero triggers relevant to this stage, activation, utilization, growth... activation. Utilization post successful... long term we would align with Mohan on utilization to growth boundary, potentially using tenure and/or utilization. Align with Mohan on utilization to growth boundary. Potentially using tenure and/or utilization... okay."
+**Uma:** *Manthly di inkoti manthly di inkoti monthly di second monthly di third monthly di inkoti* (One for monthly, another for monthly, one for the second month, one for the third month...).
 
-**Kartikeya:** "Tier zero. Each week triggered customers would move to tier zero for one month... we would align with Mohan on a weekly tier zero volume threshold... trigger impact on the agreed KPI. BAU treatment prioritization just to deploy primary to growth... multiple potential treatments may exist, we don't see any... triggered for activation or utilization. Okay."
-
-**Kartikeya:** "Tier zero trigger prioritization... Tier zero customer could qualify multiple triggers... we would need to determine how many triggers to surface and which ones to prioritize... unless the customer has multiple businesses. As a reference point, TS CID currently serves a maximum of two triggers per session... similar context. Okay. Q4 we are proposing using Q4 2026 analysis to understand which triggers have the greatest impact on the agreed KPI and use the information to prioritize. Okay, yeah. Help ask the BAU tier one, two, three methodology... we aren't able to fully follow how he is intending to prioritize. Yeah, okay. Any thoughts?"
-
-**Hima:** Yeah, that basically covers what we discussed. For the tier 1, 2, 3 logic, this is what we need clarity on regarding how we should prioritize. And tier zero is something we discussed with Mo... So for tier zero prioritization, would any trigger move the customer to tier zero, or should we be aligning that with Mo, right?
-
-**Kartikeya:** Come again?
-
-**Hima:** So for tier zero lead prioritization, triggered customers would move to tier zero for one month, right? So... one month...
-
-**Kartikeya:** Tier zero lead... lead tier zero is based on triggers, right? The first one I mentioned, right...
-
-**Hima:** So the first one is BAU lead prioritization, which is like tier 1, 2, 3.
-
-**Kartikeya:** Yeah.
-
-**Hima:** So we are saying every month, whatever the DD customer base would be, we will assign them tier 1 to 3 based on a customer-level prioritization. Yes, correct.
-
-**Kartikeya:** Now that is where Stefanie's team's work will come in.
-
-**Hima:** Yeah.
-
-**Kartikeya:** Then comes the tier 0 lead prioritization, which is about picking up some customers from the BAU tiered list each week and moving them to tier zero. And the idea is that they will remain in tier zero for one month. Okay?
-
-**Hima:** Yeah, sorry... yeah, I was saying for tier zero you are saying we'll move some customers, but those customers are basically the ones who were triggered, right?
-
-**Kartikeya:** Yeah, basically those who had a trigger. Each week BAU tiered and triggered customers. A few customers within a BAU tiered population would move to tier zero for one month.
-
-**Hima:** They would get shortlisted...
-
-**Kartikeya:** Okay, I need to use better language. Just one second. I think this is better right? Why is it not letting me copy? Just one second. We can say this, right? 'Once meeting eligible trigger, would move to tier zero for one month, after which they would revert to BAU tier unless triggered again.' Yes. 'We would align with Mo on a weekly tier zero volume threshold, if volume exceeds it we would prioritize customers based on trigger impact on the agreed KPI.' Yeah. Correct, that's now making sense for tier 0. 'BAU treatment prioritization... okay.' Treatment prioritization applies to all we decided, right?
-
-**Hima:** No, but treatment prioritization... that would be tier zero's trigger prioritization. When it comes to treatment, let's see what they are in TSC and DD. These are whether to cross-sell AC, whether to cross-sell AP, cross-sell SBS, or do relevant analysis for that, but these are all growth-based triggers. Yeah, yeah. These are not activation or utilization-based triggers. So for them, different types of treatments don't make sense. It makes sense in growth.
-
-**Kartikeya:** Yeah, yeah.
-
-**Hima:** But the action that needs to be taken by the DM that you told about, that would also be considered a treatment.
-
-**Kartikeya:** That is why I made a fourth category for it, tier zero trigger prioritization. If they have multiple triggers...
-
-**Hima:** Ah, prioritizing amongst the triggers, yeah, okay. Then this is very clear, this is the plan. But how we get feedback is another important thing we need clarity on. How are we planning to understand which KPI is more important or which trigger is affecting the most?
-
-**Kartikeya:** Which KPI is important and which is not for activation-based triggers—I think there's only one KPI. We can align with Mo, but I don't think there's any concern there. It's very easy: 90 days... the time to successful deployment.
-
-**Hima:** Yeah, time to successful deployment, that's the primary KPI we want to have, right? For everything.
-
-**Kartikeya:** Okay. Whichever one has the highest impact on it, makes more sense to utilize that trigger or rank it higher.
-
-**Hima:** Yeah.
-
-**Kartikeya:** So within that KPI, for trigger prioritization, we need a system to understand which triggers... either we should ask the DMs to give feedback that this trigger is more important, or we should have a system to track which trigger is impacting the most...
-
-**Hima:** We can have our own triggers, right? We can have those triggers, so what would be the plan for that?
-
-**Kartikeya:** We will do an analysis for that, right, in Q4 '26. We will know which KPI is there, define the KPI, define the trigger, and check how much impact a single trigger has on the KPI. If we don't have the data, then we will use business judgment.
-
-**Hima:** Yeah, yeah, so we can use both feedback from sales and this maybe.
-
-**Kartikeya:** So we can say in case the volume of customers is low within Q4 '26, we will work with the sales team to finalize the prioritization logic. But we have to write something in there, right? To base prioritization logic on business judgment. Right? Fine?
-
-**Hima:** Yeah.
-
-**Kartikeya:** This is all right?
-
-**Hima:** Yes, this is all right.
-
-**Kartikeya:** So, can you please write an email? One second, you also have to incorporate... we are still working on that number, right?
-
-**Hima:** Yeah, okay, I'll add that.
-
-**Kartikeya:** Separately we are investigating the number discrepancy in total accounts per sales colleague across teams. We would keep you updated once we are sure on that. You can write something like this, right? But we need this area from Anju. So let's get this alignment, okay? And then get understanding on this as well. Once we know both those things, then we have to write an email to Mo as well. Okay, an email, not a meeting. If we ask for a meeting, they will say they need time, maybe 3 to 5 days, right? We don't have that much time. So what you should do is write this email and send it to Anju. Anju will revert back with some things. Based on that, you need to write an email to Mo as well today. Get it aligned, tell them 'look, this is how we think. Let me know if you want to discuss, we can set up some time tomorrow to discuss in detail if required.' Write it like that. Okay. And state that we have a meeting on the 1st of October, so we want to use this instead of our current pipeline.
-
-**Hima:** Okay.
-
-**Kartikeya:** So the edit to those slides is actually very easy, right? It's not very difficult. Why? All you need to do is make some changes here. We will just write we have to do lead prioritization, trigger prioritization, whatever we want to put, right? It's very easy. So editing the slides is not a difficult job for us. Here also it's very simple.
-
-**Hima:** Yeah, yeah, yeah.
-
-**Kartikeya:** Here we can just say 'Sample Tier 0 activation triggers.' Everywhere we just put Tier 0 and it becomes simple...
-
-**Hima:** Okay, right.
-
-**Kartikeya:** So we just have to add one more thing here: Anju will prioritize all the accounts in Tier 1, 2, 3 and then from inside that we will decide who to upload to Tier 0. Okay. So these three categories will change. The framework will remain the same, just slightly changed inside.
-
-**Hima:** Yes, yes, got it. Okay, so it's very easy for us to do.
-
-**Kartikeya:** So is the email header she made for this? I'm pretty sure it's 'EA Call Prioritization Approach' - that's correct. You can just say 'Prioritization Approach'. Okay? So Hima, you will do this email in the next 15 minutes?
-
-**Hima:** Yeah, I'll send it. Just a small change, yeah. And should I write this email? What do you suggest?
-
-**Kartikeya:** It's fine, I mean if you want me to send it I'll CC you, so if she replies I'll revert back. Or if you send it, I will also revert back. No, I think one-sided communication is better. That's why I'm saying you write this email. That would be helpful. Anju will revert back, then you can reply and things can progress. If she wants you to join a meeting, you can join quickly and align with her. Are you in the office today?
-
-**Hima:** Ah, not in the office, at home.
-
-**Kartikeya:** Not in office, okay. Fine then, I think it's fine. I'm sending you this. Just get a little bit of work done, let's get it closed. We were a little late for the meeting with Ashish, I think. If this had happened one week earlier, things would have been simpler for us, right? What was your take on today's meeting with the 1force team? What happened in that?
-
-**Hima:** With Mo's meeting? Yeah again, I felt if we had a 1force path or someone, we would have better clarity on the 1force thing...
-
-**Kartikeya:** Yeah, but unfortunately he was not there. But what is your take on what was discussed? Were you able to get anything? Do you have notes for that?
-
-**Hima:** Uh, I think the notes are in the Teams meeting chat she made, but...
-
-**Kartikeya:** What happened, tell me? Do you have notes?
-
-**Hima:** There's the chat and the recap, I didn't actually create notes. Since you had joined Ashish's meeting, I was getting messages like 'here's the recap', so I thought it's already there. I was planning to take down action items...
-
-**Kartikeya:** Do you have them?
-
-**Hima:** Yeah. It's on Teams... in that same chat group we had the meeting with.
-
-**Kartikeya:** Okay, it's already in the chat?
-
-**Hima:** It's not very detailed actually... 'Recap of this meeting so far, outline, discuss the follow-up email and send out to colleagues present in this.'
-
-**Kartikeya:** Okay, since he was asking I thought she recapped it. Okay, I'll try to recap it anyway.
-
-**Hima:** Yeah, we don't have it, right?
-
-**Kartikeya:** One second... I think I have it somewhere. At least I extracted this from there before I went. Let me send this to you. I told you about this before, right?
-
-**Hima:** Yeah, I was just waiting... towards the end of the meeting I was making this, but again I thought she already put the recap in the message, that's why.
-
-**Kartikeya:** Okay, fine then, I think it's fine. Cool, yeah, let's go. Thank you.
-
-**Hima:** Thank you Kartikeya, bye.
+**User (Me):** *Excel lo ela cheyyalo naaku ardham kaale.* (I don't understand how to do it in Excel). *Columns monthly... nenu malli okasari call chestaanundu* (Columns monthly... wait, I'll call you once again).
