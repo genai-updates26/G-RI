@@ -1,199 +1,87 @@
-**Nitish:** It is a very straightforward thing, and I'll tell you what is needed. Let me share my screen and walk you through it. So, for example, were you able to select variables like this one—say, AutoPay or average high rock spend?
+Nitish: Then after that, are we using the table which he is mentioning in row number 904 anywhere else[cite: 2]?
 
-**User (Me) / Uma:** The average high rock spend, that one, is not there.
+Hema: Hmm... It's the main table, I'm guessing[cite: 2].
 
-**Nitish:** Is it not there?
+Nitish: This is the project space, that is okay[cite: 2]. I can create like these tables in a different project space also[cite: 2]. Just this table, yeah[cite: 2].
 
-**User (Me) / Uma:** Yeah, in the 48 variables.
+Hema: Table... I think uh not before that[cite: 2]. I think somewhere using here[cite: 2].
 
-**Nitish:** Okay, in the 48 variables. And that is because the list that was shared to you... let me go to the list, sample variables. Let me open that list. Because they had these binary indicators, 1 and 0, and they had selected those as the ones which need to be used, right? But what about this one? Were you able to get these, or were they only available for month 1?
+Nitish: Which is he using[cite: 2]? Again, he's fetching the CM11 itself, right[cite: 2]?
 
-**User (Me) / Uma:** No, that 14 months of data is not available, maybe that's why we don't have that in the 48.
+Hema: Yeah[cite: 2].
 
-**Nitish:** Okay, done. And then essentially, so you are saying whatever was zero, you haven't looked at it? Fair, because those were not selected. Makes sense, perfectly fine. So now let's take, for example, for your sanity, let me do this check. Out of the overall list of variables which you had, let me just do this check for you. I also did this clean-up at my end initially. What I did is, first of all, I removed everything which was a cumulative variable.
+Nitish: CM11, comma, any value, some post spend CM11 M1 V2, GCM extrapolated account level V3[cite: 2]. Now what the hell are these two variables[cite: 2]? Comma, any value[cite: 2]. Any value[cite: 2]. 
 
-**User (Me) / Uma:** Okay.
+[sighs] Okay[cite: 2]. Then why don't we ask him very simply[cite: 2]? Let's ask him that can he create like the list of CM11s, okay[cite: 2]? And their NF final date[cite: 2]. These two variables, like this any value and any value, whatever these two have created, from his table itself, okay[cite: 2], without filtering on the segment V1, okay[cite: 2]? And put segment V1 as a variable itself, as a categorical variable within that[cite: 2]. Okay, pull that as a column and share that with us[cite: 2]. Then essentially that is the starting base[cite: 2]. Once we have that starting base, all we need to do is like fetch those 14 variables, right, for like month 1 to 14[cite: 2]. That we can fetch[cite: 2]. Makes sense[cite: 2]?
 
-**Nitish:** And anything which was V1 and V2, I didn't select that initially. Now you have selected the V1 and V2 versions from that list. Fair?
+Hema: Yeah[cite: 2].
 
-**User (Me) / Uma:** Yeah.
+Nitish: So let's do that[cite: 2]. Let's do that[cite: 2].
 
-**Nitish:** So that is taken care of. Now if I select anything which is 1 out of this one, you will see there is this AMEX app activation channel. Is this something that is there in your list?
+Hema: Okay. So for those, all those other variables, it's not the same table, okay[cite: 2].
 
-**User (Me) / Uma:** Yes, it is there.
+Nitish: Yeah, yeah, it's not the same table, right[cite: 2]? He's not using it anywhere else[cite: 2].
 
-**Nitish:** What about B plat bonus category?
+Hema: Mm-hmm, yeah[cite: 2].
 
-**User (Me) / Uma:** B plat bonus category, I think, is also there, one second.
+Nitish: So that is the that is the first bottleneck[cite: 2]. That is the only bottleneck which I feel[cite: 2].
 
-**Nitish:** What about this EC CM11?
+Hema: But uh the access is with the project only, I'm assuming[cite: 2]. Not specific to the table, right[cite: 2]? So other tables were all within this project, I mean this common table, whatever, database here, the GCSPPA[cite: 2]. So for the other data, can I still be able to access that[cite: 2]?
 
-**User (Me) / Uma:** ... EC CM11 ...
+Nitish: Yeah, yeah[cite: 2]. So think about... he's using this... Okay, let me just also open this code whatever he has shared[cite: 2]. Go through it once[cite: 2]. Yeah[cite: 2]. Okay[cite: 2]. So row number 889, I go there first of all[cite: 2]. Okay[cite: 2]. Okay[cite: 2]. Done[cite: 2]. Let me just share my screen once, okay[cite: 2]? 
 
-**Nitish:** Okay, let me do one more thing here. Text filters contains M1 or it contains 1M. Now you will see, instead of one, I should have done two. Custom filter... let's take two here. Okay, so ideally these variables you can add into your dataset itself, all of this.
+Okay[cite: 2]. So what this guy is doing is, first of all, he is creating this base, okay[cite: 2]? Now this phase is talking about... this is the table name that he is using[cite: 2]. Now what this does is, okay, SC10, SC10, all of that, he is fetching that, date difference, then he is creating month 9, 10, 14, etc. from... What is this[cite: 2]? But this is also a superset[cite: 2]. Arrey yaar[cite: 2]. 
 
-**User (Me) / Uma:** Okay.
+Okay, then he is doing this[cite: 2]. So all are coming from say like a different dataset altogether[cite: 2]. From his, like nothing is like centralized[cite: 2].
 
-**Nitish:** Okay? This is from that list itself, and if you look at the orange ones which I had, I added these because they had some numerical value in it. And why I said that is because I looked at the data, and my sample data when I collected these indicators, essentially looks something like this. For card member, AutoPay indicator was there, which you also have.
+Hema: Yeah[cite: 2]. He's like uh chaining on the same thing[cite: 2].
 
-**User (Me) / Uma:** Yeah.
+Nitish: This is the only one which is like outside, like the Lumi central table[cite: 2]. Rest everything are getting say like created in between within that project itself[cite: 2].
 
-**Nitish:** Then there was this high rock spend which was available. Then there is this TNE spend which was also available to me. Absolute values, numerical ones. Then there was this B2B spend which was also available, then this EC response which is a 0-1 indicator. Then number of enrollments a person did across offers; that is also available. And then I also had this B plat bonus category, this was the absolute amount that was there. So you can add these numerical variables into the list, and I can share this with you. Just for the sanity check and sample variables flat... let me pull this out. Hema and Uma. Done. See, I am also in the same boat on whether these variables, all of them make sense or not. That is a question for me as well. Now the two people who actually worked on it and the folks in India who worked on it, they are all not available. Yes. So right now we are trying to make the best judgment to see if we can create a structure for them and then send it. So now if I look at these variables, for example, the ones which I selected here. All we need to do is—although I'm saying all we need to do, but I know it's a tedious task—for one particular card member, CM11...
+Hema: Yeah[cite: 2].
 
-**User (Me) / Uma:** Yeah.
+Nitish: I don't know why exactly we are not able to access it[cite: 2]. I also have the same issue[cite: 2]. Like even my one, it is not able to say like execute the query[cite: 2]. That's what is happening[cite: 2].
 
-**Nitish:** Supposedly you selected eight variables here, for example. Now I want all of this to be represented, say, for one card member, what are the events that happened for the AutoPay indicator across months to be tagged into a single array. Essentially AutoPay across months should look something like this. The similar way we created this in this framework as well. Right? So essentially your AutoPay indicator happened across months. This activity happened. If I can create at a monthly level for card member month one, what are the events that happened together in a single JSON, that also works. Or if you can collate for one card member across months what exactly happened for this particular indicator. Say, for example, AutoPay across M1, M2, M3, M4 up till M14, what exactly happened.
+Hema: I think we can confirm whether he has it or whether it's a whole problem with the project itself or our specific access issue, if he can execute anything on this project[cite: 2].
 
-**User (Me) / Uma:** Okay.
+Nitish: Exactly[cite: 2]. See, now I have this[cite: 2]. I go here[cite: 2]. Untitle- I don't even have the run option[cite: 2]. You see here, "You need permissions for this action"[cite: 2].
 
-**Nitish:** Okay? So that combination in itself will help us to create something like this: that in month one, what exactly happened across different features for that particular CM value.
+Hema: Yeah[cite: 2]. That's what, I'm just typing select 1 as text today, even that is not working, without accessing any database[cite: 2].
 
-**User (Me) / Uma:** Yes, for that particular CM value.
+Nitish: Yeah[cite: 2]. [sighs] I don't know[cite: 2]. Okay[cite: 2]. Missing or blocked permissions[cite: 2]. We might have to ask somewhere[cite: 2]. Like I have already raised it in this like Lumi help group, but I don't know whether that will get like solved anytime soon[cite: 2]. But if not, like ask like Shalinder to actually help you on this one[cite: 2]. Like he can execute this query, okay, if he can do that[cite: 2].
 
-**Uma:** Nitish, can we select these because we have around a total of 48 now. How can we know if these should be or could be important ones?
+Hema: Okay. Okay. Yeah[cite: 2].
 
-**Nitish:** Exactly, that's the right question that you are asking. So right now there is no governing principle to tell us whether we should select all of them or not. So what exactly we need to do is, first of all, ensure that there is a good fill rate in those variables. So for example, at a card member level, say for 1,000 card members you have these variables available. Now you look at, for a particular combination of variable, what is the total fill rate that you are getting. If that fill rate is very low, then you can negate that particular variable altogether. When I say fill rate, that should be across months.
+Nitish: Cool[cite: 2]. Done[cite: 2]. Okay, yaar[cite: 2]. Cool[cite: 2]. Thanks, Hema[cite: 2].
 
-**User (Me) / Uma:** Okay.
+Hema: Thank you[cite: 2].
 
-**Nitish:** Okay? So for example, if I say AutoPay... AutoPay is 1 across months. So essentially the fill rate would be good. But if I say email check-in, the majority across months would be zero, so I can negate that.
+Nitish: Let me know if you face any challenges, okay[cite: 2]?
 
-**User (Me) / Uma:** Okay.
+Hema: If like if we are not able to access, even Karthik or our team would not be able to access it, and that is... How could we get these variables now[cite: 2]?
 
-**Nitish:** Those are some decisions, some checks we can do. If you can't do it for all the variables, check in for a few and lay down those rules that we checked that these variables didn't have a good fill rate across months, hence we are not using it right now, and we are creating this embedding. And I'm not even saying go full-fledged with all the features. There would be some features which are important, some of them not. And let's do that culling here itself, at our end. I don't want you to get bogged down by this fact. Let's do one thing. These are the variable flags which we looked at. Now let me do one more check very simply. These are the variables; let me post them here. And let's do the sample data that we had. This one.
+Nitish: Then essentially we need to ask him like can we like transfer this data in another queue[cite: 2]? Like what whatever we have, right, we have this AM Digital, you have this access to AM Digital[cite: 2]?
 
-**User (Me) / Uma:** Okay.
+Hema: I don't have access[cite: 2].
 
-**Nitish:** So this is the overall data, Uma, which Austin shared with us, right?
+Nitish: Okay, so which queues you have access to[cite: 2]? Where you can execute or run your queries[cite: 2]? Tell me that[cite: 2].
 
-**Uma:** Yeah.
+Hema: Cust Strategy Analytics, I guess[cite: 2]? Yeah, Cust Strategy... uh yeah, Cust Strategy I have[cite: 2].
 
-**Nitish:** Okay. So let's do one thing. Paste special values. Done. Now let's do this flag. VLOOKUP of this variable from this one, comma one, comma zero. Let's see which are the ones which are getting populated. Data, filter, sort A to Z. So supposedly these are the feature set that we have selected. This is just for M2. I'm just doing it for the sake of checking here. So now for M2, the first one is account created indicator in M2. Now what is the value here across card members? What do you see? It is zero.
+Nitish: You have that[cite: 2]? Okay, can you ask likeâ[cite: 2]
 
-**User (Me) / Uma:** Yeah.
+Hema: Okay, AM Digital also I have, sorry, yeah, my bad, I think[cite: 2].
 
-**Nitish:** Okay? So let's do one more check. Let's do a simple sum of it. Whether does that add any value? It is zero. Okay? So now let's go up. So this one, account indicator, it shows that account created in month two is zero. First time indicator. Now, if I look at this account created indicator in month two... okay, this has value. For 19. Then account created num M2. Okay, number of accounts a person created in a month. So these are the absolute frequencies. So whether should I use this or this? Since this is a numerical feature, you can use this directly because it's just like a 1, 0 indicator, whereas this has the absolute value, right? So some of these calls can be taken by us on whether we should include this or just the indicator above it.
+Nitish: You can run the query[cite: 2]?
 
-**User (Me) / Uma:** Okay. Okay.
+Hema: Uh, oh, in AM Digital also I'm facing the same issue, sorry[cite: 2].
 
-**Nitish:** Similarly, if I look at air base, reimburse, and everything, all of them are zero. Doesn't make any sense. This is app login... this is an indicator, this is the number of logins. Indicator, every card member would be logging in, right? And that's what we are seeing, the majority of them are doing it. Doesn't add value. But what adds value? The number of app logins. Can I use it? Yes. Answer is yes. Now average ATO spend. It's a very low value... it's an absolute spend volume but very low volume, right? Now you have this high rock which we selected. This makes sense. ISA spend makes sense. TNE looks good, B2B looks good, right? Average TNE spend looks good. All these email ones which I said doesn't make any sense.
+Nitish: Okay, so then Cust Strategy Analytics, right[cite: 2]? That is the only one[cite: 2].
 
-**User (Me) / Uma:** Yeah.
+Hema: Mm[cite: 2].
 
-**Nitish:** But then about this benefits enrollment. People are enrolling for the benefits, correct? These two can be added. Fair? Then this mica B lock impression, number of impressions that were shown. Bonus category spend which I selected, right? Numerical one. People are checking their spending power. It adds value. Cool? So these are the ones which you can select. So what your justification could be that we have selected the highest fill rate, or the variables which have a good fill rate across months, right? And those are the ones which we have selected. These ones can be offers enrolled. Yeah. So this is offer enrolled till count, till M2. So no need to use this, but offer enrolled in that month. Makes sense?
+Nitish: Okay, then ask him to like transfer this to the Cust Strategy Analytics, like these tables, okay[cite: 2], whatever he is using, so that you can execute it further[cite: 2]. If not, then ask him to like create the dataset and share it with us[cite: 2]. The final dataset has to be say like in one queue which we can like all of us access[cite: 2]. Right now we are facing these issues like of this accesses, okay[cite: 2]? Done[cite: 2]?
 
-**User (Me) / Uma:** Yeah.
+Hema: Okay. Okay. Cool. Yeah, cool[cite: 2].
 
-**Uma:** Otherwise Nitish, can we do counts? Like suppose if we have one feature, can we do the counts for overall months and mention it under the one CM11, can we do that? Or...?
-
-**Nitish:** Okay, so you are saying for one CM11 across months you want to combine.
-
-**Uma:** Yeah.
-
-**Nitish:** If you do that, then essentially your time aspect would not come, right? That is the problem. See, if this would have been an overall point estimate exercise, then what you are suggesting, like across months if I sum it up, then that would work. No denial to it. But if I am looking at something like the sequence of events, then essentially I have to look at it monthly. Right?
-
-**Uma:** Got it. Yeah.
-
-**Nitish:** Yeah. Similarly, you have this paperless enrollment, right? Number of mica logins. These ones. Let's do that very quickly. It's okay. We can spend 5 minutes here. Like number of points redemption.
-
-**User (Me) / Uma:** Redemption. Yeah. Yes.
-
-**Nitish:** Yeah? Makes sense. Let's go down. Saving offers... sum ATO I don't know, sum of high rock spend. Oh, this is the total spend sum. Okay. F4. Sum of TNE spend, sum of B2B spend... What is the ISA spend?
-
-**User (Me) / Uma:** Oh, ISA spend. Yeah.
-
-**Nitish:** Good. Good catch. Okay. Then you can look at these are Amex flag... these are day zero ones, right? I don't care. Yeah. So the ones which... ah, see, our list is already complete. This is where till we had to look at where I had a VLOOKUP available. Correct? After that, these are day or activation cumulative ones that you had, right? This B plat bonus category we have already taken into account at the top, correct?
-
-**User (Me) / Uma:** Yes, yeah.
-
-**Nitish:** These are other months like for this one. So essentially you are covered with the majority of them. Like this TNE we have taken. Fair? So just look these up and essentially you can say, okay, we have selected these variables to start creating the feature set. We can add more based on our discussion on Monday or the India team can take that call on which features to include. We have the variable dictionary. So when you are creating this... obviously you are following some steps. Write down those steps what exactly are you doing. So in terms of steps, supposedly what was step one? Step one was you looked at the dictionary. Selected variables which were outlier. Selected spend-based features and enrollments etc. based on fill rates. Right?
-
-**User (Me) / Uma:** Okay.
-
-**Nitish:** After this, you cleaned up the data based on the best of the knowledge that you had, right? Then accumulating features across months for each card member. Right? Accumulating all those... so essentially you also did a check which had 14 months of data. Correct?
-
-**User (Me) / Uma:** Yes.
-
-**Nitish:** That was the first check that you did. And then after this accumulating the features for month, so what should the final dataset look like? You will have a CM11, you will have feature or month one feature set. This can be one way. Another way could be CM11, then you have the feature set for month one... so we'll have month one feature set which will be similar to this only, right? If I do month two feature set. Right? So essentially what this will do is for CM11 month one all the features and their values, correct?
-
-**User (Me) / Uma:** Yes.
-
-**Nitish:** CM month two all the features and their values. Fair? So this is what we need to achieve. Then essentially we will have to create a feature set dictionary. So for example, what is the overall universe of features that you have? Because there will be in month one, and if your overall selection is 100 variables, for example. Make sense? Out of those 100, 50 would have occurred in month one. 40 would have occurred in month two and so on. So your superset would be 100. Yeah. But some of them will be occurring across months. Correct?
-
-**User (Me) / Uma:** Correct.
-
-**Nitish:** Right? So you will create a feature set dictionary. Okay.
-
-**Uma:** Right. But that is the same dictionary we would be using at like... the 14 months of data right, the same...
-
-**Nitish:** Yes, yes, yes. The same set of dictionary. The same set of features, total set of features that you are looking, so from that if I remove the month prefix and suffix right, that is absolute feature. That is getting used. Got it. Done? Yes. So that is what we need to create. So this is where if we are able to create this, right? Then you send this feature and code set to India team. And ask them, okay, we have looked at these features. After this you can tell that based on whatever Shailendra has shared here, right in the group. So he has shared that there is this variable dictionary, total v1. You guys started looking at this only, right? Initially? Or you looked at something else?
-
-**Uma:** I checked the one which Austin shared. Like the sample CM, it could be from these also.
-
-**Nitish:** Okay. No harm. Do a simple check. He has some 1100 pointers mentioned out here. So these are all m1, m1, m1, m1, m1 that he has created. If these are all month one, then essentially we can't do much. We need till month 14. So we can ask them to put it till month 14 for all of them so that we will need this, and this can be created on Monday itself. Because we have both binary and continuous for month one. So he is saying that these are the simple variables, the spend variables are created for B plat population 70k customers. Master 14 e each customer, okay there is this table, then there is this table, spend variables, then spend batch two. I don't know what these are. I think these are the overall data sets that we need. So essentially you can reference this dictionary and see if you have already captured some of it in your data. If not, then essentially these are the new variables which we will ask India team or on Monday we can work to add. Make sense? Okay. Done? Cool. Now it is clear?
-
-**User (Me) & Uma:** Yeah, yeah, it's clear. Yeah, yeah.
-
-**Nitish:** Okay. So I would say don't run into bushes or hurdles here. If you have any questions, any doubts right, ask me directly what needs to be done. And right now I am completely honest with you, we are defining this process. Whether these features or the way we are constructing right, this is the best approach that we have right now. Yes. Now come Monday, we will have a discussion with Karthikeya also in India and other folks. Now supposedly they suggest that okay instead of having these features in this format let's have a different format, but at least the features will remain selected the same. Right? So that is something which we can do easily.
-
-**Uma:** Got it, got it, yeah. Shorten. And like from India team who all the members that we need to make Karthikeya and who all?
-
-**Nitish:** Ishan, Aanchal, and Karthikeya.
-
-**Uma:** Okay.
-
-**Nitish:** So when you are sending out a note or if you want to get anything reviewed with me, right? This channel is open. Ping me, tell me you want to meet, I'll come and join, we will connect, okay? But let's send this out today itself so that they can make progress on Monday.
-
-**User (Me) / Uma:** Yeah, sure.
-
-**Nitish:** Done. Excellent guys. I like the josh here. Thank you so much.
-
-**User (Me) & Uma:** Thank you, thank you, Nitish. Yeah. Thank you Nitish. Yeah.
-
-**Nitish:** And one more thing. If you guys are ordering something for evening, let me know. I'll reimburse from my end, okay. So Friday night whatever drinks, food whatever you want let me know. I'll sponsor okay. Everything. But let's get this out. And I'm all in for any discussion that you want.
-
-**User (Me):** Sure, sure, I just wanted the ending output like what you cleared on, like month one we need to have the list in one cell like that. That's what I was confused on.
-
-**Nitish:** Correct. Okay. Cool, makes sense?
-
-**User (Me):** Yes. Done. Thank you. Thank you.
-
-***(Post-Call Discussion)***
-
-**User (Me):** Hello... Hello... Hello...
-
-**Uma:** Ok sir, ok sir...
-
-**User (Me):** *Nenu okasari idi ede chustunnanu ante summary tiyadaniki chustunnanu ee call nunchi vellipoyi occhesta.* (I am just looking at this once to pull a summary, I'll drop from this call and come back).
-
-**Uma:** *Aa em kaadu aa excel sheet lo sample columns ivviti icchesi ivanni nenu JSON format lo raayali ani cheppu.* (Oh, no problem. In that Excel sheet, give the sample columns and say I have to write all these in JSON format). *Aayana anni features include cheyamannadu.* (He asked to include all features). *Manam 48 chesamu migitavi vallaki icchedam.* (We did 48, let's give the rest to them).
-
-**User (Me):** 48 plus *aayana icchina* (the ones he gave) 20...
-
-**Uma:** *Avi kuda cheyyama?* (Shouldn't we do those too?) *Adey ga cheppindi aayana* (That's what he said, right?).
-
-**User (Me):** *Avi icchina mana manam 48 lo cover autai kada* (The ones he gave will be covered in our 48, right?)
-
-**Uma:** *Aa unte extra manadantlo asalu binary ve unnai migitavi levu kada* (Yeah, if they are extra. In ours, we only have the binary ones, we don't have the rest, right?).
-
-**User (Me):** *Aayana icchina sheet asalu aayana icchina sheet ippudu across four months ledu anuko, manam em cheyyali data ekkadaninchi techukovali?* (The sheet he gave... what if the sheet he gave doesn't have data across four months, what should we do? Where do we get the data from?) *Aa unde aa sample 1000 rows data manadaggara* (We have that sample 1000 rows of data).
-
-**Uma:** *Ade artham kale naku koncham* (That's what I didn't understand a bit).
-
-**User (Me):** *Em le chuddam edokati ayyentha varaku chesi pedadaam* (It's nothing, let's see. Let's do whatever we can and send it).
-
-**Uma:** *Avvaleda?* (Didn't it happen?) *Update kuda avvaleda inka mevi* (Aren't yours updated yet?)
-
-**User (Me):** *Avvaleda?* (Didn't it?) *Manakaithe aayana excel lo ledu.* (For us, it's not in his Excel). *Naggira kanipinchatle aayana sheet chesindantlo aayana highlight chesindi* (I can't see the highlights he made in his sheet).
-
-**Uma:** *Ok sari message cheyi.* (Message him once). *Can you share the updated that we worked on it's not updated ani* ("Can you share the updated that we worked on, it's not updated").
-
-**User (Me):** *Neekayyinda chudu naakaithe avvala mari* (Check if yours is updated, mine hasn't).
-
-**Uma:** *Ok sari* (One second).
-
-**User (Me):** *Chesinattunnadu ippudu chesadu update vacchindi* (Looks like he did, he just updated it now, the update came).
-
-**Uma:** *Manthly di inkoti manthly di inkoti monthly di second monthly di third monthly di inkoti* (One for monthly, another for monthly, one for the second month, one for the third month...).
-
-**User (Me):** *Excel lo ela cheyyalo naaku ardham kaale.* (I don't understand how to do it in Excel). *Columns monthly... nenu malli okasari call chestaanundu* (Columns monthly... wait, I'll call you once again).
+Nitish: Okay. Cool, yaar[cite: 2].
