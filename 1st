@@ -1,87 +1,493 @@
-Nitish: Then after that, are we using the table which he is mentioning in row number 904 anywhere else[cite: 2]?
+Suresh: ...Rahul and team uh part. Uh we got that uh the pretty much some of the requirements. Only few requirements was uh walked out, but due to the other priorities specific to the TSE channel, uh we are planning to release all the TSE related requirements before the code freeze, and uh during that time we are planning to take the early experience implementation uh Meghana. We started some bit, but uh I think uh uh I'm sure I think we can't able to release it before the code freeze, but we were we are in the plan to start the implementation, and now we are on track on that early experience, uh specific to the TSE part.
 
-Hema: Hmm... It's the main table, I'm guessing[cite: 2].
+Meghana: There is a difference though on this one. This is for the corporate team. I'm not sure whether you were already part of those discussions. So the the one that we have had with Rahul and team, yeah, correct, uh are going to be for your business, ee- ee business teams, and this is for the corporate one.
 
-Nitish: This is the project space, that is okay[cite: 2]. I can create like these tables in a different project space also[cite: 2]. Just this table, yeah[cite: 2].
+Suresh: Okay. Mhm.
 
-Hema: Table... I think uh not before that[cite: 2]. I think somewhere using here[cite: 2].
+Kartik: So, because like this is a completely different use case that's being developed. This is for early experience for corporate.
 
-Nitish: Which is he using[cite: 2]? Again, he's fetching the CM11 itself, right[cite: 2]?
+Suresh: Since it's early experience, right, so I thought uh this also comes under the same tier. Okay, okay, got it. Yeah, yeah, sure, sure, sure. Sure, sure. Okay.
 
-Hema: Yeah[cite: 2].
+Meghana: Right. So, there are going to be some nuance scenarios that we would have to define based on the ROEs between the teams, cuz this team would just be one part of the ones, they don't actually own the accounts. They are on the account teams that they have access to. So, couple of changes from OneForce, we'd have to sort of for your awareness we would have to incorporate would be that since this team is on your opportunity team, they should also be added to the account team. And then when you are, Suresh, and when you're sending out the ownership on these insights through that file, we need to ensure that the corporate deployment team would be the right party for this relevant set of whatever logic that Kartik and Krutharth decide, and then that needs to be translated through. Make that One call out over here. One call out over here. 
 
-Nitish: CM11, comma, any value, some post spend CM11 M1 V2, GCM extrapolated account level V3[cite: 2]. Now what the hell are these two variables[cite: 2]? Comma, any value[cite: 2]. Any value[cite: 2]. 
+Meghana: Mhm.
 
-[sighs] Okay[cite: 2]. Then why don't we ask him very simply[cite: 2]? Let's ask him that can he create like the list of CM11s, okay[cite: 2]? And their NF final date[cite: 2]. These two variables, like this any value and any value, whatever these two have created, from his table itself, okay[cite: 2], without filtering on the segment V1, okay[cite: 2]? And put segment V1 as a variable itself, as a categorical variable within that[cite: 2]. Okay, pull that as a column and share that with us[cite: 2]. Then essentially that is the starting base[cite: 2]. Once we have that starting base, all we need to do is like fetch those 14 variables, right, for like month 1 to 14[cite: 2]. That we can fetch[cite: 2]. Makes sense[cite: 2]?
+Kartik: So the initial goal is not to make it live via Comet. The initial goal is to do a manual upload only, because I don't think we will be able to build something by then. Again, we require resources as well and so on. I think the right thing to focus upon is first of all understand like how how do we how does does the Comet team upload data on OneForce? What are the different fields which they upload which can directly get reflected within OneForce itself? If we can use a similar file format, we can provide data in a similar format to OneForce. Then, I think it can work. So, Comet team, I don't think it will be involved in the whole process.
 
-Hema: Yeah[cite: 2].
+Meghana: Okay. So what are the timelines, Kartik, that you are looking for? Cuz we don't have any manual processes for from OneForce side that accommodate the updates. Where you are saying that weâ
 
-Nitish: So let's do that[cite: 2]. Let's do that[cite: 2].
+Kartik: Yeah, go on.
 
-Hema: Okay. So for those, all those other variables, it's not the same table, okay[cite: 2].
+Subhu: Wait, I'm sorry. I just I just got this meeting invite forwarded by Ajay this morning, so I have I have little to no context. Uh if you don't mind, for before we discuss any further, can you share spit some light on the context?
 
-Nitish: Yeah, yeah, it's not the same table, right[cite: 2]? He's not using it anywhere else[cite: 2].
+Meghana: Right. So, insights are the meaningful inflection points or meaningful information for the associated accounts that are provided by these teamsâAD, TSE, early experience corporate, early experience business. We also have a similar setup on the prospect side of the house that is key information for these colleagues to make the next meaningful engagement with the user. This was currently BAU being updated through your demand tools or through any disjointed processes as part of us marketing. I can pull up all those um details and uh Subhu, I can share those offline with you. But through earlier this year, we have set up a process, a systematic process with Comet, pushing these through Lumi and data cloud and all those channels coming in through the upload. And we're trying to move away from any SPT partners or in-partners manually uploading the insights in the system.
 
-Hema: Mm-hmm, yeah[cite: 2].
+Subhu: Okay. So we are trying to automate the existing process, in a nutshell.
 
-Nitish: So that is the that is the first bottleneck[cite: 2]. That is the only bottleneck which I feel[cite: 2].
+Meghana: Correct. So what this meeting is focusing on is that piggybacking on the automation or the pipeline that we just uh created for all of the other teams and adding one more use case to the same. Can we also use or extend the existing revised pipeline for the insight ingestion for early experience corporate deployment teams, too? And for that conversation, Kartik was like, let's just map the files. If the files have the meaningful columns or fields, let's just tally and see if there's delta, and then we can proceed. And to that point, I was like, let's just talk what's what are we trying to achieve. If we can do it through the systematic process without any extensive build, we should be leaning towards that versus a manual process.
 
-Hema: But uh the access is with the project only, I'm assuming[cite: 2]. Not specific to the table, right[cite: 2]? So other tables were all within this project, I mean this common table, whatever, database here, the GCSPPA[cite: 2]. So for the other data, can I still be able to access that[cite: 2]?
+Subhu: Okay. So these are basically account insights coming from AIM?
 
-Nitish: Yeah, yeah[cite: 2]. So think about... he's using this... Okay, let me just also open this code whatever he has shared[cite: 2]. Go through it once[cite: 2]. Yeah[cite: 2]. Okay[cite: 2]. So row number 889, I go there first of all[cite: 2]. Okay[cite: 2]. Okay[cite: 2]. Done[cite: 2]. Let me just share my screen once, okay[cite: 2]? 
+Meghana: Correct.
 
-Okay[cite: 2]. So what this guy is doing is, first of all, he is creating this base, okay[cite: 2]? Now this phase is talking about... this is the table name that he is using[cite: 2]. Now what this does is, okay, SC10, SC10, all of that, he is fetching that, date difference, then he is creating month 9, 10, 14, etc. from... What is this[cite: 2]? But this is also a superset[cite: 2]. Arrey yaar[cite: 2]. 
+Kartik: So to give to give more light uh to put more light on this, Subane, essentially the idea is once a cu- customer gets a new corp program, or they got acquired on a corporate program, we will be doing some early experience for those guys. So there'll be some uh call, some sort of insights which we need to deliver to the sales colleagues so that they they can reach out to those customers on time, and they are able to manage that account well. Now in order to do this exercise, uh again like this is something which I thought we would be doing manual only, but since Meghana is saying that we there is a possibility to even automate it in a more structured way, I'm more than happy to do it. But essentially the idea is to provide these insights and the tiers associated with these customers on OneForce in a uh in a weekly schedule, either via manual upload or via or via these automated scheduled delivery via Comet. So either of these two processes, I'm like we're definitely more than happy to do you to go ahead with the automatic one. But regarding this, I want to understand with you, Meghana, first of all, the the funding corresponding to this aspect. Like, is the funding already there? Because there will be some requirement on the Comet side to make create a build for this, right? 
 
-Okay, then he is doing this[cite: 2]. So all are coming from say like a different dataset altogether[cite: 2]. From his, like nothing is like centralized[cite: 2].
+Meghana: That's the whole catch. [laughs] That's the whole catch. We we didn't receive any funding as such, but if we are able to leverage the same pipeline, we don't need actual funding, right, for Comet to take forward, if it is going to be the same. Cuz for all the other use cases, meaning AD, TSE, and early experience business, we're using the same pipeline. Right, Suresh, we are doing that.
 
-Hema: Yeah[cite: 2]. He's like uh chaining on the same thing[cite: 2].
+Suresh: Ha, correct.
 
-Nitish: This is the only one which is like outside, like the Lumi central table[cite: 2]. Rest everything are getting say like created in between within that project itself[cite: 2].
+Meghana: There are there would be minor enhancements on the file format, but from Comet to OneForce, it's going to be the same.
 
-Hema: Yeah[cite: 2].
+Suresh: But I think you this is planned for the current year deliverables, Meghana, or Sorry, not it. When when are you planning to launch this, go-live plan for this use case?
 
-Nitish: I don't know why exactly we are not able to access it[cite: 2]. I also have the same issue[cite: 2]. Like even my one, it is not able to say like execute the query[cite: 2]. That's what is happening[cite: 2].
+Meghana: This is Q1 2027. Q1 is what I heard from Mo.
 
-Hema: I think we can confirm whether he has it or whether it's a whole problem with the project itself or our specific access issue, if he can execute anything on this project[cite: 2].
+Kartik: Sorry, this is Q1 20- Q1 2027, next year Q1?
 
-Nitish: Exactly[cite: 2]. See, now I have this[cite: 2]. I go here[cite: 2]. Untitle- I don't even have the run option[cite: 2]. You see here, "You need permissions for this action"[cite: 2].
+Meghana: Yeah.
 
-Hema: Yeah[cite: 2]. That's what, I'm just typing select 1 as text today, even that is not working, without accessing any database[cite: 2].
+Suresh: Oh, Q1 next year? Okay, then we are happy to support, no issue. Because code freeze was getting this month end, right, so that's the reason. But yeah, actually, Mohan, if you don't want to automate the end-to-end pipeline via CPP, I have a quick uh I think uh turnaround solution, okay?
 
-Nitish: Yeah[cite: 2]. [sighs] I don't know[cite: 2]. Okay[cite: 2]. Missing or blocked permissions[cite: 2]. We might have to ask somewhere[cite: 2]. Like I have already raised it in this like Lumi help group, but I don't know whether that will get like solved anytime soon[cite: 2]. But if not, like ask like Shalinder to actually help you on this one[cite: 2]. Like he can execute this query, okay, if he can do that[cite: 2].
+Meghana: Mhm, go ahead.
 
-Hema: Okay. Okay. Yeah[cite: 2].
+Suresh: So, so we have a dedicated SFTP-based uh the file ingestion process, okay? So we have created some dedicated SFTP account for only just pushing the data to uh business team. So, I think uh currently we are sending the data to OneForce in the two different format. One is the tier upgrade or downgrade information, okay? I guess as it is, this is only specific to any tier, so it's not required that data, but there will be one more file that table ingestion process called uh the insights data upload. I can share you the specific format of the file, okay, so if you can send the file via SFTP push, so then we can able to retrieve the data and pushing the data back end to the respective OneForce table. So that's the I think quick uh solution we can able to do with very less minimal effort from the Comet team side, we can able to do. I think we got to know that you you currently wants to do the manual and then only you are planning to implement that in the CPP side, right? Uh mainly on the A corporate. So for a kind of time being, you can able to do this approach, so that that there will be no change in the OneForce system side. I mean the pipeline, specifically, apart from that any business-specific requirement. So we can able to reuse the current ingestion process which we are using for few of the triggers. So just slight modification, we can able to adjust it for this ingestion pipeline as well.
 
-Nitish: Cool[cite: 2]. Done[cite: 2]. Okay, yaar[cite: 2]. Cool[cite: 2]. Thanks, Hema[cite: 2].
+Meghana: Right.
 
-Hema: Thank you[cite: 2].
+Kartik: So, essentially, if I just once again, Meghana, just want to make sure that what you are saying is even if you are doing a manual process, there is already an existing SFTP process which we can leverage in order to make an upload to OneForce, right? There are two things here: we are required to update So the way it works is the account owner will still be those AD guys, because a customer gets converted, and the customer got a corporate program, so the account owner is still the AD guy, but there's a separate team member who we call as deployment managers. So they are the one who will manage this account post their acquisition, however they won't be the account owners. And for them, there will be a step there'll be two types of uploads which we'll be doing. Definitely like there will be uh the insights which is specific to early experience. It does not mean that these insights will be same as what we update what we upload for AD Tier 0 or there BAU tiers. There will be two sets of insights for the same account on OneForce, as well as there will be two sets of tiers as well. One tier coming from the AD team, and one tier coming from the early early experience side, from us. So there will be two different fields to one for insight and one for tier coming from early experience. Do you think that the same process can be leveraged even for this type of upload as well on OneForce?
 
-Nitish: Let me know if you face any challenges, okay[cite: 2]?
+Meghana: Right. So, there is a catch to it, right? 
 
-Hema: If like if we are not able to access, even Karthik or our team would not be able to access it, and that is... How could we get these variables now[cite: 2]?
+Kartik: Okay.
 
-Nitish: Then essentially we need to ask him like can we like transfer this data in another queue[cite: 2]? Like what whatever we have, right, we have this AM Digital, you have this access to AM Digital[cite: 2]?
+Meghana: The catch would be cuz we were discussing once the ROEs are going to be assigned, so there are two steps to it. The first is that, how do we ingest the right ownership to the right insight, right? And the second is, how do we prioritize it on their UI making sure the most meaningful information is presented to the most relevant team, right? So for the first one, for the question that you just asked is that, can we accommodate it? We might need to automate it within OneForce rather than having it at the file level, cuz if there are customizations, it should be configured within OneForce as part of the rule of engagement. If uh the insight owner needs to be assigned, a deployment manager, we have that information already identified on that account, and that can be leveraged through. That would be a holistic solution we can take forward once the approach is aligned, rather than having one more field added to the file.
 
-Hema: I don't have access[cite: 2].
+Kartik: On the OneForce side, who should we talk to, Meghana, for this?
 
-Nitish: Okay, so which queues you have access to[cite: 2]? Where you can execute or run your queries[cite: 2]? Tell me that[cite: 2].
+Meghana: It's the same group. Yeah, it's the same group. Subhu is from our solution architect team, and once we have this discussion, this initial discussion, if there is any possibility that we can leverage the pipeline, that is where Suresh and team come through. And for how we map all of this for this team, early experience corporate deployment team, I would be the point of contact, and we have a change request that is going to facilitate all the conversations further.
 
-Hema: Cust Strategy Analytics, I guess[cite: 2]? Yeah, Cust Strategy... uh yeah, Cust Strategy I have[cite: 2].
+Kartik: Got it. Okay. So, then what is the next step for the for this OneForce story?
 
-Nitish: You have that[cite: 2]? Okay, can you ask likeâ[cite: 2]
+Meghana: Right. So the next steps, the first one would be to make sure that what you are trying to achieve for this, right, so the information. Maybe Krutharth can help, he's been pretty hands-on in all the file formats. As an offline conversation, you can review that file with Suresh. We recently did a similar experience with the Block use case as well, and we onboarded the file format for Block onto the existing rails. The second item is going to be on us as OneForce team to isolate how we are going to make sure that if we have multiple stake folks working on the same account in different rules of engagement, how we make sure that the right insight is tagged to it, and how it is going to be prioritized on their workspace in the OneForce screen. I would also want to understand from you, the third is going to be for you, or to help us understand how the tier value, what fields are you tracking for each of these scenarios. Prioritization tier is the field that we were looking for. That would be something, are you using the same field for both the teams, meaning the account manager and the deployment manager, or are you having any other values being tracked? And the fourth one is going to be our this is the revised UI for the AD teams, the one that I have up on my screen, right? 
 
-Hema: Okay, AM Digital also I have, sorry, yeah, my bad, I think[cite: 2].
+Kartik: Okay.
 
-Nitish: You can run the query[cite: 2]?
+Meghana: Are we looking to leverage the similar one or no? Cuz this is the other one we have um on the on the right side, the action called to action and all of this listed through.
 
-Hema: Uh, oh, in AM Digital also I'm facing the same issue, sorry[cite: 2].
+Kartik: I would Okay. So, let me Are there any other questions apart from these, Meghana?
 
-Nitish: Okay, so then Cust Strategy Analytics, right[cite: 2]? That is the only one[cite: 2].
+Meghana: For the beginning of the conversation, this is it.
 
-Hema: Mm[cite: 2].
+Kartik: Great. Okay, cool. I'll start from the bottom then. The first one that uh about the LeadGenius, I think this is a LeadGenius format. 
 
-Nitish: Okay, then ask him to like transfer this to the Cust Strategy Analytics, like these tables, okay[cite: 2], whatever he is using, so that you can execute it further[cite: 2]. If not, then ask him to like create the dataset and share it with us[cite: 2]. The final dataset has to be say like in one queue which we can like all of us access[cite: 2]. Right now we are facing these issues like of this accesses, okay[cite: 2]? Done[cite: 2]?
+Meghana: Yes.
 
-Hema: Okay. Okay. Cool. Yeah, cool[cite: 2].
+Kartik: I would say even for the deployment managers, it's better to go to LeadGenius only, because now this is a this is a future future step, right? We should not go back to the action center. So even for deployment manager, we should be going in for LeadGenius. I can double confirm it with Mo, but I believe like that should be it. The second question was more about the tiering part, right? 
 
-Nitish: Okay. Cool, yaar[cite: 2].
+Meghana: Mhm.
+
+Kartik: So, the tiering, again, like uh we there there are two sets of tiers: one coming from the AD side, the other coming from the early experience side. 
+
+Meghana: Mhm.
+
+Kartik: So there can be a scenario where they provide they say that the account is in tier 1, and we also say that the account is in tier 2. So we cannot have the same field reflecting at two places, so there should be a different field altogether that we can come up with a name for that field, like what what field name should be there for that. But essentially it should reflect the tier that we are providing for that customer. 
+
+Meghana: Mhm.
+
+Kartik: It's a different flow of prioritization. 
+
+Meghana: Mhm.
+
+Kartik: It answers your third question, right? 
+
+Meghana: Mhm.
+
+Kartik: Okay. The first question which you mentioned, like the kind of data the sec- the second was more about from the OneForce side where you will be working with the OneForce team in order to execute this. The first was more about to understand uh what are the different data fields that we will be providing you, right? As of now, there are only two additional data fields which I can think of, which is the new insight and the new tier, because the if we just leverage the current uh process of uploading things on OneForce, whatever we have on the TSE side, I feel like that particular tier will directly map to the current TSE tier, like that should not happen. So there has to be two different fields which we should be having in the offline file, and ideally those should get linked with the two different fields that you will be creating on the OneForce. 
+
+Meghana: Mhm.
+
+Kartik: So, let me know if it it helps. Likeâ
+
+Meghana: Yeah, I'm tracking. Mhm.
+
+Kartik: So is there any other Like I think that is the major thing. Like these are the only things that we we have as of now. But if there's any other field that you think, okay, should be relevant for us to make make an upload on the OneForce side, so let me know. I can think through those and I can get back to you on that part.
+
+Meghana: All right. To facilitate that, that, let's look up what all is current, right? What all insight information is being received for all the other use cases, especially the AD ones, cuz that is going to be the most closest to this team. 
+
+Kartik: Exactly.
+
+Meghana: Right? So we can review that file format making sure that what you're visualizing is what we are getting eventually. And if there is any presentation, meaning any and user flow or any of those documentation that you have, please share those. I'll include that in our solution designing as well, making sure that we are not missing out any key information. And from there, we can then have the next steps aligned, meaning how many fields that we would need to capture the next the delta information, and what should be the file format and naming concept and all of those.
+
+Kartik: Makes sense. Cool. I I can work with Krutharth on the AD file and modify it accordingly to early experience, and then I can share it with the group here. 
+
+Meghana: Sounds good.
+
+Kartik: That should be it.
+
+Meghana: Right. While we have a backup for manual updates and whatnot, our focus would be, cuz we are planning it for the next year, to have a systematic approach, that would be the first priority. If due to any reason we are not able to do it, then we'll look for the manual updates at the time. But for now, we should be looking to use the leverage the existing integration processes for this use case, too.
+
+Kartik: Makes sense. Makes sense. The only problem I can foresee is since the process the whole R&R is not done so far, right? 
+
+Meghana: Mhm.
+
+Kartik: Like so there can be a scenario where the sales team would come and would say that, okay, we need one more field for this, because the way the responsibilities have not been defined properly between the AD guys and the deployment managers. So there can be this concern, and that's why I was more hoping if we can do a manual approach first. And once the teams actually settle, right, then we can move towards a much more structured solution. But as you said, like the priority can be the structured solution, and then we can If that doesn't work, we always have a manual thing to go for. Yeah. 
+
+Meghana: Yep. Yeah.
+
+Kartik: Perfect.
+
+Meghana: And I'm also pushing forward for the R&Rs to be confirmed so that we can also put up a design for ourselves. But if there are any conversations that you're part of, please feel free to include us as well, 
+
+Kartik: Absolutely.
+
+Meghana: cuz that is going to be a part key information for us.
+
+Kartik: Got it. Okay. Cool. So, yeah, so give give me give us like uh few days, and we will get back to you with the final list of all the fields. Uh if I work backwards, like I just want to understand the timelines with respect to this piece. Like how much time will it take for OneForce to work uh to make it happen, and how much time willâ
+
+Meghana: That depends, Kartik. Yeah, that depends on what exactly where do we land up. If there is that we're going to be leveraging, let's suppose that we are being leveraging the insight file as is, and we'll be adding a layer of custom owner assignment based on the information received from the file into that, that would be a different kind of dev that we would have to reassess with the team who's already working on something for the balance of the year, right? So the upcoming PI is all booked out. So the timelines can then be decided once we have the solution and the path forward.
+
+Kartik: Got it. But just for as a margin, if I just want to commit to someone like, okay, how much time will will it take for us to implement the solution, assuming that you guys have the bandwidth as well? 
+
+Meghana: Right, soâ
+
+Kartik: I just want to have a ballpark number.
+
+Meghana: Yeah, I wouldn't be able to commit it, to be honest, without having the tech team review it. This is so um too early to even commit. What you can commit is that we are targeting for the next year. 
+
+Kartik: Got it. Okay.
+
+Meghana: All right? We'll have more clarity as we progress.
+
+Kartik: Sure. I think that works. Okay. I think that's all then, right, Meghana?
+
+Meghana: Um yeah, for now. And if you have any quantified benefits and all those, but you know, I'm sure that you must have documented all of it in your program, uh please share those over. That will help.
+
+Kartik: Got it. Got it. Right now, like the benefit part is still being worked around, because the Nova launch itself has not been done for the customers. So there has been only a very few less few customers for whom we do act have the actual data available. 
+
+Meghana: Right.
+
+Kartik: So it's So we can but still we can do some early estimate on how much uh benefit we can see. 
+
+Meghana: Mhm.
+
+Kartik: But it will take time, like I'll let you guys know.
+
+Meghana: Right. And how we are quantifying it or measuring it, that is going to be helpful for us to understand so that we are making sure that that is information is available in OneForce to track.
+
+Kartik: Sure. Definitely. Got it.
+
+Meghana: Any questions? We have 3 more minutes.
+
+Kartik: I'm good.
+
+Meghana: Sounds good. We'll talk soon. We'll, yeah, I'll send over the discussion items we just went through.
+
+Kartik: Sure, Meghana. Thanks a lot. Thank you.
+
+Meghana: Great. 
+
+Suresh: Thanks, Meghana. Thanks.
+
+Meghana: Thank you. Bye-bye.
+
+Kartik: Thank you.
+
+[Call disconnect sound]
+
+Kartik: Hi, Hema. How are you?
+
+Hema: Hi. I'm good, good, Kartik. How are you? Just taking the notes.
+
+Kartik: Yeah, me too. I just want to make sure. Yeah, it looks like uh one thing which we definitely have to do is we need to Mo hasn't reverted back so far, right?
+
+Hema: Yeah, no, she didn't.
+
+Kartik: On the on the questions. So can you just remind her? 
+
+Hema: Okay.
+
+Kartik: Like just drop a very polite note that looking forward for your comments here. 
+
+Hema: Yeah.
+
+Kartik: Okay? And I think we should have a separate thread. There are two threads that we should be having. One, just to discuss the pieces related to the different sort of insights that you want to have, okay? There should be a different thread which should talk about like how does the sales guys would look like, okay? Like, what does the experience look like? 
+
+Hema: Yeah.
+
+Kartik: So we one of the questions that you can definitely ask is ki LeadGenius pe hoga ya like it will be like be on the Action Center?
+
+Hema: Yeah. So, what is the difference uh between those two?
+
+Kartik: So, essentially sales colleague ko dikhega kaise, that is the question, okay? 
+
+Hema: Okay.
+
+Kartik: So pehle kya hota tha ki there was one particular tab, usko kehte the Action Center, okay? Action Center pe you can see ki what are the insights corresponding to the customer that have been provided. 
+
+Hema: Okay.
+
+Kartik: However, ab woh cheez jo hai na, woh TSE aur AD mein unhone Action Center se hata ke LeadGenius pe la diya. Toh LeadGenius ka ek alag se tab banta hai. 
+
+Hema: Okay.
+
+Kartik: Okay? Right now, I let me see if I can show you. Ho sakta hai na kisi ka? 1 second. 1 second. LeadGenius, LeadGenius... Kaisa dikhega LeadGenius ka? Uh...
+
+Hema: So what Meghana was showing, with uh tier on the left and like the insights on the right, so that is Action Center?
+
+Kartik: I'll show you, 1 second, yaar. Mujhe bas woh... Mujhe koi customer chahiye waise ke liye. Any customer which is either part of TSE or AD. Do you have any customer in TSE or AD?
+
+Hema: No, I don't know. Not sure.
+
+Kartik: 1 second. Mere paas Sakshi shared that with me last week. So this is one iClick ID, okay? I just went there. Hello, wait. Why it is not opens?
+
+Hema: Approve it on the phone.
+
+Kartik: 1 second. How's the work going on, yaar? Getting work now?
+
+Hema: Yeah, Friday it was a bit [laughs] busy. And uh I've been added to some meeting, I don't know, GenAI prompt clubbing urgent. Okay, it's okay, I'll attend. Friday it was like uh starting this new thing that uh Nitesh was telling, so I was just wrapping my head around that and created something. Just tried to make sense.
+
+Kartik: Okay. No, I think that's a very good project to be in. We'll be doing a lot of coding, which is a very new sort of a role.
+
+Hema: Yeah.
+
+Kartik: So let me show you. You see here, this is called uh account page, okay, on Salesforce. 
+
+Hema: Okay. OneForce. Okay.
+
+Kartik: So you can see ki yahan pe company name, account details, account, theek hai? Then some basic details. This is where our things go, Action Center, okay? So within Action Center, pehle kya hota tha, yahan pe dikhti thi. 
+
+Hema: Okay.
+
+Kartik: Insights. Okay? Now it actually shows on treatments. You see treatments over here?
+
+Hema: Yeah, yeah, yeah.
+
+Kartik: It's a different sort of view altogether, right?
+
+Hema: Yes.
+
+Kartik: So there will be five different type of treatments which there can be. Spend expansion, AP automation, employee card, SVS card, cross-sell, and for corporate cross-sell. 
+
+Hema: Mhm. So these are the treatments like uh top five treatments, anything like that? There'd be top five.
+
+Kartik: Exactly, top five treatments, and within those top five treatments you can see ki why this treatment, everything else. Toh yeh jo view hai na, this is called LeadGenius. 
+
+Hema: Okay.
+
+Kartik: Pehle kya hota tha, yeh sab yahan par aati thi is tarah se, ek ke niche ek. Okay? Right, but now it's not like this. Yeh I think yeh Demand Gen ka hai, that's why it's going like this right now. Agar yeh Demand Gen nahi hota na, toh yeh yahan pe hota, tumhe pata bhi nahi chalta yahan pe. Like right now for most of these accounts this would be empty. Let me just check. Yeh hona bhi nahi chahiye. Isme bhi dikh toh raha hai. Yeh purana wala hai. Yeh dekho, yeh kuch doosre type ka offer hai. This is a completely different thing altogether. 
+
+Hema: Okay.
+
+Kartik: Yahan pe bhi agar tum dekhoge na, toh yeh Call to action expires in 23 days. Yeh upload abhi hua toh hai. Pata nahi kaise upload hua hai. Yeh kya hai? Tum agar dekhoge toh yahan pe kuch hai nahi information, right?
+
+Hema: Yes, yes. Yeah.
+
+Kartik: Ya phir hai toh Achha, yeh Tier 0 hai, that's why. Yeh Tier 0 account hai, isiliye iske liye yahan pe information hai. BAU wali pehle yahan par aati thi, toh BAU wali nahi hai. BAU wali tumhe yahin milegi. This is BAU. Okay, that is why. Ek bhi example nahi mila. Mujhe laga tha ek toh hoga jisme pura empty hona chahiye. 1 second. Kisme try karein? Dekho yahan pe nahi hai kuch bhi. Active is completely empty. Treatments pe tum dekhoge yahan milega tumhe. 
+
+Hema: Okay.
+
+Kartik: Dekho, yahan pe do treatment dikh raha hai, right?
+
+Hema: Yes. Okay.
+
+Kartik: So this treatment yeh treatment basically LeadGenius mein hai. Pehle yeh yahan pe nahi hote the, pehle yeh upar hote the yahan pe. Aur yeh active wale center mein jaate the. Isko bolte hain Action Center mein active wale tab ke andar. Tum yeh unse puch bata sakte ho unko. Matlab like you can So I want you to write two emails to Mo. First is ki jo humne insights bana ke bheje hue hain, right? Get her opinion whether those make sense or not. Okay? Get her alignment on that. 
+
+Hema: Yeah, okay. Mhm.
+
+Kartik: Second thing is, because uske baad jab alignment milega then we have to reach out to the data partner for us, right?
+
+Hema: Yes, yes.
+
+Kartik: And the second thing that you should be doing is, uh drop a note to Mo on a separate piece, which is saying that the new insight that you are planning to provide and the corresponding tier as well, uh do we want like we should ideally put it in LeadGenius, right? To get her confirmation from her. 
+
+Hema: Okay.
+
+Kartik: Okay?
+
+Hema: Yeah.
+
+Kartik: Aur humein yeh puchna chahiye puchna padega ki tier kahan pe aayega unke corresponding, right? 
+
+Hema: Okay. Okay.
+
+Kartik: Where that tier will show. 
+
+Hema: Yeah.
+
+Kartik: Let me see. Isme jo maine customer select kiya tha uska tier kya tha? Yeh Tier 0 kyu hai iska? I want to say something jo Tier 1, 2, 3 mein hai, ruko 1 second. J2 mein daal deta hoon. Let's see this one. Where is that tier coming up? Tier yahan pe show nahi hota hai, okay. Action Center mein yahan pe bhi tier nahi hai. Makes sense. Yahan pe tier kyu nahi aa raha? There's no tier in here? 
+
+Hema: Yeah.
+
+Kartik: Where is that tier going to come? Thoda yeh check with Krutharth ek baar. 
+
+Hema: Okay.
+
+Kartik: Try to reach out to him ki where is that tier Okay, this is you can see, prioritization tier, right? 
+
+Hema: Okay, okay. Scroll down, yeah.
+
+Kartik: So this is part of tier. 
+
+Hema: Okay.
+
+Kartik: So here CS team ke liye details, right? You can see that here it is, right? So you can ask this question: so we need to assign tier, and we need to provide insights. So you can say ki tier jo hona chahiye woh yahan pe aana chahiye, unke corresponding field kya hona chahiye, we want to check with you on that part as well. 
+
+Hema: Okay.
+
+Kartik: Okay? And then the second question is more and fir jo insights wala hai woh bhi uski bhi clarity le lete hain, ki insights jo hain woh More ke andar yahan pe jo dikhta hai Action Center mein, woh yahan pe hi dikhai denge ya fir kaise dikhai denge? We want to get that clarity as well, right?
+
+Hema: Yeah. Mhm. Yeah. Okay.
+
+Kartik: Got it?
+
+Hema: Got it.
+
+Kartik: Okay? So you understood the whole part, right, now? 
+
+Hema: Yes.
+
+Kartik: Tier kahan pe... Let me share send this to you so that like agar tum Tumhare paas access hai iska?
+
+Hema: I think, yes, OneForce ka access hai.
+
+Kartik: So this this account can can be helpful for you, right? 
+
+Hema: Yeah.
+
+Kartik: Let me just share the iClick ID as well just in case if you have any troubles. Okay? 
+
+Hema: Okay.
+
+Kartik: Toh jo Mo ko email karoge, right? Mo ko jo email karna hai, you can use this one. From Michelle. Toh yahan pe is wale list pe kar sakte ho, right? Jisme OneForce bhi hai. So you can say ki like exactly kahan pe jaayega, kya field hoga, let's get that clarity from them, right?
+
+Hema: Okay.
+
+Kartik: Were you Were you able to go through this email, right, and understood ki kya chal raha hai, right?
+
+Hema: Yeah, right. Woh I I got clarity, like that things need to be still figured out by them, right, the insights part, how to be shown, like who's the owner and what insights to be shown to whom and that.
+
+Kartik: Yeah, yeah, but essentially humein woh tier banana padega, right? And we also need to provide So we have to provide a tier information, we have to provide an insight. As of now, these are the only two things that we have discussed, either over the email or over a call. So let's ask this question to directly to Mo only, theek hai? Mo ko, Nicole ko, Christine ko, in teeno and Meghana, Michelle. Like all the four people you just ask ki humein yahan pe kis tarah se karna chahiye, aur wahan pe bhi ek baar email pe gentle reminder daal do, Mo ko.
+
+Hema: Yeah. Mhm. Yeah, sure. Okay, sure.
+
+Kartik: Okay, cool. Andâ
+
+Hema: Yeah, tell me.
+
+Kartik: So, but tier, so initially we thought like for tier we will be using VUP tiers only for 1, 2, 3 and then Tier 0 will be based on trigger, right? So, so now uh when like uh so Meghana were talking, so that could be the same tier like what we get for AD team, is that not the same tier?
+
+Kartik: No, no, no, no. 
+
+Hema: Okay.
+
+Kartik: Unki tiering alag logic se decide hoti hai, right? So AD has a different KPI altogether. 
+
+Hema: Yeah, yeah.
+
+Kartik: Basis the profitability on uh which customers are supposed to be targeted, they will be defining their own tiers. 
+
+Hema: Yeah.
+
+Kartik: We will be defining our own tiers, right? Our Tier 1, 2, 3 will be completely different altogether.
+
+Hema: Okay. Yes. So...
+
+Kartik: It will be based upon the early experience, right?
+
+Hema: Yes. So, initial for Q1, uh the tiering logic, so for that uh okay, maybe for even for that, we'll be following the same logic, but we should be having a different tier field, okay.
+
+Kartik: At least Tier 0 toh jaayega na usme? Even if you don't have a BAU tiers, right, assuming that there are no BAU tiers, toh it will be empty. But eventually it will go to Tier 0 wherever we have a trigger for that account. 
+
+Hema: Yeah, yes. Okay. Mhm. Yes, yes.
+
+Kartik: Right? So there has to be a different field altogether, right? 
+
+Hema: Yeah. Yeah, yeah, yeah.
+
+Kartik: So tomorrow, I have a discussion with Anju. Okay? I'll ask for 15 minutes on this piece as well as on next piece, because humein align toh karna padega na? Because we need to do the analysis. 
+
+Hema: Okay. Mhm. Yeah, yeah. Yes.
+
+Kartik: Okay? 
+
+Hema: Okay.
+
+Kartik: So you are clear about the both the emails, right?
+
+Hema: Yeah, yeah, yeah. I'm clear.
+
+Kartik: Okay, cool. And uh I see ki he has asked you for a couple of days, right? Dayana?
+
+Hema: Yeah, she told till today. So I was about to ask, so should I mail? I was thinking like we are following up with Alfredo, but he'sâ
+
+Kartik: No, I think let's let's wait for a couple of days. 
+
+Hema: Yeah.
+
+Kartik: And then once everything is done and then we will drop an email that okay, we have done this. Okay? 
+
+Hema: Okay. Okay.
+
+Kartik: In the meanwhile, on the SAGE part, do you need any help from me?
+
+Hema: Uh currently I'm just uh running some code, so I currently I don't think so, but uh I definitely would need tomorrow.
+
+Kartik: You're just creating the data, right?
+
+Hema: Yeah, yeah, I'm just creating the data. But I would definitely want to I wanted to talk to you regarding this, but yeah, not uh I'm good for today.
+
+Kartik: For sure. Because like I have done this part of the piece previously with Merchant Recommender, so that's why that's why they I think they have these guys have looped me in. 
+
+Hema: Yeah.
+
+Kartik: But yeah, it's a definitely a good experience for you.
+
+Hema: Okay. And during the coding part, I would definitely need some help, because this algorithm is something new to me. I just want to have like idea what uh needs to be done correctly, that's it.
+
+Kartik: Sorry, I didn't understand. Come again?
+
+Hema: No, no, no. Currently, I'm good. So, but while running the model or like for coding part, I just I would just needâ
+
+Kartik: Yeah, I think I yeah, if you need help, then it's fine. You can definitely reach out. But I think Aanchal also knows how to do it, okay? 
+
+Hema: Mhm. Okay, yeah. Sure.
+
+Kartik: Did you You can ask her for some codes already, right? Because she has done it for TI-SASRec, so she must have shared some codes with you, too?
+
+Hema: Uh no, she didn't. We are currently just making the data, so um uh that codes are there. Yeah, okay.
+
+Kartik: I'll ask her. I'll ask her to share it with you. She might be having it very handy, like where you don't need to do a lot of things. Entire thing is with you. 
+
+Hema: Okay. Okay.
+
+Kartik: Or uh let me do one thing. 1 second. Let me share one piece of the code with you in the meanwhile, just in case if you want to get a flavor of how things run. 
+
+Hema: Mhm. Okay.
+
+Kartik: Okay, this is something which we created previously. This is for SASRec, okay?
+
+Hema: Okay.
+
+Kartik: Okay, one thing. I'm not able to share this. Somehow it got blocked.
+
+Hema: Okay, it's it's These code files are getting blocked on Outlook.
+
+Kartik: Yeah, 1 second. SAGE... T4Rec, where is that T4Rec? But I think this is the most interesting GenAI, generative AI part which you can have in analytics. 
+
+Hema: Mhm.
+
+Kartik: As of now. 
+
+Hema: Yeah.
+
+Kartik: Where it's not people like 1 second. Let me share this with you on Teams. What is still going on? 1 second. Cool. So I've already done this, okay? 
+
+Hema: Yeah, yeah.
+
+Kartik: So you can go through this. It will at least give you some sort of a flavor like this is how the code will look like, but again, this is not the right code for you to actually work upon, okay? Just for 
+
+Hema: Mhm. Okay. Yeah, yeah. Yes, yes. Yeah. Okay, okay.
+
+Kartik: Okay then. Thank you, yaar. In case you need you need any help, right, Hema, please feel free to reach out. 
+
+Hema: Thank you. Yeah. Yes, yes, sure. Sure, Kartik. Thank you. Bye.
