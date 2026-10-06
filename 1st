@@ -1,290 +1,106 @@
 CALL TRANSCRIPT
-Participants: Nitesh, Ishan, Shailendra, Kartikeya, Aanchal, Uma, Himanshu
+Participants: Hema, Nitesh, Jay
 
-[00:00] Nitesh: So in the meantime, I know there are like multiple back and forth on say like a few of the things as to what needs to be done and what exactly are the set of variables that we need to include within our first set of iteration of the model itself, right? So Ishan, as per you, what is the total set of feature set that you have included in the IGCM model today, and what are those features?
+[00:00] Hema: So, we were just discussing, so previously like Jay and me. So, I think Jay and... Himanshu will also be getting added. We just wanted to understand like, because Himanshu was busy for some time, so we were trying to understand what specific need help that we would be running with Himanshu. Okay, Himanshu has a call with Stephanie, I guess. Okay.
 
-[00:24] Ishan: Okay. So previously, when I ran the IGCM model specifically for the Month 1 variable, I had a total of 119 variables. And as per the dataset which you shared in the email—that is the final table—there for a distinct month, I'm seeing 84 variables.
+[00:20] Nitesh: Okay, okay. Not a problem. So, see...
 
-[00:41] Nitesh: Okay. And are those 84 all in that 119?
+[00:23] Hema: Mhm.
 
-[00:47] Ishan: No. Only the recurrent spend and the percentage of recurrent spend, I believe, is the overlap; rest is totally different.
+[00:24] Nitesh: Okay. So, Hema, you are aware about that we were creating sequence of events, right, for Month 1 to Month 14, right? That was across all the feature set. Now, what Ashish has requested is that instead of looking at all the feature set at one go, right, first try to establish that, okay, whether a transformer can actually pick up a sequence or learn something just by looking at, say, like transaction-level data, okay? 
 
-[01:01] Nitesh: Rest is totally different. Why would that be?
+So, for the same 77k card members, right, that we had, if we are able to get, say, like daily transaction-level data for first three months post-acquisition, okay? If we are able to get that, then that tells me like, okay, this is the timestamp, this is the amount of transaction that happened, okay? Now, that amount can be, say, like $1,000, $2,000, $3,000, and then again $500, and so on, right? These can be like three months of clear sequences. 
 
-[01:03] Ishan: Yeah, because like in my incremental IGCM model, I didn't include the COGS, admin, those sort of spend variables. So now we have the intersection... Yeah, so I don't have the intersection variables also in my previous model.
+Now, I also have, say, like year-two incremental GCM as an added function there, okay? When I say year-two incremental GCM, it is like actual and predicted—actual minus predicted. So, we have the predicted definition that is coming in from Ishan. So, you can get that from Ishan itself for all the card members, what is the predicted GCM that he has, and then you also have the actual year-two GCM, okay? The difference of the two is the incremental GCM that we have, cool? 
 
-[01:18] Nitesh: Okay. So this dataset, right? This is the one that you're talking about, the one that we shared yesterday? Okay. So this has a set of incremental spend variables which were not earlier available to you when you were running your iterations. And the reason for that is that these spend variables—these were very recently developed, like over a span of last one month, and they are coming out to be pretty important in terms of identifying some of the nuances between our golden and the opportunity dataset, okay? 
+Now, if I put in, say, like a framework wherein I feed these sequences of transaction sequences in a transformer, and say, like, okay, this is the behavior that for a particular card member this is the sequence of journey, okay? And this is the overall year-two incremental GCM objective function. Can you try to create or, say, like develop a sequence of features or events that help me in telling that, okay, whether you can be a high incremental GCM or low incremental GCM, okay? 
 
-So we have select different spend lenses: one is like a comics lens, wherein you have like COGS, fixed, and admin, right? Then there is recurrent versus non-recurrent. Then we have like a SIRT industry classification, wherein like for each card member industry, we get a mapping of top 20 to 25 relevant merchant industries where they should be spending, okay? So we have created like three buckets out of that: top 3, top 5, and top 10 SIRT. And what it does is that if card member is spending within those categories, we have those indicators, both binary as well as like percentage of the spend. Okay? 
+So, what the algo will do is essentially it will read through all the sequences and try to create vector embeddings. And that embeddings can be defined, say, like 1x28 or 1x64, whatever is the length that we want, and those vectors will get created for each and every card member, which will be representation of your sequence of transactions.
 
-So those have been added, and then there is like an overall categorization of bonus and non-bonus spend, right? So these combinations in totality, combined together, will have select close to like 80, 84 combinations. That's what, Shailendra, you have shared, right?
+[02:36] Hema: Okay, like a three-month journey. Yeah.
 
-[02:42] Shailendra: Yes. So, yeah. The code that I shared, it creates a lot more variables, but yeah, you can choose and select, right, which you want to use eventually.
+[02:39] Nitesh: Yes, like three months, yeah. So, essentially now, earlier we had, say, like in the other data stream which we are working towards, we have like monthly cuts, right? I have monthly information; here I'll have like daily information, okay? So, the sequence will be much larger in this one, okay? 
 
-[02:54] Nitesh: Yeah. So, Ishan, these are only the spend variables which are there, right? Apart from this, the earlier set of features, right, which were like belonging to select activation or OCs, which were like these, right? The same ones, like account action, account setup, activation, benefit, DM, emails, solicitation, and everything. All those will remain as it is. 
+So, then essentially what the logic or, say, like the algo will do is it will read through all the sequence. Say, like for one card member, it can be, say, like I have done, say, like 200 transactions in, say, like first three months, okay? There could be some days where I have done, say, like two, three transactions as well, and I'm doing daily. So, within a 90-day period, I have would have, say, like 200 transactions with timestamps, with some timestamps leading to, say, within day—within day itself, okay? 
 
-So I think the earlier dataset which... There are like two levels of datasets which were created: one which was created by Hema, which had like a 48 set of variables initially and that was shared with the India team. The second set is these spend features, which we created yesterday for Month 1 to Month 14, and those have also been shared. Now, apart from this, any other feature which was part of this list, right, and you have already included, say like, in your incremental GCM, those features should also persist, okay? So we have to create a universe of overall everything.
+So, I will feed that sequence all together for each card member, and then essentially what algo will do is it will read through those sequences and then try to create like one vector representation for each and every card member. And the dimension of that vector will be same, okay? It will be, say, like 64-core dimension, and that dimension will be representative of the journey of the card member in terms of the transaction behavior that they have done. Makes sense?
 
-[03:53] Ishan: Okay. One call-out is, like, in the variable list shared by Shailendra—the table—we don't have percentage of construction, advertisement, shipping spend. So we need to include those as well, right?
+[03:45] Hema: Got it. Mhm. Mhm.
 
-[04:06] Nitesh: So ideally, Ashish wants to get away from that percentage within like industry-specific spend. Reason for that is that that becomes very nuanced and like dependent upon the card member industry. So for example, if you yourself belong to a construction industry, your percentage in construction would be higher. So within a spend band, I'm introducing a bias based on the industry of the card member, right? So that's why he was mentioning that instead of doing industry-specific spend features, use like an overall bonus-able category—which has like shipping, construction, electronics, high-rock, all combined together under one bonus-able category, right? Instead of using these separate industry-specific features.
+[03:46] Nitesh: Okay, so that is what we want to achieve. And then decipher from there that what this vector representation actually means. So, I will have a vector representation for a card member with high year-two incremental GCM, and I will have a vector representation for a card member with low year-two incremental GCM. So, both these vectors will be different in terms of the representation of the journey. 
 
-[04:46] Ishan: Okay, so I should be dropping those variables?
+Now, after that, once we have created those vectors, we will have to figure out what is the difference between these. Why we are saying like, okay, incremental GCM folks with high incremental GCM, they are represented by these vectors, and low incremental GCM folks are represented by these vectors. So, what is the human definition or, say, differentiation between these vectors? That is something which we need to figure out; that is the end objective. But as a starting point, we need like for those 77k card members, their daily transaction-level information. Makes sense?
 
-[04:48] Nitesh: Yes, yes. Yeah.
+[04:36] Jay: Okay, okay.
 
-[04:50] Ishan: Okay. And second question is like, what would be our starting population? Because earlier when I ran the IGCM model, I had a population of 15k based on my previous predicted Day 0 model, like between 5 to 25 percentile. But now we have refreshed that also.
+[04:37] Nitesh: Okay? So, that's what Himanshu was pulling. So, I'll tell you one more thing. So, essentially, Shailendra from our team, he actually initiated and created like the dataset with M1 to M14, okay, for all the 77k card members. Within that, there is an intermediary steps, or the tables, wherein this daily-level data is already pulled, okay? So, what he was saying is that if you want, you can use those intermediary tables where you have the daily-level data, and you can use that directly.
 
-[05:09] Nitesh: Yeah, yeah. We are developing it on select the full 77k population of the card members, B-flat card members.
+[05:09] Hema: Okay, yeah.
 
-[05:15] Ishan: Okay, not restricting to the cross-tab analysis?
+[05:10] Nitesh: Okay?
 
-[05:17] Nitesh: No, no, no. So think about it. When I'll be actioning a strategy, I cannot say like I'll be actioning a strategy based on, say like, my predicted value and say like that actual incremental, which I don't even know at that point in time whether somebody's taking up the card, right? I have only visibility into the predicted GCM. So I can action only on the select the predicted GCM, or I can create it say like on the full spectrum of card members, and when I run my Day 0 predicted GCM over it, I can subset it, right? That can be done.
+[05:11] Jay: Okay, so we can use directly to create those table that you want.
 
-[05:48] Ishan: Okay, got it. So apart from individual's industry spend variable, we should be keeping everything.
+[05:14] Nitesh: Exactly, exactly. That's what we want.
 
-[05:57] Nitesh: Yes. We should keep everything.
+[05:16] Hema: Okay.
 
-[06:05] Kartikeya: Any estimate on how many number of variables eventually we would be having? The final total number?
+[05:17] Jay: Okay, so we just want to create that table as of now, right? The embeddings and everything taken care by someone else, you are saying?
 
-[06:12] Ishan: I think it will be like still close to 180 or 190.
+[05:23] Nitesh: Yes, yes, yes. First we need the data. For embeddings and everything, I'll have like Uma, who will like help in creating like that timestamp and, say, like time-aware setup like for the TI-SASREC within that, and she can work here during the day to get this moving.
 
-[06:17] Nitesh: 180, 190, right? And within that, I'll tell you: say like, when we are looking at say like these spend features, right, spend variables, you will have select close to 84 combinations of them. Right? Within those, I would say you can keep the ones which we finalized with Ashish yesterday. Which were those ones, Shailendra? It was like top 10 SIRT, this one, then we had like COGS, and a combination of top 10 SIRT and COGS, right?
+[05:37] Jay: Okay. So, we just need to connect with Himanshu first, what are the intermediate tables, and just create a table and send it to Uma? As soon as we can, okay.
 
-[06:53] Shailendra: Yes, yes, these three mainly.
+[05:46] Nitesh: Exactly. Yes, okay?
 
-[06:56] Kartikeya: We highlighted one more: top 10 SIRT plus bonus.
+[05:48] Hema: Yeah.
 
-[07:01] Nitesh: Top 10 SIRT plus bonus. That is your another one. Yes. So, Ishan, you can keep these four combinations: COGS, top 10 SIRT, COGS plus top 10 SIRT, and top 10 SIRT plus bonus. These four.
+[05:49] Jay: Okay.
 
-[07:14] Ishan: Only these four, right?
+[05:49] Nitesh: So, all you need is for each card member, like daily-level transaction information, that's it.
 
-[07:16] Nitesh: Only these four. So that reduces your total variable set by 80 directly.
+[05:54] Jay: Okay, okay. Got it.
 
-[07:22] Ishan: Okay. One more question: like in the Excel which you shared over email, which is the data dictionary, there is in column C a filter of "final filtered variable." So do we need to use only those variables?
+[05:55] Hema: Yeah, that was what we were trying to figure out, because the daily-level transaction, as Shailendra told, it's already present. So, we were trying to figure out whether we need to do the embedding or if the data is already present, so what is the thing that you need.
 
-[07:39] Nitesh: No, no, no. That was something that was created, yeah, long time back. I don't know how exactly that was created, but nothing stops you from using the relevant ones at your end. Okay? 
+[06:06] Nitesh: Yeah. So, once we have the data, right, so what you can do, Hema, during your day—given like for Jay it will be like late—but during your day you can work with Uma to actually help in creating the embeddings for this one, for this use case, okay? So that we are able to work in parallel. And all of this is going to happen on the CPU itself, because we are not going to run everything on GPU, because that's going to take some time and access configuration. We will run everything on CPU, so let's get that done, okay, today itself.
 
-So what I would say, Ishan, first of all, like create one-pager, okay, or one tab in Excel, wherein you list all the features that are being considered, their definition, right, and their availability from Month 1 to Month 14 for 77k card members, right? That was something which is needed, and you can work with Hema on that one, okay? He was also working on this. Essentially, create one-pager on this and circulate within the team itself so that everybody knows that these are the variable set that we are working with, okay? 
+[06:34] Hema: Okay. Yeah. So, Nitesh, like the PPA table access or queue access, so are you good with it or like are you...
 
-And that is something which we can put across in the deck also, or like we can share as an update to Ashish that this is the feature set that we are considering: we have spend features, we have non-spend features, we have activations, and everything. Right? Done. And you can update like this page itself with select the relevant features that we are considering. Right now we have Month 1 to Month 14. Similarly, the other exercise which we are creating just for the transactions, that will be daily-level data for Month 1 to Month 3, which Himanshu is working on, okay?
+[06:42] Nitesh: I still don't have that access.
 
-[08:55] Ishan: Okay. One more call-out is, Nitesh, like for Month 1 variable, we currently have the daily-level breakup in a sense like Day 0, Day 1, Day 2 to 5, 6 to 10, 11 to 20, and 21+ till end of month. So do we need to use those variables or only the overall Month 1 variable?
+[06:44] Hema: So, I think I told... I told Uma like a Slack channel replied, they told like I don't have the specific IIQ that I should raise, they gave me another IIQ. I gave it to Uma as well, and told to apply for you as well, if you don't mind. So, maybe if the approval is good, then I think they told like if the approval is completed, then you should be able to query it.
 
-[09:15] Nitesh: Right now, like if we want to keep like consistent cadence in terms of the feature set, right? Because Month 1 onwards you have like monthly views, you don't have daily. Correct? So if I'm creating say like a time window or select the differentiation of the timestamps, right, essentially I should be looking at an even set of footprints. If I have select the first month split out at daily and rest of the months at monthly, then essentially I'm introducing one more bias like in my Month 1 itself, okay? So right now we are keeping it at like monthly, but the other set of exercise which we are working with in terms of the transaction-level data, that is like something will be a daily transaction-level data for like Month 1 to 3. Theek hai?
+[07:04] Nitesh: Excellent, man, excellent! Just try it once. Like, if you are... if you can get that, then essentially nothing like it, man.
 
-[09:59] Ishan: Got it.
+[07:10] Hema: Yeah. Now, without that queue, can we do this, is my question.
 
-[10:05] Kartikeya: I would say in the same dataset which you are creating, Ishan, where you have all the variables let's say on the left-hand side in rows, in the columns you can just say M1 to M14 and each of the column you can put like what is the total count of those records in which that number is filled up, so that it gives us a complete overview. And then we can add one more column on top of it which is basically the daily-level transaction data for those three months, and we can just say within this time duration how many number of times this particular variable was more than zero. That sort of a view will get us both the things in the same Excel.
+[07:15] Nitesh: We can. The only thing is... Jay, do you have access to the PPA queue?
 
-[10:44] Ishan: Okay.
+[07:22] Jay: No, I just have S Strategy ANN, CPBL MES. Like, I have for these two.
 
-[10:45] Kartikeya: Nitesh, who is working on the daily? It will be...
+[07:28] Nitesh: These two, right? Cust Strategy ANN. So, just check with Himanshu or, say, like with Shailendra, like if they can transfer to, say, like any of these queues, okay? Or, say, like if the PPA one, Hema, you can check if any of the intermediary tables which, like, Shailendra shared yesterday, if you are able to access that—like `SELECT * FROM <table_name> LIMIT 10;`—if you are able to do, then essentially you have the access.
 
-[10:49] Nitesh: Himanshu. Himanshu is working on that, yeah.
+[07:51] Hema: Yes.
 
-[10:52] Kartikeya: Got it, okay.
+[07:51] Jay: Yeah.
 
-[11:01] Nitesh: Cool. So let's have this data ready and then let's structure it across on monthly level, right, for each and every card member, so that essentially it looks something like this, okay, and it can be fed into the algo. So for example, for same one card member, card member select CM1: Month 1, these were the events that happened; Month 2, these events happened; Month 3, this happened; Month 4, this happened, and so on. Right? If we have this type of view, essentially that will help us create a sequence of events for each and every card member, right?
+[07:52] Nitesh: Okay?
 
-[11:34] Ishan: Okay, okay. Just to double-check: we are not putting the individual high-rock spend, right? It would be a part of bonus category spend.
+[07:53] Hema: Okay.
 
-[11:45] Nitesh: Individual high-rock spend... Yeah, you can keep it say like as a part of bonus-able category, or like if you have select a separate variable of this one, I think, yeah... That won't make sense, bonus-able category should have high-rock as a subset, I agree.
+[07:54] Jay: Okay.
 
-[12:01] Shailendra: Yeah, we have it, nah? In bonus category, we have high-rock transaction as well.
+[07:55] Nitesh: Okay, just try to... So, what I'm trying to say is don't stop with, say, like these accesses and issues, try to figure out, say, like a roundabout solution. Even if that roundabout solution means that asking Himanshu to download that as a CSV and then you uploading that on your particular project use case, do that, okay?
 
-[12:07] Nitesh: So essentially if I'm looking at this, right, 6603—this 6603 should be subset of 13206, fair to say?
+[08:14] Hema: Okay. Yeah.
 
-[12:15] Ishan: Mhm. Yup.
+[08:15] Jay: Okay, we will figure it out, yeah, Nitesh. Yep.
 
-[12:19] Nitesh: Then we should be good. Then keep like only bonus-able category, let's not keep high-rock as a separate. Yeah.
+[08:17] Nitesh: Done, cool. Thanks, guys.
 
-[12:24] Ishan: Okay. So particularly for the spend variable, we are keeping only the four things: COGS, top 10 SIRT, COGS cross top 10 SIRT, top 10 SIRT cross bonus. And nothing else?
+[08:19] Hema: Cool. Okay, thank you, Nitesh.
 
-[12:36] Nitesh: Yep.
+[08:20] Jay: Thank you so much. Bye-bye.
 
-[12:47] Nitesh: Okay, done. Cool. So now let's put some timeline, right guys, across everything. Obviously, this is an R&D process and we can go into n number of things to make things better, and there's no better version that exists today, nothing will be perfect. So let's try to put some timeline across it. So Ishan, we need to complete the structure for the dataset today itself, okay? Let's aim for that. Is Aanchal on the call?
-
-[13:16] Aanchal: Yeah, I'm here.
-
-[13:20] Nitesh: Okay. Aanchal, how are we progressing on say like if we want to feed this type of structure into the algo? Can we do that today?
-
-[13:28] Aanchal: Yeah, I have created a basic structure, and I also had a discussion with Kartikeya on the high level what I'm doing. I'll share code with him for review, but I have a basic structure in place. But for now, I think the variables that we were discussing, right, once I can get final set of features from Ishan I can use that. But for now I used that 48 variables which had fill rate for all 14 months, along with some spend variables. I was not sure of some because I couldn't access the data dictionary which Shailendra shared for spend variables, so I need that to pick relevant variables.
-
-[14:08] Nitesh: Okay. So Ishan will be floating in the relevant set of overall features that are there in our superset universe. Within that, we will overlay XGBoost-specific variable importance to figure out which are the ones actually making sense, and we will include that into our feature set as a starting point. Makes sense? Okay. 
-
-So that is something, Ishan, I'm looking up to you to wrap that up today, okay? And share it with Aanchal so that we can have the structure ready in terms of feeding into the algo itself, okay? Done.
-
-[14:45] Kartikeya: One call-out, Nitesh. I've asked Aanchal to not work on TI-SASREC, but rather use a basic transformer model only as of now, because we discussed we don't want to go with unsupervised, we want to go with supervised, right? Basis Ashish's response yesterday. So she's working on that particular framework. Just wanted to call that out.
-
-[15:07] Nitesh: Okay. Done, that also works. And essentially in the basic transformer, you will be putting as an objective of the incremental GCM optimization, right? That will be giving as an objective, and you will be using all these feature sets to essentially try to come up with 14 months of sequences and essentially trying to predict the incremental GCM and how does that come into play. Okay.
-
-[15:33] Kartikeya: That's a very easy framework. If it shows any value, then definitely we can improve it by changing transformer input or maybe the structure of how we are training it and so on. But as a starting point, I think this is a fairly good starting point.
-
-[15:51] Nitesh: Okay. So if we have the structure ready today, right, and this is fairly for like 77k card members, which are like just 14 length sequence and events which will be ranging max-to-max events, say like 80 events per card member, right? That is the maximum that we are going with. Do you think like we can run it in the CPU itself, or do we need like GPU?
-
-[16:17] Aanchal: Nitesh, for now I'm running on CPU only, on Loomi, because considering we just have 14 events in each customer journey and we're not running TI-SASREC, we are running just a transformer encoder—which is like less complex than TI-SASREC. So I think we should be able to run it for now. But for that timestamp-level analysis that we will do for three months later, that might require GPU.
-
-[16:45] Nitesh: Okay, done. Cool. So you have the GPU access, right? You have it. Who else has it from this group, the GPU access?
-
-[16:55] Uma: I have it, Nitesh.
-
-[16:57] Nitesh: Okay, Uma also has it. Okay, so we have one person in India, one in US, okay then we can move things. And then essentially for the rest of the folks, we should also get the GPU access depending upon the use cases and who so are working, right? So let's try to collate that as well. Kartikeya, you have GPU access or you don't?
-
-[17:17] Kartikeya: No. Actually I had GPU access previously, but recently they've changed...
-
-[17:21] Nitesh: Yeah, same here, same here. Mine was also taken back. I have like reapplied. So okay. So I'll work for you, and then essentially who are the folks on the team who would need it? Wait, wait. I think, Ishan, you should also get one, okay? And let's look in for... Hema, do you have GPU access?
-
-[17:46] Hema: No, Nitesh, I think no.
-
-[17:50] Nitesh: Okay, so let's do one thing. Let's try to raise it for Kartikeya, you, Ishan, at the very least, okay? For three folks, because we need to run like the model iterations and everything. Then let's try to do that. Okay, cool. I'll try to figure that out how to get that done as soon as possible. 
-
-Okay, cool. This is taken care of. And then on the transaction-level data, Himanshu, are you facing any challenges?
-
-[18:22] Himanshu: No, Nitesh. I'm not facing any challenges as such. I think I should be able to prepare the data in next 1 hour or so. I think I have already prepared the pipeline. It's just that I forgot a filter and then I have to reset it and then rerun the pipeline again. But yeah, I would love to validate the data once prepared with you so that we're not going in the wrong direction.
-
-[18:52] Nitesh: Okay, done. So let's do one thing. Work with Hema and Uma here, okay? So that whatever the transaction-level data that you are creating, right, it can be transitioned to... sorry, I said Huma... Hema and Uma together, right? So essentially they can work on feeding in that to a transformer during our day, okay? To see like and create a structure for that. 
-
-Cool. And Aanchal, you are aware like how you will feed it into the transformer algo, or do you need any support on that rather than just like the TI-SASREC? TI-SASREC we know you have like hands-on, on the transformer...
-
-[19:34] Aanchal: Transformer is simpler than that. Done.
-
-[19:37] Nitesh: Can you explain that architecture to Uma or Hema today so that they can also run it?
-
-[19:43] Aanchal: Yeah, I'll share the code. I'll share the code, and I'll also share like basic English-level architecture.
-
-[19:52] Nitesh: Okay, done. That works, that works. Cool. So then essentially the deck that I was creating, say like for an intermediary update with Ashish tomorrow... Okay? So essentially within that, I shouldn't be focusing on say like TI-SASREC, because that's not something which we are running right now, right? We are running a transformer, fair to say?
-
-[20:16] Aanchal: Right.
-
-[20:19] Nitesh: Okay. So let's do one thing: you guys work on it as of now, okay? Everybody has like the next step aligned with them, okay? Be it Ishan, you also have next steps; Himanshu, you also have, okay? Uma and Hema, you also have that. And Aanchal, you can connect with them to discuss with them on the transformer setup. And Himanshu, you need to transition and first of all get those transaction-level data in, and then share it with Hema and Uma so that they can access it, okay? And get that done. Makes sense?
-
-[20:51] Himanshu: Yeah.
-
-[20:52] Aanchal: Yeah, I think, but for that transaction-level data, we should still stick to TI-SASREC, which Uma is already aware of. So if she can leverage that data and we work on a TI-SASREC model...
-
-[21:05] Nitesh: Wait, wait, wait. You are saying on the transaction-level data we should focus on...
-
-[21:13] Aanchal: We will have a longer sequence there since it is daily level.
-
-[21:16] Nitesh: Yes, yes.
-
-[21:19] Aanchal: So TI-SASREC should work there and there will be different gaps between the events.
-
-[21:23] Nitesh: Yes, I agree. I agree. Then let's stick to the TI-SASREC algo for that, okay? That should be done. Okay. Himanshu, you are fetching this information for 77k card members, right?
-
-[21:36] Himanshu: 77k, yes.
-
-[21:37] Nitesh: Okay, 77k card members' transaction-level data for Month 1 to Month 3. And when you're fetching the transaction-level data, it is the raw transaction amount that you're getting, right?
-
-[21:47] Himanshu: Yes, yes. And Nitesh, I had a question that I just wanted to share like how I'm creating this data, so that if there is anything wrong that I'm doing, so that you can kind of guide me. So in the mail, you had mentioned about the 1,000 top and 1,000 bottom customers. So we need to pull the transaction-level data for those 2,000 only, right?
-
-[22:20] Nitesh: No, no, no, no. Pull the transaction for like all the card members, not select just for only those top 1,000 or bottom 1,000. That is something which I wrote in the mail, but I had a chat with Kartikeya last night itself and he mentioned that he will relay that info that essentially we should get like for all the 77k card members, run the full TI-SASREC algo on all of them, and once done, then essentially we will look at top 1,000 and bottom 1,000. Because if I run the algo only on 1,000 observations, it won't be able to train itself well. That's why.
-
-[23:00] Himanshu: Okay. So the transaction-level data in that case is, as you mentioned in the mail, that it is already there in the intermediate table. So that intermediate table has the transaction amount, the event date, the month flag (which month is the event happening), and the sequence number as well pertaining to the event. So it has CM11, event date, month number flag, and the sequence number of the transaction that is happening.
-
-[23:35] Nitesh: Yep, yep, yep. So I would say like, do one thing: Anju is asking me to join her Webex, I'll hop on there and get back. Shailendra, can you just explain it to him like how I can get that intermediate transaction-level data within the next 5 minutes, so that he can get that info directly?
-
-[23:51] Shailendra: Yes. Okay, yeah.
-
-[23:54] Nitesh: I'll join back in 10 minutes.
-
-[24:04] Shailendra: Yes. So, Himanshu, what did you want?
-
-[24:08] Himanshu: So, Shailendra, I have the intermediate table already. So I was just asking about the structure of the data that would look like. So what kind of columns or how the data will be structured as far as the transaction-level data is concerned? Because in the transaction-level intermediate table, we already have CM11, the event date, the month number flag, and the sequence of the transaction, right?
-
-[24:44] Shailendra: Mhm.
-
-[24:46] Himanshu: So what else would we be needing is my question.
-
-[24:55] Kartikeya: I think you need daily-level data. Currently it is month flag, okay, if I'm not wrong.
-
-[25:04] Himanshu: No, it has daily level already.
-
-[25:09] Shailendra: I think you should have the data at a transactional level already with merchant, customer information. So what... do you need more granular data, more aggregated data? If you want customer-level data, we also have that. If you want transactional-level data, we have that as well.
-
-[25:30] Himanshu: The intermediate table that was being referred to in the mail, it is already at transaction level, right? So the transaction-level data that Nitesh is expecting, how would it look like? How is he expecting, should it be... So for those 77k customers, we would be having columns like CM11, event date, month number flag, and the sequence of the transaction. Is that how... that was my question, is that how Nitesh is expecting?
-
-[26:09] Shailendra: Yeah, so I'm not completely sure about what is Nitesh's expectation, but I'm assuming—and again, you can check with Kartikeya as well—my understanding is that you will need to create essentially a sequence, so you should have a date, transaction amount, and then essentially based on that you can create the sequence, right? I think everything related to customer and merchant is already present. So I assume that everything that is needed for you to create the embedding, it should be already there. I don't see any other thing that is required. But what exactly structure is needed, Kartik or Nitesh would know better.
-
-[27:18] Shailendra: Hey Himanshu, you got my point?
-
-[27:22] Himanshu: Yeah, I'm kind of trying to understand. Yeah, I got your point.
-
-[27:32] Shailendra: Because I'm not completely sure how the embeddings are created, so you should talk to them. I won't be able to comment on that.
-
-[27:54] Aanchal: Shailendra, can you also share the data dictionary for the spend variables that you have created?
-
-[28:01] Shailendra: Yes, so the Excel that I shared, right, it should have everything.
-
-[28:06] Aanchal: I think I don't have access to that Excel.
-
-[28:11] Shailendra: You can request the access, I will provide the access. That shouldn't be an issue.
-
-[28:24] Ishan: So Shailendra, in the spend variable, the first spend and the COGS spend are two different things?
-
-[28:31] Shailendra: Yeah, so essentially for Month 1, everything is first spend only, right? So it doesn't really differentiate.
-
-[28:38] Ishan: No, so we need to include M1 till M14, that's why I was asking. So we have a variable cogs_first_spend_m2. So are these intersection variables or the standalone COGS variable?
-
-[28:55] Shailendra: So I think all of the variables that we have created, the new variables, are just the normal variables essentially. They are not first spend. And Month 2 to 14, I don't know if you should include first spend itself, because essentially what I did is I did an analysis on Month 2 to 14 validation, and we saw that—especially which is expected as well—we saw that Month 2 onwards, especially after 3 and 4, the first spend variables are essentially negligible, right? They have like less than 1% event rate. So they are not meaningful after first month or second month. So they were not coming up in any analysis. So in my data, I had created the first spend variables, but I did not use them.
-
-[30:00] Ishan: Okay.
-
-[30:03] Shailendra: In fact, in the data dictionary also you will find them, but I think you shouldn't use them unless there's a use case for it. And Ishan, I just need one thing from you. Do you know how to get the industry name from the SIC10 or SC10?
-
-[30:41] Ishan: Yep. Let me share the logic. By the way, it will be in the code shared previously. The variable should be top_db_nm (top underscore db underscore nm).
-
-[30:56] Shailendra: Okay, yes. Can you share that code?
-
-[31:00] Ishan: Let me find it out.
-
-[31:05] Shailendra: Is it between the three, four of us? Between you, me, and...
-
-[31:10] Ishan: It would be in the transaction logic which I shared earlier.
-
-[31:33] Shailendra: I don't have that code. So if you can just find that, right, that will be great. And also I didn't get a chance to talk about it, but did you check with Aditya on the Belgian table? I think that we had a bit of confusion, right?
-
-[31:55] Ishan: No, didn't get any response from him.
-
-[32:03] Shailendra: Okay. Yes.
-
-[32:07] Himanshu: Okay, Shailendra, I have one more question around that transaction table. So 77k customers that we're talking about, that 77k is a subset of the intermediate transaction table that is getting created in those scripts, am I right?
-
-[32:30] Shailendra: Yes. So the starting base is 77k, so all the intermediate tables will have 77k customers only. No table will have more or less, that at least I had checked.
-
-[32:44] Himanshu: The transaction table... Okay, my screen is stuck.
-
-[32:51] Shailendra: Wait, transaction table... Are you talking about the base GMS transaction table or the intermediate table that I have created?
-
-[32:59] Himanshu: Nitesh mentioned in the mail that the transaction table is getting created as an intermediate table.
-
-[33:07] Shailendra: Yes, yeah.
-
-[33:09] Himanshu: That is the intermediate table I'm talking about, because it is already at transaction level, if I'm not wrong. I went through that table and I could see that it was at transaction level, right?
-
-[33:20] Shailendra: Yes, yes.
-
-[33:22] Himanshu: And that is the table I'm referring to when I say that 77k is the subset of that table, or 77k is the base for that script?
-
-[33:38] Shailendra: Yeah, the 77k is the base only. Yes.
-
-[33:43] Himanshu: Okay, that means that intermediate transaction table has the transaction-level data for all those 77k customers, right?
-
-[33:53] Shailendra: Yes, yes.
-
-[33:56] Himanshu: Okay. Since it has that transaction-level data, so okay, now it would be better to ask Nitesh then how is he expecting this structure, or Kartikeya.
-
-[34:16] Shailendra: Yeah, that's why I said in the group as well, right? Because based on my understanding from Nitesh, the kind of data he wants, it has everything. Probably the only thing it has missing is the sequence number, which is just simple serial number.
-
-[34:33] Himanshu: Sequence number is also there, I think. Sequence number is also there in that table.
-
-[34:37] Shailendra: Yeah, so that sequence number is the month sequence number that is used to create the first spend variable.
-
-[34:43] Himanshu: Okay, it is the sequence number of the transaction. The month sequence has the column "month number flag", I think.
-
-[34:50] Kartikeya: What is the variable name for sequence number?
-
-[34:55] Himanshu: I think it is the "sequence number" only. I think I need to drop off for Stephanie Connect, I'll join back.
-
-[35:03] Shailendra: Okay. In fact, guys, let's connect as well internally, right, before the... I think this group we can connect later. Okay, thank you everyone.
+[08:21] Hema: Thank you. Bye.
