@@ -1,493 +1,290 @@
-Suresh: ...Rahul and team uh part. Uh we got that uh the pretty much some of the requirements. Only few requirements was uh walked out, but due to the other priorities specific to the TSE channel, uh we are planning to release all the TSE related requirements before the code freeze, and uh during that time we are planning to take the early experience implementation uh Meghana. We started some bit, but uh I think uh uh I'm sure I think we can't able to release it before the code freeze, but we were we are in the plan to start the implementation, and now we are on track on that early experience, uh specific to the TSE part.
+CALL TRANSCRIPT
+Participants: Nitesh, Ishan, Shailendra, Kartikeya, Aanchal, Uma, Himanshu
 
-Meghana: There is a difference though on this one. This is for the corporate team. I'm not sure whether you were already part of those discussions. So the the one that we have had with Rahul and team, yeah, correct, uh are going to be for your business, ee- ee business teams, and this is for the corporate one.
+[00:00] Nitesh: So in the meantime, I know there are like multiple back and forth on say like a few of the things as to what needs to be done and what exactly are the set of variables that we need to include within our first set of iteration of the model itself, right? So Ishan, as per you, what is the total set of feature set that you have included in the IGCM model today, and what are those features?
 
-Suresh: Okay. Mhm.
+[00:24] Ishan: Okay. So previously, when I ran the IGCM model specifically for the Month 1 variable, I had a total of 119 variables. And as per the dataset which you shared in the email—that is the final table—there for a distinct month, I'm seeing 84 variables.
 
-Kartik: So, because like this is a completely different use case that's being developed. This is for early experience for corporate.
+[00:41] Nitesh: Okay. And are those 84 all in that 119?
 
-Suresh: Since it's early experience, right, so I thought uh this also comes under the same tier. Okay, okay, got it. Yeah, yeah, sure, sure, sure. Sure, sure. Okay.
+[00:47] Ishan: No. Only the recurrent spend and the percentage of recurrent spend, I believe, is the overlap; rest is totally different.
 
-Meghana: Right. So, there are going to be some nuance scenarios that we would have to define based on the ROEs between the teams, cuz this team would just be one part of the ones, they don't actually own the accounts. They are on the account teams that they have access to. So, couple of changes from OneForce, we'd have to sort of for your awareness we would have to incorporate would be that since this team is on your opportunity team, they should also be added to the account team. And then when you are, Suresh, and when you're sending out the ownership on these insights through that file, we need to ensure that the corporate deployment team would be the right party for this relevant set of whatever logic that Kartik and Krutharth decide, and then that needs to be translated through. Make that One call out over here. One call out over here. 
+[01:01] Nitesh: Rest is totally different. Why would that be?
 
-Meghana: Mhm.
+[01:03] Ishan: Yeah, because like in my incremental IGCM model, I didn't include the COGS, admin, those sort of spend variables. So now we have the intersection... Yeah, so I don't have the intersection variables also in my previous model.
 
-Kartik: So the initial goal is not to make it live via Comet. The initial goal is to do a manual upload only, because I don't think we will be able to build something by then. Again, we require resources as well and so on. I think the right thing to focus upon is first of all understand like how how do we how does does the Comet team upload data on OneForce? What are the different fields which they upload which can directly get reflected within OneForce itself? If we can use a similar file format, we can provide data in a similar format to OneForce. Then, I think it can work. So, Comet team, I don't think it will be involved in the whole process.
+[01:18] Nitesh: Okay. So this dataset, right? This is the one that you're talking about, the one that we shared yesterday? Okay. So this has a set of incremental spend variables which were not earlier available to you when you were running your iterations. And the reason for that is that these spend variables—these were very recently developed, like over a span of last one month, and they are coming out to be pretty important in terms of identifying some of the nuances between our golden and the opportunity dataset, okay? 
 
-Meghana: Okay. So what are the timelines, Kartik, that you are looking for? Cuz we don't have any manual processes for from OneForce side that accommodate the updates. Where you are saying that weâ
+So we have select different spend lenses: one is like a comics lens, wherein you have like COGS, fixed, and admin, right? Then there is recurrent versus non-recurrent. Then we have like a SIRT industry classification, wherein like for each card member industry, we get a mapping of top 20 to 25 relevant merchant industries where they should be spending, okay? So we have created like three buckets out of that: top 3, top 5, and top 10 SIRT. And what it does is that if card member is spending within those categories, we have those indicators, both binary as well as like percentage of the spend. Okay? 
 
-Kartik: Yeah, go on.
+So those have been added, and then there is like an overall categorization of bonus and non-bonus spend, right? So these combinations in totality, combined together, will have select close to like 80, 84 combinations. That's what, Shailendra, you have shared, right?
 
-Subhu: Wait, I'm sorry. I just I just got this meeting invite forwarded by Ajay this morning, so I have I have little to no context. Uh if you don't mind, for before we discuss any further, can you share spit some light on the context?
+[02:42] Shailendra: Yes. So, yeah. The code that I shared, it creates a lot more variables, but yeah, you can choose and select, right, which you want to use eventually.
 
-Meghana: Right. So, insights are the meaningful inflection points or meaningful information for the associated accounts that are provided by these teamsâAD, TSE, early experience corporate, early experience business. We also have a similar setup on the prospect side of the house that is key information for these colleagues to make the next meaningful engagement with the user. This was currently BAU being updated through your demand tools or through any disjointed processes as part of us marketing. I can pull up all those um details and uh Subhu, I can share those offline with you. But through earlier this year, we have set up a process, a systematic process with Comet, pushing these through Lumi and data cloud and all those channels coming in through the upload. And we're trying to move away from any SPT partners or in-partners manually uploading the insights in the system.
+[02:54] Nitesh: Yeah. So, Ishan, these are only the spend variables which are there, right? Apart from this, the earlier set of features, right, which were like belonging to select activation or OCs, which were like these, right? The same ones, like account action, account setup, activation, benefit, DM, emails, solicitation, and everything. All those will remain as it is. 
 
-Subhu: Okay. So we are trying to automate the existing process, in a nutshell.
+So I think the earlier dataset which... There are like two levels of datasets which were created: one which was created by Hema, which had like a 48 set of variables initially and that was shared with the India team. The second set is these spend features, which we created yesterday for Month 1 to Month 14, and those have also been shared. Now, apart from this, any other feature which was part of this list, right, and you have already included, say like, in your incremental GCM, those features should also persist, okay? So we have to create a universe of overall everything.
 
-Meghana: Correct. So what this meeting is focusing on is that piggybacking on the automation or the pipeline that we just uh created for all of the other teams and adding one more use case to the same. Can we also use or extend the existing revised pipeline for the insight ingestion for early experience corporate deployment teams, too? And for that conversation, Kartik was like, let's just map the files. If the files have the meaningful columns or fields, let's just tally and see if there's delta, and then we can proceed. And to that point, I was like, let's just talk what's what are we trying to achieve. If we can do it through the systematic process without any extensive build, we should be leaning towards that versus a manual process.
+[03:53] Ishan: Okay. One call-out is, like, in the variable list shared by Shailendra—the table—we don't have percentage of construction, advertisement, shipping spend. So we need to include those as well, right?
 
-Subhu: Okay. So these are basically account insights coming from AIM?
+[04:06] Nitesh: So ideally, Ashish wants to get away from that percentage within like industry-specific spend. Reason for that is that that becomes very nuanced and like dependent upon the card member industry. So for example, if you yourself belong to a construction industry, your percentage in construction would be higher. So within a spend band, I'm introducing a bias based on the industry of the card member, right? So that's why he was mentioning that instead of doing industry-specific spend features, use like an overall bonus-able category—which has like shipping, construction, electronics, high-rock, all combined together under one bonus-able category, right? Instead of using these separate industry-specific features.
 
-Meghana: Correct.
+[04:46] Ishan: Okay, so I should be dropping those variables?
 
-Kartik: So to give to give more light uh to put more light on this, Subane, essentially the idea is once a cu- customer gets a new corp program, or they got acquired on a corporate program, we will be doing some early experience for those guys. So there'll be some uh call, some sort of insights which we need to deliver to the sales colleagues so that they they can reach out to those customers on time, and they are able to manage that account well. Now in order to do this exercise, uh again like this is something which I thought we would be doing manual only, but since Meghana is saying that we there is a possibility to even automate it in a more structured way, I'm more than happy to do it. But essentially the idea is to provide these insights and the tiers associated with these customers on OneForce in a uh in a weekly schedule, either via manual upload or via or via these automated scheduled delivery via Comet. So either of these two processes, I'm like we're definitely more than happy to do you to go ahead with the automatic one. But regarding this, I want to understand with you, Meghana, first of all, the the funding corresponding to this aspect. Like, is the funding already there? Because there will be some requirement on the Comet side to make create a build for this, right? 
+[04:48] Nitesh: Yes, yes. Yeah.
 
-Meghana: That's the whole catch. [laughs] That's the whole catch. We we didn't receive any funding as such, but if we are able to leverage the same pipeline, we don't need actual funding, right, for Comet to take forward, if it is going to be the same. Cuz for all the other use cases, meaning AD, TSE, and early experience business, we're using the same pipeline. Right, Suresh, we are doing that.
+[04:50] Ishan: Okay. And second question is like, what would be our starting population? Because earlier when I ran the IGCM model, I had a population of 15k based on my previous predicted Day 0 model, like between 5 to 25 percentile. But now we have refreshed that also.
 
-Suresh: Ha, correct.
+[05:09] Nitesh: Yeah, yeah. We are developing it on select the full 77k population of the card members, B-flat card members.
 
-Meghana: There are there would be minor enhancements on the file format, but from Comet to OneForce, it's going to be the same.
+[05:15] Ishan: Okay, not restricting to the cross-tab analysis?
 
-Suresh: But I think you this is planned for the current year deliverables, Meghana, or Sorry, not it. When when are you planning to launch this, go-live plan for this use case?
+[05:17] Nitesh: No, no, no. So think about it. When I'll be actioning a strategy, I cannot say like I'll be actioning a strategy based on, say like, my predicted value and say like that actual incremental, which I don't even know at that point in time whether somebody's taking up the card, right? I have only visibility into the predicted GCM. So I can action only on the select the predicted GCM, or I can create it say like on the full spectrum of card members, and when I run my Day 0 predicted GCM over it, I can subset it, right? That can be done.
 
-Meghana: This is Q1 2027. Q1 is what I heard from Mo.
+[05:48] Ishan: Okay, got it. So apart from individual's industry spend variable, we should be keeping everything.
 
-Kartik: Sorry, this is Q1 20- Q1 2027, next year Q1?
+[05:57] Nitesh: Yes. We should keep everything.
 
-Meghana: Yeah.
+[06:05] Kartikeya: Any estimate on how many number of variables eventually we would be having? The final total number?
 
-Suresh: Oh, Q1 next year? Okay, then we are happy to support, no issue. Because code freeze was getting this month end, right, so that's the reason. But yeah, actually, Mohan, if you don't want to automate the end-to-end pipeline via CPP, I have a quick uh I think uh turnaround solution, okay?
+[06:12] Ishan: I think it will be like still close to 180 or 190.
 
-Meghana: Mhm, go ahead.
+[06:17] Nitesh: 180, 190, right? And within that, I'll tell you: say like, when we are looking at say like these spend features, right, spend variables, you will have select close to 84 combinations of them. Right? Within those, I would say you can keep the ones which we finalized with Ashish yesterday. Which were those ones, Shailendra? It was like top 10 SIRT, this one, then we had like COGS, and a combination of top 10 SIRT and COGS, right?
 
-Suresh: So, so we have a dedicated SFTP-based uh the file ingestion process, okay? So we have created some dedicated SFTP account for only just pushing the data to uh business team. So, I think uh currently we are sending the data to OneForce in the two different format. One is the tier upgrade or downgrade information, okay? I guess as it is, this is only specific to any tier, so it's not required that data, but there will be one more file that table ingestion process called uh the insights data upload. I can share you the specific format of the file, okay, so if you can send the file via SFTP push, so then we can able to retrieve the data and pushing the data back end to the respective OneForce table. So that's the I think quick uh solution we can able to do with very less minimal effort from the Comet team side, we can able to do. I think we got to know that you you currently wants to do the manual and then only you are planning to implement that in the CPP side, right? Uh mainly on the A corporate. So for a kind of time being, you can able to do this approach, so that that there will be no change in the OneForce system side. I mean the pipeline, specifically, apart from that any business-specific requirement. So we can able to reuse the current ingestion process which we are using for few of the triggers. So just slight modification, we can able to adjust it for this ingestion pipeline as well.
+[06:53] Shailendra: Yes, yes, these three mainly.
 
-Meghana: Right.
+[06:56] Kartikeya: We highlighted one more: top 10 SIRT plus bonus.
 
-Kartik: So, essentially, if I just once again, Meghana, just want to make sure that what you are saying is even if you are doing a manual process, there is already an existing SFTP process which we can leverage in order to make an upload to OneForce, right? There are two things here: we are required to update So the way it works is the account owner will still be those AD guys, because a customer gets converted, and the customer got a corporate program, so the account owner is still the AD guy, but there's a separate team member who we call as deployment managers. So they are the one who will manage this account post their acquisition, however they won't be the account owners. And for them, there will be a step there'll be two types of uploads which we'll be doing. Definitely like there will be uh the insights which is specific to early experience. It does not mean that these insights will be same as what we update what we upload for AD Tier 0 or there BAU tiers. There will be two sets of insights for the same account on OneForce, as well as there will be two sets of tiers as well. One tier coming from the AD team, and one tier coming from the early early experience side, from us. So there will be two different fields to one for insight and one for tier coming from early experience. Do you think that the same process can be leveraged even for this type of upload as well on OneForce?
+[07:01] Nitesh: Top 10 SIRT plus bonus. That is your another one. Yes. So, Ishan, you can keep these four combinations: COGS, top 10 SIRT, COGS plus top 10 SIRT, and top 10 SIRT plus bonus. These four.
 
-Meghana: Right. So, there is a catch to it, right? 
+[07:14] Ishan: Only these four, right?
 
-Kartik: Okay.
+[07:16] Nitesh: Only these four. So that reduces your total variable set by 80 directly.
 
-Meghana: The catch would be cuz we were discussing once the ROEs are going to be assigned, so there are two steps to it. The first is that, how do we ingest the right ownership to the right insight, right? And the second is, how do we prioritize it on their UI making sure the most meaningful information is presented to the most relevant team, right? So for the first one, for the question that you just asked is that, can we accommodate it? We might need to automate it within OneForce rather than having it at the file level, cuz if there are customizations, it should be configured within OneForce as part of the rule of engagement. If uh the insight owner needs to be assigned, a deployment manager, we have that information already identified on that account, and that can be leveraged through. That would be a holistic solution we can take forward once the approach is aligned, rather than having one more field added to the file.
+[07:22] Ishan: Okay. One more question: like in the Excel which you shared over email, which is the data dictionary, there is in column C a filter of "final filtered variable." So do we need to use only those variables?
 
-Kartik: On the OneForce side, who should we talk to, Meghana, for this?
+[07:39] Nitesh: No, no, no. That was something that was created, yeah, long time back. I don't know how exactly that was created, but nothing stops you from using the relevant ones at your end. Okay? 
 
-Meghana: It's the same group. Yeah, it's the same group. Subhu is from our solution architect team, and once we have this discussion, this initial discussion, if there is any possibility that we can leverage the pipeline, that is where Suresh and team come through. And for how we map all of this for this team, early experience corporate deployment team, I would be the point of contact, and we have a change request that is going to facilitate all the conversations further.
+So what I would say, Ishan, first of all, like create one-pager, okay, or one tab in Excel, wherein you list all the features that are being considered, their definition, right, and their availability from Month 1 to Month 14 for 77k card members, right? That was something which is needed, and you can work with Hema on that one, okay? He was also working on this. Essentially, create one-pager on this and circulate within the team itself so that everybody knows that these are the variable set that we are working with, okay? 
 
-Kartik: Got it. Okay. So, then what is the next step for the for this OneForce story?
+And that is something which we can put across in the deck also, or like we can share as an update to Ashish that this is the feature set that we are considering: we have spend features, we have non-spend features, we have activations, and everything. Right? Done. And you can update like this page itself with select the relevant features that we are considering. Right now we have Month 1 to Month 14. Similarly, the other exercise which we are creating just for the transactions, that will be daily-level data for Month 1 to Month 3, which Himanshu is working on, okay?
 
-Meghana: Right. So the next steps, the first one would be to make sure that what you are trying to achieve for this, right, so the information. Maybe Krutharth can help, he's been pretty hands-on in all the file formats. As an offline conversation, you can review that file with Suresh. We recently did a similar experience with the Block use case as well, and we onboarded the file format for Block onto the existing rails. The second item is going to be on us as OneForce team to isolate how we are going to make sure that if we have multiple stake folks working on the same account in different rules of engagement, how we make sure that the right insight is tagged to it, and how it is going to be prioritized on their workspace in the OneForce screen. I would also want to understand from you, the third is going to be for you, or to help us understand how the tier value, what fields are you tracking for each of these scenarios. Prioritization tier is the field that we were looking for. That would be something, are you using the same field for both the teams, meaning the account manager and the deployment manager, or are you having any other values being tracked? And the fourth one is going to be our this is the revised UI for the AD teams, the one that I have up on my screen, right? 
+[08:55] Ishan: Okay. One more call-out is, Nitesh, like for Month 1 variable, we currently have the daily-level breakup in a sense like Day 0, Day 1, Day 2 to 5, 6 to 10, 11 to 20, and 21+ till end of month. So do we need to use those variables or only the overall Month 1 variable?
 
-Kartik: Okay.
+[09:15] Nitesh: Right now, like if we want to keep like consistent cadence in terms of the feature set, right? Because Month 1 onwards you have like monthly views, you don't have daily. Correct? So if I'm creating say like a time window or select the differentiation of the timestamps, right, essentially I should be looking at an even set of footprints. If I have select the first month split out at daily and rest of the months at monthly, then essentially I'm introducing one more bias like in my Month 1 itself, okay? So right now we are keeping it at like monthly, but the other set of exercise which we are working with in terms of the transaction-level data, that is like something will be a daily transaction-level data for like Month 1 to 3. Theek hai?
 
-Meghana: Are we looking to leverage the similar one or no? Cuz this is the other one we have um on the on the right side, the action called to action and all of this listed through.
+[09:59] Ishan: Got it.
 
-Kartik: I would Okay. So, let me Are there any other questions apart from these, Meghana?
+[10:05] Kartikeya: I would say in the same dataset which you are creating, Ishan, where you have all the variables let's say on the left-hand side in rows, in the columns you can just say M1 to M14 and each of the column you can put like what is the total count of those records in which that number is filled up, so that it gives us a complete overview. And then we can add one more column on top of it which is basically the daily-level transaction data for those three months, and we can just say within this time duration how many number of times this particular variable was more than zero. That sort of a view will get us both the things in the same Excel.
 
-Meghana: For the beginning of the conversation, this is it.
+[10:44] Ishan: Okay.
 
-Kartik: Great. Okay, cool. I'll start from the bottom then. The first one that uh about the LeadGenius, I think this is a LeadGenius format. 
+[10:45] Kartikeya: Nitesh, who is working on the daily? It will be...
 
-Meghana: Yes.
+[10:49] Nitesh: Himanshu. Himanshu is working on that, yeah.
 
-Kartik: I would say even for the deployment managers, it's better to go to LeadGenius only, because now this is a this is a future future step, right? We should not go back to the action center. So even for deployment manager, we should be going in for LeadGenius. I can double confirm it with Mo, but I believe like that should be it. The second question was more about the tiering part, right? 
+[10:52] Kartikeya: Got it, okay.
 
-Meghana: Mhm.
+[11:01] Nitesh: Cool. So let's have this data ready and then let's structure it across on monthly level, right, for each and every card member, so that essentially it looks something like this, okay, and it can be fed into the algo. So for example, for same one card member, card member select CM1: Month 1, these were the events that happened; Month 2, these events happened; Month 3, this happened; Month 4, this happened, and so on. Right? If we have this type of view, essentially that will help us create a sequence of events for each and every card member, right?
 
-Kartik: So, the tiering, again, like uh we there there are two sets of tiers: one coming from the AD side, the other coming from the early experience side. 
+[11:34] Ishan: Okay, okay. Just to double-check: we are not putting the individual high-rock spend, right? It would be a part of bonus category spend.
 
-Meghana: Mhm.
+[11:45] Nitesh: Individual high-rock spend... Yeah, you can keep it say like as a part of bonus-able category, or like if you have select a separate variable of this one, I think, yeah... That won't make sense, bonus-able category should have high-rock as a subset, I agree.
 
-Kartik: So there can be a scenario where they provide they say that the account is in tier 1, and we also say that the account is in tier 2. So we cannot have the same field reflecting at two places, so there should be a different field altogether that we can come up with a name for that field, like what what field name should be there for that. But essentially it should reflect the tier that we are providing for that customer. 
+[12:01] Shailendra: Yeah, we have it, nah? In bonus category, we have high-rock transaction as well.
 
-Meghana: Mhm.
+[12:07] Nitesh: So essentially if I'm looking at this, right, 6603—this 6603 should be subset of 13206, fair to say?
 
-Kartik: It's a different flow of prioritization. 
+[12:15] Ishan: Mhm. Yup.
 
-Meghana: Mhm.
+[12:19] Nitesh: Then we should be good. Then keep like only bonus-able category, let's not keep high-rock as a separate. Yeah.
 
-Kartik: It answers your third question, right? 
+[12:24] Ishan: Okay. So particularly for the spend variable, we are keeping only the four things: COGS, top 10 SIRT, COGS cross top 10 SIRT, top 10 SIRT cross bonus. And nothing else?
 
-Meghana: Mhm.
+[12:36] Nitesh: Yep.
 
-Kartik: Okay. The first question which you mentioned, like the kind of data the sec- the second was more about from the OneForce side where you will be working with the OneForce team in order to execute this. The first was more about to understand uh what are the different data fields that we will be providing you, right? As of now, there are only two additional data fields which I can think of, which is the new insight and the new tier, because the if we just leverage the current uh process of uploading things on OneForce, whatever we have on the TSE side, I feel like that particular tier will directly map to the current TSE tier, like that should not happen. So there has to be two different fields which we should be having in the offline file, and ideally those should get linked with the two different fields that you will be creating on the OneForce. 
+[12:47] Nitesh: Okay, done. Cool. So now let's put some timeline, right guys, across everything. Obviously, this is an R&D process and we can go into n number of things to make things better, and there's no better version that exists today, nothing will be perfect. So let's try to put some timeline across it. So Ishan, we need to complete the structure for the dataset today itself, okay? Let's aim for that. Is Aanchal on the call?
 
-Meghana: Mhm.
+[13:16] Aanchal: Yeah, I'm here.
 
-Kartik: So, let me know if it it helps. Likeâ
+[13:20] Nitesh: Okay. Aanchal, how are we progressing on say like if we want to feed this type of structure into the algo? Can we do that today?
 
-Meghana: Yeah, I'm tracking. Mhm.
+[13:28] Aanchal: Yeah, I have created a basic structure, and I also had a discussion with Kartikeya on the high level what I'm doing. I'll share code with him for review, but I have a basic structure in place. But for now, I think the variables that we were discussing, right, once I can get final set of features from Ishan I can use that. But for now I used that 48 variables which had fill rate for all 14 months, along with some spend variables. I was not sure of some because I couldn't access the data dictionary which Shailendra shared for spend variables, so I need that to pick relevant variables.
 
-Kartik: So is there any other Like I think that is the major thing. Like these are the only things that we we have as of now. But if there's any other field that you think, okay, should be relevant for us to make make an upload on the OneForce side, so let me know. I can think through those and I can get back to you on that part.
+[14:08] Nitesh: Okay. So Ishan will be floating in the relevant set of overall features that are there in our superset universe. Within that, we will overlay XGBoost-specific variable importance to figure out which are the ones actually making sense, and we will include that into our feature set as a starting point. Makes sense? Okay. 
 
-Meghana: All right. To facilitate that, that, let's look up what all is current, right? What all insight information is being received for all the other use cases, especially the AD ones, cuz that is going to be the most closest to this team. 
+So that is something, Ishan, I'm looking up to you to wrap that up today, okay? And share it with Aanchal so that we can have the structure ready in terms of feeding into the algo itself, okay? Done.
 
-Kartik: Exactly.
+[14:45] Kartikeya: One call-out, Nitesh. I've asked Aanchal to not work on TI-SASREC, but rather use a basic transformer model only as of now, because we discussed we don't want to go with unsupervised, we want to go with supervised, right? Basis Ashish's response yesterday. So she's working on that particular framework. Just wanted to call that out.
 
-Meghana: Right? So we can review that file format making sure that what you're visualizing is what we are getting eventually. And if there is any presentation, meaning any and user flow or any of those documentation that you have, please share those. I'll include that in our solution designing as well, making sure that we are not missing out any key information. And from there, we can then have the next steps aligned, meaning how many fields that we would need to capture the next the delta information, and what should be the file format and naming concept and all of those.
+[15:07] Nitesh: Okay. Done, that also works. And essentially in the basic transformer, you will be putting as an objective of the incremental GCM optimization, right? That will be giving as an objective, and you will be using all these feature sets to essentially try to come up with 14 months of sequences and essentially trying to predict the incremental GCM and how does that come into play. Okay.
 
-Kartik: Makes sense. Cool. I I can work with Krutharth on the AD file and modify it accordingly to early experience, and then I can share it with the group here. 
+[15:33] Kartikeya: That's a very easy framework. If it shows any value, then definitely we can improve it by changing transformer input or maybe the structure of how we are training it and so on. But as a starting point, I think this is a fairly good starting point.
 
-Meghana: Sounds good.
+[15:51] Nitesh: Okay. So if we have the structure ready today, right, and this is fairly for like 77k card members, which are like just 14 length sequence and events which will be ranging max-to-max events, say like 80 events per card member, right? That is the maximum that we are going with. Do you think like we can run it in the CPU itself, or do we need like GPU?
 
-Kartik: That should be it.
+[16:17] Aanchal: Nitesh, for now I'm running on CPU only, on Loomi, because considering we just have 14 events in each customer journey and we're not running TI-SASREC, we are running just a transformer encoder—which is like less complex than TI-SASREC. So I think we should be able to run it for now. But for that timestamp-level analysis that we will do for three months later, that might require GPU.
 
-Meghana: Right. While we have a backup for manual updates and whatnot, our focus would be, cuz we are planning it for the next year, to have a systematic approach, that would be the first priority. If due to any reason we are not able to do it, then we'll look for the manual updates at the time. But for now, we should be looking to use the leverage the existing integration processes for this use case, too.
+[16:45] Nitesh: Okay, done. Cool. So you have the GPU access, right? You have it. Who else has it from this group, the GPU access?
 
-Kartik: Makes sense. Makes sense. The only problem I can foresee is since the process the whole R&R is not done so far, right? 
+[16:55] Uma: I have it, Nitesh.
 
-Meghana: Mhm.
+[16:57] Nitesh: Okay, Uma also has it. Okay, so we have one person in India, one in US, okay then we can move things. And then essentially for the rest of the folks, we should also get the GPU access depending upon the use cases and who so are working, right? So let's try to collate that as well. Kartikeya, you have GPU access or you don't?
 
-Kartik: Like so there can be a scenario where the sales team would come and would say that, okay, we need one more field for this, because the way the responsibilities have not been defined properly between the AD guys and the deployment managers. So there can be this concern, and that's why I was more hoping if we can do a manual approach first. And once the teams actually settle, right, then we can move towards a much more structured solution. But as you said, like the priority can be the structured solution, and then we can If that doesn't work, we always have a manual thing to go for. Yeah. 
+[17:17] Kartikeya: No. Actually I had GPU access previously, but recently they've changed...
 
-Meghana: Yep. Yeah.
+[17:21] Nitesh: Yeah, same here, same here. Mine was also taken back. I have like reapplied. So okay. So I'll work for you, and then essentially who are the folks on the team who would need it? Wait, wait. I think, Ishan, you should also get one, okay? And let's look in for... Hema, do you have GPU access?
 
-Kartik: Perfect.
+[17:46] Hema: No, Nitesh, I think no.
 
-Meghana: And I'm also pushing forward for the R&Rs to be confirmed so that we can also put up a design for ourselves. But if there are any conversations that you're part of, please feel free to include us as well, 
+[17:50] Nitesh: Okay, so let's do one thing. Let's try to raise it for Kartikeya, you, Ishan, at the very least, okay? For three folks, because we need to run like the model iterations and everything. Then let's try to do that. Okay, cool. I'll try to figure that out how to get that done as soon as possible. 
 
-Kartik: Absolutely.
+Okay, cool. This is taken care of. And then on the transaction-level data, Himanshu, are you facing any challenges?
 
-Meghana: cuz that is going to be a part key information for us.
+[18:22] Himanshu: No, Nitesh. I'm not facing any challenges as such. I think I should be able to prepare the data in next 1 hour or so. I think I have already prepared the pipeline. It's just that I forgot a filter and then I have to reset it and then rerun the pipeline again. But yeah, I would love to validate the data once prepared with you so that we're not going in the wrong direction.
 
-Kartik: Got it. Okay. Cool. So, yeah, so give give me give us like uh few days, and we will get back to you with the final list of all the fields. Uh if I work backwards, like I just want to understand the timelines with respect to this piece. Like how much time will it take for OneForce to work uh to make it happen, and how much time willâ
+[18:52] Nitesh: Okay, done. So let's do one thing. Work with Hema and Uma here, okay? So that whatever the transaction-level data that you are creating, right, it can be transitioned to... sorry, I said Huma... Hema and Uma together, right? So essentially they can work on feeding in that to a transformer during our day, okay? To see like and create a structure for that. 
 
-Meghana: That depends, Kartik. Yeah, that depends on what exactly where do we land up. If there is that we're going to be leveraging, let's suppose that we are being leveraging the insight file as is, and we'll be adding a layer of custom owner assignment based on the information received from the file into that, that would be a different kind of dev that we would have to reassess with the team who's already working on something for the balance of the year, right? So the upcoming PI is all booked out. So the timelines can then be decided once we have the solution and the path forward.
+Cool. And Aanchal, you are aware like how you will feed it into the transformer algo, or do you need any support on that rather than just like the TI-SASREC? TI-SASREC we know you have like hands-on, on the transformer...
 
-Kartik: Got it. But just for as a margin, if I just want to commit to someone like, okay, how much time will will it take for us to implement the solution, assuming that you guys have the bandwidth as well? 
+[19:34] Aanchal: Transformer is simpler than that. Done.
 
-Meghana: Right, soâ
+[19:37] Nitesh: Can you explain that architecture to Uma or Hema today so that they can also run it?
 
-Kartik: I just want to have a ballpark number.
+[19:43] Aanchal: Yeah, I'll share the code. I'll share the code, and I'll also share like basic English-level architecture.
 
-Meghana: Yeah, I wouldn't be able to commit it, to be honest, without having the tech team review it. This is so um too early to even commit. What you can commit is that we are targeting for the next year. 
+[19:52] Nitesh: Okay, done. That works, that works. Cool. So then essentially the deck that I was creating, say like for an intermediary update with Ashish tomorrow... Okay? So essentially within that, I shouldn't be focusing on say like TI-SASREC, because that's not something which we are running right now, right? We are running a transformer, fair to say?
 
-Kartik: Got it. Okay.
+[20:16] Aanchal: Right.
 
-Meghana: All right? We'll have more clarity as we progress.
+[20:19] Nitesh: Okay. So let's do one thing: you guys work on it as of now, okay? Everybody has like the next step aligned with them, okay? Be it Ishan, you also have next steps; Himanshu, you also have, okay? Uma and Hema, you also have that. And Aanchal, you can connect with them to discuss with them on the transformer setup. And Himanshu, you need to transition and first of all get those transaction-level data in, and then share it with Hema and Uma so that they can access it, okay? And get that done. Makes sense?
 
-Kartik: Sure. I think that works. Okay. I think that's all then, right, Meghana?
+[20:51] Himanshu: Yeah.
 
-Meghana: Um yeah, for now. And if you have any quantified benefits and all those, but you know, I'm sure that you must have documented all of it in your program, uh please share those over. That will help.
+[20:52] Aanchal: Yeah, I think, but for that transaction-level data, we should still stick to TI-SASREC, which Uma is already aware of. So if she can leverage that data and we work on a TI-SASREC model...
 
-Kartik: Got it. Got it. Right now, like the benefit part is still being worked around, because the Nova launch itself has not been done for the customers. So there has been only a very few less few customers for whom we do act have the actual data available. 
+[21:05] Nitesh: Wait, wait, wait. You are saying on the transaction-level data we should focus on...
 
-Meghana: Right.
+[21:13] Aanchal: We will have a longer sequence there since it is daily level.
 
-Kartik: So it's So we can but still we can do some early estimate on how much uh benefit we can see. 
+[21:16] Nitesh: Yes, yes.
 
-Meghana: Mhm.
+[21:19] Aanchal: So TI-SASREC should work there and there will be different gaps between the events.
 
-Kartik: But it will take time, like I'll let you guys know.
+[21:23] Nitesh: Yes, I agree. I agree. Then let's stick to the TI-SASREC algo for that, okay? That should be done. Okay. Himanshu, you are fetching this information for 77k card members, right?
 
-Meghana: Right. And how we are quantifying it or measuring it, that is going to be helpful for us to understand so that we are making sure that that is information is available in OneForce to track.
+[21:36] Himanshu: 77k, yes.
 
-Kartik: Sure. Definitely. Got it.
+[21:37] Nitesh: Okay, 77k card members' transaction-level data for Month 1 to Month 3. And when you're fetching the transaction-level data, it is the raw transaction amount that you're getting, right?
 
-Meghana: Any questions? We have 3 more minutes.
+[21:47] Himanshu: Yes, yes. And Nitesh, I had a question that I just wanted to share like how I'm creating this data, so that if there is anything wrong that I'm doing, so that you can kind of guide me. So in the mail, you had mentioned about the 1,000 top and 1,000 bottom customers. So we need to pull the transaction-level data for those 2,000 only, right?
 
-Kartik: I'm good.
+[22:20] Nitesh: No, no, no, no. Pull the transaction for like all the card members, not select just for only those top 1,000 or bottom 1,000. That is something which I wrote in the mail, but I had a chat with Kartikeya last night itself and he mentioned that he will relay that info that essentially we should get like for all the 77k card members, run the full TI-SASREC algo on all of them, and once done, then essentially we will look at top 1,000 and bottom 1,000. Because if I run the algo only on 1,000 observations, it won't be able to train itself well. That's why.
 
-Meghana: Sounds good. We'll talk soon. We'll, yeah, I'll send over the discussion items we just went through.
+[23:00] Himanshu: Okay. So the transaction-level data in that case is, as you mentioned in the mail, that it is already there in the intermediate table. So that intermediate table has the transaction amount, the event date, the month flag (which month is the event happening), and the sequence number as well pertaining to the event. So it has CM11, event date, month number flag, and the sequence number of the transaction that is happening.
 
-Kartik: Sure, Meghana. Thanks a lot. Thank you.
+[23:35] Nitesh: Yep, yep, yep. So I would say like, do one thing: Anju is asking me to join her Webex, I'll hop on there and get back. Shailendra, can you just explain it to him like how I can get that intermediate transaction-level data within the next 5 minutes, so that he can get that info directly?
 
-Meghana: Great. 
+[23:51] Shailendra: Yes. Okay, yeah.
 
-Suresh: Thanks, Meghana. Thanks.
+[23:54] Nitesh: I'll join back in 10 minutes.
 
-Meghana: Thank you. Bye-bye.
+[24:04] Shailendra: Yes. So, Himanshu, what did you want?
 
-Kartik: Thank you.
+[24:08] Himanshu: So, Shailendra, I have the intermediate table already. So I was just asking about the structure of the data that would look like. So what kind of columns or how the data will be structured as far as the transaction-level data is concerned? Because in the transaction-level intermediate table, we already have CM11, the event date, the month number flag, and the sequence of the transaction, right?
 
-[Call disconnect sound]
+[24:44] Shailendra: Mhm.
 
-Kartik: Hi, Hema. How are you?
+[24:46] Himanshu: So what else would we be needing is my question.
 
-Hema: Hi. I'm good, good, Kartik. How are you? Just taking the notes.
+[24:55] Kartikeya: I think you need daily-level data. Currently it is month flag, okay, if I'm not wrong.
 
-Kartik: Yeah, me too. I just want to make sure. Yeah, it looks like uh one thing which we definitely have to do is we need to Mo hasn't reverted back so far, right?
+[25:04] Himanshu: No, it has daily level already.
 
-Hema: Yeah, no, she didn't.
+[25:09] Shailendra: I think you should have the data at a transactional level already with merchant, customer information. So what... do you need more granular data, more aggregated data? If you want customer-level data, we also have that. If you want transactional-level data, we have that as well.
 
-Kartik: On the on the questions. So can you just remind her? 
+[25:30] Himanshu: The intermediate table that was being referred to in the mail, it is already at transaction level, right? So the transaction-level data that Nitesh is expecting, how would it look like? How is he expecting, should it be... So for those 77k customers, we would be having columns like CM11, event date, month number flag, and the sequence of the transaction. Is that how... that was my question, is that how Nitesh is expecting?
 
-Hema: Okay.
+[26:09] Shailendra: Yeah, so I'm not completely sure about what is Nitesh's expectation, but I'm assuming—and again, you can check with Kartikeya as well—my understanding is that you will need to create essentially a sequence, so you should have a date, transaction amount, and then essentially based on that you can create the sequence, right? I think everything related to customer and merchant is already present. So I assume that everything that is needed for you to create the embedding, it should be already there. I don't see any other thing that is required. But what exactly structure is needed, Kartik or Nitesh would know better.
 
-Kartik: Like just drop a very polite note that looking forward for your comments here. 
+[27:18] Shailendra: Hey Himanshu, you got my point?
 
-Hema: Yeah.
+[27:22] Himanshu: Yeah, I'm kind of trying to understand. Yeah, I got your point.
 
-Kartik: Okay? And I think we should have a separate thread. There are two threads that we should be having. One, just to discuss the pieces related to the different sort of insights that you want to have, okay? There should be a different thread which should talk about like how does the sales guys would look like, okay? Like, what does the experience look like? 
+[27:32] Shailendra: Because I'm not completely sure how the embeddings are created, so you should talk to them. I won't be able to comment on that.
 
-Hema: Yeah.
+[27:54] Aanchal: Shailendra, can you also share the data dictionary for the spend variables that you have created?
 
-Kartik: So we one of the questions that you can definitely ask is ki LeadGenius pe hoga ya like it will be like be on the Action Center?
+[28:01] Shailendra: Yes, so the Excel that I shared, right, it should have everything.
 
-Hema: Yeah. So, what is the difference uh between those two?
+[28:06] Aanchal: I think I don't have access to that Excel.
 
-Kartik: So, essentially sales colleague ko dikhega kaise, that is the question, okay? 
+[28:11] Shailendra: You can request the access, I will provide the access. That shouldn't be an issue.
 
-Hema: Okay.
+[28:24] Ishan: So Shailendra, in the spend variable, the first spend and the COGS spend are two different things?
 
-Kartik: So pehle kya hota tha ki there was one particular tab, usko kehte the Action Center, okay? Action Center pe you can see ki what are the insights corresponding to the customer that have been provided. 
+[28:31] Shailendra: Yeah, so essentially for Month 1, everything is first spend only, right? So it doesn't really differentiate.
 
-Hema: Okay.
+[28:38] Ishan: No, so we need to include M1 till M14, that's why I was asking. So we have a variable cogs_first_spend_m2. So are these intersection variables or the standalone COGS variable?
 
-Kartik: However, ab woh cheez jo hai na, woh TSE aur AD mein unhone Action Center se hata ke LeadGenius pe la diya. Toh LeadGenius ka ek alag se tab banta hai. 
+[28:55] Shailendra: So I think all of the variables that we have created, the new variables, are just the normal variables essentially. They are not first spend. And Month 2 to 14, I don't know if you should include first spend itself, because essentially what I did is I did an analysis on Month 2 to 14 validation, and we saw that—especially which is expected as well—we saw that Month 2 onwards, especially after 3 and 4, the first spend variables are essentially negligible, right? They have like less than 1% event rate. So they are not meaningful after first month or second month. So they were not coming up in any analysis. So in my data, I had created the first spend variables, but I did not use them.
 
-Hema: Okay.
+[30:00] Ishan: Okay.
 
-Kartik: Okay? Right now, I let me see if I can show you. Ho sakta hai na kisi ka? 1 second. 1 second. LeadGenius, LeadGenius... Kaisa dikhega LeadGenius ka? Uh...
+[30:03] Shailendra: In fact, in the data dictionary also you will find them, but I think you shouldn't use them unless there's a use case for it. And Ishan, I just need one thing from you. Do you know how to get the industry name from the SIC10 or SC10?
 
-Hema: So what Meghana was showing, with uh tier on the left and like the insights on the right, so that is Action Center?
+[30:41] Ishan: Yep. Let me share the logic. By the way, it will be in the code shared previously. The variable should be top_db_nm (top underscore db underscore nm).
 
-Kartik: I'll show you, 1 second, yaar. Mujhe bas woh... Mujhe koi customer chahiye waise ke liye. Any customer which is either part of TSE or AD. Do you have any customer in TSE or AD?
+[30:56] Shailendra: Okay, yes. Can you share that code?
 
-Hema: No, I don't know. Not sure.
+[31:00] Ishan: Let me find it out.
 
-Kartik: 1 second. Mere paas Sakshi shared that with me last week. So this is one iClick ID, okay? I just went there. Hello, wait. Why it is not opens?
+[31:05] Shailendra: Is it between the three, four of us? Between you, me, and...
 
-Hema: Approve it on the phone.
+[31:10] Ishan: It would be in the transaction logic which I shared earlier.
 
-Kartik: 1 second. How's the work going on, yaar? Getting work now?
+[31:33] Shailendra: I don't have that code. So if you can just find that, right, that will be great. And also I didn't get a chance to talk about it, but did you check with Aditya on the Belgian table? I think that we had a bit of confusion, right?
 
-Hema: Yeah, Friday it was a bit [laughs] busy. And uh I've been added to some meeting, I don't know, GenAI prompt clubbing urgent. Okay, it's okay, I'll attend. Friday it was like uh starting this new thing that uh Nitesh was telling, so I was just wrapping my head around that and created something. Just tried to make sense.
+[31:55] Ishan: No, didn't get any response from him.
 
-Kartik: Okay. No, I think that's a very good project to be in. We'll be doing a lot of coding, which is a very new sort of a role.
+[32:03] Shailendra: Okay. Yes.
 
-Hema: Yeah.
+[32:07] Himanshu: Okay, Shailendra, I have one more question around that transaction table. So 77k customers that we're talking about, that 77k is a subset of the intermediate transaction table that is getting created in those scripts, am I right?
 
-Kartik: So let me show you. You see here, this is called uh account page, okay, on Salesforce. 
+[32:30] Shailendra: Yes. So the starting base is 77k, so all the intermediate tables will have 77k customers only. No table will have more or less, that at least I had checked.
 
-Hema: Okay. OneForce. Okay.
+[32:44] Himanshu: The transaction table... Okay, my screen is stuck.
 
-Kartik: So you can see ki yahan pe company name, account details, account, theek hai? Then some basic details. This is where our things go, Action Center, okay? So within Action Center, pehle kya hota tha, yahan pe dikhti thi. 
+[32:51] Shailendra: Wait, transaction table... Are you talking about the base GMS transaction table or the intermediate table that I have created?
 
-Hema: Okay.
+[32:59] Himanshu: Nitesh mentioned in the mail that the transaction table is getting created as an intermediate table.
 
-Kartik: Insights. Okay? Now it actually shows on treatments. You see treatments over here?
+[33:07] Shailendra: Yes, yeah.
 
-Hema: Yeah, yeah, yeah.
+[33:09] Himanshu: That is the intermediate table I'm talking about, because it is already at transaction level, if I'm not wrong. I went through that table and I could see that it was at transaction level, right?
 
-Kartik: It's a different sort of view altogether, right?
+[33:20] Shailendra: Yes, yes.
 
-Hema: Yes.
+[33:22] Himanshu: And that is the table I'm referring to when I say that 77k is the subset of that table, or 77k is the base for that script?
 
-Kartik: So there will be five different type of treatments which there can be. Spend expansion, AP automation, employee card, SVS card, cross-sell, and for corporate cross-sell. 
+[33:38] Shailendra: Yeah, the 77k is the base only. Yes.
 
-Hema: Mhm. So these are the treatments like uh top five treatments, anything like that? There'd be top five.
+[33:43] Himanshu: Okay, that means that intermediate transaction table has the transaction-level data for all those 77k customers, right?
 
-Kartik: Exactly, top five treatments, and within those top five treatments you can see ki why this treatment, everything else. Toh yeh jo view hai na, this is called LeadGenius. 
+[33:53] Shailendra: Yes, yes.
 
-Hema: Okay.
+[33:56] Himanshu: Okay. Since it has that transaction-level data, so okay, now it would be better to ask Nitesh then how is he expecting this structure, or Kartikeya.
 
-Kartik: Pehle kya hota tha, yeh sab yahan par aati thi is tarah se, ek ke niche ek. Okay? Right, but now it's not like this. Yeh I think yeh Demand Gen ka hai, that's why it's going like this right now. Agar yeh Demand Gen nahi hota na, toh yeh yahan pe hota, tumhe pata bhi nahi chalta yahan pe. Like right now for most of these accounts this would be empty. Let me just check. Yeh hona bhi nahi chahiye. Isme bhi dikh toh raha hai. Yeh purana wala hai. Yeh dekho, yeh kuch doosre type ka offer hai. This is a completely different thing altogether. 
+[34:16] Shailendra: Yeah, that's why I said in the group as well, right? Because based on my understanding from Nitesh, the kind of data he wants, it has everything. Probably the only thing it has missing is the sequence number, which is just simple serial number.
 
-Hema: Okay.
+[34:33] Himanshu: Sequence number is also there, I think. Sequence number is also there in that table.
 
-Kartik: Yahan pe bhi agar tum dekhoge na, toh yeh Call to action expires in 23 days. Yeh upload abhi hua toh hai. Pata nahi kaise upload hua hai. Yeh kya hai? Tum agar dekhoge toh yahan pe kuch hai nahi information, right?
+[34:37] Shailendra: Yeah, so that sequence number is the month sequence number that is used to create the first spend variable.
 
-Hema: Yes, yes. Yeah.
+[34:43] Himanshu: Okay, it is the sequence number of the transaction. The month sequence has the column "month number flag", I think.
 
-Kartik: Ya phir hai toh Achha, yeh Tier 0 hai, that's why. Yeh Tier 0 account hai, isiliye iske liye yahan pe information hai. BAU wali pehle yahan par aati thi, toh BAU wali nahi hai. BAU wali tumhe yahin milegi. This is BAU. Okay, that is why. Ek bhi example nahi mila. Mujhe laga tha ek toh hoga jisme pura empty hona chahiye. 1 second. Kisme try karein? Dekho yahan pe nahi hai kuch bhi. Active is completely empty. Treatments pe tum dekhoge yahan milega tumhe. 
+[34:50] Kartikeya: What is the variable name for sequence number?
 
-Hema: Okay.
+[34:55] Himanshu: I think it is the "sequence number" only. I think I need to drop off for Stephanie Connect, I'll join back.
 
-Kartik: Dekho, yahan pe do treatment dikh raha hai, right?
-
-Hema: Yes. Okay.
-
-Kartik: So this treatment yeh treatment basically LeadGenius mein hai. Pehle yeh yahan pe nahi hote the, pehle yeh upar hote the yahan pe. Aur yeh active wale center mein jaate the. Isko bolte hain Action Center mein active wale tab ke andar. Tum yeh unse puch bata sakte ho unko. Matlab like you can So I want you to write two emails to Mo. First is ki jo humne insights bana ke bheje hue hain, right? Get her opinion whether those make sense or not. Okay? Get her alignment on that. 
-
-Hema: Yeah, okay. Mhm.
-
-Kartik: Second thing is, because uske baad jab alignment milega then we have to reach out to the data partner for us, right?
-
-Hema: Yes, yes.
-
-Kartik: And the second thing that you should be doing is, uh drop a note to Mo on a separate piece, which is saying that the new insight that you are planning to provide and the corresponding tier as well, uh do we want like we should ideally put it in LeadGenius, right? To get her confirmation from her. 
-
-Hema: Okay.
-
-Kartik: Okay?
-
-Hema: Yeah.
-
-Kartik: Aur humein yeh puchna chahiye puchna padega ki tier kahan pe aayega unke corresponding, right? 
-
-Hema: Okay. Okay.
-
-Kartik: Where that tier will show. 
-
-Hema: Yeah.
-
-Kartik: Let me see. Isme jo maine customer select kiya tha uska tier kya tha? Yeh Tier 0 kyu hai iska? I want to say something jo Tier 1, 2, 3 mein hai, ruko 1 second. J2 mein daal deta hoon. Let's see this one. Where is that tier coming up? Tier yahan pe show nahi hota hai, okay. Action Center mein yahan pe bhi tier nahi hai. Makes sense. Yahan pe tier kyu nahi aa raha? There's no tier in here? 
-
-Hema: Yeah.
-
-Kartik: Where is that tier going to come? Thoda yeh check with Krutharth ek baar. 
-
-Hema: Okay.
-
-Kartik: Try to reach out to him ki where is that tier Okay, this is you can see, prioritization tier, right? 
-
-Hema: Okay, okay. Scroll down, yeah.
-
-Kartik: So this is part of tier. 
-
-Hema: Okay.
-
-Kartik: So here CS team ke liye details, right? You can see that here it is, right? So you can ask this question: so we need to assign tier, and we need to provide insights. So you can say ki tier jo hona chahiye woh yahan pe aana chahiye, unke corresponding field kya hona chahiye, we want to check with you on that part as well. 
-
-Hema: Okay.
-
-Kartik: Okay? And then the second question is more and fir jo insights wala hai woh bhi uski bhi clarity le lete hain, ki insights jo hain woh More ke andar yahan pe jo dikhta hai Action Center mein, woh yahan pe hi dikhai denge ya fir kaise dikhai denge? We want to get that clarity as well, right?
-
-Hema: Yeah. Mhm. Yeah. Okay.
-
-Kartik: Got it?
-
-Hema: Got it.
-
-Kartik: Okay? So you understood the whole part, right, now? 
-
-Hema: Yes.
-
-Kartik: Tier kahan pe... Let me share send this to you so that like agar tum Tumhare paas access hai iska?
-
-Hema: I think, yes, OneForce ka access hai.
-
-Kartik: So this this account can can be helpful for you, right? 
-
-Hema: Yeah.
-
-Kartik: Let me just share the iClick ID as well just in case if you have any troubles. Okay? 
-
-Hema: Okay.
-
-Kartik: Toh jo Mo ko email karoge, right? Mo ko jo email karna hai, you can use this one. From Michelle. Toh yahan pe is wale list pe kar sakte ho, right? Jisme OneForce bhi hai. So you can say ki like exactly kahan pe jaayega, kya field hoga, let's get that clarity from them, right?
-
-Hema: Okay.
-
-Kartik: Were you Were you able to go through this email, right, and understood ki kya chal raha hai, right?
-
-Hema: Yeah, right. Woh I I got clarity, like that things need to be still figured out by them, right, the insights part, how to be shown, like who's the owner and what insights to be shown to whom and that.
-
-Kartik: Yeah, yeah, but essentially humein woh tier banana padega, right? And we also need to provide So we have to provide a tier information, we have to provide an insight. As of now, these are the only two things that we have discussed, either over the email or over a call. So let's ask this question to directly to Mo only, theek hai? Mo ko, Nicole ko, Christine ko, in teeno and Meghana, Michelle. Like all the four people you just ask ki humein yahan pe kis tarah se karna chahiye, aur wahan pe bhi ek baar email pe gentle reminder daal do, Mo ko.
-
-Hema: Yeah. Mhm. Yeah, sure. Okay, sure.
-
-Kartik: Okay, cool. Andâ
-
-Hema: Yeah, tell me.
-
-Kartik: So, but tier, so initially we thought like for tier we will be using VUP tiers only for 1, 2, 3 and then Tier 0 will be based on trigger, right? So, so now uh when like uh so Meghana were talking, so that could be the same tier like what we get for AD team, is that not the same tier?
-
-Kartik: No, no, no, no. 
-
-Hema: Okay.
-
-Kartik: Unki tiering alag logic se decide hoti hai, right? So AD has a different KPI altogether. 
-
-Hema: Yeah, yeah.
-
-Kartik: Basis the profitability on uh which customers are supposed to be targeted, they will be defining their own tiers. 
-
-Hema: Yeah.
-
-Kartik: We will be defining our own tiers, right? Our Tier 1, 2, 3 will be completely different altogether.
-
-Hema: Okay. Yes. So...
-
-Kartik: It will be based upon the early experience, right?
-
-Hema: Yes. So, initial for Q1, uh the tiering logic, so for that uh okay, maybe for even for that, we'll be following the same logic, but we should be having a different tier field, okay.
-
-Kartik: At least Tier 0 toh jaayega na usme? Even if you don't have a BAU tiers, right, assuming that there are no BAU tiers, toh it will be empty. But eventually it will go to Tier 0 wherever we have a trigger for that account. 
-
-Hema: Yeah, yes. Okay. Mhm. Yes, yes.
-
-Kartik: Right? So there has to be a different field altogether, right? 
-
-Hema: Yeah. Yeah, yeah, yeah.
-
-Kartik: So tomorrow, I have a discussion with Anju. Okay? I'll ask for 15 minutes on this piece as well as on next piece, because humein align toh karna padega na? Because we need to do the analysis. 
-
-Hema: Okay. Mhm. Yeah, yeah. Yes.
-
-Kartik: Okay? 
-
-Hema: Okay.
-
-Kartik: So you are clear about the both the emails, right?
-
-Hema: Yeah, yeah, yeah. I'm clear.
-
-Kartik: Okay, cool. And uh I see ki he has asked you for a couple of days, right? Dayana?
-
-Hema: Yeah, she told till today. So I was about to ask, so should I mail? I was thinking like we are following up with Alfredo, but he'sâ
-
-Kartik: No, I think let's let's wait for a couple of days. 
-
-Hema: Yeah.
-
-Kartik: And then once everything is done and then we will drop an email that okay, we have done this. Okay? 
-
-Hema: Okay. Okay.
-
-Kartik: In the meanwhile, on the SAGE part, do you need any help from me?
-
-Hema: Uh currently I'm just uh running some code, so I currently I don't think so, but uh I definitely would need tomorrow.
-
-Kartik: You're just creating the data, right?
-
-Hema: Yeah, yeah, I'm just creating the data. But I would definitely want to I wanted to talk to you regarding this, but yeah, not uh I'm good for today.
-
-Kartik: For sure. Because like I have done this part of the piece previously with Merchant Recommender, so that's why that's why they I think they have these guys have looped me in. 
-
-Hema: Yeah.
-
-Kartik: But yeah, it's a definitely a good experience for you.
-
-Hema: Okay. And during the coding part, I would definitely need some help, because this algorithm is something new to me. I just want to have like idea what uh needs to be done correctly, that's it.
-
-Kartik: Sorry, I didn't understand. Come again?
-
-Hema: No, no, no. Currently, I'm good. So, but while running the model or like for coding part, I just I would just needâ
-
-Kartik: Yeah, I think I yeah, if you need help, then it's fine. You can definitely reach out. But I think Aanchal also knows how to do it, okay? 
-
-Hema: Mhm. Okay, yeah. Sure.
-
-Kartik: Did you You can ask her for some codes already, right? Because she has done it for TI-SASRec, so she must have shared some codes with you, too?
-
-Hema: Uh no, she didn't. We are currently just making the data, so um uh that codes are there. Yeah, okay.
-
-Kartik: I'll ask her. I'll ask her to share it with you. She might be having it very handy, like where you don't need to do a lot of things. Entire thing is with you. 
-
-Hema: Okay. Okay.
-
-Kartik: Or uh let me do one thing. 1 second. Let me share one piece of the code with you in the meanwhile, just in case if you want to get a flavor of how things run. 
-
-Hema: Mhm. Okay.
-
-Kartik: Okay, this is something which we created previously. This is for SASRec, okay?
-
-Hema: Okay.
-
-Kartik: Okay, one thing. I'm not able to share this. Somehow it got blocked.
-
-Hema: Okay, it's it's These code files are getting blocked on Outlook.
-
-Kartik: Yeah, 1 second. SAGE... T4Rec, where is that T4Rec? But I think this is the most interesting GenAI, generative AI part which you can have in analytics. 
-
-Hema: Mhm.
-
-Kartik: As of now. 
-
-Hema: Yeah.
-
-Kartik: Where it's not people like 1 second. Let me share this with you on Teams. What is still going on? 1 second. Cool. So I've already done this, okay? 
-
-Hema: Yeah, yeah.
-
-Kartik: So you can go through this. It will at least give you some sort of a flavor like this is how the code will look like, but again, this is not the right code for you to actually work upon, okay? Just for 
-
-Hema: Mhm. Okay. Yeah, yeah. Yes, yes. Yeah. Okay, okay.
-
-Kartik: Okay then. Thank you, yaar. In case you need you need any help, right, Hema, please feel free to reach out. 
-
-Hema: Thank you. Yeah. Yes, yes, sure. Sure, Kartik. Thank you. Bye.
+[35:03] Shailendra: Okay. In fact, guys, let's connect as well internally, right, before the... I think this group we can connect later. Okay, thank you everyone.
