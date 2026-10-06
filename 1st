@@ -1,106 +1,184 @@
 CALL TRANSCRIPT
-Participants: Hema, Nitesh, Jay
+Participants: Nitesh, Hema, Uma
 
-[00:00] Hema: So, we were just discussing, so previously like Jay and me. So, I think Jay and... Himanshu will also be getting added. We just wanted to understand like, because Himanshu was busy for some time, so we were trying to understand what specific need help that we would be running with Himanshu. Okay, Himanshu has a call with Stephanie, I guess. Okay.
+[00:00] Nitesh: And SIRT, yes or no. Okay, now this gives me an idea[cite: 3]. This gives me a very good idea[cite: 3]. Okay, that will be a little bit like add-on to this, but that I think will solve for, say, like majority of our work if we want to do it[cite: 3]. Okay[cite: 3], so let's do it this way[cite: 3]. Let me share my screen[cite: 3]. I think it's a simple SQL query which we should do[cite: 3]. And so, yeah, let's use this Excel only[cite: 3]. Okay[cite: 3], I'll zoom in[cite: 3]. So, you have a CM11, right[cite: 3]? You have their transaction date[cite: 3]. Okay, then you have their ACQ date[cite: 3]. Cool[cite: 3]? And then you have their month, and then you have transaction amounts, okay[cite: 3]? 
 
-[00:20] Nitesh: Okay, okay. Not a problem. So, see...
+So, first of all, there should be a column which is like spend, and you'll have to sum up all the spend at this level: CM11, transaction date, acquisition date, and month[cite: 3]. Okay[cite: 3]? Let's do that[cite: 3]. So, essentially what will happen is that you will have a sum of overall spend that is getting generated on that daily basis[cite: 3]. Makes sense[cite: 3]?
 
-[00:23] Hema: Mhm.
+[01:08] Hema: On a daily basis, okay. Sum of, okay. Total spend for that day for that CM11, yeah[cite: 3].
 
-[00:24] Nitesh: Okay. So, Hema, you are aware about that we were creating sequence of events, right, for Month 1 to Month 14, right? That was across all the feature set. Now, what Ashish has requested is that instead of looking at all the feature set at one go, right, first try to establish that, okay, whether a transformer can actually pick up a sequence or learn something just by looking at, say, like transaction-level data, okay? 
+[01:13] Nitesh: Right. So, then what will happen is for each date, you will have one row[cite: 3].
 
-So, for the same 77k card members, right, that we had, if we are able to get, say, like daily transaction-level data for first three months post-acquisition, okay? If we are able to get that, then that tells me like, okay, this is the timestamp, this is the amount of transaction that happened, okay? Now, that amount can be, say, like $1,000, $2,000, $3,000, and then again $500, and so on, right? These can be like three months of clear sequences. 
+[01:16] Hema: Mhm[cite: 3].
 
-Now, I also have, say, like year-two incremental GCM as an added function there, okay? When I say year-two incremental GCM, it is like actual and predicted—actual minus predicted. So, we have the predicted definition that is coming in from Ishan. So, you can get that from Ishan itself for all the card members, what is the predicted GCM that he has, and then you also have the actual year-two GCM, okay? The difference of the two is the incremental GCM that we have, cool? 
+[01:17] Nitesh: Okay. Now, you have different indicators, right[cite: 3]?
 
-Now, if I put in, say, like a framework wherein I feed these sequences of transaction sequences in a transformer, and say, like, okay, this is the behavior that for a particular card member this is the sequence of journey, okay? And this is the overall year-two incremental GCM objective function. Can you try to create or, say, like develop a sequence of features or events that help me in telling that, okay, whether you can be a high incremental GCM or low incremental GCM, okay? 
+[01:20] Hema: Yeah, we'll still be having that transaction amount, right[cite: 3]?
 
-So, what the algo will do is essentially it will read through all the sequences and try to create vector embeddings. And that embeddings can be defined, say, like 1x28 or 1x64, whatever is the length that we want, and those vectors will get created for each and every card member, which will be representation of your sequence of transactions.
+[01:23] Nitesh: Yes, yes. Transaction amount will be there[cite: 3].
 
-[02:36] Hema: Okay, like a three-month journey. Yeah.
+[01:25] Hema: Okay, yeah[cite: 3].
 
-[02:39] Nitesh: Yes, like three months, yeah. So, essentially now, earlier we had, say, like in the other data stream which we are working towards, we have like monthly cuts, right? I have monthly information; here I'll have like daily information, okay? So, the sequence will be much larger in this one, okay? 
+[01:27] Nitesh: So, essentially what will happen is... So, these were the filters that you said you have[cite: 3]. Okay, let me just bring everything here[cite: 3]. Okay. Special... Ctrl+V. Data... Text to Columns... Next... No gap... Okay, so we have like event date, acquisition date, days since, month flag, transaction amount, right[cite: 3]? Perfect[cite: 3]. So, then this becomes your the starting point, okay[cite: 3]? Okay, so now you will don't... you won't have the transaction amount[cite: 3]. 
 
-So, then essentially what the logic or, say, like the algo will do is it will read through all the sequence. Say, like for one card member, it can be, say, like I have done, say, like 200 transactions in, say, like first three months, okay? There could be some days where I have done, say, like two, three transactions as well, and I'm doing daily. So, within a 90-day period, I have would have, say, like 200 transactions with timestamps, with some timestamps leading to, say, within day—within day itself, okay? 
+Okay[cite: 3]? So, essentially what will happen is if there are, say, like three transactions that happened in on 9th of Jan, right, for example, then essentially all three of them will get summed together for that date itself[cite: 3]. Okay[cite: 3]? This is like the absolute spend that you will get[cite: 3]. Okay[cite: 3]? Then after that, what you need to do is... Let me... transaction output label. Okay, what does this label supposed to be[cite: 3]? What is this label[cite: 3]?
 
-So, I will feed that sequence all together for each card member, and then essentially what algo will do is it will read through those sequences and then try to create like one vector representation for each and every card member. And the dimension of that vector will be same, okay? It will be, say, like 64-core dimension, and that dimension will be representative of the journey of the card member in terms of the transaction behavior that they have done. Makes sense?
+[02:52] Hema: So, where is it? Output label is something I just run from the table, already existing one[cite: 3].
 
-[03:45] Hema: Got it. Mhm. Mhm.
+[03:25] Nitesh: Okay. So, you will write a CASE WHEN statement, okay[cite: 3]? CASE WHEN recurring flag... yeah... recurring flag equal to 1, then you sum up the spend, okay[cite: 3]?
 
-[03:46] Nitesh: Okay, so that is what we want to achieve. And then decipher from there that what this vector representation actually means. So, I will have a vector representation for a card member with high year-two incremental GCM, and I will have a vector representation for a card member with low year-two incremental GCM. So, both these vectors will be different in terms of the representation of the journey. 
+[03:40] Hema: One second... Okay[cite: 3]. Yeah, can you come again[cite: 3]?
 
-Now, after that, once we have created those vectors, we will have to figure out what is the difference between these. Why we are saying like, okay, incremental GCM folks with high incremental GCM, they are represented by these vectors, and low incremental GCM folks are represented by these vectors. So, what is the human definition or, say, differentiation between these vectors? That is something which we need to figure out; that is the end objective. But as a starting point, we need like for those 77k card members, their daily transaction-level information. Makes sense?
+[03:47] Nitesh: Okay, so what will happen... So, when recurring flag is 1, then you sum up the spend, okay, at this GROUP BY level itself[cite: 3]. So, essentially you will get for each date what is the amount of recurring spend, okay[cite: 3]? Similarly, you will do that for CASE WHEN, when SIRT rank... What is the SIRT ranking, right[cite: 3]? So, SIRT ranking is like 1, 2, 3, 4 up to so on, it will be there[cite: 3]. I don't want that, okay[cite: 3]. I want bonus indicator, okay, supposedly[cite: 3]. Similarly, CASE WHEN... Okay, F2... CASE WHEN bonus indicator equal to 1, okay, then sum the spend[cite: 3]. Okay[cite: 3]? Cool[cite: 3]? Okay, this is like some spend that will contain[cite: 3]. Then after that, you have like COGS indicator, okay, then top 10 SIRT, COGS and top 10 SIRT, top 10 SIRT and bonus indicator[cite: 3]. So, for all these four, okay, you will create these flags, okay[cite: 3]?
 
-[04:36] Jay: Okay, okay.
+[04:41] Hema: Okay. CASE WHENs and sum of those amount, yeah[cite: 3].
 
-[04:37] Nitesh: Okay? So, that's what Himanshu was pulling. So, I'll tell you one more thing. So, essentially, Shailendra from our team, he actually initiated and created like the dataset with M1 to M14, okay, for all the 77k card members. Within that, there is an intermediary steps, or the tables, wherein this daily-level data is already pulled, okay? So, what he was saying is that if you want, you can use those intermediary tables where you have the daily-level data, and you can use that directly.
+[04:45] Nitesh: Yep, then you sum up the spend[cite: 3]. Makes sense[cite: 3]?
 
-[05:09] Hema: Okay, yeah.
+[04:47] Hema: Yeah[cite: 3].
 
-[05:10] Nitesh: Okay?
+[04:48] Nitesh: Okay. So, these are like the set of features or variables that you will create, wherein, like, for each CM11, their date of transaction, acquisition date will remain the same for a CM11, days since will keep on increasing, each row will be a new number of incremental, month flag will be, say, like the month in which that is happening, right, doesn't matter[cite: 3]. Then essentially, I have the sum of the spend[cite: 3]. Correct[cite: 3]? So, I'll have select all these categories and their corresponding behaviors[cite: 3]. Now, tell me, what does this category mean, and how many distinct values I have for this category[cite: 3]?
 
-[05:11] Jay: Okay, so we can use directly to create those table that you want.
+[05:23] Hema: So, category is basically... It's like the whether it's in restaurant, or a gas, or what it is, others and...[cite: 3]
 
-[05:14] Nitesh: Exactly, exactly. That's what we want.
+[05:43] Nitesh: Okay, then I don't care[cite: 3]. Then that's okay[cite: 3]. So, this is something you prepare the data[cite: 3]. These are like simple four SQL statements like CASE WHEN, and then essentially you have the data, right[cite: 3]? Transaction-level info[cite: 3].
 
-[05:16] Hema: Okay.
+[05:55] Hema: Also need number of transaction per day? Do you want that[cite: 3]?
 
-[05:17] Jay: Okay, so we just want to create that table as of now, right? The embeddings and everything taken care by someone else, you are saying?
+[05:59] Nitesh: Oh, yes! That is a good call-out[cite: 3]. Let's add that: number of transactions[cite: 3].
 
-[05:23] Nitesh: Yes, yes, yes. First we need the data. For embeddings and everything, I'll have like Uma, who will like help in creating like that timestamp and, say, like time-aware setup like for the TI-SASREC within that, and she can work here during the day to get this moving.
+[06:07] Hema: Then at each CM11, we would be having 90... if they spent 90 days, we'll having each day for... each day, we would be having the sum like that[cite: 3].
 
-[05:37] Jay: Okay. So, we just need to connect with Himanshu first, what are the intermediate tables, and just create a table and send it to Uma? As soon as we can, okay.
+[06:18] Nitesh: Yes. So, number of transactions, yes[cite: 3]. So, essentially you will have, say, like on Day 1, two transactions happened; Day 3, one transaction happened; then Day 5, seven transactions happened[cite: 3]. You will have their sum and everything[cite: 3]. Cool[cite: 3]? Okay, so now you have these behaviors[cite: 3]. Okay, what are these[cite: 3]? These are like card member-specific daily-level behaviors that you have, okay[cite: 3]? Now, this is something that we need to feed into our TI-SASREC algorithm, okay[cite: 3]? Uma, this is where you come into play[cite: 3].
 
-[05:46] Nitesh: Exactly. Yes, okay?
+[06:48] Uma: But we don't have timestamp here, right, Nitesh[cite: 3]?
 
-[05:48] Hema: Yeah.
+[06:52] Nitesh: We do have like event date, right[cite: 3]? That is the timestamp[cite: 3].
 
-[05:49] Jay: Okay.
+[06:56] Uma: So, we only have like one event date for, per CM11[cite: 3]?
 
-[05:49] Nitesh: So, all you need is for each card member, like daily-level transaction information, that's it.
+[07:01] Nitesh: No, no. You will have for one CM11, you will have at max 90 event dates[cite: 3]. For some you will have 20, for some you will have 30[cite: 3]. So, think of these as like sessions, right, that are happening at different times[cite: 3].
 
-[05:54] Jay: Okay, okay. Got it.
+[07:14] Uma: Okay[cite: 3].
 
-[05:55] Hema: Yeah, that was what we were trying to figure out, because the daily-level transaction, as Shailendra told, it's already present. So, we were trying to figure out whether we need to do the embedding or if the data is already present, so what is the thing that you need.
+[07:15] Nitesh: Okay[cite: 3]? So, then, and he has also created like days since acquisition[cite: 3]. So, for example, if date here is, say, like 10th Jan, okay, and acquisition happened on, say, like 1st Jan, okay, then he already have this time frame, which is like 10 minus 1 Jan, which is like 9 days that has passed[cite: 3].
 
-[06:06] Nitesh: Yeah. So, once we have the data, right, so what you can do, Hema, during your day—given like for Jay it will be like late—but during your day you can work with Uma to actually help in creating the embeddings for this one, for this use case, okay? So that we are able to work in parallel. And all of this is going to happen on the CPU itself, because we are not going to run everything on GPU, because that's going to take some time and access configuration. We will run everything on CPU, so let's get that done, okay, today itself.
+[07:35] Uma: What would be the embeddings here? Because in previous case, I've used like page URL and actions and all[cite: 3]. Here, like, what should I consider for embeddings[cite: 3]?
 
-[06:34] Hema: Okay. Yeah. So, Nitesh, like the PPA table access or queue access, so are you good with it or like are you...
+[07:47] Nitesh: Ah, so there is no semantic embedding here[cite: 3]. There is no... Ha, there is no... Ha, there is this event, event that has happened[cite: 3]. So, event is like the spend amount, that is your event[cite: 3].
 
-[06:42] Nitesh: I still don't have that access.
+[08:00] Uma: Okay, spend... Okay[cite: 3].
 
-[06:44] Hema: So, I think I told... I told Uma like a Slack channel replied, they told like I don't have the specific IIQ that I should raise, they gave me another IIQ. I gave it to Uma as well, and told to apply for you as well, if you don't mind. So, maybe if the approval is good, then I think they told like if the approval is completed, then you should be able to query it.
+[08:02] Nitesh: Okay, the spend sum[cite: 3]. Then essentially you can also create, say, like a combination of... If I completely open this up, right, so your events could be: just like there we had like prop 22 as an event which you used to capture, then you had page name, right[cite: 3]? These were like the semantics and we were creating that[cite: 3]. Now, if I remove semantic out of the picture, I just put like events into play, okay, what would be the events[cite: 3]? Events are like this sum of spend, recurring spend, bonus spend, COGS spend, top 10 SIRT, top 10 SIRT and COGS, top 10 SIRT and bonus, right, and number of transactions[cite: 3]. These are the events that are there, that are getting created[cite: 3]. Okay[cite: 3]? So, similarly, similar to this structure which we created, right[cite: 3]...
 
-[07:04] Nitesh: Excellent, man, excellent! Just try it once. Like, if you are... if you can get that, then essentially nothing like it, man.
+[08:48] Uma: And what buckets do we use? But in before case, I've used bucket for like on based on the timestamp basis, right, like for TI-SASREC[cite: 3]. Here, should I use the dates[cite: 3]?
 
-[07:10] Hema: Yeah. Now, without that queue, can we do this, is my question.
+[09:00] Nitesh: Yes, here you can use the dates, okay[cite: 3]? Or you can use, say, like this days since acquisition, these are the buckets, okay[cite: 3]?
 
-[07:15] Nitesh: We can. The only thing is... Jay, do you have access to the PPA queue?
+[09:09] Uma: Okay, okay. In between one to two days, or two to three, or something[cite: 3]?
 
-[07:22] Jay: No, I just have S Strategy ANN, CPBL MES. Like, I have for these two.
+[09:12] Nitesh: Yes, something like that, okay[cite: 3]? That you can use[cite: 3]. So, what essentially what will what will happen is once you feed it into the algorithm, right, it will try to create some buckets out of this one, okay[cite: 3]? Automatically, it tells you like, okay, use like 1 to 5, 5 to 10, 10 and so on, right[cite: 3]? That's how it usually does[cite: 3]. It throws out, say, like some embedding[cite: 3]. You can control that also[cite: 3]. You can say like, okay, I want to say like every 3 days or every 5 days[cite: 3]. That is something that you want to start off with[cite: 3]. Makes sense[cite: 3]?
 
-[07:28] Nitesh: These two, right? Cust Strategy ANN. So, just check with Himanshu or, say, like with Shailendra, like if they can transfer to, say, like any of these queues, okay? Or, say, like if the PPA one, Hema, you can check if any of the intermediary tables which, like, Shailendra shared yesterday, if you are able to access that—like `SELECT * FROM <table_name> LIMIT 10;`—if you are able to do, then essentially you have the access.
+[09:41] Uma: Okay. Yes[cite: 3].
 
-[07:51] Hema: Yes.
+[09:44] Nitesh: Okay. Or you can go to, say, like this one that, okay, I want 90 days as the each and every number of day as a separate cell altogether, right[cite: 3]? So, I can, say, like 90 buckets will be there for this particular variable[cite: 3]. Nobody is stopping you from doing that[cite: 3]. Makes sense[cite: 3]?
 
-[07:51] Jay: Yeah.
+[10:01] Uma: Okay[cite: 3].
 
-[07:52] Nitesh: Okay?
+[10:03] Nitesh: Cool[cite: 3]?
 
-[07:53] Hema: Okay.
+[10:04] Uma: Yeah, Nitesh. I'll check regarding that buckets and...[cite: 3]
 
-[07:54] Jay: Okay.
+[10:09] Nitesh: Okay. Take a stab at it, okay[cite: 3]? Nobody is denying you from doing it, okay, take a stab at it and see like, okay, if this can be done[cite: 3]. Another option, which I'm giving you, okay, another option is that you go to this one, like the... You have seen this ping from Aanchal, wherein she shared the transformer code[cite: 3]?
 
-[07:55] Nitesh: Okay, just try to... So, what I'm trying to say is don't stop with, say, like these accesses and issues, try to figure out, say, like a roundabout solution. Even if that roundabout solution means that asking Himanshu to download that as a CSV and then you uploading that on your particular project use case, do that, okay?
+[10:35] Uma: Yeah. I'll just go through it once, yeah[cite: 3].
 
-[08:14] Hema: Okay. Yeah.
+[10:38] Nitesh: Yeah, you can check through this once, and Hema, you can also go through it, it's like a simple Python code, okay[cite: 3]? And what what they are trying to do here is, and this is what like Aanchal has produced today, okay, and I'm not sure if you guys went through it or not, but this is... She ran one iteration on transformer for that overall 14-month feature set that we were creating, right[cite: 3]? We created like the one that you were creating, Hema, on Friday[cite: 3]. So, what she has done is she has taken like 62 features for 14 months, okay[cite: 3]? Now, these each month, right, each month it has like 62 features, it will be either available or not available[cite: 3]. 
 
-[08:15] Jay: Okay, we will figure it out, yeah, Nitesh. Yep.
+So, what she is doing is that first of all, each month is converted into a dimension, 1x64 dimension vector, okay[cite: 3]? So, 62 items are converted into 1x64 dimensional, like a numerical representation of it, okay[cite: 3]? Then we put the temporal aspect of it, that, okay, this is monthly-level data, so each and every particular month as in terms of the context is separated by 30 days, okay[cite: 3]? We put that as a context there, okay[cite: 3]? 
 
-[08:17] Nitesh: Done, cool. Thanks, guys.
+Then essentially, we take the data, divide it into, say, like two blocks, and each block tries to optimize for four heads[cite: 3]. Four heads are that you have 64 dimensions, so each head tries to optimize for 16 dimensions, okay[cite: 3]? So, total 64 dimensions are there, two blocks are there, and it runs like a 64-dimension model, okay[cite: 3]? GELU is a algorithm which helps in optimizing your loss function, okay[cite: 3]? So, the loss function that we have here is that we are trying to predict for incremental GCM here, okay[cite: 3]? So, incremental GCM, so there will be like a prediction that will happen[cite: 3]. Once that prediction happens, it identifies, okay, what is the overall loss, then starts optimizing for that loss so that its prediction becomes better, okay[cite: 3]? 
 
-[08:19] Hema: Cool. Okay, thank you, Nitesh.
+And what it does is like firstly, it creates like 64 dimension, then it expands to 128 dimension, brings it brings it back to 64[cite: 3]. So, it runs like a feed-forward network, runs in between in itself in the encoder formation and tries to optimize for it, okay[cite: 3]? So, what it does is after this, you get 14 months and 64 dimension vectors after this[cite: 3]. So, for each month you get 1x64 dimension vector, okay, which is like the optimized representation of that journey, okay[cite: 3]? For one month, it is 1x64; for second month, 1x64; so for 14 months, it is 14x64 dimension[cite: 3]. 
 
-[08:20] Jay: Thank you so much. Bye-bye.
+Then all these dimensions, right, or these vectors, there is one way... there are multiple ways to like combine them together as a representation of full journey[cite: 3]. One is I can do a simple average, okay[cite: 3]? All the features, I like the vector, say, like within vectors, element one, right, I do sum of square and do select square root of it, divide by standard deviation, that is like average pooling, okay[cite: 3]? I do that for all the 64 dimension features and I get like one full vector which is averaged out across all 14 months[cite: 3]. Makes sense[cite: 3]?
 
-[08:21] Hema: Thank you. Bye.
+[13:48] Hema: Yeah[cite: 3].
+
+[13:49] Nitesh: Okay. Then this represents a 64-dimensional customer journey across 14 months[cite: 3]. So, one vector for each card member, cool[cite: 3]? Then what it does is it tries to run a regression head, it tries to see like, okay, when 64 dimensions go down to, say, like 32 or, say, like to a single dimension, okay, and it tries to predict the IGCM, okay[cite: 3]? Then it tries to keep on repeating this this whole procedure back and back until it reaches to a stage where the loss is minimized, yeah[cite: 3]. So, we ran, say, like close to 50 epochs of this iteration, and it closed down at, say, like close to, I think, 17 or 18[cite: 3]. By 18, it was able to optimize, okay[cite: 3]? And what what are we getting as a results[cite: 3]? Results are these[cite: 3]. 
+
+So, essentially, we had like 77k card members, yeah, correct[cite: 3]? Okay. 77k card members, in that we had... Okay, let me tell you this: this was 30%... nay, this was 30%... divided by 30%... 53, okay[cite: 3]. So, 54k was in-sample... was overall Jan to June data, okay, which was divided into in-sample and out-of-sample[cite: 3]. Out-of-sample was 30% of this, which is 16k, and in-sample was rest of the population, okay[cite: 3]? So, rest of the population would be this minus this, okay, 48k[cite: 3]. Within 48k, there was a validation dataset that was carved out randomly, and that validation dataset was 5.6k, okay[cite: 3]? So, everything from this 42k or 43k dataset was used to do training, okay[cite: 3]? Training was done on this 42k and validation was done on this 5.6k, and therein we had a Gini of 65% in-sample, okay[cite: 3]? 
+
+Now, when we did move to out-of-sample—and Uma, you also pay attention, like I think you are already aware, but this is something like for both of you, okay[cite: 3]? So, out-of-sample was close to 16k, and that had a Gini of 60%[cite: 3]. And out-of-time is like close to 24k, and we have a Gini of 58%[cite: 3]. So, essentially there is a slight drop, but it is not that high of a drop[cite: 3]. And if I look at the incremental GCM model which was created earlier, that was based on, say, like Month 1 attributes and it was close to 25% Gini[cite: 3]. So, we are already breaching that mark by pretty high number, okay[cite: 3]? 
+
+Okay, this is just like the first set[cite: 3]. Secondly, if you look at out-of-sample and out-of-time and deciled based on the predicted score that we are getting of incremental GCM, we do see it rank orders well[cite: 3]. If I look at the median, it is ranking order well, even, say, like the mean predicted GCM is ranking order, okay, rank ordering, okay[cite: 3]? So, we are able to achieve, say, like a good representation from the feature set that we already have across 14 months, okay[cite: 3]? So, this is like a starter, okay, of, say, like the algo[cite: 3]. So, whatever you guys are working on that 14-month feature set, right, that becomes important because it feeds in and it is showing value in terms of the overall, okay, overall results that we are seeing, right[cite: 3]? So, this is like the first cut[cite: 3]. 
+
+Now, the features that she has used, those are these ones[cite: 3]. Let me bring that up[cite: 3]. Yeah. So, these are the features that she has used in the first cut, okay[cite: 3]? So, there are like close to 52[cite: 3]. Now, what has happened is like some of these features were like very sparsely populated in few months[cite: 3]. So, what encoder has done is that it looks at like if some of the features are, say, like sparsely populated, it tries to create an indicator out of that, that, okay, whether this is populated sparsely, yes or no[cite: 3]. Okay, that also feeds in as an indicator within the algo[cite: 3]. 
+
+So, her idea was that, okay, should we remove those sparsely populated if they are not getting picked, or, say, they're not adding that much value[cite: 3]? So, for that we are checking that whether we should remove them or we should keep them, okay[cite: 3]? So, that's how it is being discussed[cite: 3]. But essentially, even with these features, and wherein, like, these are not even the relevant ones, because we have removed, say, like all of this advertising, airfare, construction, electronics, gas, as, like, industry-specific spend, right[cite: 3]? So, these have been removed, and even then we are getting this much Gini[cite: 3]. So, if we are able to include, say, like the relevant factors, right, then essentially performance will become even better[cite: 3]. Makes sense, yeah, okay[cite: 3]? 
+
+So, this is how the framework looks like, okay, and how we are planning to, say, like execute[cite: 3]. So, one version we already have[cite: 3]. We will create like more iterations on it with, say, like the relevant feature set which Ishan has created, because the overall variable list looks something like this, okay[cite: 3]? This is the overall variable list that he has, and if you look at the yellow ones are the ones which he has used right now[cite: 3]. So, there is still a lot of thing which can be added[cite: 3]. Makes sense[cite: 3]?
+
+[18:56] Hema: Yes[cite: 3]. Total how many are currently[cite: 3]?
+
+[19:03] Nitesh: Total, we have close to 110[cite: 3]. This one is already like a work in progress because this was created only for like 6k population, which was like they are opportunity and golden dataset, so they haven't looked at, say, like the full population[cite: 3]. That will take some time, right[cite: 3]? So, this is something like work in progress[cite: 3]. I'll check with Sonal today that do I even need this across our whole population, right[cite: 3]? If this is, say, like an important indicator, then we will invest time to get this moving, cool[cite: 3]?
+
+[19:28] Hema: Okay. Oh, yeah[cite: 3].
+
+[19:29] Nitesh: Okay. Done[cite: 3].
+
+[19:33] Hema: And now what we are currently doing is like this three three months thing is to verify whether this model is ranking differentiating them correctly, right[cite: 3]? So, we have to take like top 1,000 and...[cite: 3]
+
+[19:44] Nitesh: Yes[cite: 3]. So, essentially what we will do, that this is the framework that I'm putting across: we will have that daily set of data that is available for Month 1 to Month 3, convert these daily activities into time-aware sequences, which you both can take care of, okay[cite: 3]? Then convert configure the TI-SASREC algorithm with an IGCM-aligned objective, okay[cite: 3]? So, right now, Uma, if you would have seen that you are doing the prediction for the next best action, right, or even in the offer sensitivity when you were doing that, you had an objective function that offer that acceptance rate should be high, right[cite: 3]? We were optimizing for that[cite: 3]. Now, instead of acceptance rate, you will put incremental GCM there[cite: 3].
+
+[20:30] Uma: So, we have Y variable in like that, right[cite: 3]? In...
+
+[20:35] Nitesh: I think so, I think so, you should have[cite: 3]. Do you have incremental GCM[cite: 3]?
+
+[20:39] Hema: So, that I have to... I should, as you told, like I should get it from what the latest predicted GCM is, and then we have to subtract and get the IGCM[cite: 3].
+
+[20:49] Nitesh: Yes, yes, yes, yes! You can get that[cite: 3].
+
+[20:52] Hema: For that, I think Ishan should have it[cite: 3]. So, the actual GCM values, I didn't find that actual here[cite: 3]. So, where to... Who has the actual GCM data[cite: 3]?
+
+[21:02] Nitesh: Okay, wait a sec, wait a sec, I'll tell you[cite: 3]. Okay, so the table which Shailendra shared, right, last night, which he said that, okay, he has created like for 84 variables, can you check, does that have GCM, actual GCM, Year 2[cite: 3]?
+
+[21:24] Hema: Oh, let me check the code[cite: 3].
+
+[21:26] Nitesh: Let me just tell you the table that is there[cite: 3]. This one, right[cite: 3]? Okay.
+
+[21:38] Hema: Which table?
+
+[21:41] Nitesh: This one, right[cite: 3]? He mentioned that he has already initiated like this 77k card member, right, this spend variable[cite: 3]. Can you check, this table should have, essentially, a Year 2 GCM available in this one, okay[cite: 3]? You can use that, and this table which Ishan created today, right, you already have PPA access[cite: 3]?
+
+[22:04] Hema: Yes, I have[cite: 3].
+
+[22:05] Nitesh: Just check, ha, just check... Ha, see! This guy has already added like incremental GCM right here in this table[cite: 3]. He will have, say, like incremental GCM within this table itself[cite: 3]. Just see like if it has like Day 0 and actual, so the CM11 incremental GCM, that won't change[cite: 3]. So, you can use that copy and mapping like left join at CM11 and get this value directly[cite: 3].
+
+[22:26] Hema: Hmm. Okay[cite: 3].
+
+[22:28] Nitesh: Okay[cite: 3]?
+
+[22:29] Hema: Yeah[cite: 3].
+
+[22:30] Nitesh: Cool[cite: 3]?
+
+[22:31] Hema: Yeah, okay[cite: 3].
+
+[22:33] Nitesh: Done[cite: 3]. So, once you have the data prep, and Uma, you have, say, like the setup done for the algo, try to see like, okay, if we can create that whole structure today and like initiate one run on this one, cool[cite: 3]? I know that you will not land to, say, like the absolute solution at the get-go, there will be many hiccups, completely fine[cite: 3]. Let me know what are the challenges that you face, okay, both you, Hema, and Uma, okay, and tell me, like, so that we can connect and try to solve for it, okay[cite: 3]?
+
+[23:04] Hema: Yeah[cite: 3].
+
+[23:06] Uma: Yes, Nitesh[cite: 3].
+
+[23:07] Hema: Okay, Nitesh[cite: 3].
+
+[23:08] Nitesh: Cool[cite: 3]. Thanks, guys[cite: 3]. Anything else that you want to bring to attention[cite: 3]?
+
+[23:12] Hema: Uh, nothing more[cite: 3]. If we are... If we have anything, we'll just message you, then we can see[cite: 3]. Yeah[cite: 3].
+
+[23:18] Nitesh: Done, done, done. Cool. Thank you, guys. Take care[cite: 3].
+
+[23:21] Hema: Thank you. Bye[cite: 3].
+
+[23:22] Nitesh: Bye[cite: 3].
