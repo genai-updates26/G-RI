@@ -1,184 +1,279 @@
 CALL TRANSCRIPT
-Participants: Nitesh, Hema, Uma
-
-[00:00] Nitesh: And SIRT, yes or no. Okay, now this gives me an idea[cite: 3]. This gives me a very good idea[cite: 3]. Okay, that will be a little bit like add-on to this, but that I think will solve for, say, like majority of our work if we want to do it[cite: 3]. Okay[cite: 3], so let's do it this way[cite: 3]. Let me share my screen[cite: 3]. I think it's a simple SQL query which we should do[cite: 3]. And so, yeah, let's use this Excel only[cite: 3]. Okay[cite: 3], I'll zoom in[cite: 3]. So, you have a CM11, right[cite: 3]? You have their transaction date[cite: 3]. Okay, then you have their ACQ date[cite: 3]. Cool[cite: 3]? And then you have their month, and then you have transaction amounts, okay[cite: 3]? 
-
-So, first of all, there should be a column which is like spend, and you'll have to sum up all the spend at this level: CM11, transaction date, acquisition date, and month[cite: 3]. Okay[cite: 3]? Let's do that[cite: 3]. So, essentially what will happen is that you will have a sum of overall spend that is getting generated on that daily basis[cite: 3]. Makes sense[cite: 3]?
-
-[01:08] Hema: On a daily basis, okay. Sum of, okay. Total spend for that day for that CM11, yeah[cite: 3].
-
-[01:13] Nitesh: Right. So, then what will happen is for each date, you will have one row[cite: 3].
-
-[01:16] Hema: Mhm[cite: 3].
-
-[01:17] Nitesh: Okay. Now, you have different indicators, right[cite: 3]?
-
-[01:20] Hema: Yeah, we'll still be having that transaction amount, right[cite: 3]?
-
-[01:23] Nitesh: Yes, yes. Transaction amount will be there[cite: 3].
-
-[01:25] Hema: Okay, yeah[cite: 3].
-
-[01:27] Nitesh: So, essentially what will happen is... So, these were the filters that you said you have[cite: 3]. Okay, let me just bring everything here[cite: 3]. Okay. Special... Ctrl+V. Data... Text to Columns... Next... No gap... Okay, so we have like event date, acquisition date, days since, month flag, transaction amount, right[cite: 3]? Perfect[cite: 3]. So, then this becomes your the starting point, okay[cite: 3]? Okay, so now you will don't... you won't have the transaction amount[cite: 3]. 
-
-Okay[cite: 3]? So, essentially what will happen is if there are, say, like three transactions that happened in on 9th of Jan, right, for example, then essentially all three of them will get summed together for that date itself[cite: 3]. Okay[cite: 3]? This is like the absolute spend that you will get[cite: 3]. Okay[cite: 3]? Then after that, what you need to do is... Let me... transaction output label. Okay, what does this label supposed to be[cite: 3]? What is this label[cite: 3]?
-
-[02:52] Hema: So, where is it? Output label is something I just run from the table, already existing one[cite: 3].
-
-[03:25] Nitesh: Okay. So, you will write a CASE WHEN statement, okay[cite: 3]? CASE WHEN recurring flag... yeah... recurring flag equal to 1, then you sum up the spend, okay[cite: 3]?
-
-[03:40] Hema: One second... Okay[cite: 3]. Yeah, can you come again[cite: 3]?
-
-[03:47] Nitesh: Okay, so what will happen... So, when recurring flag is 1, then you sum up the spend, okay, at this GROUP BY level itself[cite: 3]. So, essentially you will get for each date what is the amount of recurring spend, okay[cite: 3]? Similarly, you will do that for CASE WHEN, when SIRT rank... What is the SIRT ranking, right[cite: 3]? So, SIRT ranking is like 1, 2, 3, 4 up to so on, it will be there[cite: 3]. I don't want that, okay[cite: 3]. I want bonus indicator, okay, supposedly[cite: 3]. Similarly, CASE WHEN... Okay, F2... CASE WHEN bonus indicator equal to 1, okay, then sum the spend[cite: 3]. Okay[cite: 3]? Cool[cite: 3]? Okay, this is like some spend that will contain[cite: 3]. Then after that, you have like COGS indicator, okay, then top 10 SIRT, COGS and top 10 SIRT, top 10 SIRT and bonus indicator[cite: 3]. So, for all these four, okay, you will create these flags, okay[cite: 3]?
-
-[04:41] Hema: Okay. CASE WHENs and sum of those amount, yeah[cite: 3].
-
-[04:45] Nitesh: Yep, then you sum up the spend[cite: 3]. Makes sense[cite: 3]?
-
-[04:47] Hema: Yeah[cite: 3].
-
-[04:48] Nitesh: Okay. So, these are like the set of features or variables that you will create, wherein, like, for each CM11, their date of transaction, acquisition date will remain the same for a CM11, days since will keep on increasing, each row will be a new number of incremental, month flag will be, say, like the month in which that is happening, right, doesn't matter[cite: 3]. Then essentially, I have the sum of the spend[cite: 3]. Correct[cite: 3]? So, I'll have select all these categories and their corresponding behaviors[cite: 3]. Now, tell me, what does this category mean, and how many distinct values I have for this category[cite: 3]?
-
-[05:23] Hema: So, category is basically... It's like the whether it's in restaurant, or a gas, or what it is, others and...[cite: 3]
-
-[05:43] Nitesh: Okay, then I don't care[cite: 3]. Then that's okay[cite: 3]. So, this is something you prepare the data[cite: 3]. These are like simple four SQL statements like CASE WHEN, and then essentially you have the data, right[cite: 3]? Transaction-level info[cite: 3].
-
-[05:55] Hema: Also need number of transaction per day? Do you want that[cite: 3]?
-
-[05:59] Nitesh: Oh, yes! That is a good call-out[cite: 3]. Let's add that: number of transactions[cite: 3].
-
-[06:07] Hema: Then at each CM11, we would be having 90... if they spent 90 days, we'll having each day for... each day, we would be having the sum like that[cite: 3].
-
-[06:18] Nitesh: Yes. So, number of transactions, yes[cite: 3]. So, essentially you will have, say, like on Day 1, two transactions happened; Day 3, one transaction happened; then Day 5, seven transactions happened[cite: 3]. You will have their sum and everything[cite: 3]. Cool[cite: 3]? Okay, so now you have these behaviors[cite: 3]. Okay, what are these[cite: 3]? These are like card member-specific daily-level behaviors that you have, okay[cite: 3]? Now, this is something that we need to feed into our TI-SASREC algorithm, okay[cite: 3]? Uma, this is where you come into play[cite: 3].
-
-[06:48] Uma: But we don't have timestamp here, right, Nitesh[cite: 3]?
-
-[06:52] Nitesh: We do have like event date, right[cite: 3]? That is the timestamp[cite: 3].
-
-[06:56] Uma: So, we only have like one event date for, per CM11[cite: 3]?
-
-[07:01] Nitesh: No, no. You will have for one CM11, you will have at max 90 event dates[cite: 3]. For some you will have 20, for some you will have 30[cite: 3]. So, think of these as like sessions, right, that are happening at different times[cite: 3].
-
-[07:14] Uma: Okay[cite: 3].
-
-[07:15] Nitesh: Okay[cite: 3]? So, then, and he has also created like days since acquisition[cite: 3]. So, for example, if date here is, say, like 10th Jan, okay, and acquisition happened on, say, like 1st Jan, okay, then he already have this time frame, which is like 10 minus 1 Jan, which is like 9 days that has passed[cite: 3].
-
-[07:35] Uma: What would be the embeddings here? Because in previous case, I've used like page URL and actions and all[cite: 3]. Here, like, what should I consider for embeddings[cite: 3]?
-
-[07:47] Nitesh: Ah, so there is no semantic embedding here[cite: 3]. There is no... Ha, there is no... Ha, there is this event, event that has happened[cite: 3]. So, event is like the spend amount, that is your event[cite: 3].
-
-[08:00] Uma: Okay, spend... Okay[cite: 3].
-
-[08:02] Nitesh: Okay, the spend sum[cite: 3]. Then essentially you can also create, say, like a combination of... If I completely open this up, right, so your events could be: just like there we had like prop 22 as an event which you used to capture, then you had page name, right[cite: 3]? These were like the semantics and we were creating that[cite: 3]. Now, if I remove semantic out of the picture, I just put like events into play, okay, what would be the events[cite: 3]? Events are like this sum of spend, recurring spend, bonus spend, COGS spend, top 10 SIRT, top 10 SIRT and COGS, top 10 SIRT and bonus, right, and number of transactions[cite: 3]. These are the events that are there, that are getting created[cite: 3]. Okay[cite: 3]? So, similarly, similar to this structure which we created, right[cite: 3]...
-
-[08:48] Uma: And what buckets do we use? But in before case, I've used bucket for like on based on the timestamp basis, right, like for TI-SASREC[cite: 3]. Here, should I use the dates[cite: 3]?
-
-[09:00] Nitesh: Yes, here you can use the dates, okay[cite: 3]? Or you can use, say, like this days since acquisition, these are the buckets, okay[cite: 3]?
-
-[09:09] Uma: Okay, okay. In between one to two days, or two to three, or something[cite: 3]?
-
-[09:12] Nitesh: Yes, something like that, okay[cite: 3]? That you can use[cite: 3]. So, what essentially what will what will happen is once you feed it into the algorithm, right, it will try to create some buckets out of this one, okay[cite: 3]? Automatically, it tells you like, okay, use like 1 to 5, 5 to 10, 10 and so on, right[cite: 3]? That's how it usually does[cite: 3]. It throws out, say, like some embedding[cite: 3]. You can control that also[cite: 3]. You can say like, okay, I want to say like every 3 days or every 5 days[cite: 3]. That is something that you want to start off with[cite: 3]. Makes sense[cite: 3]?
-
-[09:41] Uma: Okay. Yes[cite: 3].
-
-[09:44] Nitesh: Okay. Or you can go to, say, like this one that, okay, I want 90 days as the each and every number of day as a separate cell altogether, right[cite: 3]? So, I can, say, like 90 buckets will be there for this particular variable[cite: 3]. Nobody is stopping you from doing that[cite: 3]. Makes sense[cite: 3]?
-
-[10:01] Uma: Okay[cite: 3].
-
-[10:03] Nitesh: Cool[cite: 3]?
-
-[10:04] Uma: Yeah, Nitesh. I'll check regarding that buckets and...[cite: 3]
-
-[10:09] Nitesh: Okay. Take a stab at it, okay[cite: 3]? Nobody is denying you from doing it, okay, take a stab at it and see like, okay, if this can be done[cite: 3]. Another option, which I'm giving you, okay, another option is that you go to this one, like the... You have seen this ping from Aanchal, wherein she shared the transformer code[cite: 3]?
-
-[10:35] Uma: Yeah. I'll just go through it once, yeah[cite: 3].
-
-[10:38] Nitesh: Yeah, you can check through this once, and Hema, you can also go through it, it's like a simple Python code, okay[cite: 3]? And what what they are trying to do here is, and this is what like Aanchal has produced today, okay, and I'm not sure if you guys went through it or not, but this is... She ran one iteration on transformer for that overall 14-month feature set that we were creating, right[cite: 3]? We created like the one that you were creating, Hema, on Friday[cite: 3]. So, what she has done is she has taken like 62 features for 14 months, okay[cite: 3]? Now, these each month, right, each month it has like 62 features, it will be either available or not available[cite: 3]. 
-
-So, what she is doing is that first of all, each month is converted into a dimension, 1x64 dimension vector, okay[cite: 3]? So, 62 items are converted into 1x64 dimensional, like a numerical representation of it, okay[cite: 3]? Then we put the temporal aspect of it, that, okay, this is monthly-level data, so each and every particular month as in terms of the context is separated by 30 days, okay[cite: 3]? We put that as a context there, okay[cite: 3]? 
-
-Then essentially, we take the data, divide it into, say, like two blocks, and each block tries to optimize for four heads[cite: 3]. Four heads are that you have 64 dimensions, so each head tries to optimize for 16 dimensions, okay[cite: 3]? So, total 64 dimensions are there, two blocks are there, and it runs like a 64-dimension model, okay[cite: 3]? GELU is a algorithm which helps in optimizing your loss function, okay[cite: 3]? So, the loss function that we have here is that we are trying to predict for incremental GCM here, okay[cite: 3]? So, incremental GCM, so there will be like a prediction that will happen[cite: 3]. Once that prediction happens, it identifies, okay, what is the overall loss, then starts optimizing for that loss so that its prediction becomes better, okay[cite: 3]? 
-
-And what it does is like firstly, it creates like 64 dimension, then it expands to 128 dimension, brings it brings it back to 64[cite: 3]. So, it runs like a feed-forward network, runs in between in itself in the encoder formation and tries to optimize for it, okay[cite: 3]? So, what it does is after this, you get 14 months and 64 dimension vectors after this[cite: 3]. So, for each month you get 1x64 dimension vector, okay, which is like the optimized representation of that journey, okay[cite: 3]? For one month, it is 1x64; for second month, 1x64; so for 14 months, it is 14x64 dimension[cite: 3]. 
-
-Then all these dimensions, right, or these vectors, there is one way... there are multiple ways to like combine them together as a representation of full journey[cite: 3]. One is I can do a simple average, okay[cite: 3]? All the features, I like the vector, say, like within vectors, element one, right, I do sum of square and do select square root of it, divide by standard deviation, that is like average pooling, okay[cite: 3]? I do that for all the 64 dimension features and I get like one full vector which is averaged out across all 14 months[cite: 3]. Makes sense[cite: 3]?
-
-[13:48] Hema: Yeah[cite: 3].
-
-[13:49] Nitesh: Okay. Then this represents a 64-dimensional customer journey across 14 months[cite: 3]. So, one vector for each card member, cool[cite: 3]? Then what it does is it tries to run a regression head, it tries to see like, okay, when 64 dimensions go down to, say, like 32 or, say, like to a single dimension, okay, and it tries to predict the IGCM, okay[cite: 3]? Then it tries to keep on repeating this this whole procedure back and back until it reaches to a stage where the loss is minimized, yeah[cite: 3]. So, we ran, say, like close to 50 epochs of this iteration, and it closed down at, say, like close to, I think, 17 or 18[cite: 3]. By 18, it was able to optimize, okay[cite: 3]? And what what are we getting as a results[cite: 3]? Results are these[cite: 3]. 
-
-So, essentially, we had like 77k card members, yeah, correct[cite: 3]? Okay. 77k card members, in that we had... Okay, let me tell you this: this was 30%... nay, this was 30%... divided by 30%... 53, okay[cite: 3]. So, 54k was in-sample... was overall Jan to June data, okay, which was divided into in-sample and out-of-sample[cite: 3]. Out-of-sample was 30% of this, which is 16k, and in-sample was rest of the population, okay[cite: 3]? So, rest of the population would be this minus this, okay, 48k[cite: 3]. Within 48k, there was a validation dataset that was carved out randomly, and that validation dataset was 5.6k, okay[cite: 3]? So, everything from this 42k or 43k dataset was used to do training, okay[cite: 3]? Training was done on this 42k and validation was done on this 5.6k, and therein we had a Gini of 65% in-sample, okay[cite: 3]? 
-
-Now, when we did move to out-of-sample—and Uma, you also pay attention, like I think you are already aware, but this is something like for both of you, okay[cite: 3]? So, out-of-sample was close to 16k, and that had a Gini of 60%[cite: 3]. And out-of-time is like close to 24k, and we have a Gini of 58%[cite: 3]. So, essentially there is a slight drop, but it is not that high of a drop[cite: 3]. And if I look at the incremental GCM model which was created earlier, that was based on, say, like Month 1 attributes and it was close to 25% Gini[cite: 3]. So, we are already breaching that mark by pretty high number, okay[cite: 3]? 
-
-Okay, this is just like the first set[cite: 3]. Secondly, if you look at out-of-sample and out-of-time and deciled based on the predicted score that we are getting of incremental GCM, we do see it rank orders well[cite: 3]. If I look at the median, it is ranking order well, even, say, like the mean predicted GCM is ranking order, okay, rank ordering, okay[cite: 3]? So, we are able to achieve, say, like a good representation from the feature set that we already have across 14 months, okay[cite: 3]? So, this is like a starter, okay, of, say, like the algo[cite: 3]. So, whatever you guys are working on that 14-month feature set, right, that becomes important because it feeds in and it is showing value in terms of the overall, okay, overall results that we are seeing, right[cite: 3]? So, this is like the first cut[cite: 3]. 
-
-Now, the features that she has used, those are these ones[cite: 3]. Let me bring that up[cite: 3]. Yeah. So, these are the features that she has used in the first cut, okay[cite: 3]? So, there are like close to 52[cite: 3]. Now, what has happened is like some of these features were like very sparsely populated in few months[cite: 3]. So, what encoder has done is that it looks at like if some of the features are, say, like sparsely populated, it tries to create an indicator out of that, that, okay, whether this is populated sparsely, yes or no[cite: 3]. Okay, that also feeds in as an indicator within the algo[cite: 3]. 
-
-So, her idea was that, okay, should we remove those sparsely populated if they are not getting picked, or, say, they're not adding that much value[cite: 3]? So, for that we are checking that whether we should remove them or we should keep them, okay[cite: 3]? So, that's how it is being discussed[cite: 3]. But essentially, even with these features, and wherein, like, these are not even the relevant ones, because we have removed, say, like all of this advertising, airfare, construction, electronics, gas, as, like, industry-specific spend, right[cite: 3]? So, these have been removed, and even then we are getting this much Gini[cite: 3]. So, if we are able to include, say, like the relevant factors, right, then essentially performance will become even better[cite: 3]. Makes sense, yeah, okay[cite: 3]? 
-
-So, this is how the framework looks like, okay, and how we are planning to, say, like execute[cite: 3]. So, one version we already have[cite: 3]. We will create like more iterations on it with, say, like the relevant feature set which Ishan has created, because the overall variable list looks something like this, okay[cite: 3]? This is the overall variable list that he has, and if you look at the yellow ones are the ones which he has used right now[cite: 3]. So, there is still a lot of thing which can be added[cite: 3]. Makes sense[cite: 3]?
-
-[18:56] Hema: Yes[cite: 3]. Total how many are currently[cite: 3]?
-
-[19:03] Nitesh: Total, we have close to 110[cite: 3]. This one is already like a work in progress because this was created only for like 6k population, which was like they are opportunity and golden dataset, so they haven't looked at, say, like the full population[cite: 3]. That will take some time, right[cite: 3]? So, this is something like work in progress[cite: 3]. I'll check with Sonal today that do I even need this across our whole population, right[cite: 3]? If this is, say, like an important indicator, then we will invest time to get this moving, cool[cite: 3]?
-
-[19:28] Hema: Okay. Oh, yeah[cite: 3].
-
-[19:29] Nitesh: Okay. Done[cite: 3].
-
-[19:33] Hema: And now what we are currently doing is like this three three months thing is to verify whether this model is ranking differentiating them correctly, right[cite: 3]? So, we have to take like top 1,000 and...[cite: 3]
-
-[19:44] Nitesh: Yes[cite: 3]. So, essentially what we will do, that this is the framework that I'm putting across: we will have that daily set of data that is available for Month 1 to Month 3, convert these daily activities into time-aware sequences, which you both can take care of, okay[cite: 3]? Then convert configure the TI-SASREC algorithm with an IGCM-aligned objective, okay[cite: 3]? So, right now, Uma, if you would have seen that you are doing the prediction for the next best action, right, or even in the offer sensitivity when you were doing that, you had an objective function that offer that acceptance rate should be high, right[cite: 3]? We were optimizing for that[cite: 3]. Now, instead of acceptance rate, you will put incremental GCM there[cite: 3].
-
-[20:30] Uma: So, we have Y variable in like that, right[cite: 3]? In...
-
-[20:35] Nitesh: I think so, I think so, you should have[cite: 3]. Do you have incremental GCM[cite: 3]?
-
-[20:39] Hema: So, that I have to... I should, as you told, like I should get it from what the latest predicted GCM is, and then we have to subtract and get the IGCM[cite: 3].
-
-[20:49] Nitesh: Yes, yes, yes, yes! You can get that[cite: 3].
-
-[20:52] Hema: For that, I think Ishan should have it[cite: 3]. So, the actual GCM values, I didn't find that actual here[cite: 3]. So, where to... Who has the actual GCM data[cite: 3]?
-
-[21:02] Nitesh: Okay, wait a sec, wait a sec, I'll tell you[cite: 3]. Okay, so the table which Shailendra shared, right, last night, which he said that, okay, he has created like for 84 variables, can you check, does that have GCM, actual GCM, Year 2[cite: 3]?
-
-[21:24] Hema: Oh, let me check the code[cite: 3].
-
-[21:26] Nitesh: Let me just tell you the table that is there[cite: 3]. This one, right[cite: 3]? Okay.
-
-[21:38] Hema: Which table?
-
-[21:41] Nitesh: This one, right[cite: 3]? He mentioned that he has already initiated like this 77k card member, right, this spend variable[cite: 3]. Can you check, this table should have, essentially, a Year 2 GCM available in this one, okay[cite: 3]? You can use that, and this table which Ishan created today, right, you already have PPA access[cite: 3]?
-
-[22:04] Hema: Yes, I have[cite: 3].
-
-[22:05] Nitesh: Just check, ha, just check... Ha, see! This guy has already added like incremental GCM right here in this table[cite: 3]. He will have, say, like incremental GCM within this table itself[cite: 3]. Just see like if it has like Day 0 and actual, so the CM11 incremental GCM, that won't change[cite: 3]. So, you can use that copy and mapping like left join at CM11 and get this value directly[cite: 3].
-
-[22:26] Hema: Hmm. Okay[cite: 3].
-
-[22:28] Nitesh: Okay[cite: 3]?
-
-[22:29] Hema: Yeah[cite: 3].
-
-[22:30] Nitesh: Cool[cite: 3]?
-
-[22:31] Hema: Yeah, okay[cite: 3].
-
-[22:33] Nitesh: Done[cite: 3]. So, once you have the data prep, and Uma, you have, say, like the setup done for the algo, try to see like, okay, if we can create that whole structure today and like initiate one run on this one, cool[cite: 3]? I know that you will not land to, say, like the absolute solution at the get-go, there will be many hiccups, completely fine[cite: 3]. Let me know what are the challenges that you face, okay, both you, Hema, and Uma, okay, and tell me, like, so that we can connect and try to solve for it, okay[cite: 3]?
-
-[23:04] Hema: Yeah[cite: 3].
-
-[23:06] Uma: Yes, Nitesh[cite: 3].
-
-[23:07] Hema: Okay, Nitesh[cite: 3].
-
-[23:08] Nitesh: Cool[cite: 3]. Thanks, guys[cite: 3]. Anything else that you want to bring to attention[cite: 3]?
-
-[23:12] Hema: Uh, nothing more[cite: 3]. If we are... If we have anything, we'll just message you, then we can see[cite: 3]. Yeah[cite: 3].
-
-[23:18] Nitesh: Done, done, done. Cool. Thank you, guys. Take care[cite: 3].
-
-[23:21] Hema: Thank you. Bye[cite: 3].
-
-[23:22] Nitesh: Bye[cite: 3].
+Participants: Nitesh, Kartikeya, Ishan, Aanchal, Uma, Hema
+
+[00:00] Kartikeya: Ishan, baseline ka GCM who has to create? Hopefully, Ishan, correct me if I'm wrong, but I think you would be able to wrap it up in the next 2 to 3 hours, right[cite: 4]?
+[00:09] Ishan: Yep, definitely[cite: 4].
+[00:11] Kartikeya: Theek hai[cite: 4]. The second piece is with respect to utilizing the data[cite: 4]. Abhi dataset jo banaya tha monthly wala[cite: 4], like that got created around like half an hour back only[cite: 4]. So, Aanchal was not able to really use it[cite: 4]. But in the meanwhile, like what they have done so far is they're... they have tested out the new approach of Integrated Gradients—that IG approach[cite: 4].
+[00:33] Nitesh: Mhm[cite: 4].
+[00:34] Kartikeya: So, we got some results, but in order to interpret those results, I haven't had the time, but Aanchal, I think she has done some initial reading on that[cite: 4]. So, she can walk us through with that piece[cite: 4].
+[00:44] Nitesh: Theek hai[cite: 4].
+[00:45] Kartikeya: The third thing which is like... that is more concerning, that is the daily dataset[cite: 4]. As per my understanding, daily dataset has been not... like we were not able to work on that at all because daily dataset ke codes jo hai na, like they're sitting like everywhere[cite: 4]. It's not consolidated anywhere[cite: 4].
+[01:03] Nitesh: I... I... when I wrote that note, uske baad I realized ki because Shailendra had shared like one KT doc with me on, say, like all the features, and it had like: this feature comes from this code, this feature comes from this code, this feature comes from this code! And I'm like, okay[cite: 4]!
+[01:18] Kartikeya: This is... this is too much segregated[cite: 4]. I think here we need someone from the business team only, like the person who actually works on this, so that like they... woh create kar paayein[cite: 4]. Like I can't expect Jay to work on this; it's just too much[cite: 4]...
+[01:31] Nitesh: Theek hai. Theek hai, at least we now know like the lay of the land, right[cite: 4]? That... that is good[cite: 4].
+[01:37] Kartikeya: Exactly[cite: 4]. Exactly. And I have taken a early stab on the slides ki slides kis tarah se frame karni chahiye[cite: 4]. So, we can discuss that, too, at a high level once we discuss all this[cite: 4].
+[01:47] Nitesh: Done[cite: 4].
+[01:48] Kartikeya: So, Ishan, over to you in case if you want to add anything on top of what I said[cite: 4].
+[01:54] Ishan: Uh, no[cite: 4]. I think like you pretty covered everything[cite: 4]. Just one thing, like on the target variable piece, we will be proceeding with the capping and flooring and not the scaling, right[cite: 4]?
+[02:07] Nitesh: Capping and flooring and not the scalings, haan, because we're not taking care of that, the overall negative proportion, right[cite: 4]? What is happening, theek hai, that is okay, that is fine[cite: 4].
+[02:19] Ishan: Because last time also we did one iteration with the scaling, then Ashish told us not to do that and proceed with the capping and flooring. Yep[cite: 4].
+[02:26] Kartikeya: Why is that the reason, though? What was the reason? Sorry, I didn't understand[cite: 4].
+[02:30] Ishan: Yep, so he wants to preserve the distribution[cite: 4]. So, say, he's more keen on doing a positive shift transformation, like making all the negative values to positive, but again like still preserving their distribution[cite: 4]. But like if we do the standardized scaling, say between 0 to 1, or min-max scaling, then it will hamper the distribution[cite: 4].
+[02:51] Aanchal: But, Ishan, I didn't do min-max or 0 to 1 scaling, I did just... I did just the z-score standardization, which is basically maintaining the distribution and just changing the scale[cite: 4].
+[03:04] Ishan: Yeah, the scale is changed, right[cite: 4]?
+[03:07] Kartikeya: That is normalization, right[cite: 4]? You have made... you have made sure that your standard deviation is 1 and your mu is 0, right[cite: 4]?
+[03:14] Aanchal: Yes[cite: 4].
+[03:16] Nitesh: When you're doing scaling, Aanchal, you are doing on the target variable or you're doing for the features—standardization[cite: 4]?
+[03:25] Aanchal: For the target[cite: 4].
+[03:26] Nitesh: For the target variable? Okay[cite: 4].
+[03:30] Kartikeya: I think it makes more sense to do it on the independent variables rather than the y-variable[cite: 4]. Particularly the continuous variables[cite: 4]. I thought like on the continuous variables that we have on the x's side, like we are already doing that, right[cite: 4]?
+[03:46] Nitesh: That log one, that point which we were discussing[cite: 4]. Something of that sort, right[cite: 4]?
+[03:51] Kartikeya: Yeah, something of that sort[cite: 4]. But like we are doing some sort of normalization, right, on the x-variables as well which are continuous[cite: 4]? So, then you should say that you're doing normalization on both the sets, on the x's as well as y[cite: 4]. I was aware about the x, but I was not aware about the y one[cite: 4].
+[04:07] Ishan: So, should I do the same with my baseline model as well[cite: 4]?
+[04:14] Kartikeya: It doesn't matter[cite: 4]. X doesn't matter for you, Ishan[cite: 4]. What matters is y[cite: 4]. You should use the same y[cite: 4]. So, in case if she's doing any sort of capping, you have to do the same capping as well[cite: 4].
+[04:25] Aanchal: In the next iteration, I will also do this same capping and flooring which Ishan will be doing[cite: 4].
+[04:32] Kartikeya: Perfect, I think that makes sense[cite: 4].
+[04:35] Nitesh: And, Ishan, one more thing... Sorry, sorry, Kartikeya, one thing[cite: 4]. Stephanie was telling me that you worked with Pranav sometime back to create like a full-fledged ET model, which had like features starting from Month 1 to Month 14, but because of the framework or, say, like constraints, you just kept yourself with, say, like the most important features from Month 1 to Month 14, and you created one version of the model itself[cite: 4]. And that Gini was close to 40%[cite: 4].
+[05:09] Ishan: Uh, no[cite: 4]. Actually, the thing is that Gini close to 40% is basis on the 15k population, the cross-tab population, Golden and Opportunity[cite: 4]. And if we take the overall 77k B-flat customer, it will be close to around 28%[cite: 4].
+[05:24] Nitesh: Okay[cite: 4].
+[05:25] Ishan: And again, there are few nuances in a sense like we are using the older Day 0 prediction[cite: 4]...
+[05:34] Nitesh: Okay, understood[cite: 4].
+[05:35] Ishan: ...then we have included the spend variables as well, the first category spend or spend on certain industries[cite: 4]. Then we have a daily-level breakup of M1 and not taking the M1 as a whole[cite: 4].
+[05:47] Nitesh: Got it. Understood. Thank you[cite: 4]. Okay, now I'm clear[cite: 4]. That makes sense[cite: 4]. Sorry, Kartikeya, please, go ahead[cite: 4]. This was just like one question which Sonal popped up yesterday, so I just wanted to get that clarity[cite: 4].
+[06:04] Kartikeya: No worries. I was just going to hand over to Aanchal only so that she can walk us through what she has done[cite: 4].
+[06:11] Nitesh: Go ahead, Aanchal[cite: 4].
+[06:24] Kartikeya: Aanchal, can you hear us[cite: 4]?
+[06:26] Aanchal: Yes, I'm just sharing my screen[cite: 4].
+[06:30] Nitesh: And, Kartikeya, does this time work, like although I have kept it like without looking at everyone's calendar, but this time works, right, to meet[cite: 4]? I just wanted to keep it like before like your meeting starts[cite: 4].
+[06:40] Kartikeya: Yeah, no, it's fine[cite: 4]. It's just that like in 15 minutes now I have a connect with Anju[cite: 4]. So, at that time like I'll drop off[cite: 4]. And I'm pretty sure like she would ask for you, as well[cite: 4].
+[06:50] Nitesh: Yeah, yeah, yeah[cite: 4].
+[06:54] Aanchal: Yeah, so this is the raw data basically which we have created[cite: 4]. We have taken top 10 and top... bottom 100... top 100 and bottom 100 from our out-of-time sample and calculated Integrated Gradients for these[cite: 4]. So, where you see here, right, for this particular customer, we have...[cite: 4]
+[07:12] Kartikeya: Aanchal, you need to... you need to explain the... the baseline first[cite: 4]. Yeah, like talk about like what exactly IG will calculate, then we can talk about this Excel, right[cite: 4]?
+[07:24] Aanchal: Correct[cite: 4]. The idea is like we create a... first is we create a baseline card member feature set, which is basically we have some binary features, some continuous features[cite: 4]. So, we create a baseline, as in we will calculate the incremental for each customer over this baseline card member[cite: 4]. 
+
+So, we are starting here with like we're kept all the binary variables 0 and all the continuous with the median value across the month[cite: 4]. So, for this baseline customer...[cite: 4]
+[07:58] Nitesh: Okay, so you are saying that for all the binary features, they... we are saying that essentially they're not happening, and for the continuous, you are taking the 50th percentile[cite: 4]. That is your baseline approach[cite: 4].
+[08:10] Aanchal: Correct. For all across the features, we have values for Month 1 to Month 14[cite: 4]. Now, idea is we calculate what is the, uh, incremental GCM for this baseline card member, let's say it's 500[cite: 4]. Now, for the customer in question, we check what is the baseline... what is the incremental GCM, let's say it's 1,000[cite: 4]. So, this difference of 500 will be contributed to certain features in different months[cite: 4]. So, IG is basically telling which feature is contributing how much to this difference[cite: 4].
+[08:46] Nitesh: Okay. So, essentially, if in Month 4, one of the binary indicators becomes 1, or say, like, someone of the continuous features like the value is higher than or lower than median, so that is contributing towards the shift from 500 to 1,000[cite: 4]. That's what you are saying[cite: 4].
+[09:03] Aanchal: Correct. Yes[cite: 4].
+[09:04] Kartikeya: Essentially you can add up, Nitesh, across the months, across the features[cite: 4]. Like if you add up everything for a particular customer—the CM11 which is on the top row—essentially that summation should give you 1,000 minus 500, that gap[cite: 4]. You should be able to get that[cite: 4].
+[09:24] Nitesh: Okay[cite: 4]. So, the each and every month's... so each and every feature's contribution across months, we will get that value, and that summed up together is, say, like 500[cite: 4]. Fair to say[cite: 4]?
+[09:34] Aanchal: Correct[cite: 4].
+[09:35] Nitesh: Difference of the both[cite: 4].
+[09:36] Kartikeya: Exactly[cite: 4].
+[09:37] Aanchal: Yes[cite: 4].
+[09:38] Kartikeya: Yep. So, it's very similar to SHAP values[cite: 4].
+[09:42] Nitesh: Haan, that's what I was thinking[cite: 4]. And it is like going towards, say, like the median, right, like the central line[cite: 4]. Okay, okay[cite: 4].
+[09:53] Kartikeya: So, the good thing is now we can deal with just this Excel[cite: 4]. We don't need to go somewhere because now it will tell me like, okay, if I aggregate something on it, like let's say if I can see that for customers who were enrolled in a particular program in, let's say, the early months—Month 1, Month 2, Month 3—what is their average IG score[cite: 4]? I can get that, and I can compare it with others, and I can come up with some sort of... I can come up with a lot of slices and dices of this data and come up with different strategies[cite: 4].
+[10:29] Nitesh: Yes, I agree[cite: 4].
+[10:30] Aanchal: Basically, now we can deep-dive into that black box, like which feature and point in time is contributing to what particular, right[cite: 4]?
+[10:39] Nitesh: Okay, okay. Makes sense, makes sense. So far with you, so far with you[cite: 4].
+[10:44] Aanchal: Yeah. So, for this particular customer, right, this baseline is same for all the customer[cite: 4]. This is for the baseline customer that we created[cite: 4]. This is what model is predicting: -438 as the baseline incremental GCM[cite: 4].
+[10:56] Nitesh: Okay. But the actual incremental GCM is 225,000[cite: 4].
+[11:01] Aanchal: Yeah, so these are like outlier ones[cite: 4]. Top 100 is basically the top actual GCM[cite: 4]. I've taken top 100 and bottom 100 basis the actual one[cite: 4]. So, here like we need to look into the model performance as well because model is rank ordering properly, but it is shrinking more towards the center[cite: 4]. Maybe that is because of the scaling that I've done[cite: 4]. Not sure[cite: 4]. We can check for that[cite: 4]. 
+
+But here you can see we have all the features like the 50... 50 features that I had[cite: 4]. For each month, we have this feature in this month, what is the IG dollar this feature is contributing or not contributing[cite: 4].
+[11:43] Nitesh: So, what I am say- seeing is saying is ki in Month 1, if this person is doing admin spend, right, if it is showing up, then essentially it is adding $112[cite: 4]?
+[11:54] Aanchal: It's reverse[cite: 4]. The customer didn't have any...[cite: 4]
+[11:58] Nitesh: Okay, customer raw value was 0[cite: 4].
+[12:00] Kartikeya: Not necessarily[cite: 4]. Nitesh, it's not necessary[cite: 4]. The reason is we don't really know what was the value of admin percentage, right[cite: 4]? Whatever that value is, because of which there was an incremental IG effect of 112, that's what we can say[cite: 4]. So, in binary indicator, it's very easy[cite: 4]. For continuous variables, we need to be very clear about like how to interpret that[cite: 4]. It's not like saying that, okay, if you're just making a spend on admin, then you'll be having some IG... then you'll be having 112 impact[cite: 4].
+[12:31] Nitesh: Got it, got it. So, it's not, say, like a direct value, it is more as a...[cite: 4]
+[12:39] Kartikeya: Exactly. That's why we have the customer values as well[cite: 4]. Because that's why we have the customer values here as well, so what we can do is we can maybe bucket it around, that, okay, if the admin percentage is, let's say, between 5%... less than 5%, what is the average IG value[cite: 4]? When it is between 5% to 20%, then what is average IG value[cite: 4]? That way we can come up with some sort of understanding[cite: 4].
+[13:02] Nitesh: Okay, okay, okay[cite: 4].
+[13:07] Aanchal: The raw data, I just gave this data to ChatGPT, and it created few trend analysis[cite: 4]. So, this is basically the feature level, so it's aggregated value for this particular feature[cite: 4]. These are the actual values in terms of percentage: that top 100 have 70%, bottom have 30%, and because of this 70%, we are getting an average IG of 497 in the top 100, and bottom average is 15[cite: 4]. It's basically this category... higher this category spend is contributing to a positive IG lift[cite: 4].
+[13:48] Nitesh: Okay, then essentially you're saying like the construction spend is adding an IG value of 270 because the top 100 are...[cite: 4]
+[13:56] Aanchal: For the top 100[cite: 4].
+[13:57] Nitesh: Top 100 are, say, like contributing close to 37,000 what? That average of 37,984 is average spend that is happening by the top 100[cite: 4]?
+[14:06] Aanchal: Correct, yes. Yes[cite: 4]. But again, I was telling this to Kartikeya as well that Ashish has asked us to remove these category spend, right, because these might be biased[cite: 4].
+[14:15] Kartikeya: Yes[cite: 4].
+[14:15] Nitesh: Yes, so that we remove, like, in the updated iteration, right, in the next one[cite: 4]?
+[14:19] Aanchal: Yeah, so we'll get some different features[cite: 4].
+[14:21] Nitesh: Yeah, these features are not even there[cite: 4]. We have, like, removed these industry-specific ones[cite: 4].
+[14:26] Aanchal: Right[cite: 4].
+[14:29] Kartikeya: But even after that, like I can see there are some... good understanding, like... Myca ka kuch hai kya ispe, like one second[cite: 4]?
+[14:37] Aanchal: Yeah, Myca login indicator[cite: 4]. But isko hum, like we cannot read it from average[cite: 4]. We need maybe count of customer out of 100 who had this indicator[cite: 4].
+[14:49] Nitesh: Haan, because this is coming out to be like all the card members have the Myca login: 84 - 84[cite: 4].
+[14:56] Aanchal: Then we have DCA impression indicator, we have VLOC impression indicator[cite: 4]...
+[15:05] Nitesh: Okay, so this is like something of feature contribution, right, sort of a thing that is coming out to be, like how much this feature or, say, like this particular attribute is contributing towards your incremental GCM, fair to say[cite: 4]?
+[15:23] Aanchal: Yeah[cite: 4].
+[15:24] Kartikeya: Yes, that's one of the views, yes[cite: 4]. But I think there can be a lot more which we can do, like...[cite: 4]
+[15:29] Aanchal: Yeah, we can look at patterns, trends...[cite: 4]
+[15:37] Nitesh: Hmm. This looks interesting[cite: 4]. This looks...
+[15:40] Kartikeya: We need to spend some more time into this[cite: 4].
+[15:42] Nitesh: Yeah[cite: 4].
+[15:42] Aanchal: Yeah, this is the first time we are doing this, right[cite: 4]? That's why[cite: 4].
+[15:48] Nitesh: But I think if we are able to do something out of it, right, at least like it solves... it solves to like some degree of that interpretation like which we have been struggling with so far with the feature set, right[cite: 4]?
+[15:59] Kartikeya: To a large degree, it sort of explains things[cite: 4]. It's not like the average thing across, we can actually do the time series part as well[cite: 4]. It's not like average across the features[cite: 4]. Like right now we're doing at a feature level, right[cite: 4]? We can also see for a particular feature how things are going...[cite: 4]
+[16:13] Nitesh: How it's changing across months, yeah, that was my point[cite: 4].
+[16:16] Kartikeya: Exactly. So, that that also can come up here[cite: 4].
+[16:20] Nitesh: So, essentially like if one of the feature, say like is... which is like the top driver and it is increasing over time, so then that establishes that if the trend is increasing, then essentially this can lead to positive or high GCM, fair[cite: 4]?
+[16:31] Aanchal: Yes. Here is one kind view here, like for B-flat construction spend, it is kind of increasing over time month-on-month average[cite: 4].
+[16:43] Nitesh: This is for the top ones, and for the bottom ones it is decreasing month-over-month[cite: 4]?
+[16:48] Aanchal: Yeah[cite: 4].
+[16:49] Nitesh: Like in between there are spikes, but if I look at the slope, it is actually...[cite: 4]
+[16:56] Kartikeya: Yeah, it will be negative[cite: 4].
+[16:57] Nitesh: Yeah, it will be negative[cite: 4].
+[17:04] Aanchal: But all these are spend, like, majorly[cite: 4].
+[17:07] Nitesh: Majorly spend-related ones, they are showing[cite: 4]. Like bonus percentage category, it is actually like for the bottom one it is dropping from 40% to just 20%, whereas the top ones are still maintaining at 60% to 70%, right[cite: 4]?
+[17:21] Kartikeya: Yep[cite: 4].
+[17:23] Nitesh: That's a good insight, like I won't deny this, it's actually a good insight[cite: 4].
+[17:33] Kartikeya: Let's use it better, like let's use the complete data and interpret this with full force when we have the entire data[cite: 4].
+[17:41] Aanchal: Yeah, because I think these are like outliers, top 100, bottom 100[cite: 4]. We need bigger sample[cite: 4].
+[17:47] Nitesh: Yeah, we need bigger sample, like at least like for... but at least like if I'm comparing the extremes, right, so there is some peak differentiation that is showing up in my extremes for the top as well as for the bottom, correct[cite: 4]? Right? Okay[cite: 4]. 
+
+This is good, even very good progress, very good[cite: 4]. I think when we'll... once we'll have, say, like the updated feature set, we run an algo on that, we figure out like, okay, what is the new set of features that are popping up on the top, and how are they are contributing, I think then we should have, say, like a more comprehensive read[cite: 4]. But even now, this tells me that, okay, there is some pattern which is getting captured when I'm saying that something is contributing more versus less as compared to the other features[cite: 4]. Okay. Okay. Okay[cite: 4]. Done. Done[cite: 4]. This is good[cite: 4]. This is good[cite: 4]. 
+
+Now, Kartikeya, one question... So, and like to Ishan, as well: so we created this predicted Day 0 model first, okay[cite: 4]? Based on that, that predicted Day 0 model predicted that, okay, these are the predicted Year 2 GCM that I have[cite: 4]. Now, some of those folks where the prediction was wrong, they moved up to, say, like actual Year 2 GCM, they became, say, like our Golden dataset, right[cite: 4]? Like people who actually... Oh, sorry, for whom I predicted high and they remained high actually in, like, Year 2, that is like my Golden dataset, right[cite: 4]? But there can be some people for whom I predicted high, but they ended up at lower level, right[cite: 4]? And for some, I predicted low, but they ended up to be high GCM, right[cite: 4]? So, these can be, say, like our Opportunity datasets where things moved, cool[cite: 4]? 
+
+So, there is this two Opportunity groups which the team was, uh, looking at: one was called A, another was B2[cite: 4]. And what was A was, it was Golden, like whom we predicted high, they ended up being high, and Opportunity was the one where we predicted high, but they ended up being low, right[cite: 4]? And so, essentially, what Sonal mentioned was, or say like she suggested, and I think this was like one of the pointers which Anju was also trying to push, that if I look at within this, uh, trained algo, right, for the people whom I'm defining as Golden and whom I'm defining as Opportunity, okay, some samples from them and some samples from the Opportunity, do I see like similar levels of discrimination in terms of the feature set[cite: 4]? Just like you are getting like top and bottom, right, top 100 and bottom 100, we are seeing like construction spend is, say, like increasing, for the other segment it is reducing; the bonus percentage is remaining stable, for the other it is reducing[cite: 4]. Do we see something of that feature if I compare my Golden and Opportunity dataset[cite: 4]?
+[20:48] Kartikeya: Yeah, I think we can do that[cite: 4].
+[20:50] Nitesh: We can do that, right, within this early[cite: 4]?
+[20:52] Kartikeya: Yeah, like it's it's just a matter of definition[cite: 4]. We can pick which customers we need to do, and she can easily create the views for that, as well[cite: 4].
+[21:01] Nitesh: Done. Done[cite: 4]. That works. That works[cite: 4]. So, what I'm getting as a takeaway is that the three-month daily-level data will require like someone from here to actually like work on, say, like the code and the setup, and majorly it could be, say, like Shailendra or, say, like Jay, because they have actually worked on the data[cite: 4]. Let me talk to them and see like and like with Sonal as to how we can proceed with the creation of the daily-level data[cite: 4]. 
+
+Secondly, uh, in terms of what we have, so we now have like the full feature set that is available to us on the latest set of features, and we'll be training the algo on the latest set of features for the 14-month SAGE setup, correct[cite: 4]? Third is, Ishan, you are developing a baseline model of XGBoost, and the reason for that is the earlier trained model that we created: one, it was built on a smaller sample; two, it didn't have say... it had like the daily breakup for Month 1; and three, uh, it was using the older Day 0 predicted GCM, right, and not the latest one[cite: 4]. Okay, so hence you need to create one baseline model which is like based on the updated version of everything[cite: 4]. Makes sense, yeah[cite: 4]?
+[22:12] Ishan: Okay[cite: 4].
+[22:13] Nitesh: This is one[cite: 4].
+[22:15] Kartikeya: I think there's I think there's also one more thing which Ishan has to do: once the model gets trained by Aanchal, right, the hidden states are supposed to be used by him in order to see if it adds...[cite: 4]
+[22:24] Nitesh: Yes, to create like a SAGE plus, uh, point estimates[cite: 4]. Yes. Yep[cite: 4].
+[22:30] Kartikeya: But there's only one problem here[cite: 4]... I don't think there will be any additional value as such which it can bring because it's the same data, right[cite: 4]? And even like it's not it's it's not even in proper series as well, so...[cite: 4]
+[22:44] Nitesh: Yeah.
+[22:45] Kartikeya: That's the problem that we have[cite: 4].
+[22:47] Nitesh: So, one good thing is when I showed this first iteration, right, Kartikeya and Aanchal, to Sonal yesterday, her first question was that, "So, this 60% is coming with, say, like features and and, say, like the point estimates?" I said, "No, only just with the features[cite: 4]." And she was like, "Only with the features[cite: 4]?" I said, "Yeah[cite: 4]." And then she was like, "The vectors are adding so much value[cite: 4]?" I said, "Yes, even with the one which are not a complete dataset, feature set, I am able to achieve like close to 60% Gini[cite: 4]." So, she was like astounded by that fact that, okay, it is adding value because the earlier iterations, whatever she saw, right, on the IGCM, those were never beyond, say, like 40% on any version that she saw, like even the earlier or, say, like...[cite: 4]
+[23:32] Kartikeya: But but my point is like, in the in the previous iterations, were we using all the 14 months of data or just the first few months[cite: 4]?
+[23:41] Nitesh: There was one iteration which Pranav... which like Ishan worked with Pranav, which had like 14 months of data, which I was talking about[cite: 4]. Although it had, say, like some caveats, like it didn't use the updated Day 0 model, but even then that was like the starting point that they had[cite: 4].
+[23:56] Kartikeya: Got it[cite: 4]. So from that, from that particular point...[cite: 4]
+[24:00] Nitesh: Yeah[cite: 4].
+[24:01] Kartikeya: ...definitely there's a lot of...[cite: 4]
+[24:02] Nitesh: Yeah, a lot of improvement, yeah[cite: 4].
+[24:06] Kartikeya: Okay. I think then let's do it that way only ki isme let me work with Aanchal to finally see ki isko kaise interpret kar sakte hain, because interpretation is going to be very hard[cite: 4]. Once she creates the data... once she creates the data, Nitesh, let's do one thing: she can share the data with you and me both[cite: 4], and she is also working on the same, but we also try to make some interpretation out of it, me also I'll also try, and let's try to come up with some storyline for Anju[cite: 4].
+[24:37] Nitesh: Done, done, done, done. Cool[cite: 4].
+[24:42] Kartikeya: We have a meeting with Ashish tomorrow, right[cite: 4]?
+[24:45] Nitesh: Tomorrow, haan, we have a meeting with Ashish[cite: 4]. I think I have received the invite[cite: 4]. Let me see my calendar has updated or not[cite: 4]. Let me tell you at what time[cite: 4]... Anju?
+[24:57] Kartikeya: Yeah, my meeting with Anju is just got cancelled[cite: 4]. So, but I'm pretty sure like she would want us to update her as well, right[cite: 4]?
+[25:05] Nitesh: Yeah, yeah, yeah[cite: 4].
+[25:06] Kartikeya: When exactly you want to have that conversation[cite: 4]?
+[25:08] Nitesh: So, today at like 2:00 PM, uh, Sonal has kept some time with Anju on, say, like walking through the whole setup[cite: 4]. That was the only time that was available with her today at 2:00 PM, okay[cite: 4]? So, I'll see like if if she pings earlier or, say, like Sonal pings earlier, I'll ping you as well, like before 12:00 PM, like which is like 9:30 PM your time[cite: 4]. Before that, if they ping, I'll ping you, okay[cite: 4]? I won't ping you after, say, like 10:30 PM[cite: 4]. That won't happen[cite: 4].
+[25:36] Kartikeya: Chalega boss, theek hai, theek hai[cite: 4]. That that's okay[cite: 4].
+[25:39] Nitesh: That's okay, cool[cite: 4].
+[25:40] Kartikeya: Then I'm gonna... then I'll be waiting for Aanchal's dataset and then I'll do the analysis on top of it[cite: 4].
+[25:45] Nitesh: That's okay[cite: 4]. Cool[cite: 4].
+[25:47] Kartikeya: Chalo, thank you[cite: 4].
+[25:49] Nitesh: Theek hai[cite: 4]. I was looking through the slides, yeah, slides look good, uh, in terms of the frame[cite: 4].
+[25:54] Kartikeya: The slides with the... we need to still do a lot[cite: 4]. I just, yeah, I just worked on one of the slides, this one[cite: 4]. I thought like this is slightly more easier to interpret[cite: 4].
+[26:05] Nitesh: Hmm. Pooling, optimizer...[cite: 4]
+[26:07] Kartikeya: Let's know if this works[cite: 4]. This is just to work around ki model specification what what exactly we want to say[cite: 4].
+[26:14] Nitesh: Haan, exactly[cite: 4]. I think this is something like which Ashish would be interested in to go through because he was telling the other day like because we are putting SAGE on, say, like this one[cite: 4]. So, what all the use cases, right, that we have worked till now, all of them have worked on historical data[cite: 4]. Say, like from the point estimate[cite: 4]. So, essentially like if I'm looking at, say, like gamer prediction, what it does is it looks at like last 3 months or last 6 months of behavior[cite: 4]. The one that is happening in DM, they are looking last 36 months of behavior[cite: 4]. 
+
+Herein, what we are trying to do is like from the point of acquisition, we are looking forward as to what user is doing and then in future we are trying to predict based on that future estimate, what is their Year 2 GCM[cite: 4]. So, he felt that, okay, it won't be straightforward as to what exactly we are doing here[cite: 4]. So, I think he would be interested in knowing like as to what exactly is the approach[cite: 4]. So, for him this would work, but I think I will lose like Anju or Sonal when I'm trying to explain this architectural framework[cite: 4]. Yesterday I tried, and Sonal got lost in that transformer[cite: 4]...
+[27:14] Kartikeya: But at a high level it's very easy, right[cite: 4]? All you're saying is like you're converting 62 inputs...[cite: 4]
+[27:17] Nitesh: High level, it is easy[cite: 4].
+[27:19] Kartikeya: I'm not even going into the transformer part like, I'm not talk about Q, K, V, like that's completely different, I don't want to go into that[cite: 4].
+[27:26] Nitesh: So, that's what I said: yeh vector hai, yeh vector hai, that gets converted after transformer into this vector[cite: 4]. They're like, "Haan, okay, this works[cite: 4]."
+[27:35] Kartikeya: Exactly, and that's exactly what you put on the slide as well[cite: 4]. I've kept it like at a very high level only[cite: 4]. Aage ispe thoda bahut changes kar sakte hain[cite: 4], and I'll work on the slides, too[cite: 4].
+[27:45] Nitesh: Theek hai, done, man[cite: 4]. Theek hai, done[cite: 4]. Cool hai[cite: 4]. And Kartikeya, you want to discuss on this one, the project tracker, like Anju wanted that tracker[cite: 4]? I worked on it yesterday also, I added some few things[cite: 4]. Do you want to take a review of that like for 5 minutes, right now or later, that works[cite: 4]?
+[28:05] Kartikeya: Sure[cite: 4]. Give me like give me like half an hour, if that's okay[cite: 4]. I'll ping you[cite: 4].
+[28:09] Nitesh: Haan, theek hai. Theek hai, that works, that works. Theek hai[cite: 4].
+[28:12] Kartikeya: Perfect[cite: 4]. Okay, then. Thank you[cite: 4].
+[28:15] Nitesh: Thank you[cite: 4].
+[28:16] Kartikeya: Bye[cite: 4].
+[28:17] Nitesh: Thank you[cite: 4].
+[28:18] Aanchal: Thank you[cite: 4].
+[28:20] Nitesh: Uma, Hema, guys[cite: 4]...
+[28:22] Hema: Yeah[cite: 4]?
+[28:23] Nitesh: What is the progress on the daily transaction-level data[cite: 4]?
+[28:26] Uma: Yeah, Nitesh[cite: 4]. So, we have did that time series one, and I've used this days since acquisition as bucketing, not like the one which we thought before, event date[cite: 4]. For event date, I took it to order the events, and days since acquisition is like the time, uh, event[cite: 4].
+[28:48] Nitesh: Okay[cite: 4].
+[28:49] Uma: And first version, I did let like as usual like 1 to 90, so I didn't bucket like a 3 days bucket or 5 days bucket[cite: 4]. And for the input variables, I've took the standardization and sign log p because there were negative variables and some were very high and some were very low[cite: 4]. And even with the IGCM[cite: 4]. So, I'm thinking to try for next bucketing kind of thing, like if you bucket like 3 days or 5 days[cite: 4]...
+[29:18] Nitesh: Okay. First of all, tell me, is your health okay[cite: 4]?
+[29:21] Uma: Yeah, yeah, Nitesh, I just had cold, that's it[cite: 4].
+[29:24] Nitesh: Just that cold? Okay, okay, that's okay, because your voice is like very drooping, so I just wanted to check like is everything okay. Okay[cite: 4].
+[29:31] Uma: Yeah, yeah[cite: 4].
+[29:32] Nitesh: Theek hai[cite: 4]. So now, okay, I'll ask you a few tactical questions[cite: 4].
+[29:36] Uma: Yes, Nitesh[cite: 4].
+[29:37] Nitesh: First thing, we have the full dataset, right, which is three months of data, and we know at which date what happened, okay[cite: 4]?
+[29:44] Uma: Yeah[cite: 4].
+[29:45] Nitesh: Now, the part where you are stuck or, say, like trying to go past is that how to define the feature set in terms of, like, bucketing for the days, right[cite: 4]? That's what you are trying to do, okay[cite: 4]. So, earlier when we were thinking that if you use the daily-level data, that is not working[cite: 4]. So, you are saying like you need to create, say, like some buckets out of that[cite: 4]. And you are trying to create like what, 5-day buckets or 3-day buckets[cite: 4]?
+[30:10] Uma: That I need to check, Nitesh[cite: 4]. Right now, I took like as it is I've given it to the model itself, so I didn't assign any buckets right now for the initial version[cite: 4]. So, for the test and training data, I have like R-squared around... one sec... R-squared around 0.12[cite: 4]. So, I just need to bucket those and check for the training and test data[cite: 4]. I've just took like some, uh, 60% training and 30 something like testing in that data itself[cite: 4].
+[30:48] Nitesh: Okay, so you are taking first of all... Okay, so let let us define something[cite: 4]. So, you have this data from Jan to August, which is comprising of 77k card members, correct[cite: 4]?
+[30:58] Uma: Yeah[cite: 4].
+[30:59] Nitesh: Okay[cite: 4]. So now, the usual approach that we do is we do training and, uh... this training and test, okay[cite: 4]? So, test is your out-of-time[cite: 4]. So, out-of-time is essentially July and August, which we have been using till now[cite: 4].
+[31:14] Uma: Yeah[cite: 4].
+[31:15] Nitesh: Okay[cite: 4]? So, any acquisition with the acquisition date belonging to July and August, you can keep it outside to in OOT[cite: 4]. When it comes to Jan to June, okay, that dataset you can split in 70-30 proportion randomly, that way[cite: 4].
+[31:31] Uma: Okay. Yeah[cite: 4].
+[31:32] Nitesh: Nobody is stopping you to do that, okay[cite: 4]? Now, when you're doing 70-30, like 70 is your training, 30 is your out-of-sample, correct[cite: 4]?
+[31:40] Uma: Yeah[cite: 4].
+[31:40] Nitesh: And within training, you can do validation and everything, that is completely fine, okay[cite: 4]? Now, once you are doing this, so you are feeding all this as a feature set within the algo, and you are letting it decide that, okay, what is the day bucketing that it wants to do[cite: 4].
+[31:55] Uma: Yeah, initially it took like 1 to 90 because we have 90 days, right[cite: 4]? So, it took like 1 to 90 itself[cite: 4]. So, it didn't take like any bucketing based on the, uh, date[cite: 4]. So, right now I'm planning to give like 3-day or 5-days and check like the results, and check like which one make the better suitable one[cite: 4].
+[32:18] Nitesh: Okay. Okay. Cool[cite: 4]. Okay, theek hai, that works[cite: 4]. And all of this we are running on the CPU itself, okay, there is no GPU requirement, makes sense[cite: 4]?
+[32:28] Uma: Yeah[cite: 4].
+[32:29] Nitesh: Okay, done[cite: 4]. And do you feel any constraint that it will take a longer time to run it on the CPU, or is it getting run, say, like at fairly good speed[cite: 4]?
+[32:38] Uma: Yesterday I left it like, uh, 3 3 hours, I guess, but, uh, I don't know, depends on that, uh... uh, GPU... CPU usage and all, like behind[cite: 4]. So, I just need to check them[cite: 4]. I can use GPU also, like I'll see if it makes it faster then[cite: 4].
+[32:58] Nitesh: So, when you're using GPU, right, so essentially right now your data is at a CM11 level, correct[cite: 4]?
+[33:03] Uma: Yeah, yeah[cite: 4].
+[33:04] Nitesh: Okay[cite: 4]. CM11 is a PII information[cite: 4]. If you will upload, it will trigger something[cite: 4]. So, what you can do is at your end, it is very simple: CM11, take the column of CM11, okay, and create a surrogate key for that at your end[cite: 4]. So, like for example, rank order the CM11s that you have, and give them like CM1, 2, 3, 4, and so on till CM77000, okay[cite: 4]?
+[33:28] Uma: Okay, got it[cite: 4].
+[33:28] Nitesh: And maintain that mapping[cite: 4]. What you upload to the system is like CM1, CM2, CM3 up to CM77k, okay[cite: 4]?
+[33:36] Uma: Okay, got it[cite: 4].
+[33:37] Nitesh: That mapping, so then it becomes like non-PII data, and then you upload it, you run it, you can bring it back when everything works for you, okay[cite: 4]?
+[33:45] Uma: Got it, Nitesh. Yeah[cite: 4].
+[33:49] Nitesh: Makes sense[cite: 4]?
+[33:50] Uma: Yeah[cite: 4]. What would be the next step? So, if we have these bucketing and the information, like then we need to feed this data into the model along with...[cite: 4]
+[33:59] Nitesh: Yes[cite: 4]. So, essentially what you are doing is that you are creating a transformer, okay, which will try to generate like embeddings and you're trying to optimize for the incremental GCM here, right[cite: 4]?
+[34:14] Uma: Yeah, yeah[cite: 4].
+[34:15] Nitesh: So, but these embeddings will be doing is that they will be trying to optimize themselves for the loss function of incremental GCM, makes sense[cite: 4]?
+[34:23] Uma: Okay[cite: 4].
+[34:24] Nitesh: That that's what we are doing[cite: 4]. So, these embeddings will get trained in such a manner that they try to predict the incremental GCM with the minimum error, and when you use these embeddings in, say, like out-of-time and out-of-sample to score, okay, you will get a feature set[cite: 4]. That feature set, we need to run, say, like in XGBoost and then say like essentially whether we are getting an improvement in the incremental GCM model itself or not[cite: 4].
+[34:51] Uma: Got it, Nitesh[cite: 4].
+[34:52] Nitesh: Okay[cite: 4]? So, I would say try, like once you are done, right, once you are like working on this, before that you and Hema... and Hema, I would say like you also work on, say, like running these iterations, okay, and look into it that as to how you can improve this algo and, say, like this overall working mechanism so that we can make dual progress on this one, okay[cite: 4]? And both of you should connect for 10-15 minutes with Aanchal, walk her through the process that you are doing and what is the end objective that we're trying to solve for, okay[cite: 4]? If she has any questions or any concerns and you end up with, say, like some doubts, okay, let me know, we should connect back again and solve the whole structure, okay, at our end[cite: 4].
+[35:38] Hema: Yeah[cite: 4].
+[35:39] Nitesh: Makes sense[cite: 4]?
+[35:40] Hema: Got it, yes[cite: 4].
+[35:40] Uma: Yes[cite: 4].
+[35:41] Nitesh: Got it? Okay[cite: 4]. And Hema, one one thing I want you to like start looking at, say, like in parallel is like creating the data or the feature set at a daily level, which Kartikeya was saying, right, that we need someone who can actually help us with, say, like creating the daily-level feature set across all the features, okay, that we are considering[cite: 4]. 
+
+So now, that codes, or say like those set of codes, right, they are sitting with Ishan as well as with Shailendra or Jay Vishal here, in US, okay[cite: 4]? So, the other two folks who are in US, which is like Shailendra and Jay Vishal, they have like some set of codes, and Ishan has some set of codes, okay[cite: 4]? So, I'll try to see with Sonal like if I can get someone, either of them, to actually work on creating the daily feature set, right[cite: 4]? But if not, then essentially I'll try to see like how we can make it happen along with us, say like you, me, Uma, we can try to get that feature set out, okay, on daily-level basis[cite: 4]. But try to get a sense of like what exactly these features are and where exactly they are getting pulled from, and if I want to create this at a daily level, what will it entail for it[cite: 4]?
+[36:58] Hema: So, Shailendra has already has this all features on monthly level, right[cite: 4]?
+[37:02] Nitesh: Haan, he has on monthly level[cite: 4].
+[37:04] Hema: But I think, uh, I can just go through it and check for, uh, we can create for daily level, what features we can create[cite: 4].
+[37:14] Nitesh: [Speaking off-call to colleague in room: "Achha, we have few good updates. One update, transformer model and..."]
+[37:18] Colleague: I didn't know you are out next week.
+[37:21] Nitesh: Koi nahi, yahan pe main in dono ko train kar raha hoon. India mein Kartikeya hai, sab ho jayega. Humara transformer model done ho gaya.
+[37:26] Colleague: But Kartikeya is not... You need Anshuk also. Hema is good enough.
+[37:30] Nitesh: Hema is good enough! Hema and Uma. And plus, phone pe toh available rahenge. Don't worry.
+[37:38] Nitesh: Hello[cite: 4]?
+[37:39] Hema: Yeah, okay. Yeah, Nitesh, yes[cite: 4].
+[37:42] Nitesh: So, Hema, you are being counted upon like a lot, okay[cite: 4]? Anju just told me like Hema is here in US, so things will be taken care of; Uma is here, so things will be taken care of, okay[cite: 4]? So, you both have like the cornerstone of getting things done from US in this workstream[cite: 4]. So, I'm counting you both[cite: 4].
+[37:59] Hema: Okay[cite: 4].
+[38:00] Nitesh: Okay[cite: 4]?
+[38:01] Uma: Yes[cite: 4].
+[38:02] Nitesh: So, I need like full 200% attention and select rigor here[cite: 4]. Anything, I'm literally saying, any access, any issue, any concern you have, tell me at any point in time, I'll try to solve for it, okay[cite: 4]? Next week I'm on off, but that doesn't stop you from reaching out to me over Slack, okay[cite: 4]? You have this Slack group which is like our common group, like that SAGE rj80, then you have like a chat group between you, me, and Uma, okay[cite: 4]? All of us should be able to make progress then, okay, on this[cite: 4]. Done[cite: 4].
+[38:38] Hema: And like, yeah, I was talking, Nitesh, like, uh, Shailendra has created the monthly-level features, so these those are the same features, right, we'll be using? Like Ishan has created all the feed... I mean, all the features that we need to have a detailed feature, what the features are[cite: 4].
+[38:52] Nitesh: Yes, yes, yes. Those set of features at daily level for first three months[cite: 4].
+[38:54] Hema: Yes. Yeah, so for that what data still we need to have, I sh- I should just find where to get that data from, that's it, right[cite: 4]?
+[39:01] Nitesh: Exactly. Exactly. Exactly, okay[cite: 4]? And what I'll tell you is like, and I'll tell you upfront, like some these codes have been developed over, say, like last 6-7 months, okay[cite: 4]? So now, what has happened is ki supposedly there was an update that happened with Ashish, okay, or an update that happened with, say, like Anju or Sonal[cite: 4]. They asked like, okay, "Why don't we add this feature or, say, like that feature?" So, what team did is they just pulled that feature on ad hoc basis, okay, and created that[cite: 4]. So now, there was no optimization done, okay[cite: 4]? 
+
+Sometimes you will see like in some codes, you will see `SELECT * FROM <table_name>`, and they just literally had like 2,000 columns and, say, like 10 billion rows, they did a `SELECT *` and then did a left join on that, okay[cite: 4]? So, not all of them have been optimized, okay[cite: 4]? So, it is a bit of a tedious task, but if you start looking into it, I think within a day or two, you should be able to create like a flow chart as to where it is getting what, and you can have, say, like a one concise version of it[cite: 4]. Like all the features, can we, say, like created in like one code patch, and we can just fetch it out easily[cite: 4]? Okay[cite: 4]? Right now, it is very distributed, and even I was pained when I was going through that[cite: 4]. I didn't have time to like consolidate everything, so that's why like we are in a fix right now to make it happen[cite: 4].
+[40:19] Hema: And if it's for like, not just for 3 months, it's for all 14 months daily-level transactions[cite: 4]?
+[40:24] Nitesh: No, no, don't go to 14 months, man, that would be like a huge[cite: 4]!
+[40:27] Hema: Okay[cite: 4].
+[40:28] Nitesh: 3 months. 3 months, 3 months[cite: 4]. 3 months is a max[cite: 4].
+[40:31] Hema: Okay[cite: 4].
+[40:31] Nitesh: I would say like I would be more than happy like if I get, say, like Month 1 itself like because of the complexity of the data, and like how much volume it will generate, I don't even know[cite: 4]. Because there can be people, say, like if I think about Myca login, right, that would be happening daily for some card members[cite: 4].
+[40:48] Hema: Yes, yes. True[cite: 4].
+[40:50] Nitesh: Right? And that too like multiple times in a day[cite: 4].
+[40:52] Hema: Yeah[cite: 4].
+[40:53] Nitesh: So, what should I do with that setup? Should I count the number of Myca logins that happened within a day, or, say, like just I take that as an indicator that, okay, it happened within this day, how many times I don't care, right[cite: 4]? So, those are different set of requirements that we have[cite: 4].
+[41:07] Hema: Got got it. Yeah[cite: 4].
+[41:09] Nitesh: Cool[cite: 4]?
+[41:09] Hema: Yeah. And for running this iteration, do I need to have the GPU access or is it fine with the CPU[cite: 4]?
+[41:14] Nitesh: No, no, no. Leave the CPU on running whole night[cite: 4].
+[41:17] Hema: Hold whole night[cite: 4]. Yeah[cite: 4].
+[41:19] Nitesh: Cool[cite: 4]?
+[41:20] Hema: Yeah. Okay[cite: 4].
+[41:21] Nitesh: Okay. And, like, connect with Aanchal[cite: 4]. I think right now she is busy with, say, like the work that we were just discussing, okay[cite: 4]? And ping her, say, like in half an hour or so, and see like if you guys can discuss on, say, like if you are following the right steps[cite: 4].
+[41:37] Hema: Sure, sure. No problem, Nitesh. Yeah[cite: 4].
+[41:40] Nitesh: Thank you, guys[cite: 4].
+[41:41] Hema: Thank you[cite: 4].
+[41:42] Uma: Thank you, Nitesh[cite: 4].
+[41:44] Nitesh: Cool[cite: 4].
