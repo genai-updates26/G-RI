@@ -1,279 +1,373 @@
-CALL TRANSCRIPT
-Participants: Nitesh, Kartikeya, Ishan, Aanchal, Uma, Hema
+Nitesh: Effectively, the drop we are seeing... this is its drop. And the drop we were seeing for this, which you just shared... inside this, the results, Gini is 55.
 
-[00:00] Kartikeya: Ishan, baseline ka GCM who has to create? Hopefully, Ishan, correct me if I'm wrong, but I think you would be able to wrap it up in the next 2 to 3 hours, right[cite: 4]?
-[00:09] Ishan: Yep, definitely[cite: 4].
-[00:11] Kartikeya: Theek hai[cite: 4]. The second piece is with respect to utilizing the data[cite: 4]. Abhi dataset jo banaya tha monthly wala[cite: 4], like that got created around like half an hour back only[cite: 4]. So, Aanchal was not able to really use it[cite: 4]. But in the meanwhile, like what they have done so far is they're... they have tested out the new approach of Integrated Gradients—that IG approach[cite: 4].
-[00:33] Nitesh: Mhm[cite: 4].
-[00:34] Kartikeya: So, we got some results, but in order to interpret those results, I haven't had the time, but Aanchal, I think she has done some initial reading on that[cite: 4]. So, she can walk us through with that piece[cite: 4].
-[00:44] Nitesh: Theek hai[cite: 4].
-[00:45] Kartikeya: The third thing which is like... that is more concerning, that is the daily dataset[cite: 4]. As per my understanding, daily dataset has been not... like we were not able to work on that at all because daily dataset ke codes jo hai na, like they're sitting like everywhere[cite: 4]. It's not consolidated anywhere[cite: 4].
-[01:03] Nitesh: I... I... when I wrote that note, uske baad I realized ki because Shailendra had shared like one KT doc with me on, say, like all the features, and it had like: this feature comes from this code, this feature comes from this code, this feature comes from this code! And I'm like, okay[cite: 4]!
-[01:18] Kartikeya: This is... this is too much segregated[cite: 4]. I think here we need someone from the business team only, like the person who actually works on this, so that like they... woh create kar paayein[cite: 4]. Like I can't expect Jay to work on this; it's just too much[cite: 4]...
-[01:31] Nitesh: Theek hai. Theek hai, at least we now know like the lay of the land, right[cite: 4]? That... that is good[cite: 4].
-[01:37] Kartikeya: Exactly[cite: 4]. Exactly. And I have taken a early stab on the slides ki slides kis tarah se frame karni chahiye[cite: 4]. So, we can discuss that, too, at a high level once we discuss all this[cite: 4].
-[01:47] Nitesh: Done[cite: 4].
-[01:48] Kartikeya: So, Ishan, over to you in case if you want to add anything on top of what I said[cite: 4].
-[01:54] Ishan: Uh, no[cite: 4]. I think like you pretty covered everything[cite: 4]. Just one thing, like on the target variable piece, we will be proceeding with the capping and flooring and not the scaling, right[cite: 4]?
-[02:07] Nitesh: Capping and flooring and not the scalings, haan, because we're not taking care of that, the overall negative proportion, right[cite: 4]? What is happening, theek hai, that is okay, that is fine[cite: 4].
-[02:19] Ishan: Because last time also we did one iteration with the scaling, then Ashish told us not to do that and proceed with the capping and flooring. Yep[cite: 4].
-[02:26] Kartikeya: Why is that the reason, though? What was the reason? Sorry, I didn't understand[cite: 4].
-[02:30] Ishan: Yep, so he wants to preserve the distribution[cite: 4]. So, say, he's more keen on doing a positive shift transformation, like making all the negative values to positive, but again like still preserving their distribution[cite: 4]. But like if we do the standardized scaling, say between 0 to 1, or min-max scaling, then it will hamper the distribution[cite: 4].
-[02:51] Aanchal: But, Ishan, I didn't do min-max or 0 to 1 scaling, I did just... I did just the z-score standardization, which is basically maintaining the distribution and just changing the scale[cite: 4].
-[03:04] Ishan: Yeah, the scale is changed, right[cite: 4]?
-[03:07] Kartikeya: That is normalization, right[cite: 4]? You have made... you have made sure that your standard deviation is 1 and your mu is 0, right[cite: 4]?
-[03:14] Aanchal: Yes[cite: 4].
-[03:16] Nitesh: When you're doing scaling, Aanchal, you are doing on the target variable or you're doing for the features—standardization[cite: 4]?
-[03:25] Aanchal: For the target[cite: 4].
-[03:26] Nitesh: For the target variable? Okay[cite: 4].
-[03:30] Kartikeya: I think it makes more sense to do it on the independent variables rather than the y-variable[cite: 4]. Particularly the continuous variables[cite: 4]. I thought like on the continuous variables that we have on the x's side, like we are already doing that, right[cite: 4]?
-[03:46] Nitesh: That log one, that point which we were discussing[cite: 4]. Something of that sort, right[cite: 4]?
-[03:51] Kartikeya: Yeah, something of that sort[cite: 4]. But like we are doing some sort of normalization, right, on the x-variables as well which are continuous[cite: 4]? So, then you should say that you're doing normalization on both the sets, on the x's as well as y[cite: 4]. I was aware about the x, but I was not aware about the y one[cite: 4].
-[04:07] Ishan: So, should I do the same with my baseline model as well[cite: 4]?
-[04:14] Kartikeya: It doesn't matter[cite: 4]. X doesn't matter for you, Ishan[cite: 4]. What matters is y[cite: 4]. You should use the same y[cite: 4]. So, in case if she's doing any sort of capping, you have to do the same capping as well[cite: 4].
-[04:25] Aanchal: In the next iteration, I will also do this same capping and flooring which Ishan will be doing[cite: 4].
-[04:32] Kartikeya: Perfect, I think that makes sense[cite: 4].
-[04:35] Nitesh: And, Ishan, one more thing... Sorry, sorry, Kartikeya, one thing[cite: 4]. Stephanie was telling me that you worked with Pranav sometime back to create like a full-fledged ET model, which had like features starting from Month 1 to Month 14, but because of the framework or, say, like constraints, you just kept yourself with, say, like the most important features from Month 1 to Month 14, and you created one version of the model itself[cite: 4]. And that Gini was close to 40%[cite: 4].
-[05:09] Ishan: Uh, no[cite: 4]. Actually, the thing is that Gini close to 40% is basis on the 15k population, the cross-tab population, Golden and Opportunity[cite: 4]. And if we take the overall 77k B-flat customer, it will be close to around 28%[cite: 4].
-[05:24] Nitesh: Okay[cite: 4].
-[05:25] Ishan: And again, there are few nuances in a sense like we are using the older Day 0 prediction[cite: 4]...
-[05:34] Nitesh: Okay, understood[cite: 4].
-[05:35] Ishan: ...then we have included the spend variables as well, the first category spend or spend on certain industries[cite: 4]. Then we have a daily-level breakup of M1 and not taking the M1 as a whole[cite: 4].
-[05:47] Nitesh: Got it. Understood. Thank you[cite: 4]. Okay, now I'm clear[cite: 4]. That makes sense[cite: 4]. Sorry, Kartikeya, please, go ahead[cite: 4]. This was just like one question which Sonal popped up yesterday, so I just wanted to get that clarity[cite: 4].
-[06:04] Kartikeya: No worries. I was just going to hand over to Aanchal only so that she can walk us through what she has done[cite: 4].
-[06:11] Nitesh: Go ahead, Aanchal[cite: 4].
-[06:24] Kartikeya: Aanchal, can you hear us[cite: 4]?
-[06:26] Aanchal: Yes, I'm just sharing my screen[cite: 4].
-[06:30] Nitesh: And, Kartikeya, does this time work, like although I have kept it like without looking at everyone's calendar, but this time works, right, to meet[cite: 4]? I just wanted to keep it like before like your meeting starts[cite: 4].
-[06:40] Kartikeya: Yeah, no, it's fine[cite: 4]. It's just that like in 15 minutes now I have a connect with Anju[cite: 4]. So, at that time like I'll drop off[cite: 4]. And I'm pretty sure like she would ask for you, as well[cite: 4].
-[06:50] Nitesh: Yeah, yeah, yeah[cite: 4].
-[06:54] Aanchal: Yeah, so this is the raw data basically which we have created[cite: 4]. We have taken top 10 and top... bottom 100... top 100 and bottom 100 from our out-of-time sample and calculated Integrated Gradients for these[cite: 4]. So, where you see here, right, for this particular customer, we have...[cite: 4]
-[07:12] Kartikeya: Aanchal, you need to... you need to explain the... the baseline first[cite: 4]. Yeah, like talk about like what exactly IG will calculate, then we can talk about this Excel, right[cite: 4]?
-[07:24] Aanchal: Correct[cite: 4]. The idea is like we create a... first is we create a baseline card member feature set, which is basically we have some binary features, some continuous features[cite: 4]. So, we create a baseline, as in we will calculate the incremental for each customer over this baseline card member[cite: 4]. 
+Aanchal: 55.
 
-So, we are starting here with like we're kept all the binary variables 0 and all the continuous with the median value across the month[cite: 4]. So, for this baseline customer...[cite: 4]
-[07:58] Nitesh: Okay, so you are saying that for all the binary features, they... we are saying that essentially they're not happening, and for the continuous, you are taking the 50th percentile[cite: 4]. That is your baseline approach[cite: 4].
-[08:10] Aanchal: Correct. For all across the features, we have values for Month 1 to Month 14[cite: 4]. Now, idea is we calculate what is the, uh, incremental GCM for this baseline card member, let's say it's 500[cite: 4]. Now, for the customer in question, we check what is the baseline... what is the incremental GCM, let's say it's 1,000[cite: 4]. So, this difference of 500 will be contributed to certain features in different months[cite: 4]. So, IG is basically telling which feature is contributing how much to this difference[cite: 4].
-[08:46] Nitesh: Okay. So, essentially, if in Month 4, one of the binary indicators becomes 1, or say, like, someone of the continuous features like the value is higher than or lower than median, so that is contributing towards the shift from 500 to 1,000[cite: 4]. That's what you are saying[cite: 4].
-[09:03] Aanchal: Correct. Yes[cite: 4].
-[09:04] Kartikeya: Essentially you can add up, Nitesh, across the months, across the features[cite: 4]. Like if you add up everything for a particular customer—the CM11 which is on the top row—essentially that summation should give you 1,000 minus 500, that gap[cite: 4]. You should be able to get that[cite: 4].
-[09:24] Nitesh: Okay[cite: 4]. So, the each and every month's... so each and every feature's contribution across months, we will get that value, and that summed up together is, say, like 500[cite: 4]. Fair to say[cite: 4]?
-[09:34] Aanchal: Correct[cite: 4].
-[09:35] Nitesh: Difference of the both[cite: 4].
-[09:36] Kartikeya: Exactly[cite: 4].
-[09:37] Aanchal: Yes[cite: 4].
-[09:38] Kartikeya: Yep. So, it's very similar to SHAP values[cite: 4].
-[09:42] Nitesh: Haan, that's what I was thinking[cite: 4]. And it is like going towards, say, like the median, right, like the central line[cite: 4]. Okay, okay[cite: 4].
-[09:53] Kartikeya: So, the good thing is now we can deal with just this Excel[cite: 4]. We don't need to go somewhere because now it will tell me like, okay, if I aggregate something on it, like let's say if I can see that for customers who were enrolled in a particular program in, let's say, the early months—Month 1, Month 2, Month 3—what is their average IG score[cite: 4]? I can get that, and I can compare it with others, and I can come up with some sort of... I can come up with a lot of slices and dices of this data and come up with different strategies[cite: 4].
-[10:29] Nitesh: Yes, I agree[cite: 4].
-[10:30] Aanchal: Basically, now we can deep-dive into that black box, like which feature and point in time is contributing to what particular, right[cite: 4]?
-[10:39] Nitesh: Okay, okay. Makes sense, makes sense. So far with you, so far with you[cite: 4].
-[10:44] Aanchal: Yeah. So, for this particular customer, right, this baseline is same for all the customer[cite: 4]. This is for the baseline customer that we created[cite: 4]. This is what model is predicting: -438 as the baseline incremental GCM[cite: 4].
-[10:56] Nitesh: Okay. But the actual incremental GCM is 225,000[cite: 4].
-[11:01] Aanchal: Yeah, so these are like outlier ones[cite: 4]. Top 100 is basically the top actual GCM[cite: 4]. I've taken top 100 and bottom 100 basis the actual one[cite: 4]. So, here like we need to look into the model performance as well because model is rank ordering properly, but it is shrinking more towards the center[cite: 4]. Maybe that is because of the scaling that I've done[cite: 4]. Not sure[cite: 4]. We can check for that[cite: 4]. 
+Nitesh: It's a 4% drop. So, meaning the stability of this is higher. This is more stable than what he's producing. His volatility is very high, like 70%...
 
-But here you can see we have all the features like the 50... 50 features that I had[cite: 4]. For each month, we have this feature in this month, what is the IG dollar this feature is contributing or not contributing[cite: 4].
-[11:43] Nitesh: So, what I am say- seeing is saying is ki in Month 1, if this person is doing admin spend, right, if it is showing up, then essentially it is adding $112[cite: 4]?
-[11:54] Aanchal: It's reverse[cite: 4]. The customer didn't have any...[cite: 4]
-[11:58] Nitesh: Okay, customer raw value was 0[cite: 4].
-[12:00] Kartikeya: Not necessarily[cite: 4]. Nitesh, it's not necessary[cite: 4]. The reason is we don't really know what was the value of admin percentage, right[cite: 4]? Whatever that value is, because of which there was an incremental IG effect of 112, that's what we can say[cite: 4]. So, in binary indicator, it's very easy[cite: 4]. For continuous variables, we need to be very clear about like how to interpret that[cite: 4]. It's not like saying that, okay, if you're just making a spend on admin, then you'll be having some IG... then you'll be having 112 impact[cite: 4].
-[12:31] Nitesh: Got it, got it. So, it's not, say, like a direct value, it is more as a...[cite: 4]
-[12:39] Kartikeya: Exactly. That's why we have the customer values as well[cite: 4]. Because that's why we have the customer values here as well, so what we can do is we can maybe bucket it around, that, okay, if the admin percentage is, let's say, between 5%... less than 5%, what is the average IG value[cite: 4]? When it is between 5% to 20%, then what is average IG value[cite: 4]? That way we can come up with some sort of understanding[cite: 4].
-[13:02] Nitesh: Okay, okay, okay[cite: 4].
-[13:07] Aanchal: The raw data, I just gave this data to ChatGPT, and it created few trend analysis[cite: 4]. So, this is basically the feature level, so it's aggregated value for this particular feature[cite: 4]. These are the actual values in terms of percentage: that top 100 have 70%, bottom have 30%, and because of this 70%, we are getting an average IG of 497 in the top 100, and bottom average is 15[cite: 4]. It's basically this category... higher this category spend is contributing to a positive IG lift[cite: 4].
-[13:48] Nitesh: Okay, then essentially you're saying like the construction spend is adding an IG value of 270 because the top 100 are...[cite: 4]
-[13:56] Aanchal: For the top 100[cite: 4].
-[13:57] Nitesh: Top 100 are, say, like contributing close to 37,000 what? That average of 37,984 is average spend that is happening by the top 100[cite: 4]?
-[14:06] Aanchal: Correct, yes. Yes[cite: 4]. But again, I was telling this to Kartikeya as well that Ashish has asked us to remove these category spend, right, because these might be biased[cite: 4].
-[14:15] Kartikeya: Yes[cite: 4].
-[14:15] Nitesh: Yes, so that we remove, like, in the updated iteration, right, in the next one[cite: 4]?
-[14:19] Aanchal: Yeah, so we'll get some different features[cite: 4].
-[14:21] Nitesh: Yeah, these features are not even there[cite: 4]. We have, like, removed these industry-specific ones[cite: 4].
-[14:26] Aanchal: Right[cite: 4].
-[14:29] Kartikeya: But even after that, like I can see there are some... good understanding, like... Myca ka kuch hai kya ispe, like one second[cite: 4]?
-[14:37] Aanchal: Yeah, Myca login indicator[cite: 4]. But isko hum, like we cannot read it from average[cite: 4]. We need maybe count of customer out of 100 who had this indicator[cite: 4].
-[14:49] Nitesh: Haan, because this is coming out to be like all the card members have the Myca login: 84 - 84[cite: 4].
-[14:56] Aanchal: Then we have DCA impression indicator, we have VLOC impression indicator[cite: 4]...
-[15:05] Nitesh: Okay, so this is like something of feature contribution, right, sort of a thing that is coming out to be, like how much this feature or, say, like this particular attribute is contributing towards your incremental GCM, fair to say[cite: 4]?
-[15:23] Aanchal: Yeah[cite: 4].
-[15:24] Kartikeya: Yes, that's one of the views, yes[cite: 4]. But I think there can be a lot more which we can do, like...[cite: 4]
-[15:29] Aanchal: Yeah, we can look at patterns, trends...[cite: 4]
-[15:37] Nitesh: Hmm. This looks interesting[cite: 4]. This looks...
-[15:40] Kartikeya: We need to spend some more time into this[cite: 4].
-[15:42] Nitesh: Yeah[cite: 4].
-[15:42] Aanchal: Yeah, this is the first time we are doing this, right[cite: 4]? That's why[cite: 4].
-[15:48] Nitesh: But I think if we are able to do something out of it, right, at least like it solves... it solves to like some degree of that interpretation like which we have been struggling with so far with the feature set, right[cite: 4]?
-[15:59] Kartikeya: To a large degree, it sort of explains things[cite: 4]. It's not like the average thing across, we can actually do the time series part as well[cite: 4]. It's not like average across the features[cite: 4]. Like right now we're doing at a feature level, right[cite: 4]? We can also see for a particular feature how things are going...[cite: 4]
-[16:13] Nitesh: How it's changing across months, yeah, that was my point[cite: 4].
-[16:16] Kartikeya: Exactly. So, that that also can come up here[cite: 4].
-[16:20] Nitesh: So, essentially like if one of the feature, say like is... which is like the top driver and it is increasing over time, so then that establishes that if the trend is increasing, then essentially this can lead to positive or high GCM, fair[cite: 4]?
-[16:31] Aanchal: Yes. Here is one kind view here, like for B-flat construction spend, it is kind of increasing over time month-on-month average[cite: 4].
-[16:43] Nitesh: This is for the top ones, and for the bottom ones it is decreasing month-over-month[cite: 4]?
-[16:48] Aanchal: Yeah[cite: 4].
-[16:49] Nitesh: Like in between there are spikes, but if I look at the slope, it is actually...[cite: 4]
-[16:56] Kartikeya: Yeah, it will be negative[cite: 4].
-[16:57] Nitesh: Yeah, it will be negative[cite: 4].
-[17:04] Aanchal: But all these are spend, like, majorly[cite: 4].
-[17:07] Nitesh: Majorly spend-related ones, they are showing[cite: 4]. Like bonus percentage category, it is actually like for the bottom one it is dropping from 40% to just 20%, whereas the top ones are still maintaining at 60% to 70%, right[cite: 4]?
-[17:21] Kartikeya: Yep[cite: 4].
-[17:23] Nitesh: That's a good insight, like I won't deny this, it's actually a good insight[cite: 4].
-[17:33] Kartikeya: Let's use it better, like let's use the complete data and interpret this with full force when we have the entire data[cite: 4].
-[17:41] Aanchal: Yeah, because I think these are like outliers, top 100, bottom 100[cite: 4]. We need bigger sample[cite: 4].
-[17:47] Nitesh: Yeah, we need bigger sample, like at least like for... but at least like if I'm comparing the extremes, right, so there is some peak differentiation that is showing up in my extremes for the top as well as for the bottom, correct[cite: 4]? Right? Okay[cite: 4]. 
+Aanchal: Maybe we should try... eventually we need to do that segmentation only, right?
 
-This is good, even very good progress, very good[cite: 4]. I think when we'll... once we'll have, say, like the updated feature set, we run an algo on that, we figure out like, okay, what is the new set of features that are popping up on the top, and how are they are contributing, I think then we should have, say, like a more comprehensive read[cite: 4]. But even now, this tells me that, okay, there is some pattern which is getting captured when I'm saying that something is contributing more versus less as compared to the other features[cite: 4]. Okay. Okay. Okay[cite: 4]. Done. Done[cite: 4]. This is good[cite: 4]. This is good[cite: 4]. 
+Nitesh: Hmm.
 
-Now, Kartikeya, one question... So, and like to Ishan, as well: so we created this predicted Day 0 model first, okay[cite: 4]? Based on that, that predicted Day 0 model predicted that, okay, these are the predicted Year 2 GCM that I have[cite: 4]. Now, some of those folks where the prediction was wrong, they moved up to, say, like actual Year 2 GCM, they became, say, like our Golden dataset, right[cite: 4]? Like people who actually... Oh, sorry, for whom I predicted high and they remained high actually in, like, Year 2, that is like my Golden dataset, right[cite: 4]? But there can be some people for whom I predicted high, but they ended up at lower level, right[cite: 4]? And for some, I predicted low, but they ended up to be high GCM, right[cite: 4]? So, these can be, say, like our Opportunity datasets where things moved, cool[cite: 4]? 
+Aanchal: So, we should try one iteration with important variables from XGBoost along with the embeddings, maybe.
 
-So, there is this two Opportunity groups which the team was, uh, looking at: one was called A, another was B2[cite: 4]. And what was A was, it was Golden, like whom we predicted high, they ended up being high, and Opportunity was the one where we predicted high, but they ended up being low, right[cite: 4]? And so, essentially, what Sonal mentioned was, or say like she suggested, and I think this was like one of the pointers which Anju was also trying to push, that if I look at within this, uh, trained algo, right, for the people whom I'm defining as Golden and whom I'm defining as Opportunity, okay, some samples from them and some samples from the Opportunity, do I see like similar levels of discrimination in terms of the feature set[cite: 4]? Just like you are getting like top and bottom, right, top 100 and bottom 100, we are seeing like construction spend is, say, like increasing, for the other segment it is reducing; the bonus percentage is remaining stable, for the other it is reducing[cite: 4]. Do we see something of that feature if I compare my Golden and Opportunity dataset[cite: 4]?
-[20:48] Kartikeya: Yeah, I think we can do that[cite: 4].
-[20:50] Nitesh: We can do that, right, within this early[cite: 4]?
-[20:52] Kartikeya: Yeah, like it's it's just a matter of definition[cite: 4]. We can pick which customers we need to do, and she can easily create the views for that, as well[cite: 4].
-[21:01] Nitesh: Done. Done[cite: 4]. That works. That works[cite: 4]. So, what I'm getting as a takeaway is that the three-month daily-level data will require like someone from here to actually like work on, say, like the code and the setup, and majorly it could be, say, like Shailendra or, say, like Jay, because they have actually worked on the data[cite: 4]. Let me talk to them and see like and like with Sonal as to how we can proceed with the creation of the daily-level data[cite: 4]. 
+Nitesh: Yeah, that also makes sense. And total features, what did he use? Did he put all the features in?
 
-Secondly, uh, in terms of what we have, so we now have like the full feature set that is available to us on the latest set of features, and we'll be training the algo on the latest set of features for the 14-month SAGE setup, correct[cite: 4]? Third is, Ishan, you are developing a baseline model of XGBoost, and the reason for that is the earlier trained model that we created: one, it was built on a smaller sample; two, it didn't have say... it had like the daily breakup for Month 1; and three, uh, it was using the older Day 0 predicted GCM, right, and not the latest one[cite: 4]. Okay, so hence you need to create one baseline model which is like based on the updated version of everything[cite: 4]. Makes sense, yeah[cite: 4]?
-[22:12] Ishan: Okay[cite: 4].
-[22:13] Nitesh: This is one[cite: 4].
-[22:15] Kartikeya: I think there's I think there's also one more thing which Ishan has to do: once the model gets trained by Aanchal, right, the hidden states are supposed to be used by him in order to see if it adds...[cite: 4]
-[22:24] Nitesh: Yes, to create like a SAGE plus, uh, point estimates[cite: 4]. Yes. Yep[cite: 4].
-[22:30] Kartikeya: But there's only one problem here[cite: 4]... I don't think there will be any additional value as such which it can bring because it's the same data, right[cite: 4]? And even like it's not it's it's not even in proper series as well, so...[cite: 4]
-[22:44] Nitesh: Yeah.
-[22:45] Kartikeya: That's the problem that we have[cite: 4].
-[22:47] Nitesh: So, one good thing is when I showed this first iteration, right, Kartikeya and Aanchal, to Sonal yesterday, her first question was that, "So, this 60% is coming with, say, like features and and, say, like the point estimates?" I said, "No, only just with the features[cite: 4]." And she was like, "Only with the features[cite: 4]?" I said, "Yeah[cite: 4]." And then she was like, "The vectors are adding so much value[cite: 4]?" I said, "Yes, even with the one which are not a complete dataset, feature set, I am able to achieve like close to 60% Gini[cite: 4]." So, she was like astounded by that fact that, okay, it is adding value because the earlier iterations, whatever she saw, right, on the IGCM, those were never beyond, say, like 40% on any version that she saw, like even the earlier or, say, like...[cite: 4]
-[23:32] Kartikeya: But but my point is like, in the in the previous iterations, were we using all the 14 months of data or just the first few months[cite: 4]?
-[23:41] Nitesh: There was one iteration which Pranav... which like Ishan worked with Pranav, which had like 14 months of data, which I was talking about[cite: 4]. Although it had, say, like some caveats, like it didn't use the updated Day 0 model, but even then that was like the starting point that they had[cite: 4].
-[23:56] Kartikeya: Got it[cite: 4]. So from that, from that particular point...[cite: 4]
-[24:00] Nitesh: Yeah[cite: 4].
-[24:01] Kartikeya: ...definitely there's a lot of...[cite: 4]
-[24:02] Nitesh: Yeah, a lot of improvement, yeah[cite: 4].
-[24:06] Kartikeya: Okay. I think then let's do it that way only ki isme let me work with Aanchal to finally see ki isko kaise interpret kar sakte hain, because interpretation is going to be very hard[cite: 4]. Once she creates the data... once she creates the data, Nitesh, let's do one thing: she can share the data with you and me both[cite: 4], and she is also working on the same, but we also try to make some interpretation out of it, me also I'll also try, and let's try to come up with some storyline for Anju[cite: 4].
-[24:37] Nitesh: Done, done, done, done. Cool[cite: 4].
-[24:42] Kartikeya: We have a meeting with Ashish tomorrow, right[cite: 4]?
-[24:45] Nitesh: Tomorrow, haan, we have a meeting with Ashish[cite: 4]. I think I have received the invite[cite: 4]. Let me see my calendar has updated or not[cite: 4]. Let me tell you at what time[cite: 4]... Anju?
-[24:57] Kartikeya: Yeah, my meeting with Anju is just got cancelled[cite: 4]. So, but I'm pretty sure like she would want us to update her as well, right[cite: 4]?
-[25:05] Nitesh: Yeah, yeah, yeah[cite: 4].
-[25:06] Kartikeya: When exactly you want to have that conversation[cite: 4]?
-[25:08] Nitesh: So, today at like 2:00 PM, uh, Sonal has kept some time with Anju on, say, like walking through the whole setup[cite: 4]. That was the only time that was available with her today at 2:00 PM, okay[cite: 4]? So, I'll see like if if she pings earlier or, say, like Sonal pings earlier, I'll ping you as well, like before 12:00 PM, like which is like 9:30 PM your time[cite: 4]. Before that, if they ping, I'll ping you, okay[cite: 4]? I won't ping you after, say, like 10:30 PM[cite: 4]. That won't happen[cite: 4].
-[25:36] Kartikeya: Chalega boss, theek hai, theek hai[cite: 4]. That that's okay[cite: 4].
-[25:39] Nitesh: That's okay, cool[cite: 4].
-[25:40] Kartikeya: Then I'm gonna... then I'll be waiting for Aanchal's dataset and then I'll do the analysis on top of it[cite: 4].
-[25:45] Nitesh: That's okay[cite: 4]. Cool[cite: 4].
-[25:47] Kartikeya: Chalo, thank you[cite: 4].
-[25:49] Nitesh: Theek hai[cite: 4]. I was looking through the slides, yeah, slides look good, uh, in terms of the frame[cite: 4].
-[25:54] Kartikeya: The slides with the... we need to still do a lot[cite: 4]. I just, yeah, I just worked on one of the slides, this one[cite: 4]. I thought like this is slightly more easier to interpret[cite: 4].
-[26:05] Nitesh: Hmm. Pooling, optimizer...[cite: 4]
-[26:07] Kartikeya: Let's know if this works[cite: 4]. This is just to work around ki model specification what what exactly we want to say[cite: 4].
-[26:14] Nitesh: Haan, exactly[cite: 4]. I think this is something like which Ashish would be interested in to go through because he was telling the other day like because we are putting SAGE on, say, like this one[cite: 4]. So, what all the use cases, right, that we have worked till now, all of them have worked on historical data[cite: 4]. Say, like from the point estimate[cite: 4]. So, essentially like if I'm looking at, say, like gamer prediction, what it does is it looks at like last 3 months or last 6 months of behavior[cite: 4]. The one that is happening in DM, they are looking last 36 months of behavior[cite: 4]. 
+Aanchal: Yeah.
 
-Herein, what we are trying to do is like from the point of acquisition, we are looking forward as to what user is doing and then in future we are trying to predict based on that future estimate, what is their Year 2 GCM[cite: 4]. So, he felt that, okay, it won't be straightforward as to what exactly we are doing here[cite: 4]. So, I think he would be interested in knowing like as to what exactly is the approach[cite: 4]. So, for him this would work, but I think I will lose like Anju or Sonal when I'm trying to explain this architectural framework[cite: 4]. Yesterday I tried, and Sonal got lost in that transformer[cite: 4]...
-[27:14] Kartikeya: But at a high level it's very easy, right[cite: 4]? All you're saying is like you're converting 62 inputs...[cite: 4]
-[27:17] Nitesh: High level, it is easy[cite: 4].
-[27:19] Kartikeya: I'm not even going into the transformer part like, I'm not talk about Q, K, V, like that's completely different, I don't want to go into that[cite: 4].
-[27:26] Nitesh: So, that's what I said: yeh vector hai, yeh vector hai, that gets converted after transformer into this vector[cite: 4]. They're like, "Haan, okay, this works[cite: 4]."
-[27:35] Kartikeya: Exactly, and that's exactly what you put on the slide as well[cite: 4]. I've kept it like at a very high level only[cite: 4]. Aage ispe thoda bahut changes kar sakte hain[cite: 4], and I'll work on the slides, too[cite: 4].
-[27:45] Nitesh: Theek hai, done, man[cite: 4]. Theek hai, done[cite: 4]. Cool hai[cite: 4]. And Kartikeya, you want to discuss on this one, the project tracker, like Anju wanted that tracker[cite: 4]? I worked on it yesterday also, I added some few things[cite: 4]. Do you want to take a review of that like for 5 minutes, right now or later, that works[cite: 4]?
-[28:05] Kartikeya: Sure[cite: 4]. Give me like give me like half an hour, if that's okay[cite: 4]. I'll ping you[cite: 4].
-[28:09] Nitesh: Haan, theek hai. Theek hai, that works, that works. Theek hai[cite: 4].
-[28:12] Kartikeya: Perfect[cite: 4]. Okay, then. Thank you[cite: 4].
-[28:15] Nitesh: Thank you[cite: 4].
-[28:16] Kartikeya: Bye[cite: 4].
-[28:17] Nitesh: Thank you[cite: 4].
-[28:18] Aanchal: Thank you[cite: 4].
-[28:20] Nitesh: Uma, Hema, guys[cite: 4]...
-[28:22] Hema: Yeah[cite: 4]?
-[28:23] Nitesh: What is the progress on the daily transaction-level data[cite: 4]?
-[28:26] Uma: Yeah, Nitesh[cite: 4]. So, we have did that time series one, and I've used this days since acquisition as bucketing, not like the one which we thought before, event date[cite: 4]. For event date, I took it to order the events, and days since acquisition is like the time, uh, event[cite: 4].
-[28:48] Nitesh: Okay[cite: 4].
-[28:49] Uma: And first version, I did let like as usual like 1 to 90, so I didn't bucket like a 3 days bucket or 5 days bucket[cite: 4]. And for the input variables, I've took the standardization and sign log p because there were negative variables and some were very high and some were very low[cite: 4]. And even with the IGCM[cite: 4]. So, I'm thinking to try for next bucketing kind of thing, like if you bucket like 3 days or 5 days[cite: 4]...
-[29:18] Nitesh: Okay. First of all, tell me, is your health okay[cite: 4]?
-[29:21] Uma: Yeah, yeah, Nitesh, I just had cold, that's it[cite: 4].
-[29:24] Nitesh: Just that cold? Okay, okay, that's okay, because your voice is like very drooping, so I just wanted to check like is everything okay. Okay[cite: 4].
-[29:31] Uma: Yeah, yeah[cite: 4].
-[29:32] Nitesh: Theek hai[cite: 4]. So now, okay, I'll ask you a few tactical questions[cite: 4].
-[29:36] Uma: Yes, Nitesh[cite: 4].
-[29:37] Nitesh: First thing, we have the full dataset, right, which is three months of data, and we know at which date what happened, okay[cite: 4]?
-[29:44] Uma: Yeah[cite: 4].
-[29:45] Nitesh: Now, the part where you are stuck or, say, like trying to go past is that how to define the feature set in terms of, like, bucketing for the days, right[cite: 4]? That's what you are trying to do, okay[cite: 4]. So, earlier when we were thinking that if you use the daily-level data, that is not working[cite: 4]. So, you are saying like you need to create, say, like some buckets out of that[cite: 4]. And you are trying to create like what, 5-day buckets or 3-day buckets[cite: 4]?
-[30:10] Uma: That I need to check, Nitesh[cite: 4]. Right now, I took like as it is I've given it to the model itself, so I didn't assign any buckets right now for the initial version[cite: 4]. So, for the test and training data, I have like R-squared around... one sec... R-squared around 0.12[cite: 4]. So, I just need to bucket those and check for the training and test data[cite: 4]. I've just took like some, uh, 60% training and 30 something like testing in that data itself[cite: 4].
-[30:48] Nitesh: Okay, so you are taking first of all... Okay, so let let us define something[cite: 4]. So, you have this data from Jan to August, which is comprising of 77k card members, correct[cite: 4]?
-[30:58] Uma: Yeah[cite: 4].
-[30:59] Nitesh: Okay[cite: 4]. So now, the usual approach that we do is we do training and, uh... this training and test, okay[cite: 4]? So, test is your out-of-time[cite: 4]. So, out-of-time is essentially July and August, which we have been using till now[cite: 4].
-[31:14] Uma: Yeah[cite: 4].
-[31:15] Nitesh: Okay[cite: 4]? So, any acquisition with the acquisition date belonging to July and August, you can keep it outside to in OOT[cite: 4]. When it comes to Jan to June, okay, that dataset you can split in 70-30 proportion randomly, that way[cite: 4].
-[31:31] Uma: Okay. Yeah[cite: 4].
-[31:32] Nitesh: Nobody is stopping you to do that, okay[cite: 4]? Now, when you're doing 70-30, like 70 is your training, 30 is your out-of-sample, correct[cite: 4]?
-[31:40] Uma: Yeah[cite: 4].
-[31:40] Nitesh: And within training, you can do validation and everything, that is completely fine, okay[cite: 4]? Now, once you are doing this, so you are feeding all this as a feature set within the algo, and you are letting it decide that, okay, what is the day bucketing that it wants to do[cite: 4].
-[31:55] Uma: Yeah, initially it took like 1 to 90 because we have 90 days, right[cite: 4]? So, it took like 1 to 90 itself[cite: 4]. So, it didn't take like any bucketing based on the, uh, date[cite: 4]. So, right now I'm planning to give like 3-day or 5-days and check like the results, and check like which one make the better suitable one[cite: 4].
-[32:18] Nitesh: Okay. Okay. Cool[cite: 4]. Okay, theek hai, that works[cite: 4]. And all of this we are running on the CPU itself, okay, there is no GPU requirement, makes sense[cite: 4]?
-[32:28] Uma: Yeah[cite: 4].
-[32:29] Nitesh: Okay, done[cite: 4]. And do you feel any constraint that it will take a longer time to run it on the CPU, or is it getting run, say, like at fairly good speed[cite: 4]?
-[32:38] Uma: Yesterday I left it like, uh, 3 3 hours, I guess, but, uh, I don't know, depends on that, uh... uh, GPU... CPU usage and all, like behind[cite: 4]. So, I just need to check them[cite: 4]. I can use GPU also, like I'll see if it makes it faster then[cite: 4].
-[32:58] Nitesh: So, when you're using GPU, right, so essentially right now your data is at a CM11 level, correct[cite: 4]?
-[33:03] Uma: Yeah, yeah[cite: 4].
-[33:04] Nitesh: Okay[cite: 4]. CM11 is a PII information[cite: 4]. If you will upload, it will trigger something[cite: 4]. So, what you can do is at your end, it is very simple: CM11, take the column of CM11, okay, and create a surrogate key for that at your end[cite: 4]. So, like for example, rank order the CM11s that you have, and give them like CM1, 2, 3, 4, and so on till CM77000, okay[cite: 4]?
-[33:28] Uma: Okay, got it[cite: 4].
-[33:28] Nitesh: And maintain that mapping[cite: 4]. What you upload to the system is like CM1, CM2, CM3 up to CM77k, okay[cite: 4]?
-[33:36] Uma: Okay, got it[cite: 4].
-[33:37] Nitesh: That mapping, so then it becomes like non-PII data, and then you upload it, you run it, you can bring it back when everything works for you, okay[cite: 4]?
-[33:45] Uma: Got it, Nitesh. Yeah[cite: 4].
-[33:49] Nitesh: Makes sense[cite: 4]?
-[33:50] Uma: Yeah[cite: 4]. What would be the next step? So, if we have these bucketing and the information, like then we need to feed this data into the model along with...[cite: 4]
-[33:59] Nitesh: Yes[cite: 4]. So, essentially what you are doing is that you are creating a transformer, okay, which will try to generate like embeddings and you're trying to optimize for the incremental GCM here, right[cite: 4]?
-[34:14] Uma: Yeah, yeah[cite: 4].
-[34:15] Nitesh: So, but these embeddings will be doing is that they will be trying to optimize themselves for the loss function of incremental GCM, makes sense[cite: 4]?
-[34:23] Uma: Okay[cite: 4].
-[34:24] Nitesh: That that's what we are doing[cite: 4]. So, these embeddings will get trained in such a manner that they try to predict the incremental GCM with the minimum error, and when you use these embeddings in, say, like out-of-time and out-of-sample to score, okay, you will get a feature set[cite: 4]. That feature set, we need to run, say, like in XGBoost and then say like essentially whether we are getting an improvement in the incremental GCM model itself or not[cite: 4].
-[34:51] Uma: Got it, Nitesh[cite: 4].
-[34:52] Nitesh: Okay[cite: 4]? So, I would say try, like once you are done, right, once you are like working on this, before that you and Hema... and Hema, I would say like you also work on, say, like running these iterations, okay, and look into it that as to how you can improve this algo and, say, like this overall working mechanism so that we can make dual progress on this one, okay[cite: 4]? And both of you should connect for 10-15 minutes with Aanchal, walk her through the process that you are doing and what is the end objective that we're trying to solve for, okay[cite: 4]? If she has any questions or any concerns and you end up with, say, like some doubts, okay, let me know, we should connect back again and solve the whole structure, okay, at our end[cite: 4].
-[35:38] Hema: Yeah[cite: 4].
-[35:39] Nitesh: Makes sense[cite: 4]?
-[35:40] Hema: Got it, yes[cite: 4].
-[35:40] Uma: Yes[cite: 4].
-[35:41] Nitesh: Got it? Okay[cite: 4]. And Hema, one one thing I want you to like start looking at, say, like in parallel is like creating the data or the feature set at a daily level, which Kartikeya was saying, right, that we need someone who can actually help us with, say, like creating the daily-level feature set across all the features, okay, that we are considering[cite: 4]. 
+Nitesh: Okay. The total number of features he selected, that is what? How many features this guy has selected? 448 features! This is overfit, man. This is classic overfitting. He built it on top of 500 features. Name of the independent variable, weight, number of times feature used to split, average improvement, cover, gain, contribution, feature's total gain... Okay. Variable list overall... okay. What did he do in the overall? Oh, he added the overall list. He put all the months' data. Okay. And in variable list selected... what happened here? What change occurred? Okay. Feature importance... in feature importance, this is the weight... So, all the random stuff—balance transfer, APR, reimbursement, all these things—none of these got selected. Okay. Now here, benefits enrollment start... Okay. Cool. Man, what has he shared? 72% Gini, 60 and 58. If it reached 58 in out-of-time (OOT), then we have already reached 53 with just features alone. So with just features and point estimates if we use it, then some...
 
-So now, that codes, or say like those set of codes, right, they are sitting with Ishan as well as with Shailendra or Jay Vishal here, in US, okay[cite: 4]? So, the other two folks who are in US, which is like Shailendra and Jay Vishal, they have like some set of codes, and Ishan has some set of codes, okay[cite: 4]? So, I'll try to see with Sonal like if I can get someone, either of them, to actually work on creating the daily feature set, right[cite: 4]? But if not, then essentially I'll try to see like how we can make it happen along with us, say like you, me, Uma, we can try to get that feature set out, okay, on daily-level basis[cite: 4]. But try to get a sense of like what exactly these features are and where exactly they are getting pulled from, and if I want to create this at a daily level, what will it entail for it[cite: 4]?
-[36:58] Hema: So, Shailendra has already has this all features on monthly level, right[cite: 4]?
-[37:02] Nitesh: Haan, he has on monthly level[cite: 4].
-[37:04] Hema: But I think, uh, I can just go through it and check for, uh, we can create for daily level, what features we can create[cite: 4].
-[37:14] Nitesh: [Speaking off-call to colleague in room: "Achha, we have few good updates. One update, transformer model and..."]
-[37:18] Colleague: I didn't know you are out next week.
-[37:21] Nitesh: Koi nahi, yahan pe main in dono ko train kar raha hoon. India mein Kartikeya hai, sab ho jayega. Humara transformer model done ho gaya.
-[37:26] Colleague: But Kartikeya is not... You need Anshuk also. Hema is good enough.
-[37:30] Nitesh: Hema is good enough! Hema and Uma. And plus, phone pe toh available rahenge. Don't worry.
-[37:38] Nitesh: Hello[cite: 4]?
-[37:39] Hema: Yeah, okay. Yeah, Nitesh, yes[cite: 4].
-[37:42] Nitesh: So, Hema, you are being counted upon like a lot, okay[cite: 4]? Anju just told me like Hema is here in US, so things will be taken care of; Uma is here, so things will be taken care of, okay[cite: 4]? So, you both have like the cornerstone of getting things done from US in this workstream[cite: 4]. So, I'm counting you both[cite: 4].
-[37:59] Hema: Okay[cite: 4].
-[38:00] Nitesh: Okay[cite: 4]?
-[38:01] Uma: Yes[cite: 4].
-[38:02] Nitesh: So, I need like full 200% attention and select rigor here[cite: 4]. Anything, I'm literally saying, any access, any issue, any concern you have, tell me at any point in time, I'll try to solve for it, okay[cite: 4]? Next week I'm on off, but that doesn't stop you from reaching out to me over Slack, okay[cite: 4]? You have this Slack group which is like our common group, like that SAGE rj80, then you have like a chat group between you, me, and Uma, okay[cite: 4]? All of us should be able to make progress then, okay, on this[cite: 4]. Done[cite: 4].
-[38:38] Hema: And like, yeah, I was talking, Nitesh, like, uh, Shailendra has created the monthly-level features, so these those are the same features, right, we'll be using? Like Ishan has created all the feed... I mean, all the features that we need to have a detailed feature, what the features are[cite: 4].
-[38:52] Nitesh: Yes, yes, yes. Those set of features at daily level for first three months[cite: 4].
-[38:54] Hema: Yes. Yeah, so for that what data still we need to have, I sh- I should just find where to get that data from, that's it, right[cite: 4]?
-[39:01] Nitesh: Exactly. Exactly. Exactly, okay[cite: 4]? And what I'll tell you is like, and I'll tell you upfront, like some these codes have been developed over, say, like last 6-7 months, okay[cite: 4]? So now, what has happened is ki supposedly there was an update that happened with Ashish, okay, or an update that happened with, say, like Anju or Sonal[cite: 4]. They asked like, okay, "Why don't we add this feature or, say, like that feature?" So, what team did is they just pulled that feature on ad hoc basis, okay, and created that[cite: 4]. So now, there was no optimization done, okay[cite: 4]? 
+Aanchal: We are also using the same variables, right, Nitesh?
 
-Sometimes you will see like in some codes, you will see `SELECT * FROM <table_name>`, and they just literally had like 2,000 columns and, say, like 10 billion rows, they did a `SELECT *` and then did a left join on that, okay[cite: 4]? So, not all of them have been optimized, okay[cite: 4]? So, it is a bit of a tedious task, but if you start looking into it, I think within a day or two, you should be able to create like a flow chart as to where it is getting what, and you can have, say, like a one concise version of it[cite: 4]. Like all the features, can we, say, like created in like one code patch, and we can just fetch it out easily[cite: 4]? Okay[cite: 4]? Right now, it is very distributed, and even I was pained when I was going through that[cite: 4]. I didn't have time to like consolidate everything, so that's why like we are in a fix right now to make it happen[cite: 4].
-[40:19] Hema: And if it's for like, not just for 3 months, it's for all 14 months daily-level transactions[cite: 4]?
-[40:24] Nitesh: No, no, don't go to 14 months, man, that would be like a huge[cite: 4]!
-[40:27] Hema: Okay[cite: 4].
-[40:28] Nitesh: 3 months. 3 months, 3 months[cite: 4]. 3 months is a max[cite: 4].
-[40:31] Hema: Okay[cite: 4].
-[40:31] Nitesh: I would say like I would be more than happy like if I get, say, like Month 1 itself like because of the complexity of the data, and like how much volume it will generate, I don't even know[cite: 4]. Because there can be people, say, like if I think about Myca login, right, that would be happening daily for some card members[cite: 4].
-[40:48] Hema: Yes, yes. True[cite: 4].
-[40:50] Nitesh: Right? And that too like multiple times in a day[cite: 4].
-[40:52] Hema: Yeah[cite: 4].
-[40:53] Nitesh: So, what should I do with that setup? Should I count the number of Myca logins that happened within a day, or, say, like just I take that as an indicator that, okay, it happened within this day, how many times I don't care, right[cite: 4]? So, those are different set of requirements that we have[cite: 4].
-[41:07] Hema: Got got it. Yeah[cite: 4].
-[41:09] Nitesh: Cool[cite: 4]?
-[41:09] Hema: Yeah. And for running this iteration, do I need to have the GPU access or is it fine with the CPU[cite: 4]?
-[41:14] Nitesh: No, no, no. Leave the CPU on running whole night[cite: 4].
-[41:17] Hema: Hold whole night[cite: 4]. Yeah[cite: 4].
-[41:19] Nitesh: Cool[cite: 4]?
-[41:20] Hema: Yeah. Okay[cite: 4].
-[41:21] Nitesh: Okay. And, like, connect with Aanchal[cite: 4]. I think right now she is busy with, say, like the work that we were just discussing, okay[cite: 4]? And ping her, say, like in half an hour or so, and see like if you guys can discuss on, say, like if you are following the right steps[cite: 4].
-[41:37] Hema: Sure, sure. No problem, Nitesh. Yeah[cite: 4].
-[41:40] Nitesh: Thank you, guys[cite: 4].
-[41:41] Hema: Thank you[cite: 4].
-[41:42] Uma: Thank you, Nitesh[cite: 4].
-[41:44] Nitesh: Cool[cite: 4].
+Nitesh: Oh yeah, variables we are using the same. That is one thing. Meaning, isn't sequencing adding anything?
+
+Aanchal: Yeah.
+
+Nitesh: What should we do next then? Next would effectively be this: if instead of sequencing we use direct estimates, then we are reaching this level. If we use sequencing, then we are reaching the level that you guys are doing, right? Which is this one. Oh, yeah. Then essentially what I was thinking about sending an update to Anju and Sonal, I should hold it off. Shouldn't send it, right?
+
+Aanchal: Yeah.
+
+Nitesh: Okay. What is AD? In case of digital... [Silence / background reading] In sample and out of sample... XGBoost... In sample out... Feature importance... out of 10, top 10 features, nine correspond to newly created spend variables. We also added newly created spend variables.
+
+Aanchal: Yeah.
+
+Nitesh: Ours isn't picking up, and his is picking up in XGBoost.
+
+Aanchal: Yeah.
+
+Nitesh: Effectively, where is the issue coming from? That is what I'm trying to assess. He also used the same feature set.
+
+Aanchal: I think we should both compare first this... In-sample will basically be the entire train sample, right?
+
+Nitesh: Hmm.
+
+Aanchal: Hmm. But ours is the validation Gini.
+
+Nitesh: Yeah. Did you apply the exact same flooring, capping, and everything that you applied and he applied?
+
+Aanchal: Yes, yeah.
+
+Nitesh: Okay. Cool.
+
+(Short pause while waiting / reconnecting)
+
+
+Nitesh: Hema, is Uma around?
+
+Speaker 3: Yeah, I just messaged her.
+
+Nitesh: Okay, cool. Okay. Let's hope for... That is for the other thing. Now I'm thinking like if this is not working, whether that will work or not.
+
+Kartikeya: Hi Nitesh.
+
+Nitesh: Hello, sir.
+
+Kartikeya: I told you, right? I had a feeling like this.
+
+Nitesh: Right. It's like having a curse on your tongue, whatever you say comes true!
+
+Kartikeya: Oh man! Literally, we are doing exactly that, right? Picking up the exact same data point and putting it in, picking up the exact same data points and doing that. I was already feeling that no impact would show up. We can do one thing: add those variables and features here in 58 and ask him to check how much it yields. But I don't think there should be much variation, because whatever content they have, whatever signal is there, it's already extracted. That's all. Other than that, whichever methodology you apply, roughly it will remain the same.
+
+Nitesh: Yeah.
+
+Kartikeya: Now look, essentially he has input all 14 months' features. Now, something got picked from one month, something else from another month. And here we are using the sequence of only those features.
+
+Nitesh: Exactly. But in this, if you see, recency matters a lot. I can see that. If you look at M13 and M14, the majority of variables...
+
+Nitesh: Yeah, effectively those are being picked up a lot.
+
+Kartikeya: Exactly. Whatever is latest information, it's based on that. I think I'm seeing a problem with the construct itself. That's why I think we constructed this SAGE problem incorrectly. What Ashish is saying, to do it at a daily level, that makes more sense. Doing this at a monthly level, like, we are not doing justice to SAGE.
+
+Nitesh: So at a daily level, effectively what transaction-level work they are doing, like Hema and Uma... at least from there...
+
+Kartikeya: That is more meaningful. That is more meaningful. We can do one thing here: whatever SAGE features came out of hidden states, Aanchal would have those. We can put those in the current model and say, "Let's fight it." How much time it takes, I'm not sure, but we can check once whether there's any Gini improvement or not. Maybe from there we get 10% or 15% improvement, but beyond that, I don't have high hopes to be honest.
+
+Nitesh: I mean, I'm looking at it like even if we get 5%, that is more than sufficient. Because for all other...
+
+Kartikeya: But that is not a value add, right? But that is not a value add.
+
+Nitesh: No, all the other initiatives, like the one happening on Sentinel and offer sensitivity, there the... if the overall incremental is coming out to be 2%, that is considered like a value add with respect to the Gini. Even 2% incremental gain is getting counted there.
+
+Kartikeya: We aren't doing modeling in that much depth where we'd think so much about 2%, right?
+
+Nitesh: Right.
+
+(Brief pause)
+
+
+Kartikeya: Information-wise, we have already used that. What haven't we used? Until and unless we don't use more data, I don't think it's possible. You'll have to use digital data in this, and then you...
+
+Nitesh: Tell me one thing: the embeddings we were using, what we have done is we have done an average pooling, right?
+
+Kartikeya: Uh-huh.
+
+Nitesh: So, what Aanchal was telling me is that with hyperparameter tuning, you can increase your performance by 5% at max. Change whatever code you want.
+
+Nitesh: If I'm right now at what, 53, right?
+
+Kartikeya: 53's 5%, you'll reach 54, 55, up to 57. You can't go above that.
+
+Nitesh: Can't go above that.
+
+Kartikeya: On Merchant Recommender, I tried 60 variations, and all of them settled within a plus/minus 5% range. Nothing else happened.
+
+Nitesh: Okay.
+
+Kartikeya: And what the Sentinel team is doing, if you look at their emails too, the ones you forwarded... one is 2.3%, another is 2.2%, 2.7%—everything is hovering around that.
+
+Nitesh: Yeah, it's all revolving around that.
+
+Kartikeya: Which has no real value add. It's just minor changes from hyperparameter tuning. That is what it is giving you as answers, nothing else.
+
+Nitesh: Correct.
+
+Kartikeya: So, we aren't getting it like this.
+
+Nitesh: Hmm. So effectively, what should be done? Meaning, if we think of the next step from here...
+
+Kartikeya: Wait, let me look for a second. First of all, the sequence needs to be properly formed into a sequence and fed. Right now it's not a sequence, first of all. These are indicators. On indicators, the SAGE concept doesn't even apply. XGBoost is a better model for this type of data.
+
+Nitesh: Because we are using monthly indicators effectively, not like a sequence.
+
+Kartikeya: Sequence length of 12 is nothing, I'm telling you. At least 30 to 40 should be the sequence length, then only it matters. We can ask ChatGPT on this, we can refer to articles as well. But 12 is nothing. And that 3-length one, I wouldn't even want to do.
+
+Nitesh: Okay, then let's drop the 3-length one completely.
+
+Kartikeya: Exactly. The 12-length one, we can show it to Anju and Sonal just for the sake of showing, but there's nothing in it. We will have to pull transactions at a daily level; that's the only way I can think of. And in that too, PRAGMA is the right solution. Multiple data points will come into it, multiple types of data sources will come, they will all concatenate together, and then it'll be set.
+
+Nitesh: But the interpretation of that will effectively be lost.
+
+Kartikeya: In PRAGMA, interpretation is going to be very...
+
+Nitesh: Interpretation will be lost right at this point.
+
+Kartikeya: Interpretation will become very difficult, extremely difficult.
+
+Nitesh: Difficult aside, it's next to impossible.
+
+Kartikeya: As of now, I am not even sure how to do it.
+
+Nitesh: Yeah, exactly.
+
+Kartikeya: So I cannot go into that. We need to find patterns. XGBoost is already showing you the pattern, that M8 and M9 are coming out on top, right? Apply SHAP values on it, and I'll show you the pattern right there, whatever you need.
+
+Nitesh: Well, that will show up there itself. Feature importance itself shows effectively that Month 13 and Month 14 features are coming up higher.
+
+Kartikeya: Exactly.
+
+Aanchal: I think the same trend is there even from SAGE output. It's saying recent months are more valuable.
+
+Kartikeya: Exactly. Both are pointing in the same direction.
+
+Aanchal: Yeah.
+
+Nitesh: So essentially what is happening is, the closer it is to the Year 2 GCM calculation, the better are the features or their values, right?
+
+Kartikeya: Uh-huh.
+
+Nitesh: Because Year 2 GCM is computed around Month 16 to 24. If I'm closer to there, then essentially any indicators or actions happening closer to Month 13 and 14, that's when it is getting picked up. Fair to say?
+
+Kartikeya: Yeah, yeah, that is accurate.
+
+Aanchal: In that case, only edge can be if we can predict it sooner. Like XGBoost might not be able to predict it with 3 months of data if we pick daily level data and do that SAGE framework on 3 months of data post-acquisition, and that predicts it better than XGBoost.
+
+Kartikeya: I don't think that will happen either. XGBoost might do much better. Basically, we are reducing the data, right? The less data we have, the better it is for the XGBoost algorithm. The more data there is, the easier it is for SAGE to outperform.
+
+Aanchal: But previously the XGBoost iteration with just Month 1 features were not performing well. Like the last iteration had just Month 1 features.
+
+Kartikeya: Why do you think SAGE will perform better?
+
+Aanchal: No, if we add daily level data, we create a bigger sequence.
+
+Nitesh: Create a bigger sequence. The debate is fine about which one will work better.
+
+Kartikeya: Why doesn't it have product, by the way? We should have product in this as well.
+
+(Voices overlap / background chat)
+
+
+Kartikeya: Aanchal, Hema, Kartikeya... What's up, Kartikeya?
+
+Speaker 4: Hello!
+
+Kartikeya: Brainstorming session is going on. Let's connect once.
+
+Kartikeya: At least Aanchal and Kartikeya should not join.
+
+Kartikeya: We can try on a smaller dataset, but I'm not very sure how relevant it will be.
+
+Nitesh: That's the thing. If there were a significant difference, then I think we could have bought that SAGE is adding value.
+
+Kartikeya: I have one basic question, okay? Let me share my screen.
+
+Background voice: Can you turn off the tea maker?
+
+Kartikeya: In all this analysis that we are doing, why can't we... first of all, why isn't product included in this, like which product the customer was acquired on?
+
+Nitesh: These are all B-Flat cardmembers, right?
+
+Kartikeya: Oh, these are all B-Flat, okay. So let's do one thing: take the customer, and what activities can a customer perform? If we think of simple daily-level transactions, and here if we talk about page visits... okay. Which pages did they visit, where did they spend, and did any servicing interaction happen? Servicing or sales interaction.
+
+Nitesh: Okay, those features are already with us. We can add page visits.
+
+Kartikeya: We also have enrollment indicators. All enrollments happen via web page only, right?
+
+Nitesh: Yes, via web page. That's why their indicators exist. We have indicators for that.
+
+Kartikeya: Are those indicators at date level or timestamp level?
+
+Nitesh: At date level I think they have it. In raw data sets it might be in timestamp, but it could be daily.
+
+Speaker 3: Date, date.
+
+Kartikeya: Date, okay. Everything is at date level. One second... Enrollment indicators could be there, what other detailed information could there be?
+
+Nitesh: After this, it would be what impressions were served to them or what activities they performed on pages, like interactions with pages. All that can be captured along with page visits.
+
+Kartikeya: When we talk about impressions, do we have timestamps for when they received impressions?
+
+Nitesh: If you pull from the base data, OET transaction logs, then you will get the timestamp.
+
+Kartikeya: But on daily level, how will we do page visits? In one day, if they do one session and visit 10 pages, how will we handle that?
+
+Nitesh: For those 10 pages, either I define a sequence beforehand like A, B, C, D, E essentially, and on my end use timestamps to create the sequence and feed that this sequence was generated on this day for pages.
+
+Kartikeya: Whatever it is, Nitesh, we have to go granular, that's the only way. That's the only conclusion coming out. Whether we go to daily level or timestamp level is a separate thing, but we have to go granular. One of these two things we have to do, because at monthly level there is no value add visible. And rather than taking 14 months or 3 months, even if we show value for 1 month, that's enough. We should focus on Month 1. Because Month 1 values we have, everything is easily fetchable.
+
+Nitesh: For Month 1, they have Day 1–10, 10–20, and 21–30, three sets of features.
+
+Kartikeya: Not daily, kind of weekly—one-third of a month.
+
+Nitesh: One-third, so in one month, three events will come out. Only three pointers will come effectively. We will have to construct daily data additionally. It isn't readily built.
+
+Kartikeya: Tell me one thing: why do you think SAGE should be valuable here? How exactly did that thought come into place? What is it that SAGE can identify which normal GBM won't be able to do?
+
+Nitesh: The major thought coming from top-down was that they have seen merit in doing interaction or sequencing of actions in the overall prediction. We are seeing improvement in Merchant Recommender, in Sentinel SAGE, slight improvement in Offer Sensitivity, because we are looking at sequences of events. The sequence of events should add value even in early tenure as an initiative. Nobody knows for sure whether it will add value or not.
+
+Kartikeya: In Gamer, I can tell you that acquiring features were like: in the last 10 days did something happen, did a page visit happen? Which page the customer came through can easily tell you if they are a gamer or not, which is intuitive to think about, so sequence matters there. Here, I'm not even sure why sequence should matter.
+
+Nitesh: Sequence will matter here in the sense: think about it, say your Year 2 GCM becomes positive or you are top Year 2 GCM. There are customers whose GCM remains flat from Year 1 to Year 2, some decline into negative, and some increase. So there is some activity happening for people whose GCM is increasing compared to those who are flat or declining. There's a sequence or pattern. They started off spending in bonusing categories, but over time started spending in categories more relevant to their business, like top 10 merchants, which adds more value, or their overall average spend increases over time. That in itself leads to incremental GCM in Year 2.
+
+Kartikeya: But that trend is already captured automatically in monthly variables. If it's captured in monthly variables, XGBoost can do it. The problem is within the month, what trend are we getting? In M14, there are two customers: one spent equally across all days, one spent all at once. Do you think there will be a difference between the two?
+
+Nitesh: The way we are approaching it, no difference is showing up.
+
+Kartikeya: We should have actual examples to see if such a thing really matters. Only then if we use SAGE will we see an impact. If we don't have a hypothesis, that's where the problem arises.
+
+Nitesh: Essentially, examples of feature interactions for high incremental GCM versus low incremental GCM across monthly levels, right?
+
+Kartikeya: Within the month, at a daily level, we need to see. We should have a hypothesis: why is one customer going down or up compared to another when monthly data is the same but daily data differs? Because that is exactly what SAGE can capture that XGBoost cannot.
+
+Nitesh: I get your point. We are back to the same question: we need information at a daily level.
+
+Kartikeya: We should only go there once we have a hypothesis, otherwise we'll be in the same loop. We can spend two days building daily data, run SAGE, and check if impact comes. Or we build a hypothesis first for why it matters. It could be that for Year 1 to 14 months it doesn't impact, but in the first two to three months it does, because enrollments happen a lot then. Based on enrollments in the first few months, whether they enrolled early or not might give better results. If our hypothesis is strong, it will be better.
+
+Nitesh: To make the hypothesis strong, we need some use cases, right? Where we see certain features or sets of features...
+
+Kartikeya: What was in the use cases?
+
+Nitesh: In ET transcripts from the Golden Opportunity dataset, we looked at ~77 conversations. We found cases where during an early tenure call, a customer asks if they can use their card for specific spends, and the sales rep guides them to merchants where peers spend and get good returns. Right after that conversation, the person started spending in those merchant categories, spend increased, and Year 2 GCM turned out much better. So we have call evidence that conversations lead to better spending behavior. But ET calls happen only for selected folks, not everyone.
+
+Kartikeya: But that evidence doesn't support SAGE over XGBoost. You made a call, spend started next month, and you already have an indicator for the call in XGBoost. That indicator is in SAGE too. I'm comparing: the evidence you provide should be captured in SAGE and not in XGBoost, only then does it make a difference.
+
+Nitesh: Meaning, if I take monthly spending patterns rather than observing someone whose spend increases organically over duration in certain categories, SAGE could capture that behavior better than XGBoost.
+
+Kartikeya: If someone's spend increases, XGBoost captures that trend too. You need to see within a month itself at a daily level what changes SAGE captures that XGBoost cannot.
+
+Nitesh: It could be that towards the end of the month, a person enrolled in something and spend surged suddenly, but across the full month, the numbers look the same as another person's.
+
+Kartikeya: Even then, you'll know at both monthly and daily levels. Information needs to differ for answers to differ.
+
+Nitesh: That's what I'm trying to think: what sequence of patterns leads to high versus low GCM?
+
+(Nitesh mulls over monthly aggregation vs. sequential features)
+
+
+Nitesh: If I aggregate monthly into XGBoost vs. sequential, performance is similar or slightly inferior. Either learning from sequences isn't great compared to XGBoost, or if I want more learning, I need longer time frames or daily level information. But that needs to be substantiated with case studies showing something is happening that XGBoost can't capture, but a sequence can.
+
+Kartikeya: Stephanie is the owner of this channel, right? Having a discussion with her can be helpful.
+
+(Silence while messaging/waiting for Stephanie)
+
+
+Kartikeya: Situation boils down to this: within one month, if Event 1 happens then Event 2, versus Event 2 then Event 1, do you think there's a difference? If we don't have a hypothesis that these two are different, SAGE can't help. Personally, I don't feel daily spend sequence will impact much because spend is best captured at a monthly level, given different customer habits and seasonality.
+
+Nitesh: Anju and Sonal have high hopes that something earth-shattering will come from the 14-month sequence.
+
+Kartikeya: You can hope, but I don't think it's possible when feeding the exact same monthly information to both models.
+
+Nitesh: The meeting with Anju was at 2:00 PM, now moved to 4:30 PM.
+
+Kartikeya: I'm not sure what you'll tell them. It's a bit challenging.
+
+Nitesh: I can't just say performance isn't coming. Let me check with Stephanie.
+
+Kartikeya: Aanchal, Uma, Hema, do you have any thoughts?
+
+Aanchal: The only data we are not currently using is digital data. That is the only additional thing.
+
+Kartikeya: You can use it in XGBoost as well. SAGE won't add unique value just from that.
+
+(Stephanie joins)
+
+
+Nitesh: Hey Stephanie!
+
+Stephanie: Hello, everyone!
+
+Kartikeya: Good morning!
+
+Stephanie: Good evening! So late for you guys!
+
+Kartikeya: Yeah, still trying to figure out. Nitesh, go ahead.
+
+Nitesh: So Stephanie, we ran 14-month monthly behaviors through SAGE across the selected feature set. We looked at the performance of the feature outcome coming out of SAGE with XGBoost. We also ran a baseline XGBoost model feeding all features from Month 1 to Month 14 (e.g., benefit enrollment Month 1 to 14) and let it select top features to predict incremental GCM. The baseline XGBoost performance is coming out better than SAGE. If we want to hypothesize that SAGE adds value beyond traditional modeling, how do we define that hypothesis?
+
+Stephanie: Is Gini a good metric?
+
+Nitesh: Baseline XGBoost gives a Gini of 58%, whereas via SAGE it is 53%.
+
+Stephanie: So you have a lower Gini?
+
+Nitesh: Yes.
+
+Stephanie: That's different from what I saw yesterday. What changed?
+
+Nitesh: Yesterday we included categorical spends (electronics, construction, restaurant). Today, per Ashish's feedback to avoid industry-specific features, I removed them and used standard features (calls, top 10 spend, etc.). Also, we applied flooring and capping on the target variable today, which caused a slight deterioration. With identical flooring, capping, and feature sets: SAGE gives an out-of-time Gini of 53%, while XGBoost gives 58%.
+
+Stephanie: In the SAGE meeting, even a 2% Gini improvement was considered good. I'm surprised yours is lower.
+
+Kartikeya: We can extract hidden states from the transformer model and use them in the baseline model, though we don't expect a huge jump.
+
+Stephanie: Even 1% to 2% is good. In another presentation, a jump from 60% to 62% with no new data—just method change—was positioned as a win.
+
+Kartikeya: But we should have a clear hypothesis: why would SAGE work better than XGBoost when both are fed the same monthly aggregated data?
+
+Stephanie: We want to build SAGE because earlier manual attempts at creating sequence paths across multiple dimensions caused overfitting in tree models. SAGE finds the commonality of paths among top performers versus bottom performers, making sense of a customer's trajectory.
+
+Kartikeya: Were you looking at those touchpoints at a daily level or monthly level?
+
+Stephanie: Monthly level.
+
+Kartikeya: Got it. Nitesh, we can use Aanchal's Excel sheet to identify patterns between top 100 and bottom 100 performers to understand what they are doing. But Gini won't jump dramatically. The value of SAGE is in interpretation and storytelling rather than raw Gini lift.
+
+Nitesh: From a marketing campaign perspective, SAGE gives the monthly trajectory so we know when to intervene with campaigns, whereas XGBoost only gives an isolated point estimate (like Month 13) without showing how the trend built up.
+
+Kartikeya: Exactly. SAGE is better for building the storyline and actionable strategy. Put this in the deck for Anju and Sonal to align on where the true value lies.
+
+Nitesh: Okay, I'll prepare for the evening discussion.
+
+Kartikeya: Highlight the big win in front of Ashish using the storyline.
+
+Aanchal: I shared the Golden Opportunity data for IG in the group and added embeddings for 77k data for Ishan to use tomorrow.
+
+Kartikeya: Did you share the IG values for all customers?
+
+Aanchal: Scored 15k instead of 77k because 77k was taking too long (~1.5 hours for 15k). I did it for the Golden Opportunity dataset and top/bottom 100.
+
+Nitesh: Is top/bottom 100 based on actual IGCM or predicted?
+
+Aanchal: I'll switch it to predicted IGCM in 10–15 minutes.
+
+Nitesh: Sounds good. Make it predicted IGCM so I can build a story out of it. Thank you, everyone.
+
+Kartikeya / Stephanie / Team: Thank you! Bye.
