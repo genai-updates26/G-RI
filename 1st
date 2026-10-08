@@ -1,373 +1,46 @@
-Nitesh: Effectively, the drop we are seeing... this is its drop. And the drop we were seeing for this, which you just shared... inside this, the results, Gini is 55.
-
-Aanchal: 55.
-
-Nitesh: It's a 4% drop. So, meaning the stability of this is higher. This is more stable than what he's producing. His volatility is very high, like 70%...
-
-Aanchal: Maybe we should try... eventually we need to do that segmentation only, right?
-
-Nitesh: Hmm.
-
-Aanchal: So, we should try one iteration with important variables from XGBoost along with the embeddings, maybe.
-
-Nitesh: Yeah, that also makes sense. And total features, what did he use? Did he put all the features in?
-
-Aanchal: Yeah.
-
-Nitesh: Okay. The total number of features he selected, that is what? How many features this guy has selected? 448 features! This is overfit, man. This is classic overfitting. He built it on top of 500 features. Name of the independent variable, weight, number of times feature used to split, average improvement, cover, gain, contribution, feature's total gain... Okay. Variable list overall... okay. What did he do in the overall? Oh, he added the overall list. He put all the months' data. Okay. And in variable list selected... what happened here? What change occurred? Okay. Feature importance... in feature importance, this is the weight... So, all the random stuff—balance transfer, APR, reimbursement, all these things—none of these got selected. Okay. Now here, benefits enrollment start... Okay. Cool. Man, what has he shared? 72% Gini, 60 and 58. If it reached 58 in out-of-time (OOT), then we have already reached 53 with just features alone. So with just features and point estimates if we use it, then some...
-
-Aanchal: We are also using the same variables, right, Nitesh?
-
-Nitesh: Oh yeah, variables we are using the same. That is one thing. Meaning, isn't sequencing adding anything?
-
-Aanchal: Yeah.
-
-Nitesh: What should we do next then? Next would effectively be this: if instead of sequencing we use direct estimates, then we are reaching this level. If we use sequencing, then we are reaching the level that you guys are doing, right? Which is this one. Oh, yeah. Then essentially what I was thinking about sending an update to Anju and Sonal, I should hold it off. Shouldn't send it, right?
-
-Aanchal: Yeah.
-
-Nitesh: Okay. What is AD? In case of digital... [Silence / background reading] In sample and out of sample... XGBoost... In sample out... Feature importance... out of 10, top 10 features, nine correspond to newly created spend variables. We also added newly created spend variables.
-
-Aanchal: Yeah.
-
-Nitesh: Ours isn't picking up, and his is picking up in XGBoost.
-
-Aanchal: Yeah.
-
-Nitesh: Effectively, where is the issue coming from? That is what I'm trying to assess. He also used the same feature set.
-
-Aanchal: I think we should both compare first this... In-sample will basically be the entire train sample, right?
-
-Nitesh: Hmm.
-
-Aanchal: Hmm. But ours is the validation Gini.
-
-Nitesh: Yeah. Did you apply the exact same flooring, capping, and everything that you applied and he applied?
-
-Aanchal: Yes, yeah.
-
-Nitesh: Okay. Cool.
-
-(Short pause while waiting / reconnecting)
-
-
-Nitesh: Hema, is Uma around?
-
-Speaker 3: Yeah, I just messaged her.
-
-Nitesh: Okay, cool. Okay. Let's hope for... That is for the other thing. Now I'm thinking like if this is not working, whether that will work or not.
-
-Kartikeya: Hi Nitesh.
-
-Nitesh: Hello, sir.
-
-Kartikeya: I told you, right? I had a feeling like this.
-
-Nitesh: Right. It's like having a curse on your tongue, whatever you say comes true!
-
-Kartikeya: Oh man! Literally, we are doing exactly that, right? Picking up the exact same data point and putting it in, picking up the exact same data points and doing that. I was already feeling that no impact would show up. We can do one thing: add those variables and features here in 58 and ask him to check how much it yields. But I don't think there should be much variation, because whatever content they have, whatever signal is there, it's already extracted. That's all. Other than that, whichever methodology you apply, roughly it will remain the same.
-
-Nitesh: Yeah.
-
-Kartikeya: Now look, essentially he has input all 14 months' features. Now, something got picked from one month, something else from another month. And here we are using the sequence of only those features.
-
-Nitesh: Exactly. But in this, if you see, recency matters a lot. I can see that. If you look at M13 and M14, the majority of variables...
-
-Nitesh: Yeah, effectively those are being picked up a lot.
-
-Kartikeya: Exactly. Whatever is latest information, it's based on that. I think I'm seeing a problem with the construct itself. That's why I think we constructed this SAGE problem incorrectly. What Ashish is saying, to do it at a daily level, that makes more sense. Doing this at a monthly level, like, we are not doing justice to SAGE.
-
-Nitesh: So at a daily level, effectively what transaction-level work they are doing, like Hema and Uma... at least from there...
-
-Kartikeya: That is more meaningful. That is more meaningful. We can do one thing here: whatever SAGE features came out of hidden states, Aanchal would have those. We can put those in the current model and say, "Let's fight it." How much time it takes, I'm not sure, but we can check once whether there's any Gini improvement or not. Maybe from there we get 10% or 15% improvement, but beyond that, I don't have high hopes to be honest.
-
-Nitesh: I mean, I'm looking at it like even if we get 5%, that is more than sufficient. Because for all other...
-
-Kartikeya: But that is not a value add, right? But that is not a value add.
-
-Nitesh: No, all the other initiatives, like the one happening on Sentinel and offer sensitivity, there the... if the overall incremental is coming out to be 2%, that is considered like a value add with respect to the Gini. Even 2% incremental gain is getting counted there.
-
-Kartikeya: We aren't doing modeling in that much depth where we'd think so much about 2%, right?
-
-Nitesh: Right.
-
-(Brief pause)
-
-
-Kartikeya: Information-wise, we have already used that. What haven't we used? Until and unless we don't use more data, I don't think it's possible. You'll have to use digital data in this, and then you...
-
-Nitesh: Tell me one thing: the embeddings we were using, what we have done is we have done an average pooling, right?
-
-Kartikeya: Uh-huh.
-
-Nitesh: So, what Aanchal was telling me is that with hyperparameter tuning, you can increase your performance by 5% at max. Change whatever code you want.
-
-Nitesh: If I'm right now at what, 53, right?
-
-Kartikeya: 53's 5%, you'll reach 54, 55, up to 57. You can't go above that.
-
-Nitesh: Can't go above that.
-
-Kartikeya: On Merchant Recommender, I tried 60 variations, and all of them settled within a plus/minus 5% range. Nothing else happened.
-
-Nitesh: Okay.
-
-Kartikeya: And what the Sentinel team is doing, if you look at their emails too, the ones you forwarded... one is 2.3%, another is 2.2%, 2.7%—everything is hovering around that.
-
-Nitesh: Yeah, it's all revolving around that.
-
-Kartikeya: Which has no real value add. It's just minor changes from hyperparameter tuning. That is what it is giving you as answers, nothing else.
-
-Nitesh: Correct.
-
-Kartikeya: So, we aren't getting it like this.
-
-Nitesh: Hmm. So effectively, what should be done? Meaning, if we think of the next step from here...
-
-Kartikeya: Wait, let me look for a second. First of all, the sequence needs to be properly formed into a sequence and fed. Right now it's not a sequence, first of all. These are indicators. On indicators, the SAGE concept doesn't even apply. XGBoost is a better model for this type of data.
-
-Nitesh: Because we are using monthly indicators effectively, not like a sequence.
-
-Kartikeya: Sequence length of 12 is nothing, I'm telling you. At least 30 to 40 should be the sequence length, then only it matters. We can ask ChatGPT on this, we can refer to articles as well. But 12 is nothing. And that 3-length one, I wouldn't even want to do.
-
-Nitesh: Okay, then let's drop the 3-length one completely.
-
-Kartikeya: Exactly. The 12-length one, we can show it to Anju and Sonal just for the sake of showing, but there's nothing in it. We will have to pull transactions at a daily level; that's the only way I can think of. And in that too, PRAGMA is the right solution. Multiple data points will come into it, multiple types of data sources will come, they will all concatenate together, and then it'll be set.
-
-Nitesh: But the interpretation of that will effectively be lost.
-
-Kartikeya: In PRAGMA, interpretation is going to be very...
-
-Nitesh: Interpretation will be lost right at this point.
-
-Kartikeya: Interpretation will become very difficult, extremely difficult.
-
-Nitesh: Difficult aside, it's next to impossible.
-
-Kartikeya: As of now, I am not even sure how to do it.
-
-Nitesh: Yeah, exactly.
-
-Kartikeya: So I cannot go into that. We need to find patterns. XGBoost is already showing you the pattern, that M8 and M9 are coming out on top, right? Apply SHAP values on it, and I'll show you the pattern right there, whatever you need.
-
-Nitesh: Well, that will show up there itself. Feature importance itself shows effectively that Month 13 and Month 14 features are coming up higher.
-
-Kartikeya: Exactly.
-
-Aanchal: I think the same trend is there even from SAGE output. It's saying recent months are more valuable.
-
-Kartikeya: Exactly. Both are pointing in the same direction.
-
-Aanchal: Yeah.
-
-Nitesh: So essentially what is happening is, the closer it is to the Year 2 GCM calculation, the better are the features or their values, right?
-
-Kartikeya: Uh-huh.
-
-Nitesh: Because Year 2 GCM is computed around Month 16 to 24. If I'm closer to there, then essentially any indicators or actions happening closer to Month 13 and 14, that's when it is getting picked up. Fair to say?
-
-Kartikeya: Yeah, yeah, that is accurate.
-
-Aanchal: In that case, only edge can be if we can predict it sooner. Like XGBoost might not be able to predict it with 3 months of data if we pick daily level data and do that SAGE framework on 3 months of data post-acquisition, and that predicts it better than XGBoost.
-
-Kartikeya: I don't think that will happen either. XGBoost might do much better. Basically, we are reducing the data, right? The less data we have, the better it is for the XGBoost algorithm. The more data there is, the easier it is for SAGE to outperform.
-
-Aanchal: But previously the XGBoost iteration with just Month 1 features were not performing well. Like the last iteration had just Month 1 features.
-
-Kartikeya: Why do you think SAGE will perform better?
-
-Aanchal: No, if we add daily level data, we create a bigger sequence.
-
-Nitesh: Create a bigger sequence. The debate is fine about which one will work better.
-
-Kartikeya: Why doesn't it have product, by the way? We should have product in this as well.
-
-(Voices overlap / background chat)
-
-
-Kartikeya: Aanchal, Hema, Kartikeya... What's up, Kartikeya?
-
-Speaker 4: Hello!
-
-Kartikeya: Brainstorming session is going on. Let's connect once.
-
-Kartikeya: At least Aanchal and Kartikeya should not join.
-
-Kartikeya: We can try on a smaller dataset, but I'm not very sure how relevant it will be.
-
-Nitesh: That's the thing. If there were a significant difference, then I think we could have bought that SAGE is adding value.
-
-Kartikeya: I have one basic question, okay? Let me share my screen.
-
-Background voice: Can you turn off the tea maker?
-
-Kartikeya: In all this analysis that we are doing, why can't we... first of all, why isn't product included in this, like which product the customer was acquired on?
-
-Nitesh: These are all B-Flat cardmembers, right?
-
-Kartikeya: Oh, these are all B-Flat, okay. So let's do one thing: take the customer, and what activities can a customer perform? If we think of simple daily-level transactions, and here if we talk about page visits... okay. Which pages did they visit, where did they spend, and did any servicing interaction happen? Servicing or sales interaction.
-
-Nitesh: Okay, those features are already with us. We can add page visits.
-
-Kartikeya: We also have enrollment indicators. All enrollments happen via web page only, right?
-
-Nitesh: Yes, via web page. That's why their indicators exist. We have indicators for that.
-
-Kartikeya: Are those indicators at date level or timestamp level?
-
-Nitesh: At date level I think they have it. In raw data sets it might be in timestamp, but it could be daily.
-
-Speaker 3: Date, date.
-
-Kartikeya: Date, okay. Everything is at date level. One second... Enrollment indicators could be there, what other detailed information could there be?
-
-Nitesh: After this, it would be what impressions were served to them or what activities they performed on pages, like interactions with pages. All that can be captured along with page visits.
-
-Kartikeya: When we talk about impressions, do we have timestamps for when they received impressions?
-
-Nitesh: If you pull from the base data, OET transaction logs, then you will get the timestamp.
-
-Kartikeya: But on daily level, how will we do page visits? In one day, if they do one session and visit 10 pages, how will we handle that?
-
-Nitesh: For those 10 pages, either I define a sequence beforehand like A, B, C, D, E essentially, and on my end use timestamps to create the sequence and feed that this sequence was generated on this day for pages.
-
-Kartikeya: Whatever it is, Nitesh, we have to go granular, that's the only way. That's the only conclusion coming out. Whether we go to daily level or timestamp level is a separate thing, but we have to go granular. One of these two things we have to do, because at monthly level there is no value add visible. And rather than taking 14 months or 3 months, even if we show value for 1 month, that's enough. We should focus on Month 1. Because Month 1 values we have, everything is easily fetchable.
-
-Nitesh: For Month 1, they have Day 1–10, 10–20, and 21–30, three sets of features.
-
-Kartikeya: Not daily, kind of weekly—one-third of a month.
-
-Nitesh: One-third, so in one month, three events will come out. Only three pointers will come effectively. We will have to construct daily data additionally. It isn't readily built.
-
-Kartikeya: Tell me one thing: why do you think SAGE should be valuable here? How exactly did that thought come into place? What is it that SAGE can identify which normal GBM won't be able to do?
-
-Nitesh: The major thought coming from top-down was that they have seen merit in doing interaction or sequencing of actions in the overall prediction. We are seeing improvement in Merchant Recommender, in Sentinel SAGE, slight improvement in Offer Sensitivity, because we are looking at sequences of events. The sequence of events should add value even in early tenure as an initiative. Nobody knows for sure whether it will add value or not.
-
-Kartikeya: In Gamer, I can tell you that acquiring features were like: in the last 10 days did something happen, did a page visit happen? Which page the customer came through can easily tell you if they are a gamer or not, which is intuitive to think about, so sequence matters there. Here, I'm not even sure why sequence should matter.
-
-Nitesh: Sequence will matter here in the sense: think about it, say your Year 2 GCM becomes positive or you are top Year 2 GCM. There are customers whose GCM remains flat from Year 1 to Year 2, some decline into negative, and some increase. So there is some activity happening for people whose GCM is increasing compared to those who are flat or declining. There's a sequence or pattern. They started off spending in bonusing categories, but over time started spending in categories more relevant to their business, like top 10 merchants, which adds more value, or their overall average spend increases over time. That in itself leads to incremental GCM in Year 2.
-
-Kartikeya: But that trend is already captured automatically in monthly variables. If it's captured in monthly variables, XGBoost can do it. The problem is within the month, what trend are we getting? In M14, there are two customers: one spent equally across all days, one spent all at once. Do you think there will be a difference between the two?
-
-Nitesh: The way we are approaching it, no difference is showing up.
-
-Kartikeya: We should have actual examples to see if such a thing really matters. Only then if we use SAGE will we see an impact. If we don't have a hypothesis, that's where the problem arises.
-
-Nitesh: Essentially, examples of feature interactions for high incremental GCM versus low incremental GCM across monthly levels, right?
-
-Kartikeya: Within the month, at a daily level, we need to see. We should have a hypothesis: why is one customer going down or up compared to another when monthly data is the same but daily data differs? Because that is exactly what SAGE can capture that XGBoost cannot.
-
-Nitesh: I get your point. We are back to the same question: we need information at a daily level.
-
-Kartikeya: We should only go there once we have a hypothesis, otherwise we'll be in the same loop. We can spend two days building daily data, run SAGE, and check if impact comes. Or we build a hypothesis first for why it matters. It could be that for Year 1 to 14 months it doesn't impact, but in the first two to three months it does, because enrollments happen a lot then. Based on enrollments in the first few months, whether they enrolled early or not might give better results. If our hypothesis is strong, it will be better.
-
-Nitesh: To make the hypothesis strong, we need some use cases, right? Where we see certain features or sets of features...
-
-Kartikeya: What was in the use cases?
-
-Nitesh: In ET transcripts from the Golden Opportunity dataset, we looked at ~77 conversations. We found cases where during an early tenure call, a customer asks if they can use their card for specific spends, and the sales rep guides them to merchants where peers spend and get good returns. Right after that conversation, the person started spending in those merchant categories, spend increased, and Year 2 GCM turned out much better. So we have call evidence that conversations lead to better spending behavior. But ET calls happen only for selected folks, not everyone.
-
-Kartikeya: But that evidence doesn't support SAGE over XGBoost. You made a call, spend started next month, and you already have an indicator for the call in XGBoost. That indicator is in SAGE too. I'm comparing: the evidence you provide should be captured in SAGE and not in XGBoost, only then does it make a difference.
-
-Nitesh: Meaning, if I take monthly spending patterns rather than observing someone whose spend increases organically over duration in certain categories, SAGE could capture that behavior better than XGBoost.
-
-Kartikeya: If someone's spend increases, XGBoost captures that trend too. You need to see within a month itself at a daily level what changes SAGE captures that XGBoost cannot.
-
-Nitesh: It could be that towards the end of the month, a person enrolled in something and spend surged suddenly, but across the full month, the numbers look the same as another person's.
-
-Kartikeya: Even then, you'll know at both monthly and daily levels. Information needs to differ for answers to differ.
-
-Nitesh: That's what I'm trying to think: what sequence of patterns leads to high versus low GCM?
-
-(Nitesh mulls over monthly aggregation vs. sequential features)
-
-
-Nitesh: If I aggregate monthly into XGBoost vs. sequential, performance is similar or slightly inferior. Either learning from sequences isn't great compared to XGBoost, or if I want more learning, I need longer time frames or daily level information. But that needs to be substantiated with case studies showing something is happening that XGBoost can't capture, but a sequence can.
-
-Kartikeya: Stephanie is the owner of this channel, right? Having a discussion with her can be helpful.
-
-(Silence while messaging/waiting for Stephanie)
-
-
-Kartikeya: Situation boils down to this: within one month, if Event 1 happens then Event 2, versus Event 2 then Event 1, do you think there's a difference? If we don't have a hypothesis that these two are different, SAGE can't help. Personally, I don't feel daily spend sequence will impact much because spend is best captured at a monthly level, given different customer habits and seasonality.
-
-Nitesh: Anju and Sonal have high hopes that something earth-shattering will come from the 14-month sequence.
-
-Kartikeya: You can hope, but I don't think it's possible when feeding the exact same monthly information to both models.
-
-Nitesh: The meeting with Anju was at 2:00 PM, now moved to 4:30 PM.
-
-Kartikeya: I'm not sure what you'll tell them. It's a bit challenging.
-
-Nitesh: I can't just say performance isn't coming. Let me check with Stephanie.
-
-Kartikeya: Aanchal, Uma, Hema, do you have any thoughts?
-
-Aanchal: The only data we are not currently using is digital data. That is the only additional thing.
-
-Kartikeya: You can use it in XGBoost as well. SAGE won't add unique value just from that.
-
-(Stephanie joins)
-
-
-Nitesh: Hey Stephanie!
-
-Stephanie: Hello, everyone!
-
-Kartikeya: Good morning!
-
-Stephanie: Good evening! So late for you guys!
-
-Kartikeya: Yeah, still trying to figure out. Nitesh, go ahead.
-
-Nitesh: So Stephanie, we ran 14-month monthly behaviors through SAGE across the selected feature set. We looked at the performance of the feature outcome coming out of SAGE with XGBoost. We also ran a baseline XGBoost model feeding all features from Month 1 to Month 14 (e.g., benefit enrollment Month 1 to 14) and let it select top features to predict incremental GCM. The baseline XGBoost performance is coming out better than SAGE. If we want to hypothesize that SAGE adds value beyond traditional modeling, how do we define that hypothesis?
-
-Stephanie: Is Gini a good metric?
-
-Nitesh: Baseline XGBoost gives a Gini of 58%, whereas via SAGE it is 53%.
-
-Stephanie: So you have a lower Gini?
-
-Nitesh: Yes.
-
-Stephanie: That's different from what I saw yesterday. What changed?
-
-Nitesh: Yesterday we included categorical spends (electronics, construction, restaurant). Today, per Ashish's feedback to avoid industry-specific features, I removed them and used standard features (calls, top 10 spend, etc.). Also, we applied flooring and capping on the target variable today, which caused a slight deterioration. With identical flooring, capping, and feature sets: SAGE gives an out-of-time Gini of 53%, while XGBoost gives 58%.
-
-Stephanie: In the SAGE meeting, even a 2% Gini improvement was considered good. I'm surprised yours is lower.
-
-Kartikeya: We can extract hidden states from the transformer model and use them in the baseline model, though we don't expect a huge jump.
-
-Stephanie: Even 1% to 2% is good. In another presentation, a jump from 60% to 62% with no new data—just method change—was positioned as a win.
-
-Kartikeya: But we should have a clear hypothesis: why would SAGE work better than XGBoost when both are fed the same monthly aggregated data?
-
-Stephanie: We want to build SAGE because earlier manual attempts at creating sequence paths across multiple dimensions caused overfitting in tree models. SAGE finds the commonality of paths among top performers versus bottom performers, making sense of a customer's trajectory.
-
-Kartikeya: Were you looking at those touchpoints at a daily level or monthly level?
-
-Stephanie: Monthly level.
-
-Kartikeya: Got it. Nitesh, we can use Aanchal's Excel sheet to identify patterns between top 100 and bottom 100 performers to understand what they are doing. But Gini won't jump dramatically. The value of SAGE is in interpretation and storytelling rather than raw Gini lift.
-
-Nitesh: From a marketing campaign perspective, SAGE gives the monthly trajectory so we know when to intervene with campaigns, whereas XGBoost only gives an isolated point estimate (like Month 13) without showing how the trend built up.
-
-Kartikeya: Exactly. SAGE is better for building the storyline and actionable strategy. Put this in the deck for Anju and Sonal to align on where the true value lies.
-
-Nitesh: Okay, I'll prepare for the evening discussion.
-
-Kartikeya: Highlight the big win in front of Ashish using the storyline.
-
-Aanchal: I shared the Golden Opportunity data for IG in the group and added embeddings for 77k data for Ishan to use tomorrow.
-
-Kartikeya: Did you share the IG values for all customers?
-
-Aanchal: Scored 15k instead of 77k because 77k was taking too long (~1.5 hours for 15k). I did it for the Golden Opportunity dataset and top/bottom 100.
-
-Nitesh: Is top/bottom 100 based on actual IGCM or predicted?
-
-Aanchal: I'll switch it to predicted IGCM in 10–15 minutes.
-
-Nitesh: Sounds good. Make it predicted IGCM so I can build a story out of it. Thank you, everyone.
-
-Kartikeya / Stephanie / Team: Thank you! Bye.
+Nitesh: For the TI SAS run, how and where exactly is it taking more time, and how can we improve it? I just want to get a sense out of that.
+Uma: Okay, Nitesh. Initially, we have a total of 90 days of data, right? Like three months' data. Initially, we've done the bucketing size as one bucket for one day. Later, I did these buckets like 1 to 3 days as bucket 1, 4 to 6 days as bucket 2. And similarly, it goes for a 5-day bucket, like 1 to 5 days for bucket 1, and so on, and I tried the results.
+Anchal: Just one question on this one. When you are saying bucket, are we saying everything that is happening between, let's say, if the bucket size is 3, everything which is happening from day 1 to 3 will be in event 1 of the TI SAS run?
+Uma: Yeah.
+Anchal: And what all data do you have? How are we creating the sequence?
+Uma: The sequence is based on the final date. I ordered the sequence based on an NA final date.
+Nitesh: Can you show that, Uma, like some data? I need to see what exactly you are passing.
+Anchal: So for each customer, you will have one NA final date, right? Now for that particular customer, how are we creating the sequence?
+Uma: I'll show you once. It's based on acquisition dates.
+Anchal: But the acquisition date will be one for each customer, right? So that is not a sequence. You need to build the sequence based on the timestamp or the date of the event you are sequencing.
+Nitesh: So Uma, see, you have one card member, and one card member has one acquisition date, right? That is the date when this card got acquired. Now after that date, the card member is doing transaction-level behavior. That is the event date. So essentially, what we are trying to say is for each card member, after the acquisition date, you have the days from acquisition. This tells me how many days have passed since acquisition when the transaction is happening. So if I took a card on 1st January, and a transaction is happening on 10th Jan, the difference would be 10 days, right?
+Uma: Yeah. Based on that days since acquisition only, I've taken the bucket size. We don't have the acquisition date in the table itself.
+Anchal: Any reasoning behind doing this bucketing? Because before, for Sage and all, we did the bucketing for a time gap, right, some 0 to 30 seconds. That time gap was basically when we were seeing, let's say there is event 1 happening on 1st of Jan, and there is another event happening on 10th of Jan. So the gap is 9 days. That bucketing was to define because we also need to create a vector for this time gap, correct? We don't need buckets just because it's 90 days. In this case, we don't need buckets.
+Nitesh: If spend happened on 1st of January and next spend is happening on 10th of January, you are also creating time gap embeddings, correct? Are you saying these buckets is to define the time gap between 1st to 10th Jan?
+Uma: Yeah, kind of like the gap between days, not the time. In our case, the time unit is days.
+Anchal: So one event happened on 1st of Jan, second event happened on 10th of Jan. We are defining event 1 as 1st Jan event, event 2 as 10th Jan event, and using bucketing to define the gap between the two, correct? But we are not saying like if the bucket size is 5, everything that is happening between 1st of Jan to 5th of Jan will be one event.
+Uma: I've tried that also here. This 3-day is that only, like 1 to 3 days will be as bucket 1. What happened in these three days' dates will be coming under one bucket.
+Anchal: And it is represented as one event? I don't know how many dates should be combined to get a sequence. The sequence will be the actual data, right? We don't need to define any bucket for that. So for a particular customer, if there are 10 transaction-level data points in these 90 days, your event length is 10. Some customers might have it between 1 to 10 days, and some customers might have between 20 to 30 or around 90 days.
+Nitesh: Anchal, Anju is calling me for 2 minutes, I'll be back.
+Anchal: Okay, I'll be back. Let's say event 1 is on 1st Jan, event 2 is 10th Jan, event 3 is 20th Jan. These 10 events are my input to TI SAS run. Now I want to add time gap embedding as well. So for this event 2, it is happening 9 days after event 1. So the time gap is 9 days. I need to create these time... wherever the time gap is 9, there will be a specific time embedding assigned to the 9. Even if customer B has somewhere a time gap of 9, the same vector will be used to define that time gap. What bucketing we were using in the original that you are mentioning, that was like defining instead of using 9, the absolute number, we are saying a time gap between 0 to 5 days will be time gap embedding 1. Between 5 to 10 will be time gap embedding 2. This is to represent the time gap, but the event length will remain 10. Is this the understanding?
+Hima: Yeah, I mean, I'm just thinking if event 10 is the case, so let's say if we're taking it for 3 days as time gaps, as 3-day buckets. So the buckets would be for 90 days it would be 30 buckets.
+Anchal: Yeah, 0 to 3 will be one, then 4 to 6 will be one.
+Hima: So it will be like 30 buckets. I think she did it each individual day as well. I think, Uma, you did it for each day, right?
+Uma: Initially I did for that only. But just because we did buckets in Sage, I thought of doing, let's take a bucket and see if there is anything we could do it this way. The only doubt I had was when you mentioned buckets, I thought you were combining event 1 and 2 into one event.
+Hima: I think that is what happens when we create a bucket 1, 2, 3. If the two events happen in the first three days, those two events would be captured by the first bucket. What happens in TI SAS run, right, you create multiple vector embeddings. You have an item embedding that will define event 1, you'll have a position embedding, you have a time gap embedding. So event 2 will be there, so even if these two are within the time bucket you are defining, they will have different item embeddings, position embeddings, and time gap embeddings. Basically you are saying we would be inputting all, not at a bucketing level but at an individual day level.
+Uma: Yes. But the time gap will be just adding another detail that event 2 happened within this much time of event 1.
+Anchal: I think 3 days sounds reasonable to me. I've done XGBoost for about what coefficients can we compare about these, based on that I think 3 days is having a good number for it.
+Hima: Yeah, 3 days sounds... I'm just thinking from the business perspective as well. Because 5 days is like too outdated of information. I think we will need it, it's not like if you are creating a 3-day bucket then we need to go 3-3 day bucket till 90, right? After a certain point, let's say if the gap is greater than 10, you give it in one single bucket. Because the events are too far apart, anything after that is equal to us.
+Nitesh: Hey guys, what happened, I am back.
+Hima: So I was just saying like because coming to modeling TI SAS, that I'm not very sure of, so not for that, but generally if we are doing at day level, I'm just trying to make sense of like from a customer point of view or like when we are trying to analyze what is happening. If that is too granular to make sense of like for each customer if you are doing at day level transactions. If you are going at a day level, is my understanding right that the final output would be something like at day 74 something happened for this customer, day 68 something happened? How does that improve or help us?
+Nitesh: Okay, so think about it. There are like different campaigns when it comes to early tenure which are run. One campaign is run within the first month, when you take a card, after 10 days of taking a card, there is a call that is done to a card member to tell them how they can use their card or if there are any questions regarding the usage. Right now there is a very set curriculum in which a sales rep talks to these people. For the people who are already doing things organically or they are aware about the product and their usage, they will start growing from the get-go itself. It is for the other set of the people who are not highly engaged, we get to know that at this point in time, their engagement was going down. We tell the sales rep team that for these card members, if you do this on day 27, they are gonna pay for their existing card spend, and that is when you should call them. That is something we can induce only when I am looking at the most granular behaviors.
+Hima: Yes, that is clear.
+Nitesh: Looking at them across all 90 days might make the data too huge. For that reason, right now we have pulled down everything into the mix. There has to be a check done on which of these features have been prominent for the top card members. Then we will curtail down the set of features to maybe just 30 features in itself across 90 days. That is something as a sequence can be fed to the algo, wherein we can say this feature pops up up and down, this is the trajectory, can you decipher this sequence, create a vector out of this, and I can use this vector into my XGBoost model as a feature set.
+Hima: So now if we are not just doing it for 90 days, if we are doing it for whole 14 months, are we getting too specific on saying day 74 you reach out to this? Would that be more of a business logic that we would give a range of these days?
+Nitesh: Free-ness to the customer that this range of days that happens and we try to improve on that. What I will do is for a certain set of card members, right, if the inflection point is coming at exactly day 26 or day 27, for a huge jump of it, I might set a range, do that between day 25 to day 30, that is when the inflection point can happen. If I have daily-level information, then you can start bucketing at 3 days, 5 days, 10 days, whatever information we have. If I do bucketing of say 10 days starting off, then essentially within the first month how many points I have, three. Three points in a sequence don't add any value. Don't go beyond 90 days, just keep it till 90 days, this daily level sequence, that is the max that we should go ahead with.
+Anchal: One thing, Nitesh, when we are defining these buckets, to explain the gap, so we cannot go till 90. If the gap between two events is more than 10, then whether it is 20 days, 30 days, it's the same thing. We can create one bucket for greater than 10 days maybe, 10 is just an example, but we can decide something like that.
+Nitesh: Okay, done. Do that check. It is an iteration, right, run an iteration and see if it adds value. So Uma, why don't you do that check quickly? Hima, you can also help on that. And let's try to finalize that bucketing and one iteration today itself. Check and share the details with the group between you, me, and Anchal, so that we can decide on that execution run today itself and solve for it.
+Uma: Sure, Nitesh.
+Hima: Anchal, what are the other parameters to keep in mind while doing it?
+Anchal: Transformer parameters right, the number of layers you are keeping, the learning rate, what kind of pooling we are using, basically the transformer hyperparameters.
+Nitesh: Anything else guys? I was trying to make the feature level set at a daily transaction level, but couldn't work more on that. I was just asking around like how Ishan has created it. He has created it for all the 14 months and monthly level.
+Anchal: For the spend-related features, we can create daily level right, that we already have. It is for the non-spend ones where you are struggling to get that information on a daily level. Let's try to prioritize here what are the best things that we should look at. Let's talk about treatment response. Within the first three months, if people are responding to certain treatments, we know they are more engaged. Try to get the treatment response first. Then comes the benefit enrollments. If people are taking benefits and enrolling in it, they are trying to use their card for different types of activities, that is either using it for lounge access or Delta enrollment. Then comes product features, like a business checking account or business line of credit transaction, or they redeemed any points. Let's do it in bits and pieces. There is a person here in my team, his name is Shyam, he's a contractor. If you are having a code for the rest of the items, and it will take like one hour for you to set code for these three or these two together, you can ask him to pull the data for you. Divide and conquer. For one or two things like activation or DM or email or these external behaviors, you can ask if Jay Sharma in the India team can pull that up for you.
+Hima: Got it. Make sense.
+Nitesh: Cool guys. Uma, Anchal, and Hima, you are also clear. The channel is always active, let me know if you have any questions or any concerns. And Uma, do share the details in terms of the days or the bucketing that we need to put across, share those descriptive stats with Anchal, and then essentially we can take a call and execute the transformer algorithm.
+Uma: Sure, Nitesh.
+Nitesh: Thank you, guys. Take care.
