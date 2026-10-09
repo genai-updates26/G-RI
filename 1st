@@ -1,46 +1,575 @@
-Nitesh: For the TI SAS run, how and where exactly is it taking more time, and how can we improve it? I just want to get a sense out of that.
-Uma: Okay, Nitesh. Initially, we have a total of 90 days of data, right? Like three months' data. Initially, we've done the bucketing size as one bucket for one day. Later, I did these buckets like 1 to 3 days as bucket 1, 4 to 6 days as bucket 2. And similarly, it goes for a 5-day bucket, like 1 to 5 days for bucket 1, and so on, and I tried the results.
-Anchal: Just one question on this one. When you are saying bucket, are we saying everything that is happening between, let's say, if the bucket size is 3, everything which is happening from day 1 to 3 will be in event 1 of the TI SAS run?
-Uma: Yeah.
-Anchal: And what all data do you have? How are we creating the sequence?
-Uma: The sequence is based on the final date. I ordered the sequence based on an NA final date.
-Nitesh: Can you show that, Uma, like some data? I need to see what exactly you are passing.
-Anchal: So for each customer, you will have one NA final date, right? Now for that particular customer, how are we creating the sequence?
-Uma: I'll show you once. It's based on acquisition dates.
-Anchal: But the acquisition date will be one for each customer, right? So that is not a sequence. You need to build the sequence based on the timestamp or the date of the event you are sequencing.
-Nitesh: So Uma, see, you have one card member, and one card member has one acquisition date, right? That is the date when this card got acquired. Now after that date, the card member is doing transaction-level behavior. That is the event date. So essentially, what we are trying to say is for each card member, after the acquisition date, you have the days from acquisition. This tells me how many days have passed since acquisition when the transaction is happening. So if I took a card on 1st January, and a transaction is happening on 10th Jan, the difference would be 10 days, right?
-Uma: Yeah. Based on that days since acquisition only, I've taken the bucket size. We don't have the acquisition date in the table itself.
-Anchal: Any reasoning behind doing this bucketing? Because before, for Sage and all, we did the bucketing for a time gap, right, some 0 to 30 seconds. That time gap was basically when we were seeing, let's say there is event 1 happening on 1st of Jan, and there is another event happening on 10th of Jan. So the gap is 9 days. That bucketing was to define because we also need to create a vector for this time gap, correct? We don't need buckets just because it's 90 days. In this case, we don't need buckets.
-Nitesh: If spend happened on 1st of January and next spend is happening on 10th of January, you are also creating time gap embeddings, correct? Are you saying these buckets is to define the time gap between 1st to 10th Jan?
-Uma: Yeah, kind of like the gap between days, not the time. In our case, the time unit is days.
-Anchal: So one event happened on 1st of Jan, second event happened on 10th of Jan. We are defining event 1 as 1st Jan event, event 2 as 10th Jan event, and using bucketing to define the gap between the two, correct? But we are not saying like if the bucket size is 5, everything that is happening between 1st of Jan to 5th of Jan will be one event.
-Uma: I've tried that also here. This 3-day is that only, like 1 to 3 days will be as bucket 1. What happened in these three days' dates will be coming under one bucket.
-Anchal: And it is represented as one event? I don't know how many dates should be combined to get a sequence. The sequence will be the actual data, right? We don't need to define any bucket for that. So for a particular customer, if there are 10 transaction-level data points in these 90 days, your event length is 10. Some customers might have it between 1 to 10 days, and some customers might have between 20 to 30 or around 90 days.
-Nitesh: Anchal, Anju is calling me for 2 minutes, I'll be back.
-Anchal: Okay, I'll be back. Let's say event 1 is on 1st Jan, event 2 is 10th Jan, event 3 is 20th Jan. These 10 events are my input to TI SAS run. Now I want to add time gap embedding as well. So for this event 2, it is happening 9 days after event 1. So the time gap is 9 days. I need to create these time... wherever the time gap is 9, there will be a specific time embedding assigned to the 9. Even if customer B has somewhere a time gap of 9, the same vector will be used to define that time gap. What bucketing we were using in the original that you are mentioning, that was like defining instead of using 9, the absolute number, we are saying a time gap between 0 to 5 days will be time gap embedding 1. Between 5 to 10 will be time gap embedding 2. This is to represent the time gap, but the event length will remain 10. Is this the understanding?
-Hima: Yeah, I mean, I'm just thinking if event 10 is the case, so let's say if we're taking it for 3 days as time gaps, as 3-day buckets. So the buckets would be for 90 days it would be 30 buckets.
-Anchal: Yeah, 0 to 3 will be one, then 4 to 6 will be one.
-Hima: So it will be like 30 buckets. I think she did it each individual day as well. I think, Uma, you did it for each day, right?
-Uma: Initially I did for that only. But just because we did buckets in Sage, I thought of doing, let's take a bucket and see if there is anything we could do it this way. The only doubt I had was when you mentioned buckets, I thought you were combining event 1 and 2 into one event.
-Hima: I think that is what happens when we create a bucket 1, 2, 3. If the two events happen in the first three days, those two events would be captured by the first bucket. What happens in TI SAS run, right, you create multiple vector embeddings. You have an item embedding that will define event 1, you'll have a position embedding, you have a time gap embedding. So event 2 will be there, so even if these two are within the time bucket you are defining, they will have different item embeddings, position embeddings, and time gap embeddings. Basically you are saying we would be inputting all, not at a bucketing level but at an individual day level.
-Uma: Yes. But the time gap will be just adding another detail that event 2 happened within this much time of event 1.
-Anchal: I think 3 days sounds reasonable to me. I've done XGBoost for about what coefficients can we compare about these, based on that I think 3 days is having a good number for it.
-Hima: Yeah, 3 days sounds... I'm just thinking from the business perspective as well. Because 5 days is like too outdated of information. I think we will need it, it's not like if you are creating a 3-day bucket then we need to go 3-3 day bucket till 90, right? After a certain point, let's say if the gap is greater than 10, you give it in one single bucket. Because the events are too far apart, anything after that is equal to us.
-Nitesh: Hey guys, what happened, I am back.
-Hima: So I was just saying like because coming to modeling TI SAS, that I'm not very sure of, so not for that, but generally if we are doing at day level, I'm just trying to make sense of like from a customer point of view or like when we are trying to analyze what is happening. If that is too granular to make sense of like for each customer if you are doing at day level transactions. If you are going at a day level, is my understanding right that the final output would be something like at day 74 something happened for this customer, day 68 something happened? How does that improve or help us?
-Nitesh: Okay, so think about it. There are like different campaigns when it comes to early tenure which are run. One campaign is run within the first month, when you take a card, after 10 days of taking a card, there is a call that is done to a card member to tell them how they can use their card or if there are any questions regarding the usage. Right now there is a very set curriculum in which a sales rep talks to these people. For the people who are already doing things organically or they are aware about the product and their usage, they will start growing from the get-go itself. It is for the other set of the people who are not highly engaged, we get to know that at this point in time, their engagement was going down. We tell the sales rep team that for these card members, if you do this on day 27, they are gonna pay for their existing card spend, and that is when you should call them. That is something we can induce only when I am looking at the most granular behaviors.
-Hima: Yes, that is clear.
-Nitesh: Looking at them across all 90 days might make the data too huge. For that reason, right now we have pulled down everything into the mix. There has to be a check done on which of these features have been prominent for the top card members. Then we will curtail down the set of features to maybe just 30 features in itself across 90 days. That is something as a sequence can be fed to the algo, wherein we can say this feature pops up up and down, this is the trajectory, can you decipher this sequence, create a vector out of this, and I can use this vector into my XGBoost model as a feature set.
-Hima: So now if we are not just doing it for 90 days, if we are doing it for whole 14 months, are we getting too specific on saying day 74 you reach out to this? Would that be more of a business logic that we would give a range of these days?
-Nitesh: Free-ness to the customer that this range of days that happens and we try to improve on that. What I will do is for a certain set of card members, right, if the inflection point is coming at exactly day 26 or day 27, for a huge jump of it, I might set a range, do that between day 25 to day 30, that is when the inflection point can happen. If I have daily-level information, then you can start bucketing at 3 days, 5 days, 10 days, whatever information we have. If I do bucketing of say 10 days starting off, then essentially within the first month how many points I have, three. Three points in a sequence don't add any value. Don't go beyond 90 days, just keep it till 90 days, this daily level sequence, that is the max that we should go ahead with.
-Anchal: One thing, Nitesh, when we are defining these buckets, to explain the gap, so we cannot go till 90. If the gap between two events is more than 10, then whether it is 20 days, 30 days, it's the same thing. We can create one bucket for greater than 10 days maybe, 10 is just an example, but we can decide something like that.
-Nitesh: Okay, done. Do that check. It is an iteration, right, run an iteration and see if it adds value. So Uma, why don't you do that check quickly? Hima, you can also help on that. And let's try to finalize that bucketing and one iteration today itself. Check and share the details with the group between you, me, and Anchal, so that we can decide on that execution run today itself and solve for it.
-Uma: Sure, Nitesh.
-Hima: Anchal, what are the other parameters to keep in mind while doing it?
-Anchal: Transformer parameters right, the number of layers you are keeping, the learning rate, what kind of pooling we are using, basically the transformer hyperparameters.
-Nitesh: Anything else guys? I was trying to make the feature level set at a daily transaction level, but couldn't work more on that. I was just asking around like how Ishan has created it. He has created it for all the 14 months and monthly level.
-Anchal: For the spend-related features, we can create daily level right, that we already have. It is for the non-spend ones where you are struggling to get that information on a daily level. Let's try to prioritize here what are the best things that we should look at. Let's talk about treatment response. Within the first three months, if people are responding to certain treatments, we know they are more engaged. Try to get the treatment response first. Then comes the benefit enrollments. If people are taking benefits and enrolling in it, they are trying to use their card for different types of activities, that is either using it for lounge access or Delta enrollment. Then comes product features, like a business checking account or business line of credit transaction, or they redeemed any points. Let's do it in bits and pieces. There is a person here in my team, his name is Shyam, he's a contractor. If you are having a code for the rest of the items, and it will take like one hour for you to set code for these three or these two together, you can ask him to pull the data for you. Divide and conquer. For one or two things like activation or DM or email or these external behaviors, you can ask if Jay Sharma in the India team can pull that up for you.
-Hima: Got it. Make sense.
-Nitesh: Cool guys. Uma, Anchal, and Hima, you are also clear. The channel is always active, let me know if you have any questions or any concerns. And Uma, do share the details in terms of the days or the bucketing that we need to put across, share those descriptive stats with Anchal, and then essentially we can take a call and execute the transformer algorithm.
-Uma: Sure, Nitesh.
-Nitesh: Thank you, guys. Take care.
+================================================================================
+MEETING TRANSCRIPT: EARLY TENURE MODELING & FEATURE ENGINEERING DISCUSSION
+================================================================================
+Participants Identified:
+- Karthikeya (Lead / Host)
+- Nitesh
+- Hema
+- Jai
+- Stephanie
+- Ishan
+- Anchal (Brief attendee)
+
+--------------------------------------------------------------------------------
+TRANSCRIPT
+--------------------------------------------------------------------------------
+
+[00:00] Karthikeya: First of all, the intent is to understand the patterns, right? Pattern here being—like, we need to be very cognizant about what do we mean by pattern. A pattern can be something: customer was initially spending upon, let's say, electronics industry, then it shifted to, let's say, construction industry. That is also a pattern, right? Similarly, they are having a lot of new spends on the different, different merchants. We can also say that.
+
+[00:25] Karthikeya: So, whatever inference that we want finally out from the model, we need to define the same parameters or the same variables within the vector as well for each transaction. Because anything outside of it, the model won't be able to get or answer anything at all.
+
+[00:46] Nitesh: So essentially, what the outcome we want to look at, we should define the inputs in similar fashion.
+
+[00:53] Karthikeya: Exactly.
+
+[00:54] Nitesh: Okay. Okay.
+
+[00:55] Karthikeya: Let's assume that if I only provide what is a transaction amount and which SE10 it belongs to, let's say I created a vector on that, right? I cannot expect any sort of algorithm to help me out that, okay, whether they are making a COGS spend first, then they move to admin spend—like, they can't do it, right? They need to know that information.
+
+[01:13] Nitesh: Correct.
+
+[01:14] Karthikeya: So whatever information that we put in the vector, that's the only inference that I can get out of it.
+
+[01:19] Nitesh: That I agree. That I agree. I can't get anything beyond out of it.
+
+[01:23] Karthikeya: Exactly.
+
+[01:25] Karthikeya: Yeah, hi Stephanie. Hello.
+
+[01:28] Nitesh: Hey, hi Stephanie. Good morning. We just started.
+
+[01:34] Karthikeya: So as I was mentioning, like, we can only get that inference which we actually ingest in the vector itself. So our vector has to be exhaustive. Okay?
+
+[01:45] Nitesh: Correct.
+
+[01:45] Karthikeya: I realized that there was a data set which Hema created yesterday. I think it was at a day level. So at a CM11 cross day, let's say there are multiple transactions, they were kind of concatenated in one single record itself.
+
+[02:00] Nitesh: One single day, yes. And supposedly there were like multiple merchants on which within a single day a person has done transactions. We have accumulated that amount, but we have mentioned out an array of the merchant on which this transaction has happened, correct? Yeah.
+
+[02:17] Karthikeya: Yes, absolutely. And in case if there is no transaction on that particular day, I think that the record is not even there for that CM11.
+
+[02:24] Nitesh: Yeah. Yes. Agreed.
+
+[02:27] Karthikeya: Okay. Now when it comes to any sort of Sage, at the end of the day, we need to use Sage. Either it's supervised or unsupervised, that is something which we can debate upon, but we have to use Sage. Now we have 3 months of data, and if we are using Sage, one very important thing would be like whether we should provide the data at a customer cross date level or we provide data at a customer cross event level.
+
+[02:53] Nitesh: Customer cross date level, customer... When you say event, event will also be at a date level, right?
+
+[02:58] Karthikeya: Event will be at, but there can be multiple. So when you concatenated or when you kind of aggregated everything in one day, right, the two different transactions—I'm saying let's keep them separate. That's the difference.
+
+[03:13] Nitesh: Okay. So you are saying like even within a day transaction, I keep it say like separate. So essentially for a particular card member, if there are like three transactions, I should have like three different rows or say like three different columns.
+
+[03:25] Karthikeya: Exactly. Exactly.
+
+[03:26] Nitesh: For that. Okay. Okay.
+
+[03:28] Karthikeya: The reason why I'm saying that is, when we aggregated such information, we kind of lost one important attribute, which is merchant name. Right now I don't know how merchant names would be relevant, whether it would be or not, but one thing is very clear: there can be some very big merchants. Let's say we talk about Apple or let's say Google, and if someone is spending on that particular merchant, and if that spending on that particular merchant impacts the understanding of the pattern, then we will be losing out that front entirely.
+
+[03:59] Nitesh: Okay, okay. So the magnitude within a day for each merchant, I lose that if I aggregated because I just keep the three merchant names and the overall spent, but not the absolute amount spent on that merchant. Fair to say?
+
+[04:09] Karthikeya: No, no, you can't even ingest within the transformer the sequence of the merchant that you're putting in. Because it has to have a unique set, right? You cannot put arrays into transformers.
+
+[04:25] Nitesh: Ha, that I agree. I cannot put arrays into transformer. I have to put that separately. So now supposedly within a day, right, there are three transactions that happened. One in morning, one in afternoon, one in evening. I don't have the timestamp for it, but I have the date for it.
+
+[04:41] Karthikeya: That's fine.
+
+[04:42] Nitesh: It doesn't matter, right?
+
+[04:42] Karthikeya: It doesn't matter, right. What we can do, we can sort them let's say basis the merchant name itself. I think it should be fine. Date cross merchant.
+
+[04:49] Nitesh: Merchant name or the spend volume, whatever it is. Okay.
+
+[04:54] Karthikeya: Yeah, like we can come up with some sort of a logic in order to sort them. The reason is the only information that we'll be losing out is the merchant name when we aggregate at a date level. And to be honest, I don't see a reason why we should actually aggregate at a date level. Like, there's no added advantage of doing it at a date level in any way.
+
+[05:10] Nitesh: Okay. The only thing which I was looking at like when aggregating at a date level, if I just look at spend, right? Overall spend. Then if there are like three transactions that happened without—like when I was creating this day before yesterday, then essentially I didn't have the merchant in the purview. It was more around how the transaction behaviors are happening on a day-to-day basis. Then it would have made sense, but now if I want to include merchant, then essentially like merchant corresponding transaction amount within a day, then it makes sense. I agree.
+
+[05:41] Karthikeya: To be very honest, like when it comes to Sage, these models work better when you provide the raw sequence to it, rather than aggregated data.
+
+[05:49] Nitesh: Aggregated data, correct.
+
+[05:50] Karthikeya: Even if we aggregate on a day or in a month, like, ideally we should not.
+
+[05:54] Nitesh: Okay. Okay.
+
+[05:54] Karthikeya: So coming back to that same point, as per my understanding, I think we should have a sequence. Sequence of events—sequence not on that customer cross date, sequence of actual transaction events itself for all the customers.
+
+[06:07] Nitesh: Okay. Okay.
+
+[06:09] Karthikeya: Okay, so that's one, because it will not let us lose any information. The second thing is, once we define that, then for each transaction we have to be very cautious about what are the variables that we are trying to put. Because only on those variables, essentially we will be creating all the inferences.
+
+[06:24] Nitesh: We'll be creating inferences. Correct.
+
+[06:26] Karthikeya: So I'll discuss that later, but assume that, okay, there is merchant, merchant name, its industry, its transaction amount, and etcetera, etcetera. There are three types of variables that we will be able to have: customer profile variables, merchant profile variables, and transaction profile variables. That has to go into that vector.
+
+[06:45] Nitesh: Yes. When it's customer profile variables, customer profile will remain the same, right? Across...
+
+[06:50] Karthikeya: No, it will remain same. You're absolutely right on that. But whenever we are trying to run Sage, right? Sage doesn't... Okay, so there are two things here. There can be two types of variables. One type of variable is which is static for the customer across all the sequences.
+
+[07:04] Nitesh: Ha, correct. That would be the profile, customer profile.
+
+[07:06] Karthikeya: That is a profile variable, but the thing is these variables can still make an impact on your overall performance of the model. Why? Because certain customers—customers of certain, let's say, industry tend to follow a pattern which the other industries' customers won't be. So there's a merit to include that industry as well.
+
+[07:28] Nitesh: So essentially, what additional added layer that we are trying to put across is like... In an essence, we are trying to control the profile of the customer as well, right? Because certain customer profiles will be performing in certain actions.
+
+[07:43] Karthikeya: Exactly. All we are saying is, whatever the model is, we are just saying to that model: "I'm giving you all the information which is relevant for you, so that you can actually make a better prediction," irrespective of whether that information is constant across all the events. Why? It will still be relevant. Like, we have tested this in merchant recommender previously; we actually put those variables—the customer industry—and we have seen that it actually impacts something. The impact can be minimal or can be something else, but it can impact.
+
+[08:11] Nitesh: Okay. It can impact.
+
+[08:14] Karthikeya: Because the revenue bands of the customer are different and they might behave in a different way altogether, right? And the model needs to learn that behavior.
+
+[08:25] Nitesh: Okay. Yeah. Okay, with you.
+
+[08:29] Karthikeya: Theek hai. So now we are saying that, okay, we can define that vector. We know that we have to put down the entire event itself. The second thing that we have to do is we can either do a supervised learning or unsupervised learning. Right now let's assume that we are doing this unsupervised learning only, where the idea is we are just trying to predict what is the next best action.
+
+[08:47] Nitesh: Okay.
+
+[08:48] Karthikeya: Now here there are multiple ways in which we can do this. When I say multiple ways, I mean to say the next best action—like, either we can try to predict the entire next vector, that's also a possibility...
+
+[08:59] Jai: Yeah.
+
+[09:00] Karthikeya: Or within that vector, we can try to get only, let's say, the transaction amount, or let's say the merchant ID. There can be multiple such things that you can do.
+
+[09:09] Nitesh: So if I narrow down my objective function of the next best action, right, it doesn't change the way the vector or the embedding will get created, or will it?
+
+[09:21] Karthikeya: It will, because what will go into the loss function?
+
+[09:26] Nitesh: Okay, for the loss function.
+
+[09:27] Karthikeya: So think of this: ki we calculated h1 from the transformer.
+
+[09:31] Nitesh: Correct.
+
+[09:32] Karthikeya: Now, from that h1, are you trying to compare that h1 with t2? Or are you trying to compare the merchant coming from h1 and then compare the merchant from t2? That will go into loss function. So there are multiple things that you can do.
+
+[09:48] Nitesh: Okay. So it can be a multiple dimension loss function or it can be a single dimension. Say like just if I'm predicting for the spend, it will try to optimize for that spend prediction.
+
+[09:57] Karthikeya: Exactly. So the reason is, like let's say we put a lot of junk in that whole vector. Then if you're trying to predict that vector, then probably I'm not sure how the performance would be, right? So sometimes it's safe that, okay, we should only go ahead and predict for merchant name or the transaction spend, something like that. Again, that is debatable and we can start with something. Ishan, you have a question?
+
+[10:21] Ishan: Uh no, no. Sorry, I raised by mistake.
+
+[10:23] Karthikeya: Okay, no worries.
+
+[10:24] Nitesh: Okay, no worries.
+
+[10:26] Karthikeya: So now once we have the unsupervised learning done, what have we done so far? We will be able to have what will be the vector representation of each transaction event made by the customer. We also have what is my final condensed form of customer sequence vector representation, because h_t, right? That will be holding that information.
+
+[10:53] Nitesh: Yes, yes.
+
+[10:54] Karthikeya: Now what I can do is—now here we have to do a clustered approach where we are doing a clustering, but it has to be a supervised clustering approach. Where we know what are the GCMs/IGCM for all the customers. So basis that, we can say that, okay, let's try to cluster different, different sort of customers basis the 64-dimension or 32-dimension vector by which we have represented that customer. And let's assume that we finally have 10 different types of clusters: five clusters belonging to high GCM, five belonging to low GCM. There can be some middle one as well. Let's assume that we are able to identify that.
+
+[11:38] Karthikeya: Then what we have to do is, there are certain approaches in the market—again, that is something which Jai can talk more about—but essentially you have to go back then. You know that these customers belonging to one particular type of cluster give you high GCM, assume that. What we are going to do next is, whatever the sequence that we were previously able to have for those customers, we are going to average it out somehow for all those customers. And since we are only dealing with the variables we know—we exactly know what goes into that vector, right?—we can then infer basis that vector representation only what are the major features of these customer groups.
+
+[12:22] Karthikeya: We can see that, okay, for the first few days, the first kind of thing that customer was doing was they were trying to make a spend on, let's say, high reward industries, then they subsequently moved into advertising-based industries. That sort of inference we will be able to have basis the new approach. What was the name, Jai? Sorry, I'm forgetting about the algorithm's name.
+
+[12:45] Jai: Uh, PrefixScan.
+
+[12:47] Karthikeya: So this is a new kind of algorithm, but essentially we have to do that sort of inferencing. And for inferencing, it's going into the reverse direction now. Once we know that these customers belong to a particular cluster, then try to see how does it make sense.
+
+[13:02] Nitesh: Okay, so let me summarize. So essentially, what we're saying is we have event sequences for each and every card member across a 90-day window that can include your spend, merchant, or say like category spend, etcetera. We then run a transformer or say like an algo over it, and then essentially it tries to condense that whole journey into a 1x32 or a 1x64 vector for each and every card member.
+
+[13:31] Nitesh: Now for each and every card member, I'll also include the profile variables as well, which will go into that feature set. So that will be part of the 1x32 representation for each card member. Now, for each card member, I also have the actual year-two GCM available to me, and I know which is high, which is low. Okay? So based on that high and low, I can do a clustering of my vector representations of the journey, and say like, okay, these vectors belong together, or they have a very high GCM. So this particular segment belongs together, essentially.
+
+[14:06] Nitesh: Now for that cluster that can contain say like 1,000 card members, I can still condense those 1,000x32 vectors into a single-dimension vector as well, which is like sort of an averaging out across them by Euclidean distance or whatever we can. And then that can become like a one single-row representation of that cluster. That's what we are saying?
+
+[14:28] Karthikeya: The condensing part at the very last step, right, it's not as an average. It's more about that for each—let's assume that we are talking about one customer. For one customer, the first transaction was more about they spend on a particular type of merchant. Then the second transaction happens on the second type of merchant, which belongs to advertising industry. The third spend actually happens on a construction industry.
+
+[14:54] Karthikeya: So we have a trend that, okay, this customer moved from restaurant to advertisement to construction. Let's say we have this sort of view for 1,000 customers within that cluster, right? Then we can get an understanding that majority of these customers have this sort of a sequence.
+
+[15:11] Nitesh: This sort of a behavior. So that is a sort of an interpretation that we will bring after we do clustering, or grouping of high GCM card members together, right? Essentially.
+
+[15:25] Karthikeya: Not just grouping based upon high GCM, but also basis the vectors as well. It's a supervised clustering approach.
+
+[15:30] Nitesh: Supervised clustering approach. Okay. Okay.
+
+[15:37] Karthikeya: So that is one possible thing that we can do. Hema, I see you have raised a question.
+
+[15:46] Hema: Yeah, Karthikeya. So as you were saying like we'll analyze spend across like construction or like these things, but again, are we not going to the point where like it is industry specific?
+
+[16:03] Karthikeya: Okay. No, no, no, no. We can still do it, right? Like that sort of categorization was still there, right? The COGS spend, admin spend—I think that was still there. Some sort of spend categorization we're still putting in the model.
+
+[16:13] Hema: Specific industry people would be more inclined towards specific of these things.
+
+[16:20] Karthikeya: But that is also fine. Why? Because in the vector, we already have the customer industry included.
+
+[16:24] Hema: Okay. Okay, yeah.
+
+[16:25] Karthikeya: When we have the customer industry, then automatically it will tell me like for these kinds of customers who belong to this industry, this is the kind of pattern they follow.
+
+[16:32] Hema: Oh, got it. Got it.
+
+[16:33] Ishan: Karthikeya, should we remove those transactions which are not belonging to either of the selected industries, say either COGS, top 10 cert, or so? Because eventually we will give an offer based on those industries.
+
+[16:47] Karthikeya: No, I think we should have a classification for each spend as well—which category it belongs to.
+
+[16:53] Ishan: Okay.
+
+[16:56] Nitesh: I would say don't remove any spend. Have that absolute total spend as well into the mix. Because see, if I'm spending $1,000: 100 can be COGS, 100 can be fixed, 200 can be admin. Okay? I can categorize $400 out of that into these three categories, but there is $600 which I can't even categorize. Because for them, we don't know—that can be a different set of merchants.
+
+[17:18] Karthikeya: One question: are you talking about—even one transaction can be split into multiple pieces?
+
+[17:25] Jai: Yeah, yeah.
+
+[17:26] Karthikeya: No, right?
+
+[17:27] Nitesh: No, no, not one transaction.
+
+[17:29] Karthikeya: Not one transaction. Exactly, right?
+
+[17:31] Nitesh: One transaction would be belonging to one of the categories, but what I'm saying is...
+
+[17:35] Karthikeya: Yes, then we are sorted, right?
+
+[17:36] Nitesh: Ha, then we are sorted.
+
+[17:37] Karthikeya: It will never happen.
+
+[17:39] Nitesh: I was actually talking from a day aggregation level. Yeah, my bad. So, not from that lens. Yeah.
+
+[17:49] Karthikeya: Okay. Open to everyone, like if they have any questions, let me know.
+
+[17:55] Jai: Karthikeya, I have one question/suggestion, like both. So our intent was also to understand when to pitch an early tenure a particular treatment, right? Or a particular insight that we have. So on that, what I was thinking is: let's say first we derive everything from a 90-day sequence, right? Like let's say we create a cluster, the high-performing cluster, we understand what are the journeys that are contributing to it.
+
+[18:21] Jai: And then, let's say for a particular customer we create a 30-day vector also. Then we can see from the probabilistic way—I was researching about it—whether this particular journey can translate to that high-performing cohort of 90 days or not. And if yes, the features that the 30 days has and the 90 days high GCM cohort that we built, we can see among the attributes that we have calculated which one is contributing to the high GCM, and we can see in the 30-day journey which one is lagging the most in comparison to that 90-day vector.
+
+[18:58] Jai: And actually we can pitch that when the 30 days completes for a particular customer who has a probability of going into the journey of that high-performing GCM cohort.
+
+[19:10] Nitesh: You are saying create a... See, that is where I was also debating yesterday. So the same thing, like this clustering piece and also how to build sub-sequences. That I was discussing with Stephanie as well yesterday. So if I look at, say like, 0 to 30 days, right, think about it: what does Sage do? If I have daily transaction-level behavior, what it will try to optimize? Because it has a time series of events, it will try to give the highest weightage to the most recent event. So your day 30 or day 25 will have a higher weightage in terms of the sequence as compared to what has happened on day one, right? Within just a 30-day sequence.
+
+[19:49] Nitesh: If I look at a 90-day sequence, what will happen? It will try to give a higher weightage to the last 10 days or so, right? 80 to 90 as compared to what has happened in the first 10 days or first 30 days. So when I'm comparing two different sequences here, looking at 0 to 90 days versus 1 to 30, the amount of weightage that each particular feature would have received would be very different when I'm looking at a longer timeframe versus a shorter timeframe.
+
+[20:14] Nitesh: So once I create a 90-day vector, and then I try to decipher—if I create a 30-day then try to compare, then essentially it's not apples to oranges. But if I do first 30, and then I look at 31 to 60, right, then what would have happened in the second month—last 10 days of second month—those would be comparable with the last 10 days of the first month, because the algorithm would have learned in a similar fashion that these 30 days are important. Not like a 90-day algorithm.
+
+[20:41] Nitesh: So that's what I was thinking: if you want to do a first 30-day comparison, compare it with a subsequent month, but not compare it with overall 90-day window. Because the algorithm would have learned that these steps would have happened across 90 days versus what has happened in the first 30 days. That's why I was a bit skeptical when I was also reading about it: creating sub-sequences of first, second, or third month together versus separate, or should we do sequentially for them? That is what I was thinking.
+
+[21:13] Jai: Okay. So I was not saying compare 30 with the 90. What I was saying is, for that 30-day journey, you can actually predict what the 90-day journey would look like through some algorithm which I was reading.
+
+[21:26] Nitesh: 30-day, how does a 90-day journey look like, and then you would compare that journey with the actual 90-day journey?
+
+[21:36] Jai: No. So let's say we have predicted the 90-day journey, and we would see which cluster it will fall into. We have five or 10 clusters as Karthikeya was saying, right? High GCM, low GCM, medium GCM. And if we can see from the 30 days to which cluster it belongs to, and we take some 15–20 features that were important to that cluster, and see the performance of those features in the 30 days that we have, and see where the highest difference is lying. So you can actually pitch that treatment or feature to that customer after 30 days itself, and will not wait for the 90 days to happen.
+
+[22:11] Jai: This was just a thought to see whether day-wise it is important when to pitch a particular feature to a customer, or a treatment to a customer.
+
+[22:20] Nitesh: From treatment actionable plan, that's what you're saying.
+
+[22:22] Jai: Exactly. But I think it will come in the next step. First we build that. So I think we can first start with that, and then maybe build on this.
+
+[22:33] Nitesh: Not a bad idea, I would say. What you're trying to think from the deployment perspective, you are thinking: how soon can I make some decision to do some sort of a treatment, essentially? Like whether in the first 10 days, first 15... That's what his thought was also—Ashish's thought when we were discussing with him. He was like: "Give me like 10 days, 15 days, 30, 45," and so on.
+
+[22:58] Karthikeya: I think he was more looking towards a pattern. He was trying to understand the pattern before recommending the treatment. I think we are going to the second-level ask. So let's start with something very basic, probably 30 days or 90 days of data, and let's see how the pattern looks like. If we are able to decipher something out of it, then we can move to the second step: when exactly this pattern is supposed to be used in order to make judgment on when exactly we need to pitch.
+
+[23:34] Nitesh: Okay. So let's do one thing. Instead of making any progress today—obviously if we start doing something today, we will be only able to update Sonal or Anju on Monday, fair? That there is something that we are working towards. Let's do one thing: let's summarize that this is the approach that we are planning to work on. We have 90 days of data. We are looking at transaction-level information. These are the feature sets that we are trying to look across, and try to come up with:
+a) What is the condensed vector representation of each and every card member?
+b) Then based on their actual GCM, we will be trying to cluster customers together which are representative, with an objective function of high GCM, and try to see what exactly are the behaviors or the features that are prominent within that cluster.
+And then we can compare essentially across top or bottom, which are the feature sets that are potentially different.
+
+[24:32] Nitesh: That is the approach that we are following, and we are looking at transaction-level information. We are starting with a 90-day window to come up with initial set of vectors and initial set of pattern recognition here. So are they aligned with the feature set, as well as with this algo? Reason for that is that yesterday in Ashish's call, Anju was of the opinion that we are doing 14-month Sage; he was of the opinion we are doing daily level. So I just want to bring them on board that this is something we are doing, and we get the right narrative with them, right? Agreed?
+
+[25:08] Karthikeya: Okay. Let's do that. Cool.
+
+[25:12] Ishan: One call out is, Karthikeya, to your point, like one transaction can't be split into different categories, but I think those categories are not mutually exclusive. The reason being we have separate bonus category, top 10 cert, and an intersection of both. So we need to prioritize...
+
+[25:26] Karthikeya: No, no, no. Even in that scenario, we can create different indicators for each, right?
+
+[25:31] Ishan: Yep. But just wanted to call out.
+
+[25:33] Karthikeya: Makes sense. Absolutely, yeah.
+
+[25:36] Nitesh: So all these categories summed together won't reach you to the overall spend, or it might overshoot also. Fair to say?
+
+[25:42] Ishan: Why?
+
+[25:44] Nitesh: They are not mutually exclusive, fair?
+
+[25:48] Ishan: Okay.
+
+[25:49] Nitesh: So it can be, say like, if I'm saying COGS, admin, fixed—this plus others can reach up to the total spend amount in a day, okay? But if I talk about a separate category altogether, like COGS into top 10 cert—if that transaction happened of $100, it can belong to only one type of industry within top 10 cert, or it can be COGS, right? So that amount, if I'm categorizing as COGS into top 10 cert, then that amount is completely MECE. Fair?
+
+[26:23] Nitesh: It won't belong to... It can be part of COGS as separate, but COGS into top cert will be one transaction itself. Fair?
+
+[26:34] Ishan: Yep.
+
+[26:34] Nitesh: Because think about one transaction: I'm categorizing one transaction either it is COGS or top 10 cert; it can have one flag for both of them. Right? Same way.
+
+[26:41] Ishan: Yep, got it. Yep.
+
+[26:46] Karthikeya: So I do have some list of variables. Let me share my screen for just 2 minutes.
+
+[26:50] Nitesh: Let's go ahead.
+
+[26:55] Karthikeya: Yeah, I think these are the ones which I was thinking which we can have. CM11 we don't have to keep it, like this is just an identifier.
+
+[27:03] Nitesh: This can be a surrogate key, like CM11, that doesn't matter, right? Yeah. Merchant ID...
+
+[27:08] Karthikeya: Merchant ID, but we still want to have it. Merchant industry. Spend category means COGS and admin; whatever those variables are, we can just put it over here. Either we can put binary indicators for each of them. Then transaction amount bucket: we can create three, four, five... I think five different set of buckets would be good. Like less than 100, 100 to 1,000, something like that we can create. An online/offline indicator, whether that transaction was done in an online way or an offline way. Then comes the distance to the physical merchant. Whichever merchants we have, we have their corresponding SE10s. Let's use that information as well.
+
+[27:46] Nitesh: Distance to physical merchant? Customer's distance to merchant?
+
+[27:49] Karthikeya: Customer's distance to merchant.
+
+[27:51] Nitesh: Okay. How will I get that? That's what I'm just thinking.
+
+[27:54] Karthikeya: We have the zip code for customer, and we have the zip code for the merchant.
+
+[27:59] Nitesh: Okay, that's fine. Zip code to lat-long, and lat-long to distance.
+
+[28:04] Karthikeya: I have already shared code on Teams as well.
+
+[28:09] Nitesh: Okay, perfect. Perfect.
+
+[28:10] Karthikeya: The only thing which I don't know is how will you get the SE10's zip code and customer's zip code. Once you have the zip codes, then you can use that exercise.
+
+[28:19] Nitesh: SE10 zip code and merchant zip code...
+
+[28:23] Karthikeya: I think I have the code, it's just that it's only available for proprietary merchants, not for other merchants. Because I don't have access to that. So there's a GMNS merchant car, I think that's the table name. I can confirm.
+
+[28:36] Ishan: Uh but, Karthikeya, this is only relevant in case of a physical transaction, right? If I'm doing an online sort of transaction it doesn't matter like if I'm sitting in Delhi and doing a transaction in the US.
+
+[28:44] Karthikeya: Yeah, we can forcefully make it null, right?
+
+[28:49] Ishan: Hm.
+
+[28:56] Karthikeya: So for distance, we were using this one: GMNS merchant car. But I was only able to get it for proprietary merchants, not for OptBlue merchants or third-party recipients. So we need someone who has this access as well, because more the merrier kind of situation.
+
+[29:16] Nitesh: So you are getting this at an SE10 level?
+
+[29:19] Karthikeya: Zip code at an SE10 level, and the same zip code can be fetched for the customers as well. I think even the tagging file has the zip code for the customers.
+
+[29:29] Nitesh: Okay. Okay, we can use that.
+
+[29:32] Karthikeya: Theek hai. And the rest of the code I've already shared on Teams. So that should be good. Now, let me open the Excel. Then we have the new and repeat merchant indicator, whether that earlier transaction is the first one or the repeat one.
+
+[29:46] Nitesh: Excellent.
+
+[29:46] Karthikeya: Days since previous transaction; days since the previous transaction with the same merchant.
+
+[29:53] Nitesh: This is interesting. This is interesting. Days since previous transaction with the same merchant. Okay, done.
+
+[29:59] Karthikeya: Then we have the merchant transaction count to date, like how many number of transactions a customer has done with the merchant.
+
+[30:05] Nitesh: Sort of a cumulative. Theek hai.
+
+[30:07] Karthikeya: Days since acquisition. These are the customer profile variables: revenue and industry. And then finally, number of distinct merchants the customer has made till date.
+
+[30:22] Nitesh: Number of distinct merchants till date. Okay. Can you also add number of B2B merchants? Wherein if anything that happens on COGS, admin, or fixed, those merchants are B2B merchants. But any other spend, that can be non-B2B.
+
+[30:43] Karthikeya: You say COGS, admin, and fixed?
+
+[30:49] Nitesh: Fixed. Yeah.
+
+[30:51] Karthikeya: Okay, got it. Yeah, then we can use that in order to identify this as well. I think this would be good enough for us to start. And then if later we need anything else, then we can do it as well. My point is, whatever inference that we are going to get, it will come from this only: that previously the customer was making a spend in this industry, then it moved to some other industries; or what kind of spend category they were spending upon; whether they are actually doing a lot of transactions on new merchants or repeat merchants. That sort of meaning we can have.
+
+[31:24] Nitesh: Correct. Correct.
+
+[31:25] Karthikeya: So this is going to be something which we are going to find inference on. So this is relevant. I'm going to put this as well on the Teams group. Any other suggestion on the data part that you think we need apart from this?
+
+[31:51] Nitesh: Hema, in your data set which you shared yesterday, right? What you shared would be a subset of this, right?
+
+[31:59] Hema: Yeah, not all. Some are there.
+
+[32:02] Nitesh: Not all. Okay, done. So what are the features that you already shared? Can you tell me?
+
+[32:08] Hema: Yeah, so I think I have the merchant ID, spend category...
+
+[32:13] Karthikeya: I do have this data. Hold on. So let me just put side-by-side so that we can compare easily. Days since acquisition, this is done. You have the total spend, it's fine. Recurring—these indicators can be done by this, like this is done. Recurring, bonus, COGS.
+
+[32:41] Nitesh: Done. Okay.
+
+[32:43] Karthikeya: B2B spend... Again, a lot of these features have to be calculated, Nitesh. Like, these are not directly available.
+
+[32:50] Nitesh: Correct, correct, correct.
+
+[32:51] Karthikeya: The level of data itself is different, right? So it needs to be tested in a good way back again.
+
+[32:59] Nitesh: Got it. Got it. I think could be done. You already have transaction-level data, Hema, right?
+
+[33:04] Hema: Yeah.
+
+[33:06] Nitesh: Okay. So all we need is maintain it at a transaction level and don't do that aggregation, like that CASE WHEN statement which we were doing, fair?
+
+[33:12] Hema: Yes, yes.
+
+[33:13] Nitesh: If you remove that, then you get the most granular information.
+
+[33:17] Hema: Yeah.
+
+[33:17] Nitesh: And then in the spend category, I would say have COGS, admin, fixed also, and then the others. That discrimination. Then you have COGS in top 10 cert, bonus category—okay, that is also good. Then you have online indicator. Okay, so there is this online spend indicator as well, right, that we have?
+
+[33:38] Karthikeya: Yeah, I think he had that. Where is it?
+
+[33:44] Hema: No, it's not there, actually.
+
+[33:46] Nitesh: It's not there. But I think in the raw data, if I want to fetch, I do have that online spend indicator.
+
+[33:52] Hema: Yeah.
+
+[33:53] Ishan: Yep, so basically there are three or four kinds of spend: online, physical, CNP (which is card not present), and I think others. So we can tag accordingly.
+
+[34:02] Nitesh: Yes, then we should have that categorization, right?
+
+[34:06] Karthikeya: Then that categorization will directly come over here, right? All the four.
+
+[34:10] Nitesh: Yes.
+
+[34:11] Ishan: Yep.
+
+[34:14] Nitesh: Okay, done. Then you have the merchant ID and the merchant name, correct?
+
+[34:19] Hema: Yeah.
+
+[34:20] Nitesh: Then essentially try to get the merchant zip code as well.
+
+[34:24] Hema: Yeah, for that... who would be the right person to get that information for this?
+
+[34:33] Nitesh: You have this SE10, right? SE10 of that merchant?
+
+[34:36] Hema: Yeah, in the data it's there, yeah.
+
+[34:41] Nitesh: Yeah, so if you have the SE10, then essentially from this table which Karthikeya shared, GMNS merchant car, from there you can get the zip code of that. Okay?
+
+[34:50] Hema: Okay.
+
+[34:52] Nitesh: And then for CM11, you can get this from either Risk New Account or from CUST360: what is the billable zip code or home zip code that this person has put across. Okay?
+
+[35:08] Hema: Got it.
+
+[35:09] Nitesh: That is the zip code of the card member from where they are actually doing the transaction, or where they are actually residing.
+
+[35:16] Hema: Merchant industry also, yeah.
+
+[35:20] Nitesh: Yeah, merchant industry you will also get. Then merchant transaction count till date.
+
+[35:26] Hema: We also need to add the card member industry as well, right?
+
+[35:30] Karthikeya: Yes, we need to put that as well.
+
+[35:33] Nitesh: So for that card member industry, you can ask Jai Vishal or Shalinder; they already have that for each and every card member.
+
+[35:40] Hema: I had that, I just didn't add that data, that's it.
+
+[35:42] Nitesh: Yeah, done. That's great. Okay.
+
+[35:47] Jai: Days since previous transaction with the same merchant should be with the same merchant industry, right? Not the exact name. Because when you are matching the names, there might be some errors, right?
+
+[35:58] Hema: Even I was thinking.
+
+[36:00] Karthikeya: I didn't understand, come again?
+
+[36:02] Jai: So you have written "days since previous transaction with the same merchant" on the 18th row, right? It should actually be with the same merchant industry, maybe SIC4 we can do if you want more granularity. It should not be with the same merchant name. Because I've seen multiple times the merchant names are different when logged—sometimes there will be an extra exclamation mark.
+
+[36:24] Karthikeya: No, but that's why we have a merchant ID, right, which we call SE10. We can use that variable, SE10, in order to find whether it's actually a previous transaction on the same merchant or not. We don't need to depend on the name.
+
+[36:36] Jai: But at least if it's from the same industry, then that information will be more relevant to us, right, than the name of the merchant?
+
+[36:45] Karthikeya: If you want, we can put that as well—one more variable.
+
+[36:48] Jai: Yeah, we can maybe add an additional row with same merchant industry.
+
+[36:52] Jai: Okay, I got it. With SE10 we can do that for the merchant name, and then SIC4 we can get for merchant industry.
+
+[37:00] Karthikeya: Merchant industry. Okay.
+
+[37:02] Nitesh: I think there is merit in both. Say like if I look at SE10 level, right, and if I'm residing within two nearby zip codes and that's like a 10 km distance that I have, and I'm doing with the same merchant, that is a more resonating fact that I'm doing this in my vicinity, right? If I'm just looking at the same merchant. Same merchant industry can be a little broader. But when I'm thinking from execution perspective—like early tenure curriculum, when the sales rep will call—they won't talk about the same merchant name; they will say "do this in this merchant industry." So from execution perspective, row 19 works; from understanding how closer a merchant has to be for a particular card member, 18th row works.
+
+[37:54] Karthikeya: Makes sense. Let's have both in that scenario.
+
+[37:58] Nitesh: Okay. Cool. This looks good. Hema, tell me now one thing: you will be able to get everything that is being mentioned out here, right?
+
+[38:11] Hema: Yeah.
+
+[38:12] Nitesh: Okay. Do you foresee any challenge to get this info?
+
+[38:15] Hema: No, I think I can get. Only the zip code and the industry that as Karthikeya said, I think we're good.
+
+[38:24] Nitesh: Okay, cool. So essentially try to get this data as soon as possible, Hema.
+
+[38:30] Hema: Okay.
+
+[38:31] Nitesh: Secondly, Karthikeya, should we follow the same transformer architecture that we were using with earlier Sage setup, or should we use TIS-Asgard here? Just want to understand during the day if these guys can help in running some framework...
+
+[38:49] Karthikeya: TIS-Asgard is definitely helpful. We should not let go of TIS-Asgard.
+
+[38:58] Nitesh: Okay, cool. So Uma has that framework. What I'll do is I'll try to see if I can get this into that framework for TIS-Asgard today, if I get this data. And then we will send across that information to you guys.
+
+[39:15] Karthikeya: Got it. Then on Monday we can pick up the clustering piece. But, Nitesh, I don't think this can be done by Monday for sure. It will take time.
+
+[39:25] Nitesh: I'm not even asking that. I know, that's completely fine.
+
+[39:32] Karthikeya: Now with respect to updating Sonal and Anju as well: Jai, can you please help in writing that email for her? Explaining what exactly we are planning to do. And then you can send it across to me and Nitesh first, and when we say yes, then please forward it to Anju as well. That would work, right?
+
+[39:52] Jai: Okay. Yeah, yeah. Yep.
+
+[39:54] Karthikeya: Perfect.
+
+[39:55] Nitesh: That works, yes. Cool.
+
+[39:57] Karthikeya: Theek hai. Anything else?
+
+[40:00] Nitesh: Ha, one thing, Karthikeya: next week I'm on off.
+
+[40:04] Karthikeya: Entire week?
+
+[40:05] Nitesh: Entire week, yes.
+
+[40:07] Karthikeya: Oh. I wasn't aware. [laughs]
+
+[40:10] Nitesh: Yeah, so I think I'm giving this information late, I should have told earlier. But essentially next week there was some plan that we did 2 months back, can't move it around, there's multiple commitments that I have. So I'll be out next week. But essentially, I'm already trying to onboard Stephanie from here to understand how the algo works. She might not have the technical details out of it, but at a broader level she's understanding as to what exactly we are trying to do here. That is developing patterns, trying to contextualize it, and then getting the feature set which actually tells me what is the difference between high and low GCM. Okay?
+
+[40:52] Karthikeya: Got it.
+
+[40:53] Nitesh: So she's onboard with that idea. But in terms of for Hema and Uma from here to operate, I have asked her if she can give them proper guidance during the day if they get stuck at any point in time. But in case, supposedly your morning and Hema's late night—because I got to know from Hema that he sleeps late, he definitely doesn't sleep early—if there are any follow-ups that Hema has or any issues that he has, he can translate that to you during his night so that you can take over during the day, right?
+
+[41:36] Nitesh: And if you have any follow-ups for him on technical grounds, or for Uma—be it you want them to run any algorithm or you want them to prep any data—you can tell them directly as one instruction that this is something we need, and loop in Stephanie. That Slack channel I'll be constantly checking, so don't worry on that part. If there is anything where I can help, I'll try to pitch in. Okay?
+
+[42:03] Karthikeya: Yeah, that works.
+
+[42:04] Jai: That works.
+
+[42:05] Hema: Sure.
+
+[42:07] Nitesh: Okay, cool. Then see you next Monday.
+
+[42:11] Karthikeya: Yeah, thanks guys.
+
+[42:13] Nitesh: And yeah, in case of any questions or concerns, let us know. I know there will be feedback from Ashish again, but let's see how that meeting goes.
+
+[42:26] Karthikeya: Yeah, I'm pretty sure next week they want to have some meeting, right?
+
+[42:30] Nitesh: Yeah, yeah. Next week... I think there is one meeting today on Sage. That is like a broader Sage meeting that is happening. Amit Srivastava forwarded that to me, and Vineet said: "Do you have updated results on early tenure?" I'm like: "Dude, yesterday I got a feedback. I don't have anything." [laughs]
+
+[42:52] Karthikeya: [laughs] I think that works.
+
+[42:55] Nitesh: Cool. Theek hai, guys.
+
+[42:58] Karthikeya: Okay, then. Thank you, Nitesh. Thank you, Stephanie.
+
+[43:00] Jai: Thank you.
+
+[43:00] Karthikeya: Jai, please share that email today only, okay? To me and Nitesh.
+
+[43:03] Jai: Yeah, yeah, I'll have a draft for you guys ready in 1 hour. I'll send it to you.
+
+[43:08] Karthikeya: Sure.
+
+[43:09] Nitesh: Okay, cool.
+
+[43:10] Karthikeya: Thank you, then.
+
+[43:11] Nitesh: Thank you, guys.
+
+[43:13] Jai: Thank you, Karthikeya.
+
+[43:14] Nitesh: Anchal, can you stay over? Like we can... Achha, she dropped off. She is gone. [laughs]
+
+[43:19] Jai: Okay. [laughs]
+
+[43:20] Jai: Chalo, bye Nitesh, bye Hema.
+
+[43:21] Hema: Bye.
+
+[43:22] Karthikeya: Bye, Nitesh.
+
+[43:23] Nitesh: Take care, guys. Thanks, Jai. Thanks, Hema.
+
+[43:26] Hema: Thank you.
+
+[43:29] All: Bye.
+================================================================================
