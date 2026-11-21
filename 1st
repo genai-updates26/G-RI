@@ -1,89 +1,1679 @@
-**Speaker 1:** You try to understand what kind of triggers she's looking for. And we've created some sort of a framework around it because the idea is we also want to put down tiers as well. Because tiers are relevant. We got her feedback as well, like how we can incorporate it. So we wanted to get your alignment that whether that tier framework is good enough for us. If yes, then how exactly other things are going to pan out. That's the intent of this discussion. So let me just share my screen.
+00:00:00,000 --> 00:00:09,920 [Speaker 0]
+[notification sound] Hi, Nitish. 
 
-**Speaker 2:** Is that based on, so we had sent an email, we have done some work the three of us, and then as a follow, this is a follow-up to that or have you had conversations without me since that email?
+00:00:11,040 --> 00:00:11,880 [Speaker 1]
+Hey. Hi, Ima. 
 
-**Speaker 1:** No, after that email, we had other conversation directly.
+00:00:12,100 --> 00:00:12,300 [Speaker 0]
+Hi. 
 
-**Speaker 2:** Look at you guys, can you see you over there? I love it. Okay, so this is post that email, post conversations, now I'm just kind of going to kind of look and digest it.
+00:00:14,020 --> 00:00:14,460 [Speaker 1]
+What's up? 
 
-**Speaker 1:** Yes, we want your final alignment, like we just want to discuss first and align within ourselves, and then we wanted to get your alignment, that was the intent.
+00:00:15,380 --> 00:00:16,180 [Speaker 0]
+Nothing much. What happened? 
 
-**Speaker 2:** Sounds good.
+00:00:16,180 --> 00:00:20,820 [Speaker 1]
+[laughing] What, what do you expect it would happen? 
 
-**Speaker 1:** Okay. Let me, like we have created a small deck for this, so let me just bring that up. Can you see my screen?
+00:00:21,760 --> 00:00:24,940 [Speaker 0]
+Yeah. At least you got a chance to explain things or... 
 
-**Speaker 2:** Yes.
+00:00:24,940 --> 00:00:29,100 [Speaker 1]
+[clears throat] So essentially, 
 
-**Speaker 1:** Yes. So, there are three primary components here. The first is just the trigger types, like what all different types of triggers that we are going to talk about. Then the second is more about talk about like how the tier cross insights framework would work. And the third component is more about like what exactly we think that we can achieve in Q1 2027.
+00:00:30,480 --> 00:00:32,439 [Speaker 1]
+when I started showing the deck to Sonal- 
 
-Okay? Now, let me just directly jump to that trigger then. So, we have we have divided everything into three types of triggers: activation, risk, and growth. I realize that the time when we say adoption, and when this team is saying adoption, they can mean different things. Similarly, utilization can also mean different things. We wanted to ensure that the definitions that we are using on our side versus your side, like that is to be aligned. So, that's why these are the three categories that we have said.
+00:00:32,700 --> 00:00:33,020 [Speaker 0]
+Mm-hmm. 
 
-One is called activation. Activation is everything related to the until the deployment phase. So, anything which is not going correct for the customer because of it, the customer is not able to successfully deploy it on the on the platform. That's what we are calling as, okay, those are the different areas in which the customer can have some problem, and then we can create triggers out of those.
+00:00:33,020 --> 00:00:37,100 [Speaker 1]
+-she was like, "You are throwing a lot of information at me- 
 
-So, these all kind of triggers which are responsible for customer being a successful deploy being successfully deployed, those are called activation based triggers. Then comes the risk based triggers or we call them as under utilization. The intent is once the customer is successfully deployed, then let's say they are not using the platform that often. They're having some limit relation, like they're using lower limits, they're not logging in on the platform a lot of times. Those sort of things will go under the risk aspect.
+00:00:37,380 --> 00:00:37,600 [Speaker 0]
+Mm-hmm. 
 
-And and the third aspect is a growth part, where we say that, okay, the customer is actually has activated, they are not under utilizing the product as well. Now, there's a time that we should engage with them in order to cross-sell them something else. So, either we can increase their line limits, or we can provide them some, let's say, we can try to on-board them on the API automation product and so on. So, that is the third pillar of treatments that we can have.
+00:00:37,600 --> 00:00:38,900 [Speaker 1]
+-which I'm not able to understand." 
 
-We are using treatments and triggers more or less in the same way, like for us triggers and treatments are same.
+00:00:39,240 --> 00:00:39,780 [Speaker 0]
+Mm-hmm. 
 
-Now, uh we want you to understand first of all, like when it comes to the treatment well, when it comes to activation based triggers, I understand the digital deployment team will be the primary responsible for these type of triggers. They will consume these, and they will have a conversation with the customers. Will ensure that the customer built whatever roadblocks the customer has, those get solved and the customer get successfully deployed.
+00:00:39,780 --> 00:00:41,900 [Speaker 1]
+"Do you have any results?" Okay. 
 
-But when it comes to the risk aspect, here the situation is slightly tricky. So, let's say we provide a trigger, and we notice that, okay, customer is not have not logging in on the platform for a longer duration, let's say for more than 21 days, uh then the digital deployment team, they're having a conversation with the customer, and the customer says that, look, like I am not uh I'm not I'm feeling stuck on a particular piece because of which I'm not using the platform.
+00:00:42,120 --> 00:00:42,440 [Speaker 0]
+Mm-hmm. 
 
-Then I completely agree that the digital deployment team can try to solve that particular roadblock and make sure that the customer starts to spend once again on that platform, or highly engages with them.
+00:00:43,040 --> 00:00:47,780 [Speaker 1]
+So I showed her the results that we had, like from all the four approaches. 
 
-But just in case if there's a situation where the customer says, look, your limit that you have provided us is very low, and because of which I'm not using the platform. Now, in this scenario, as for my understanding, the digital deployment team will involve the associated account developer, they will, and they will be on-boarded in this conversation. That's not the case.
+00:00:47,980 --> 00:00:48,200 [Speaker 0]
+Mm-hmm. 
 
-Now, what will happen in this, in that scenario?
+00:00:48,940 --> 00:00:54,860 [Speaker 1]
+Then she was like, "How come there can be like four outcomes from, uh, for the same thing?" 
 
-**Speaker 2:** Digital deployment manager is pushing that.
+00:00:55,940 --> 00:01:05,560 [Speaker 1]
+So I explained to her that all the four approaches, or say like three approaches that we have taken, essentially requires us different inputs of the data- 
 
-**Speaker 1:** Digital deployment managers will be, because that will be an opportunity of some sort, right? Because if we are saying that, okay, I'm going to create a new increased limit for you, that's a new treatment, right? At least in TC, maybe those kind of treatments gets uh they get prioritized by the respective account developers or the, their colleagues.
+00:01:05,900 --> 00:01:06,380 [Speaker 0]
+Mm-hmm. 
 
-**Speaker 2:** Yes, so remember, so we are kind of evolving, so today these are accounts that today let's just focus solely on net new accounts. So, because everything that will happen in the next probably I would say let's say eight months is net new. We will eventually have to treat existing customers. And so what we have agreed upon for roles and responsibilities is we will own those opportunities. We will not, we will call them entrenchment opportunities, and we're only identifying a few of them. We've got about six that we're identifying that we're saying, okay, through this digital deployment, which is 13 full months, we are focusing on activation, we are focusing on risk, and yes, when we identify these growth opportunities or entrenchment opportunities, we will flag them, we will log them. They're one of six, they are not the same ones that the 80s do, because we don't, I'm not saying I don't believe, I'm saying we think we want to focus on certain six of them, except versus or five of them versus a whole nine of them, right? I want to focus in on where we can make the most impact.
+00:01:06,380 --> 00:01:10,280 [Speaker 1]
+-different trainings, and hence that's why the outcomes are different. 
 
-And so we will be flagging those as entrenchment opportunities, and then we are going to use the rise functionality and all of the same space functionality. They're just going to be attached to an entrenchment opportunity versus a CV signing or whatever we call that.
+00:01:10,660 --> 00:01:10,900 [Speaker 0]
+Yeah. 
 
-And so we will still be doing growth opportunities. We're just kind of doing them in a different way.
+00:01:10,900 --> 00:01:14,460 [Speaker 1]
+Okay? And the way to interpret those outcomes is also different. 
 
-**Speaker 1:** Got it. So, like not all the types of growth opportunities you will be doing, only a subset of them, that's the idea, right?
+00:01:14,940 --> 00:01:15,560 [Speaker 0]
+Mm-hmm. 
 
-**Speaker 2:** Yes. And we can send those over to you, yes.
+00:01:15,580 --> 00:01:17,960 [Speaker 1]
+Okay? So then she was like, uh, 
 
-**Speaker 1:** That would be very helpful. Okay, I was under the impression that probably like those are the ones which uh AD team would be taking care of. That was the intent.
+00:01:19,440 --> 00:01:19,860 [Speaker 1]
+"Okay, 
 
-**Speaker 2:** Yeah, because you have to, so what we, so again, the AD doesn't get assigned for a long period of time from that net new sales, right? And so that AD won't even it won't even be a managed customer yet, because it will still be sitting in the tracking period of the seller. And that seller is now going to hand all that over to us.
+00:01:21,040 --> 00:01:26,400 [Speaker 1]
+I understand that point that, okay, there can be different outcomes, but which outcome makes the most sense?" 
 
-Now, they're saying you guys manage the growth of that customer. Yes, I'm still getting paid and tracked on it, but I'm working in concert and partnership with you because you're the best to do it right now. I got to go sell new deals.
+00:01:27,140 --> 00:01:27,660 [Speaker 0]
+Yeah. 
 
-**Speaker 1:** Got it. So, AD really more like uh they will take a back seat on these customers, probably the digital deployment team would be the primary person, like they would be the ones who will be providing all those treatments to those customers, even for certain growth triggers as well. Is that understanding correct?
+00:01:27,660 --> 00:01:29,920 [Speaker 1]
+If I ask you this question, what will be your answer? 
 
-**Speaker 2:** Yes, and they're and the ones I'll just be so we can not speak in generalities. Increase line, so underrating, so if they need more line, we will absolutely grow customer that way. Um, expense management add-on, if at the beginning they say, I don't want expense management, and then month four, we're having a conversation with them and they want expense management, that's an additional one. Bill pay is an additional one, which is something you have here, API automation. Um, supplemental cards is one that we after deployment. So, after they're through deployment. So, after they're through deployment, we could say, okay, we've already, let's issue you 20 cards, but let's say in six months you want four more cards, let's talk about that and get those growing. And then the last one is a multi-remit and a pay down. Maybe they didn't know, they can multi-remit. So, those are the five that digital deployment and software engagement will both be focused on for 2027. We may grow that out in 2028, but those are the ones that we're going to focus in on year one.
+00:01:31,200 --> 00:01:34,100 [Speaker 0]
+Uh, I would say Shapley, if I'm thinking now. 
 
-**Speaker 1:** Okay. Perfect. Then I think this makes total sense.
+00:01:35,720 --> 00:01:37,080 [Speaker 1]
+You are thinking Shapley, right? 
 
-Then what we can say is that for Q1 2027, I still like uh not Q1 2027, like let's like uh not Q1 2027, like let me talk about that later.
+00:01:37,120 --> 00:01:37,380 [Speaker 0]
+Mm-hmm. 
 
-Now, let's talk about each of these triggers, like what is the primary KPIs for us to understand whether those triggers are actually working or not. Rather than having all those different triggers, we thought like we should only be having one probably because that will help us in order to identify whether that trigger is whether the selection criteria is working good or not.
+00:01:37,720 --> 00:01:39,440 [Speaker 1]
+Kartikay is not on the same page. 
 
-In order to check whether the performance is good or not, that's a different thing altogether. We can have all the bunch of all the bunch of KPIs for the digital deployment team. But when it comes to selection, whether that particular trigger is actually improving that thing or not, we should ideally be focusing upon one type of KPI.
+00:01:39,500 --> 00:01:39,680 [Speaker 0]
+Yeah. 
 
-So, for activation, we are saying that, okay, time to successful deployment or successful on-boarding.
+00:01:41,160 --> 00:01:41,440 [Speaker 1]
+Okay. 
 
-For risk, we were initially thinking of using Y2 IRR, like what is the incremental revenue that we are able to drive because of uh the risk that we have eliminated using these triggers. So, let's say if the customer is not logged in for 21 days, right? We provided a trigger, and eventually whenever the sales guy would be having that conversation with the customer, eventually that increased the engagement with the customer, hence they will be an associated CV improvement with that customer, right? So, we were thinking of map try to cover that up using the incremental revenue for year two for that customer.
+00:01:42,580 --> 00:01:47,800 [Speaker 1]
+Now, essentially, what should I show to Ashish? Because next Wednesday I have a meeting with him. 
 
-Does it make sense?
+00:01:48,460 --> 00:01:49,120 [Speaker 0]
+Coming Wednesday. 
 
-**Speaker 2:** Year two is, what do you mean by year two?
+00:01:50,200 --> 00:01:51,080 [Speaker 1]
+Coming Wednesday. 
 
-**Speaker 1:** So, it's actually year one, it's not year two, it's more about like how much incremental we are able to drive because of that.
+00:01:51,320 --> 00:01:51,400 [Speaker 0]
+Oh. 
 
-**Speaker 2:** How would you define incrementality? Would you just say month-over-month or what? What do you, what is your, what is your incremental? Is that just month-over-month spend? Or what? What do you, what is your, what is your incremental? Is that just month-over-month spend? Or what? What is your incremental?
+00:01:51,420 --> 00:01:51,660 [Speaker 1]
+Okay. 
 
-**Speaker 1:** So, I think like when we when we uh when we discussed regarding the KPIs for digital deployment team, one of the one of the variables was a CV growth as well, right? The intent is to use that variable over here, like this is like a proxy as of today. But we want to use that variable here in order to see whether those triggers are working or not.
+00:01:52,800 --> 00:01:59,220 [Speaker 1]
+I have already forwarded that invite to Kartikay. It is like right now only it was kept for only Anju and Sonal- 
 
-**Speaker 2:** Okay.
+00:01:59,600 --> 00:01:59,760 [Speaker 0]
+Mm-hmm. 
 
-**Speaker 1:** Um, we can do that. We're kind of doing that through our, we've got two kind of, when you think of CV targets, we've got just a whole holistic portfolio to say, you've been assigned 120 accounts. How are those, what's that portfolio looking like? Is it decreasing or is it increasing? Like the one big bucket. And then we have an additional metric, kind of like if you think of AD, which is incremental CV, which is incremental CV, which is going to be tied to those entrenchment opportunities. So, that's more on the growth pillar than it is the risk pillar. So, I would buy our focus of CV to the risk pillar because that's just spending and we're not breaking down and we're spending. The growth is we're talking to them about underwriting, we're talking to them about increased supplemental cards, we're talking to them about EVM when they don't have EVM. Makes sense.
+00:01:59,760 --> 00:02:01,900 [Speaker 1]
+-but they forwarded it to me and Stephanie- 
 
-**Speaker 2:** I think for growth like we are, we are actually talking about those signing dates on those entrenchment opportunities only, that was the intent. For risk, probably like we need to use a better variable or better better KPI, which captures the CV growth of that customer.
+00:02:02,260 --> 00:02:02,700 [Speaker 0]
+Mm-hmm. 
+
+00:02:02,700 --> 00:02:04,440 [Speaker 1]
+-and I forwarded it to Kartikay as well. 
+
+00:02:04,720 --> 00:02:04,940 [Speaker 0]
+Okay. 
+
+00:02:04,940 --> 00:02:05,460 [Speaker 1]
+Okay? 
+
+00:02:05,480 --> 00:02:05,700 [Speaker 0]
+Mm-hmm. 
+
+00:02:06,480 --> 00:02:12,800 [Speaker 1]
+So right now it is like 40 plus. I don't know whether they would en-encourage like more people to join in. 
+
+00:02:13,120 --> 00:02:13,280 [Speaker 0]
+Yeah. 
+
+00:02:13,280 --> 00:02:18,900 [Speaker 1]
+But right now I think it is more around so like understanding what exactly needs to be done because there is a Heather update- 
+
+00:02:19,500 --> 00:02:19,640 [Speaker 0]
+Mm-hmm. 
+
+00:02:19,640 --> 00:02:22,460 [Speaker 1]
+-that is slotted for 20th of January. 
+
+00:02:23,200 --> 00:02:23,500 [Speaker 0]
+Okay. 
+
+00:02:23,640 --> 00:02:23,720 [Speaker 1]
+Okay? 
+
+00:02:24,600 --> 00:02:24,740 [Speaker 0]
+Okay. 
+
+00:02:24,740 --> 00:02:33,220 [Speaker 1]
+So for that update, we need to prep starting now because after like, what, 15, 20 days people are going on off, right? 
+
+00:02:33,500 --> 00:02:33,760 [Speaker 0]
+Yeah. 
+
+00:02:35,100 --> 00:02:41,020 [Speaker 1]
+Okay. So from that perspective, I wanted to showcase to her that what exactly we have done. Okay? 
+
+00:02:41,360 --> 00:02:41,400 [Speaker 0]
+Mm-hmm. 
+
+00:02:41,400 --> 00:02:43,520 [Speaker 1]
+So this is something I was able to cover with her. 
+
+00:02:43,880 --> 00:02:44,060 [Speaker 0]
+Okay. 
+
+00:02:44,080 --> 00:02:44,780 [Speaker 1]
+The only things. 
+
+00:02:45,800 --> 00:02:59,740 [Speaker 1]
+Okay. And you can make notes as to what exactly she gave as a feedback. I was trying to cover this, then she got lost here. Then essentially I went directly to these results. 
+
+00:03:00,500 --> 00:03:00,560 [Speaker 0]
+Mm-hmm. 
+
+00:03:00,580 --> 00:03:01,640 [Speaker 1]
+The first approach. 
+
+00:03:01,660 --> 00:03:01,760 [Speaker 0]
+Mm-hmm. 
+
+00:03:01,780 --> 00:03:08,660 [Speaker 1]
+I told her that, okay, this is the GCM it is adding, and these are the top five features which is adding value. 
+
+00:03:08,700 --> 00:03:09,180 [Speaker 0]
+Mm-hmm. 
+
+00:03:09,220 --> 00:03:14,480 [Speaker 1]
+And these are the days in which... But essentially it is telling me that later activation works. Okay? 
+
+00:03:14,540 --> 00:03:15,240 [Speaker 0]
+Yeah. 
+
+00:03:15,260 --> 00:03:18,220 [Speaker 1]
+Hence, we changed our approach slightly- 
+
+00:03:18,600 --> 00:03:18,640 [Speaker 0]
+Mm-hmm. 
+
+00:03:18,640 --> 00:03:24,820 [Speaker 1]
+-to go towards this segment wherein like we were taking combinations of this one. Okay? 
+
+00:03:25,680 --> 00:03:25,740 [Speaker 0]
+Okay. 
+
+00:03:25,740 --> 00:03:29,120 [Speaker 1]
+The moment I reached here, she was like, "It is way too much overload for me." 
+
+00:03:29,500 --> 00:03:29,840 [Speaker 0]
+Oh. 
+
+00:03:29,840 --> 00:03:31,600 [Speaker 1]
+Okay? "I'm not able to process." 
+
+00:03:32,000 --> 00:03:32,740 [Speaker 0]
+Mm-hmm. 
+
+00:03:32,860 --> 00:03:37,300 [Speaker 1]
+Uh, and, uh, that discussion, right, which was happening earlier- 
+
+00:03:37,920 --> 00:03:38,280 [Speaker 0]
+Yeah. 
+
+00:03:38,280 --> 00:03:43,080 [Speaker 1]
+-uh, wherein they were discussing markers, that discussion continued till 
+
+00:03:44,480 --> 00:03:45,800 [Speaker 1]
+almost end of that meeting. 
+
+00:03:46,080 --> 00:03:46,340 [Speaker 0]
+Okay. 
+
+00:03:46,340 --> 00:03:47,500 [Speaker 1]
+When I started speaking- 
+
+00:03:47,880 --> 00:03:48,040 [Speaker 0]
+Mm-hmm. 
+
+00:03:48,040 --> 00:03:54,440 [Speaker 1]
+-like I just got only five, 10 minutes. I extended it to 15, but that was the max that I could get. Okay? 
+
+00:03:54,920 --> 00:03:55,140 [Speaker 0]
+Yeah. 
+
+00:03:55,140 --> 00:04:01,020 [Speaker 1]
+I tried to explain everything that I'm-- we are doing, but she asked only for the results that we have. 
+
+00:04:01,260 --> 00:04:01,780 [Speaker 0]
+Mm-hmm. 
+
+00:04:01,780 --> 00:04:02,000 [Speaker 1]
+Okay? 
+
+00:04:02,400 --> 00:04:03,060 [Speaker 0]
+Yeah. 
+
+00:04:03,060 --> 00:04:04,520 [Speaker 1]
+So I showed this to her as well- 
+
+00:04:04,860 --> 00:04:04,900 [Speaker 0]
+Mm-hmm. 
+
+00:04:04,900 --> 00:04:11,220 [Speaker 1]
+-that this is what I'm getting. Then I told her that I'm getting these results as well, okay, in Shapley. 
+
+00:04:11,260 --> 00:04:11,980 [Speaker 0]
+Mm-hmm. 
+
+00:04:12,020 --> 00:04:15,520 [Speaker 1]
+And these are the ones which are-- which we are saying that to prioritize early- 
+
+00:04:15,860 --> 00:04:15,880 [Speaker 0]
+Yeah. 
+
+00:04:15,880 --> 00:04:18,959 [Speaker 1]
+-like bonusable CNP activation, B2B spend. Okay? 
+
+00:04:20,660 --> 00:04:25,660 [Speaker 1]
+So what she told me is that instead of showing these many approaches- 
+
+00:04:26,440 --> 00:04:26,740 [Speaker 0]
+Mm-hmm. 
+
+00:04:26,740 --> 00:04:29,900 [Speaker 1]
+-why don't you tell me which is the one which adds the most value? 
+
+00:04:31,040 --> 00:04:31,460 [Speaker 1]
+Okay? 
+
+00:04:31,500 --> 00:04:32,160 [Speaker 0]
+Mm-hmm. 
+
+00:04:32,160 --> 00:04:48,740 [Speaker 1]
+So I told her, I'm not sure which adds the most value because the principles that we are following with each and every approach is the same. That is, we are trying to reduce the distance to golden and trying to measure which particular component adds how much to GCM prediction. Okay? 
+
+00:04:49,900 --> 00:05:01,020 [Speaker 1]
+So then she told that both Shalindra and Jay Vishal, these guys are trying to assess how much of each and every marker that they are looking at their end- 
+
+00:05:01,260 --> 00:05:01,700 [Speaker 0]
+Mm-hmm. 
+
+00:05:01,700 --> 00:05:15,080 [Speaker 1]
+-is adding value in terms of GCM impact, like actual GCM impact. So what they are trying to assess is, like between golden and opportunity, if somebody did this action versus didn't do this action, what was the change in their GCM? 
+
+00:05:15,680 --> 00:05:16,840 [Speaker 0]
+Hmm. 
+
+00:05:16,840 --> 00:05:17,120 [Speaker 1]
+Okay? 
+
+00:05:17,920 --> 00:05:18,060 [Speaker 0]
+Okay. 
+
+00:05:18,060 --> 00:05:27,280 [Speaker 1]
+So they are trying to assess that way. So what she is telling me is that if the rank order of the GCM impact that they are generating- 
+
+00:05:27,880 --> 00:05:28,000 [Speaker 0]
+Mm-hmm. 
+
+00:05:28,000 --> 00:05:28,280 [Speaker 1]
+-okay? 
+
+00:05:29,900 --> 00:05:34,280 [Speaker 1]
+Supposedly the rank order says that the first thing that adds value is select bonus. 
+
+00:05:34,280 --> 00:05:34,820 [Speaker 0]
+Yeah. 
+
+00:05:34,820 --> 00:05:39,220 [Speaker 1]
+Then comes top 10 cert or select, then comes COGS, admin or fixed. 
+
+00:05:39,260 --> 00:05:39,560 [Speaker 0]
+Mm-hmm. 
+
+00:05:39,560 --> 00:05:40,020 [Speaker 1]
+Right? 
+
+00:05:40,060 --> 00:05:40,940 [Speaker 0]
+Mm-hmm. 
+
+00:05:41,020 --> 00:05:48,440 [Speaker 1]
+And if you are also seeing the similar rank order at your end, whatever approach that fit-fits that, use that approach. 
+
+00:05:48,820 --> 00:05:49,760 [Speaker 0]
+Okay. Okay. 
+
+00:05:50,800 --> 00:05:58,160 [Speaker 1]
+Okay? Second thing, she mentioned that if you want to look at the magnitude also, whatever the magnitude that they are generating- 
+
+00:05:58,480 --> 00:05:58,940 [Speaker 0]
+Yeah. 
+
+00:05:58,940 --> 00:06:06,536 [Speaker 1]
+-if your magnitude is also coming out to be closer to that, then use that approach. 
+
+00:06:06,536 --> 00:06:06,756 [Speaker 1]
+Okay? 
+
+00:06:07,216 --> 00:06:07,836 [Speaker 0]
+Hmm. 
+
+00:06:07,836 --> 00:06:10,796 [Speaker 1]
+So these were like the suggestions that she put across. 
+
+00:06:11,196 --> 00:06:11,316 [Speaker 0]
+Yeah. 
+
+00:06:11,316 --> 00:06:11,516 [Speaker 1]
+Okay? 
+
+00:06:12,576 --> 00:06:26,376 [Speaker 1]
+So now these are very crude ideas which are like coming across. So I don't know whether to like take it with a pinch of salt or like whether to follow it up. But this was something her suggestion, so I can't go back and say like, okay, I can't look into it. 
+
+00:06:26,756 --> 00:06:26,796 [Speaker 0]
+Yeah. 
+
+00:06:26,796 --> 00:06:27,696 [Speaker 1]
+I have to look into it. 
+
+00:06:28,056 --> 00:06:28,596 [Speaker 0]
+Yeah. 
+
+00:06:28,596 --> 00:06:33,036 [Speaker 1]
+So essentially, I'm waiting for what Jay and Shailendra shares in terms of the impact- 
+
+00:06:33,376 --> 00:06:33,776 [Speaker 0]
+Yeah. 
+
+00:06:33,776 --> 00:06:36,276 [Speaker 1]
+-and select the potential rank ordering of the features- 
+
+00:06:36,536 --> 00:06:36,776 [Speaker 0]
+Mm-hmm. 
+
+00:06:36,776 --> 00:06:38,296 [Speaker 1]
+-uh, that they are looking at therein. 
+
+00:06:38,536 --> 00:06:38,976 [Speaker 0]
+Mm-hmm. 
+
+00:06:38,976 --> 00:06:44,116 [Speaker 1]
+If any of these approaches that we have done follows that, then essentially we will go with that approach. Okay? 
+
+00:06:44,756 --> 00:06:45,536 [Speaker 0]
+Yeah. 
+
+00:06:45,556 --> 00:06:46,396 [Speaker 1]
+Okay. Got it? 
+
+00:06:46,536 --> 00:06:46,976 [Speaker 0]
+Got it. 
+
+00:06:46,976 --> 00:06:53,036 [Speaker 1]
+So I want you to like draft this and share it with this, uh, Kartikeya as well. 
+
+00:06:53,256 --> 00:06:53,276 [Speaker 0]
+Mm-hmm. 
+
+00:06:53,276 --> 00:06:56,096 [Speaker 1]
+That, okay, this is something which you got-- which we got as an input- 
+
+00:06:56,376 --> 00:06:56,916 [Speaker 0]
+Mm-hmm. 
+
+00:06:56,916 --> 00:06:57,836 [Speaker 1]
+-from Sonal. 
+
+00:06:58,256 --> 00:06:58,676 [Speaker 0]
+Yeah. 
+
+00:06:58,676 --> 00:07:02,996 [Speaker 1]
+She didn't go through into details of each and every approach, but she went through the outcomes. 
+
+00:07:03,176 --> 00:07:03,636 [Speaker 0]
+Mm-hmm. 
+
+00:07:03,716 --> 00:07:19,416 [Speaker 1]
+And for across outcomes, since the magnitude of that outcome and the distances are different, so what she's suggesting is that whatever the sizing that Jay and Shailendra are doing in terms of individual markers and their potential GCM benefit, 
+
+00:07:20,796 --> 00:07:24,596 [Speaker 1]
+if we are able to find similar rank orders- 
+
+00:07:24,796 --> 00:07:24,996 [Speaker 0]
+Mm-hmm. 
+
+00:07:24,996 --> 00:07:26,036 [Speaker 1]
+-or the GCM benefit- 
+
+00:07:26,316 --> 00:07:26,336 [Speaker 0]
+Mm-hmm. 
+
+00:07:26,336 --> 00:07:27,716 [Speaker 1]
+-or select similar magnitude- 
+
+00:07:28,236 --> 00:07:28,456 [Speaker 0]
+Yeah. 
+
+00:07:28,456 --> 00:07:34,076 [Speaker 1]
+-then essentially we should follow with that particular approach of all the three approaches. Okay? 
+
+00:07:34,076 --> 00:07:35,696 [Speaker 0]
+Got it, got it. Yeah. 
+
+00:07:35,776 --> 00:07:36,276 [Speaker 1]
+Done? 
+
+00:07:36,276 --> 00:07:36,376 [Speaker 0]
+Yeah. 
+
+00:07:37,456 --> 00:07:41,356 [Speaker 1]
+Her second point was that why aren't we using integrated gradients 
+
+00:07:42,656 --> 00:07:43,676 [Speaker 1]
+approach 
+
+00:07:44,736 --> 00:07:45,116 [Speaker 1]
+anywhere? 
+
+00:07:47,056 --> 00:07:52,836 [Speaker 0]
+Integrated gradient that we discussed, right? We need to have a baseline, and that part Ashish was not aligned. 
+
+00:07:53,936 --> 00:07:59,876 [Speaker 1]
+Uh, so now apparently I think Ashish is favor of select doing that integrated gradients now. 
+
+00:08:00,496 --> 00:08:00,716 [Speaker 0]
+Okay. 
+
+00:08:00,956 --> 00:08:07,756 [Speaker 1]
+Because that's what she's told that Ashish asked for it, why exactly aren't you guys following that integrated gradients approach? Okay? 
+
+00:08:08,016 --> 00:08:08,856 [Speaker 0]
+Okay. 
+
+00:08:08,876 --> 00:08:13,176 [Speaker 1]
+So I did explain to her, because this was something that I created last Thursday- 
+
+00:08:13,216 --> 00:08:13,396 [Speaker 0]
+Mm-hmm. 
+
+00:08:13,396 --> 00:08:18,236 [Speaker 1]
+-like why Shapley is different and integrated gradients is different. Okay? 
+
+00:08:18,236 --> 00:08:18,776 [Speaker 0]
+Okay. 
+
+00:08:18,776 --> 00:08:21,176 [Speaker 1]
+So these are, these are like couple of slides which I created- 
+
+00:08:21,576 --> 00:08:21,956 [Speaker 0]
+Mm-hmm. 
+
+00:08:21,956 --> 00:08:27,676 [Speaker 1]
+-wherein I said that, okay, supposedly there is a journey where the GCM is predicted is 5,000. 
+
+00:08:27,996 --> 00:08:28,456 [Speaker 0]
+Mm-hmm. 
+
+00:08:28,456 --> 00:08:34,056 [Speaker 1]
+You simulate something, you change something in that journey, and that GCM changes to 5,100 prediction. Okay? 
+
+00:08:34,476 --> 00:08:35,096 [Speaker 0]
+Yeah. 
+
+00:08:35,096 --> 00:08:43,916 [Speaker 1]
+Now there's a 100 dollar model GCM change, and I want to understand that how much of each and every attribute is contributing to that 100 dollars. Correct? 
+
+00:08:43,916 --> 00:08:44,096 [Speaker 0]
+Yeah. 
+
+00:08:45,256 --> 00:08:57,296 [Speaker 1]
+So now integrated gradients follows model response during ma-- during a mathematical transition, whereas Shapley compares complete transaction combinations to distribute the change across attributes. Okay? 
+
+00:08:57,296 --> 00:08:57,776 [Speaker 0]
+Okay. Yeah. 
+
+00:08:59,136 --> 00:09:01,556 [Speaker 1]
+And what does that mean is that 
+
+00:09:03,056 --> 00:09:06,916 [Speaker 1]
+when I'm saying that I'm gonna-- I have added a transaction on day five, right? 
+
+00:09:07,076 --> 00:09:07,096 [Speaker 0]
+Mm-hmm. 
+
+00:09:07,096 --> 00:09:09,376 [Speaker 1]
+And it changed it to by 100 dollars. 
+
+00:09:09,936 --> 00:09:10,196 [Speaker 0]
+Mm-hmm. 
+
+00:09:10,196 --> 00:09:15,316 [Speaker 1]
+So what IG does is that it starts with select, okay, if that value was zero, 
+
+00:09:16,836 --> 00:09:23,716 [Speaker 1]
+GCM was 5,000. If that value instead of zero becomes 0.25, this is how prediction changes. 
+
+00:09:24,996 --> 00:09:25,096 [Speaker 0]
+Okay. 
+
+00:09:25,096 --> 00:09:39,556 [Speaker 1]
+If that value changes by 0.5, this is what happens. And if that value becomes 0.75, this is what happens. And this is-- if that value becomes one, this is what happens. So what it will do is it will try to create hypothetical checks in between. 
+
+00:09:39,896 --> 00:09:40,096 [Speaker 0]
+Mm-hmm. 
+
+00:09:40,116 --> 00:09:40,296 [Speaker 1]
+Okay? 
+
+00:09:41,616 --> 00:09:44,236 [Speaker 1]
+Ideally, it is either zero or one, right? 
+
+00:09:44,256 --> 00:09:44,516 [Speaker 0]
+Yeah. 
+
+00:09:44,536 --> 00:09:45,956 [Speaker 1]
+These things never even exist. 
+
+00:09:46,296 --> 00:09:46,636 [Speaker 0]
+Yes. 
+
+00:09:46,636 --> 00:09:58,316 [Speaker 1]
+But IG will check on all of this and try to come up with select what exactly is leading to a change in the GCM. Okay? Now the transformer learns zero and patterns. 
+
+00:09:59,716 --> 00:09:59,896 [Speaker 0]
+Mm-hmm. 
+
+00:09:59,896 --> 00:10:07,876 [Speaker 1]
+But it can sometimes return outputs for intermediate out-- inputs as well, because humne yeh nahi bola na in the transformer ki zero and one hi hona chahiye. 
+
+00:10:07,956 --> 00:10:08,296 [Speaker 0]
+Yes. 
+
+00:10:09,416 --> 00:10:19,896 [Speaker 1]
+Right? So it can produce like outputs, but those are not meaningful outputs or guaranteed to be meaning-meaningful, right? So IG I can't use if I'm using the way I'm using right now. Make sense? 
+
+00:10:19,896 --> 00:10:21,096 [Speaker 0]
+Yes, yes. 
+
+00:10:21,096 --> 00:10:22,636 [Speaker 1]
+So I tried to explain this- 
+
+00:10:22,976 --> 00:10:23,055 [Speaker 0]
+Mm-hmm. 
+
+00:10:23,055 --> 00:10:27,456 [Speaker 1]
+-and then she was like, okay, uh, makes sense, but essentially 
+
+00:10:28,896 --> 00:10:35,696 [Speaker 1]
+if you're not using IG, then what exactly are you using? So I explained to her that we have a customer support algorithm, and we have select a Shapley- 
+
+00:10:36,036 --> 00:10:36,096 [Speaker 0]
+Yeah. 
+
+00:10:36,096 --> 00:10:36,856 [Speaker 1]
+-which we used. 
+
+00:10:36,896 --> 00:10:37,756 [Speaker 0]
+Mm-hmm. 
+
+00:10:37,796 --> 00:10:45,256 [Speaker 1]
+And she was like, okay, but essentially Ashish wanted to see like IG-based solution. So I don't know why that came into play. 
+
+00:10:45,676 --> 00:10:46,736 [Speaker 0]
+Mm-hmm. 
+
+00:10:46,836 --> 00:10:47,416 [Speaker 1]
+Okay? 
+
+00:10:47,516 --> 00:10:47,896 [Speaker 0]
+Mm-hmm. 
+
+00:10:47,896 --> 00:11:00,276 [Speaker 1]
+So that is the thing that came across, and I gave her like few examples also ki integrated gradient se ho sakta hai ki what can happen is bonus A will get 67 and C and T get 33, whereas Shapley tells me that it is 60 and 40. 
+
+00:11:00,476 --> 00:11:01,176 [Speaker 0]
+Mm-hmm. 
+
+00:11:01,276 --> 00:11:01,516 [Speaker 1]
+Right? 
+
+00:11:01,536 --> 00:11:02,296 [Speaker 0]
+That 
+
+00:11:03,576 --> 00:11:03,636 [Speaker 0]
+is... 
+
+00:11:03,636 --> 00:11:05,936 [Speaker 1]
+And maine kaha ki neither of them is like right or wrong- 
+
+00:11:06,096 --> 00:11:06,116 [Speaker 0]
+Mm-hmm. 
+
+00:11:06,116 --> 00:11:07,996 [Speaker 1]
+-but there's different ways to predict. 
+
+00:11:08,656 --> 00:11:08,916 [Speaker 0]
+Yeah. 
+
+00:11:10,716 --> 00:11:11,176 [Speaker 1]
+Correct? 
+
+00:11:11,216 --> 00:11:11,816 [Speaker 0]
+Mm-hmm. 
+
+00:11:11,816 --> 00:11:16,356 [Speaker 1]
+So yeah, yahan tak toh main gaya bhi nahi, but these were like the few questions that she asked- 
+
+00:11:16,956 --> 00:11:17,056 [Speaker 0]
+Mm-hmm. 
+
+00:11:17,056 --> 00:11:23,636 [Speaker 1]
+-and I tried to answer. But the crux is she wants to understand which approach to take, essentially. 
+
+00:11:24,116 --> 00:11:27,916 [Speaker 0]
+Yeah, that's finally what is the one that is giving us the result that she wants. 
+
+00:11:28,996 --> 00:11:31,416 [Speaker 1]
+Yes. So that is what she's looking for. 
+
+00:11:31,676 --> 00:11:32,116 [Speaker 0]
+Mm-hmm. 
+
+00:11:32,156 --> 00:11:36,356 [Speaker 1]
+And which are the features are popping up and at what point in time. 
+
+00:11:36,456 --> 00:11:36,596 [Speaker 0]
+Yeah. 
+
+00:11:37,996 --> 00:11:38,496 [Speaker 1]
+Okay? 
+
+00:11:38,596 --> 00:11:39,356 [Speaker 0]
+Mm-hmm. 
+
+00:11:39,356 --> 00:11:42,856 [Speaker 1]
+So I would say like send out a note to Kartikeya. 
+
+00:11:42,856 --> 00:11:43,196 [Speaker 0]
+Okay. 
+
+00:11:43,216 --> 00:11:53,516 [Speaker 1]
+Okay? Tell that, okay, we, uh, made few changes to the deck, okay, to align with like what we discussed with Ashish last time around. We put in like some follow-ups initially- 
+
+00:11:54,076 --> 00:11:54,176 [Speaker 0]
+Mm-hmm. 
+
+00:11:54,176 --> 00:11:59,836 [Speaker 1]
+-and we restructured the deck a little bit, but in a sense con-- retained everything that we had. Okay? 
+
+00:12:00,236 --> 00:12:00,756 [Speaker 0]
+Mm-hmm. 
+
+00:12:00,756 --> 00:12:03,756 [Speaker 1]
+Now, these are the questions that came from Sonal- 
+
+00:12:04,156 --> 00:12:04,316 [Speaker 0]
+Mm-hmm. 
+
+00:12:04,316 --> 00:12:09,016 [Speaker 1]
+-and how we can answer. She wants us to stick to just one singular approach- 
+
+00:12:09,236 --> 00:12:09,296 [Speaker 0]
+Yeah. 
+
+00:12:09,296 --> 00:12:10,096 [Speaker 1]
+-and not all of them- 
+
+00:12:10,456 --> 00:12:10,796 [Speaker 0]
+Mm-hmm. 
+
+00:12:10,796 --> 00:12:15,796 [Speaker 1]
+-depending upon the outcome that we will get from Jay and Shailendra. Okay? 
+
+00:12:15,816 --> 00:12:16,556 [Speaker 0]
+Mm-hmm. 
+
+00:12:16,656 --> 00:12:19,896 [Speaker 1]
+And, uh, third thing is that, uh... 
+
+00:12:21,036 --> 00:12:21,876 [Speaker 1]
+What was the other thing? 
+
+00:12:23,456 --> 00:12:31,236 [Speaker 1]
+Yeah, this one, man. Ask him, like, why exactly are we getting, like, these many predictions, man? Such high predictions. These ones. 
+
+00:12:31,276 --> 00:12:31,576 [Speaker 0]
+Mm-hmm. 
+
+00:12:31,696 --> 00:12:33,076 [Speaker 1]
+For CNP and everything. 
+
+00:12:34,576 --> 00:12:39,096 [Speaker 1]
+This doesn't make sense. You are also aligned with that fact, right? That if the average GCM is- 
+
+00:12:39,116 --> 00:12:41,636 [Speaker 0]
+I think the GCM values, I think, yeah, I am aligned with that. 
+
+00:12:41,696 --> 00:12:47,436 [Speaker 1]
+Yeah. And you can share that Excel with him and say like, "Okay, this is, this is what the actual GCM looks like." 
+
+00:12:47,596 --> 00:12:47,915 [Speaker 0]
+Mm-hmm. 
+
+00:12:47,915 --> 00:12:49,556 [Speaker 1]
+Okay? That we see. 
+
+00:12:49,916 --> 00:12:50,256 [Speaker 0]
+Mm-hmm. 
+
+00:12:50,256 --> 00:12:56,836 [Speaker 1]
+Now, we are saying that, okay, adding a CNP will increase the GCM prediction by this much. How is this possible? 
+
+00:12:57,496 --> 00:12:57,716 [Speaker 0]
+Yeah. 
+
+00:12:59,156 --> 00:12:59,396 [Speaker 1]
+Right? 
+
+00:13:00,656 --> 00:13:06,596 [Speaker 1]
+I think this approach, what he has here, can still work. Okay? I'm not denying it. 
+
+00:13:06,656 --> 00:13:06,896 [Speaker 0]
+Yes. 
+
+00:13:07,576 --> 00:13:09,276 [Speaker 1]
+I think the only thing that 
+
+00:13:10,616 --> 00:13:19,635 [Speaker 1]
+I am, like, a little skeptical is the support thing, man. Like, why this 90% or everything? We could have used, like, all the patterns, right? 
+
+00:13:19,715 --> 00:13:19,976 [Speaker 0]
+Yes. 
+
+00:13:20,916 --> 00:13:30,256 [Speaker 1]
+Why do we want to stop ourselves with, say, like, this 90%? I know that the number of patterns will increase by, say, like, how much? Instead of 100 that you're getting, it will become 200. 
+
+00:13:30,416 --> 00:13:30,856 [Speaker 0]
+Mm-hmm. 
+
+00:13:30,856 --> 00:13:33,656 [Speaker 1]
+But there is, like, GPU, there is server which can learn around it. 
+
+00:13:34,016 --> 00:13:34,236 [Speaker 0]
+Yeah. 
+
+00:13:34,236 --> 00:13:35,196 [Speaker 1]
+Why are we stopping it? 
+
+00:13:35,676 --> 00:13:36,296 [Speaker 0]
+Yeah. 
+
+00:13:36,296 --> 00:13:52,076 [Speaker 1]
+So write out these two pointers, like, okay, what if, if we remove this support thing and capture all the patterns? Okay? A. And secondly, when we are looking at these predictions, these predictions seem to be way too high in terms of the GCM contribution. 
+
+00:13:52,376 --> 00:13:52,576 [Speaker 0]
+Yeah. 
+
+00:13:53,816 --> 00:13:54,076 [Speaker 1]
+Right? 
+
+00:13:54,396 --> 00:13:54,556 [Speaker 0]
+Yes. 
+
+00:13:54,556 --> 00:14:02,216 [Speaker 1]
+Because the overall average GCM is close to 3300, and this is something which we pulled some time back. So essentially, it seems way too high- 
+
+00:14:02,796 --> 00:14:02,996 [Speaker 0]
+Yes. 
+
+00:14:04,156 --> 00:14:04,556 [Speaker 1]
+-for us. 
+
+00:14:06,116 --> 00:14:06,556 [Speaker 0]
+Got it. 
+
+00:14:08,216 --> 00:14:08,516 [Speaker 1]
+Okay? 
+
+00:14:09,196 --> 00:14:09,256 [Speaker 0]
+Yeah. 
+
+00:14:09,276 --> 00:14:21,116 [Speaker 1]
+And, uh, tell him that, uh, we have an update with Ashi slotted for Wednesday. Okay? That is for, uh, preparing for Heather update in January, in mid-Jan. 
+
+00:14:21,836 --> 00:14:22,096 [Speaker 0]
+Okay. 
+
+00:14:22,096 --> 00:14:24,395 [Speaker 1]
+That is the idea. And, uh, 
+
+00:14:26,096 --> 00:14:31,136 [Speaker 1]
+yeah, we need to, like, finalize one single approach here on this one. Okay? 
+
+00:14:31,136 --> 00:14:31,396 [Speaker 0]
+Got it. 
+
+00:14:31,396 --> 00:14:41,476 [Speaker 1]
+I'm fine if he says that, like, okay, Shapley does-- has, like, limitations. Yeah, because I agree, these combinations will grow insane if I add more features, right? 
+
+00:14:41,716 --> 00:14:42,236 [Speaker 0]
+Yeah. 
+
+00:14:42,236 --> 00:14:53,136 [Speaker 1]
+To maintain and manage that in itself will become humongous. And the number of combinations that we will end up tracking for, say, like, the Shapley to run, it will go into an endless loop, right? 
+
+00:14:53,136 --> 00:14:53,396 [Speaker 0]
+Yes. 
+
+00:14:53,416 --> 00:14:57,636 [Speaker 1]
+Right now, only you were adding-- having, like, close to 3 million plus combinations, correct? 
+
+00:14:57,856 --> 00:14:58,056 [Speaker 0]
+Correct. 
+
+00:14:59,476 --> 00:15:03,696 [Speaker 1]
+Uh, so essentially, yes, these are the changes which we need to make. 
+
+00:15:05,176 --> 00:15:07,236 [Speaker 0]
+Got it. I'll, uh, let him know then. 
+
+00:15:08,236 --> 00:15:08,636 [Speaker 1]
+Yep. 
+
+00:15:08,636 --> 00:15:11,076 [Speaker 0]
+We'll wait for Jay and Shailendra to share that first. 
+
+00:15:11,876 --> 00:15:15,056 [Speaker 1]
+Yeah, yeah. We'll have to-- They'll have to share. I'll ask them- 
+
+00:15:15,456 --> 00:15:15,576 [Speaker 0]
+Yeah. 
+
+00:15:15,576 --> 00:15:16,716 [Speaker 1]
+-to, like, share that with us. 
+
+00:15:16,756 --> 00:15:16,896 [Speaker 0]
+Mm-hmm. 
+
+00:15:18,816 --> 00:15:20,896 [Speaker 1]
+Okay. But the thing is, yaar ki, 
+
+00:15:22,056 --> 00:15:26,216 [Speaker 1]
+to be honest, I haven't received any guidance on the approach, 
+
+00:15:27,396 --> 00:15:29,016 [Speaker 1]
+neither from Sonal, neither from Anju. 
+
+00:15:29,216 --> 00:15:29,576 [Speaker 0]
+Yeah. 
+
+00:15:31,336 --> 00:15:34,256 [Speaker 1]
+Where nobody is willing to, like, put time into the approach. 
+
+00:15:34,696 --> 00:15:37,956 [Speaker 0]
+What are they working on? Is there anything other important thing going on right now? 
+
+00:15:39,516 --> 00:15:43,036 [Speaker 1]
+Don't know, man. Like, that marker analysis which Stephanie was showing, 
+
+00:15:44,156 --> 00:15:52,556 [Speaker 1]
+there were, like, so many questions, and, like, Sonal was so engrossed in those numbers. I also felt that, okay, I'll also get time. [laughs] That's why I went- 
+
+00:15:53,116 --> 00:15:53,516 [Speaker 0]
+Yeah. 
+
+00:15:53,516 --> 00:15:57,256 [Speaker 1]
+-with that mindset that, okay, let me discuss. But, uh, 
+
+00:15:59,256 --> 00:16:13,576 [Speaker 1]
+I think it is a function of the fact that if you are not aware about the algo or how, say, like, this thing works, then essentially you will focus more on, like, the outcome of it. Like, okay, what is the outcome? Because if you're not-- you 
+
+00:16:14,596 --> 00:16:14,996 [Speaker 1]
+are not, 
+
+00:16:17,036 --> 00:16:22,376 [Speaker 1]
+select familiar with the setup as to, like, how transformer input or output will cause an issue. 
+
+00:16:24,056 --> 00:16:25,776 [Speaker 0]
+Yes. Yeah, that is the main thing. 
+
+00:16:26,916 --> 00:16:27,736 [Speaker 1]
+That is the main thing. 
+
+00:16:29,036 --> 00:16:29,396 [Speaker 1]
+Okay. 
+
+00:16:30,596 --> 00:16:31,096 [Speaker 1]
+Theek hai. 
+
+00:16:31,116 --> 00:16:31,376 [Speaker 0]
+Mm-hmm. 
+
+00:16:31,396 --> 00:16:32,676 [Speaker 1]
+And in the deck, Hema- 
+
+00:16:32,816 --> 00:16:33,655 [Speaker 0]
+Mm-hmm. 
+
+00:16:33,655 --> 00:16:43,196 [Speaker 1]
+-can you take a stab to, like, clean it a little bit more, okay? On the deck. Reason I'm saying this is, or say, like, make it more intuitive, and I'll tell you why. 
+
+00:16:44,236 --> 00:16:44,656 [Speaker 0]
+So, like- 
+
+00:16:44,736 --> 00:16:44,956 [Speaker 1]
+If I- 
+
+00:16:44,956 --> 00:16:49,936 [Speaker 0]
+-if we are getting the results from Shailendra, do you want to keep all three approaches yet, or, like, we'll move? 
+
+00:16:50,316 --> 00:16:56,416 [Speaker 1]
+No, no. Then toh we will, like, we'll have to align on, say, like, a singular approach, and then, like, if we-- I am getting the results from that. 
+
+00:16:56,696 --> 00:16:56,856 [Speaker 0]
+Yeah. 
+
+00:16:58,116 --> 00:16:58,416 [Speaker 1]
+Yep. 
+
+00:16:59,796 --> 00:17:00,016 [Speaker 0]
+Okay. 
+
+00:17:00,096 --> 00:17:07,376 [Speaker 1]
+Okay. So let me share this. Like, I don't know, like, right now whether I'll get those results today or not. That is also something which is skeptical. 
+
+00:17:07,736 --> 00:17:08,376 [Speaker 0]
+Okay. 
+
+00:17:08,376 --> 00:17:15,096 [Speaker 1]
+So essentially, we are doing these three approaches, right? First of all, these verbiage, right, that we are putting across. 
+
+00:17:15,096 --> 00:17:15,296 [Speaker 0]
+Yeah. 
+
+00:17:15,316 --> 00:17:26,536 [Speaker 1]
+Like, a-adding one realistic transaction, like, one seven-dimensional spending. These are, like, very broad. Like, no-nobody in their sane mindset, by reading this, will understand what exactly am I doing. 
+
+00:17:26,736 --> 00:17:27,316 [Speaker 0]
+Yeah. 
+
+00:17:27,316 --> 00:17:30,936 [Speaker 1]
+Okay? Can I define this better? That is first thing. 
+
+00:17:31,156 --> 00:17:31,756 [Speaker 0]
+Mm-hmm. 
+
+00:17:31,756 --> 00:17:32,196 [Speaker 1]
+Secondly, 
+
+00:17:33,516 --> 00:17:40,456 [Speaker 1]
+when we are doing these approaches, right, six transaction attributes and everything, and, like, modeling, these are all, like, written lines. 
+
+00:17:41,476 --> 00:17:45,456 [Speaker 1]
+So I prefer something of this type wherein 
+
+00:17:46,916 --> 00:17:48,976 [Speaker 1]
+I show visually what exactly am I doing. 
+
+00:17:49,596 --> 00:17:50,016 [Speaker 0]
+Okay. 
+
+00:17:51,136 --> 00:17:51,436 [Speaker 1]
+Right? 
+
+00:17:51,636 --> 00:17:51,896 [Speaker 0]
+Mm-hmm. 
+
+00:17:52,016 --> 00:17:55,536 [Speaker 1]
+This becomes, like, more comprehensible that, okay, this is something that happened- 
+
+00:17:55,836 --> 00:17:56,156 [Speaker 0]
+Mm-hmm. 
+
+00:17:56,156 --> 00:17:59,916 [Speaker 1]
+-and I'm going to introduce something earlier and then test it out. Okay? 
+
+00:18:00,016 --> 00:18:00,376 [Speaker 0]
+Mm-hmm. 
+
+00:18:00,376 --> 00:18:03,436 [Speaker 1]
+So having just, like, one page just to explain- 
+
+00:18:03,836 --> 00:18:04,816 [Speaker 0]
+Mm-hmm. 
+
+00:18:04,816 --> 00:18:10,196 [Speaker 1]
+-that, okay, this is something which we did. We looked at these six attributes, these 11 features, right? 
+
+00:18:10,536 --> 00:18:10,616 [Speaker 0]
+Mm-hmm. 
+
+00:18:10,616 --> 00:18:22,476 [Speaker 1]
+So essentially, put a page in between wherein you just explain an example, like one card member, 30 days, these were the ones that were there, and I'm introducing one combination earlier. That's it. 
+
+00:18:22,896 --> 00:18:23,176 [Speaker 0]
+Got it.
+
+00:18:24,500 --> 00:18:26,360 [Speaker 1]
+Okay? A simple example of that. 
+
+00:18:26,660 --> 00:18:26,800 [Speaker 0]
+Yeah. 
+
+00:18:27,420 --> 00:18:27,960 [Speaker 1]
+Done? 
+
+00:18:27,960 --> 00:18:28,420 [Speaker 0]
+Done. 
+
+00:18:28,420 --> 00:18:35,380 [Speaker 1]
+And then these, these are the approaches that these took, like G-GCM. I don't know what is the relevance of these charts anymore. 
+
+00:18:36,180 --> 00:18:36,600 [Speaker 0]
+Mm-hmm. 
+
+00:18:36,600 --> 00:18:39,580 [Speaker 1]
+It is just telling that, okay, the later activation helps, right? 
+
+00:18:39,860 --> 00:18:40,240 [Speaker 0]
+Yeah. 
+
+00:18:40,240 --> 00:18:41,040 [Speaker 1]
+That is the convey. 
+
+00:18:42,080 --> 00:18:44,700 [Speaker 1]
+Then we said that, okay, instead of that, we went on to this. 
+
+00:18:45,900 --> 00:18:46,060 [Speaker 1]
+Okay? 
+
+00:18:46,380 --> 00:18:47,260 [Speaker 0]
+Mm-hmm. 
+
+00:18:47,280 --> 00:18:51,340 [Speaker 1]
+Huh, this was also the question which Sunil had, that if you are already moving to this 
+
+00:18:52,520 --> 00:18:54,080 [Speaker 1]
+approach, why are you showing me these numbers? 
+
+00:18:55,860 --> 00:18:55,920 [Speaker 0]
+Okay. 
+
+00:18:55,920 --> 00:19:02,840 [Speaker 1]
+I'm like, yeah, point is valid. [chuckling] There's no point in showing now, because he's not interested in looking at the approaches. 
+
+00:19:03,040 --> 00:19:03,680 [Speaker 0]
+Yes, yes. 
+
+00:19:03,680 --> 00:19:04,320 [Speaker 1]
+Okay? 
+
+00:19:04,360 --> 00:19:05,440 [Speaker 0]
+Yeah. 
+
+00:19:05,440 --> 00:19:08,180 [Speaker 1]
+And this is what we are saying, that we are going for a persistent approach. 
+
+00:19:08,440 --> 00:19:08,820 [Speaker 0]
+Mm-hmm. 
+
+00:19:08,820 --> 00:19:11,280 [Speaker 1]
+So then essentially first 10 slides are of no use. 
+
+00:19:11,300 --> 00:19:11,980 [Speaker 0]
+No use, yes. 
+
+00:19:13,060 --> 00:19:16,660 [Speaker 1]
+I can have this, but all of this of no use, right? 
+
+00:19:16,700 --> 00:19:16,980 [Speaker 0]
+Mm-hmm. 
+
+00:19:17,440 --> 00:19:18,780 [Speaker 1]
+I can start directly from here. 
+
+00:19:19,420 --> 00:19:20,260 [Speaker 0]
+11th one. 
+
+00:19:20,260 --> 00:19:23,360 [Speaker 1]
+And just say, yeah, we are using combinations, this approach. 
+
+00:19:23,840 --> 00:19:24,140 [Speaker 0]
+Mm-hmm. Yeah. 
+
+00:19:24,140 --> 00:19:25,720 [Speaker 1]
+And this is how we have done it. 
+
+00:19:26,360 --> 00:19:26,520 [Speaker 0]
+Got it. 
+
+00:19:26,520 --> 00:19:30,840 [Speaker 1]
+So essentially we are explaining this is done, then these are the results, right? 
+
+00:19:31,160 --> 00:19:31,380 [Speaker 0]
+Yeah. 
+
+00:19:33,460 --> 00:19:41,520 [Speaker 1]
+Another approach is this one, which we just discussed. You can clean this up and see, like, if this can be done better. I think I might have skipped few things here. 
+
+00:19:41,860 --> 00:19:41,980 [Speaker 0]
+Mm-hmm. 
+
+00:19:42,060 --> 00:19:49,560 [Speaker 1]
+Just put this better. This is done. This is another approach. Then there's a third approach that we have done. Correct? 
+
+00:19:49,580 --> 00:19:49,760 [Speaker 0]
+Yeah. 
+
+00:19:51,160 --> 00:20:00,760 [Speaker 1]
+Done. Just clean up the deck. I would say, like, either you want to use Copilot or GPT, that is okay. But try to see, like, if you are able to link slides from one to the other. Okay? 
+
+00:20:00,760 --> 00:20:01,160 [Speaker 0]
+Got it. 
+
+00:20:01,160 --> 00:20:03,660 [Speaker 1]
+And share those notes with, uh, Karthikeya- 
+
+00:20:04,060 --> 00:20:04,240 [Speaker 0]
+Okay. 
+
+00:20:04,240 --> 00:20:04,660 [Speaker 1]
+-on that. 
+
+00:20:05,000 --> 00:20:11,560 [Speaker 0]
+Okay. The slide part, I think, uh, can I work it, like, today late evening or tomorrow? 
+
+00:20:12,580 --> 00:20:13,860 [Speaker 1]
+Uh-huh, uh-huh. That works, man. 
+
+00:20:17,040 --> 00:20:17,680 [Speaker 1]
+That works. 
+
+00:20:20,320 --> 00:20:20,680 [Speaker 1]
+That works. 
+
+00:20:28,580 --> 00:20:28,880 [Speaker 1]
+Done. 
+
+00:20:29,900 --> 00:20:30,580 [Speaker 1]
+What else, man? 
+
+00:20:31,800 --> 00:20:33,140 [Speaker 1]
+What are your plans for the weekend? 
+
+00:20:34,059 --> 00:20:35,380 [Speaker 0]
+I'm going to Florida this Sunday, 
+
+00:20:36,600 --> 00:20:37,340 [Speaker 0]
+Sunday morning. 
+
+00:20:37,460 --> 00:20:37,580 [Speaker 1]
+Huh? 
+
+00:20:39,180 --> 00:20:40,620 [Speaker 1]
+Sunday you are going to Florida? 
+
+00:20:40,900 --> 00:20:40,980 [Speaker 0]
+Yeah. 
+
+00:20:41,020 --> 00:20:41,460 [Speaker 1]
+And then? 
+
+00:20:42,680 --> 00:20:43,780 [Speaker 0]
+I'll be returning next week. 
+
+00:20:44,880 --> 00:20:45,940 [Speaker 0]
+I'll be working, but- 
+
+00:20:45,940 --> 00:20:46,100 [Speaker 1]
+You are- 
+
+00:20:46,100 --> 00:20:51,180 [Speaker 0]
+-uh, I'll just be going to my friend's place there. So we have long weekend Thursday onwards, right? So- 
+
+00:20:51,960 --> 00:20:52,140 [Speaker 1]
+Uh-huh. 
+
+00:20:52,140 --> 00:20:55,060 [Speaker 0]
+-we are planning, uh, to go to Key West in Florida. 
+
+00:20:56,540 --> 00:20:57,780 [Speaker 1]
+Oh, man. Nice. 
+
+00:20:57,780 --> 00:21:01,540 [Speaker 0]
+[chuckling] That's why Sunday I'll go, and Monday, Tuesday, Wednesday I'll work. 
+
+00:21:02,660 --> 00:21:07,140 [Speaker 0]
+Thursday to-- Again, I'm planning to take the PTO for Monday and Tuesday after next week. 
+
+00:21:08,740 --> 00:21:12,520 [Speaker 1]
+Monday and Tuesday after next week. Uh-huh. Take, man. 
+
+00:21:14,340 --> 00:21:18,960 [Speaker 1]
+That is okay. [sighing] 
+
+00:21:18,960 --> 00:21:19,580 [Speaker 0]
+Mm-hmm. 
+
+00:21:19,860 --> 00:21:40,520 [Speaker 1]
+I don't know, man. ये कहाँ जा रहा है project मतलब? पहले इतना traction था, एकदम से daily, by daily updates हो रहे हैं। ये क्यों नहीं चल रहा है? Sage का output क्यों नहीं आ रहा है? Algo क्या लगा रहे हो? Pragma क्यों नहीं run कर रहे? सब कुछ चल रहा था। अब एकदम से खत्म हो गया सब कुछ। कोई पूछ ही नहीं रहा है कि approach क्या लगा रहा है। 
+
+00:21:40,560 --> 00:21:41,300 [Speaker 0]
+भाई, मतलब, 
+
+00:21:42,920 --> 00:21:51,440 [Speaker 0]
+I think again it would be coming to the point where, like, suddenly it becomes a priority now again. I don't know why all Sage projects are, like, taking a slowdown suddenly. 
+
+00:21:53,180 --> 00:21:56,480 [Speaker 1]
+All Sage projects? You are facing anywhere else also this? 
+
+00:21:56,720 --> 00:22:02,040 [Speaker 0]
+The Pragma people, like, uh, uh, who works with Shiva team, right? I, I know one person. 
+
+00:22:02,060 --> 00:22:02,120 [Speaker 1]
+Uh-huh. 
+
+00:22:02,120 --> 00:22:05,200 [Speaker 0]
+He also joined recently. He was working on the Pragma thing. Even they stopped. 
+
+00:22:05,260 --> 00:22:05,460 [Speaker 1]
+Uh-huh. 
+
+00:22:07,280 --> 00:22:07,520 [Speaker 1]
+Huh. 
+
+00:22:07,540 --> 00:22:13,620 [Speaker 0]
+He was saying like, uh, uh, no, we are in a pause right now kind of thing. We're not moving that fast. I don't have any work right now. 
+
+00:22:16,140 --> 00:22:20,440 [Speaker 0]
+Well, maybe they are working on a backend, but they slowed down is what I heard from him. 
+
+00:22:23,280 --> 00:22:24,100 [Speaker 1]
+ऐसा क्यों हो गया है? 
+
+00:22:25,180 --> 00:22:45,120 [Speaker 0]
+That's why I was asking. I, I asked Anshit as well. Like, he was telling Raymond, uh, update के बाद he was pretty much impressed with the video and everything. So I was like, "What happened?" [chuckling] He even didn't get to communicate with people. He was also shocked. "Oh, this, this happened like that." But I'm not sure. [chuckling] 
+
+00:22:45,140 --> 00:22:46,400 [Speaker 1]
+पता नहीं क्या चल रहा है। 
+
+00:22:48,460 --> 00:23:05,760 [Speaker 1]
+मेरे को उससे, मेरे को इससे problem नहीं है कि मतलब कोई देख रहा है कि नहीं देख रहा है, लेकिन at least कोई communication ही नहीं है हमारे पास कि मतलब whether we should continue doing this or not. And like the same dilemma which Karthikeya was also having. He was like, "Should we progress any further here?" Like, what should we do? 
+
+00:23:06,100 --> 00:23:06,220 [Speaker 0]
+Mm-hmm. 
+
+00:23:06,300 --> 00:23:07,240 [Speaker 1]
+That to be honest. 
+
+00:23:07,260 --> 00:23:07,540 [Speaker 0]
+Mm-hmm. 
+
+00:23:07,640 --> 00:23:19,780 [Speaker 1]
+Even I'm not in the clear. And I was hoping today to have, like, some meaningful discussion to drive something home. But if the objective of the discussion is just to know 
+
+00:23:21,020 --> 00:23:23,200 [Speaker 1]
+whether there is any outcome or not, right? 
+
+00:23:23,460 --> 00:23:23,480 [Speaker 0]
+Mm-hmm. 
+
+00:23:23,500 --> 00:23:30,820 [Speaker 1]
+And if I am myself not sure about the outcome and I'm looking for guidance, and the question comes back to me, tell me which is the best one- 
+
+00:23:30,820 --> 00:23:31,240 [Speaker 0]
+[chuckling] 
+
+00:23:31,240 --> 00:23:32,640 [Speaker 1]
+-then essentially I don't have an answer. 
+
+00:23:32,820 --> 00:23:38,520 [Speaker 0]
+Yeah. So basically they are also looking for outcome. We are looking for a little guidance so that we can get the outcome. But they are not even sure. 
+
+00:23:38,600 --> 00:23:38,740 [Speaker 1]
+Yeah. 
+
+00:23:38,740 --> 00:23:39,680 [Speaker 0]
+Even we are not sure. 
+
+00:23:40,700 --> 00:23:41,280 [Speaker 1]
+Yeah. So 
+
+00:23:43,100 --> 00:23:47,020 [Speaker 1]
+it is like, तुम कर लो, नहीं तुम कर लो यार, तुम कर लो, नहीं तुम कर लो। 
+
+00:23:49,100 --> 00:23:54,680 [Speaker 1]
+ठीक है। Let's see, man, how that goes. Okay. But, uh, good luck, man. Have a nice trip. 
+
+00:23:54,880 --> 00:23:55,040 [Speaker 0]
+Yeah. 
+
+00:23:55,060 --> 00:23:55,240 [Speaker 1]
+Okay? 
+
+00:23:55,300 --> 00:23:56,060 [Speaker 0]
+Thank you. 
+
+00:23:56,060 --> 00:24:01,380 [Speaker 1]
+Go enjoy. And, uh, like Florida तो same time zone में ही है, तो I think that is okay. 
+
+00:24:01,560 --> 00:24:02,240 [Speaker 0]
+Yeah, same time zone. 
+
+00:24:02,240 --> 00:24:07,860 [Speaker 1]
+Yes, it's not a... Yeah. Nice. But take calls from beach, okay? With the margarita in hand. 
+
+00:24:07,860 --> 00:24:09,780 [Speaker 0]
+[chuckling] Yeah. One day- 
+
+00:24:09,820 --> 00:24:09,920 [Speaker 1]
+And like- 
+
+00:24:09,920 --> 00:24:15,760 [Speaker 0]
+-I'll not be traveling anywhere because all the people are coming. Like, there's like seven, eight people coming from different places. 
+
+00:24:16,840 --> 00:24:17,080 [Speaker 1]
+Okay. 
+
+00:24:17,220 --> 00:24:19,440 [Speaker 0]
+So I studied at Florida, so it's like- 
+
+00:24:19,600 --> 00:24:19,840 [Speaker 1]
+Uh-huh. 
+
+00:24:20,060 --> 00:24:21,100 [Speaker 0]
+So that's why we are meeting there. 
+
+00:24:22,140 --> 00:24:23,460 [Speaker 1]
+Oh, so it's a homecoming then. 
+
+00:24:23,520 --> 00:24:24,260 [Speaker 0]
+Yeah. [chuckling] 
+
+00:24:24,260 --> 00:24:27,932 [Speaker 1]
+Sensible. Nice, nice, nice. Good, man. Good. Have fun. 
+
+00:24:28,252 --> 00:24:28,572 [Speaker 0]
+Thank you. 
+
+00:24:28,632 --> 00:24:29,152 [Speaker 1]
+Okay? 
+
+00:24:29,172 --> 00:24:29,612 [Speaker 0]
+I'll give it this. 
+
+00:24:29,912 --> 00:24:34,892 [Speaker 1]
+Drop these notes and, uh, like put across ki IG, YG ka bhi discussion ho raha hai. 
+
+00:24:34,892 --> 00:24:35,092 [Speaker 0]
+Yeah. 
+
+00:24:35,092 --> 00:24:42,912 [Speaker 1]
+And like they are looking for ki like IG pe bhi kar sakte hain. Agar IG use karke, I would say like ki agar wo jo approach which Kartik is taking, right? 
+
+00:24:42,972 --> 00:24:43,072 [Speaker 0]
+Mm-hmm. 
+
+00:24:43,092 --> 00:24:44,272 [Speaker 1]
+Support vector and everything. 
+
+00:24:44,392 --> 00:24:45,112 [Speaker 0]
+Mm-hmm. 
+
+00:24:45,112 --> 00:24:47,012 [Speaker 1]
+If agar we replace that with IG- 
+
+00:24:47,492 --> 00:24:47,612 [Speaker 0]
+Yeah. 
+
+00:24:47,612 --> 00:24:50,052 [Speaker 1]
+-and that gives us something that is even better, right? 
+
+00:24:50,272 --> 00:24:51,192 [Speaker 0]
+Yes, yes. Correct. 
+
+00:24:52,112 --> 00:24:55,252 [Speaker 1]
+Shapley hamare paas hai, hum IG use kar lenge prediction mein. 
+
+00:24:55,472 --> 00:24:55,852 [Speaker 0]
+Mm-hmm. Yeah. 
+
+00:24:55,852 --> 00:24:57,852 [Speaker 1]
+So, Sonal-- Accha haan, one more thing. 
+
+00:24:57,912 --> 00:24:58,892 [Speaker 0]
+Mm-hmm. 
+
+00:24:58,892 --> 00:25:03,932 [Speaker 1]
+Sonal asked me essentially ki we have a golden vector. 
+
+00:25:04,512 --> 00:25:04,712 [Speaker 0]
+Yeah. 
+
+00:25:06,012 --> 00:25:06,452 [Speaker 1]
+Theek hai? 
+
+00:25:06,472 --> 00:25:06,592 [Speaker 0]
+Mm-hmm. 
+
+00:25:06,612 --> 00:25:07,852 [Speaker 1]
+We have opportunity vectors. 
+
+00:25:08,052 --> 00:25:08,672 [Speaker 0]
+Correct. 
+
+00:25:08,672 --> 00:25:13,112 [Speaker 1]
+Now she was asking me that if for golden I have a predicted GCM. 
+
+00:25:13,152 --> 00:25:13,532 [Speaker 0]
+Mm-hmm. 
+
+00:25:13,532 --> 00:25:13,812 [Speaker 1]
+Okay? 
+
+00:25:14,152 --> 00:25:14,352 [Speaker 0]
+Okay. 
+
+00:25:15,452 --> 00:25:19,732 [Speaker 1]
+And I want to understand what is contributing to that prediction in GCM. 
+
+00:25:20,692 --> 00:25:21,392 [Speaker 0]
+Mm-hmm. 
+
+00:25:21,392 --> 00:25:22,312 [Speaker 1]
+Only for golden. 
+
+00:25:22,412 --> 00:25:23,052 [Speaker 0]
+Okay. 
+
+00:25:23,052 --> 00:25:26,012 [Speaker 1]
+Can't that be given by integrated gradients? 
+
+00:25:28,412 --> 00:25:29,011 [Speaker 0]
+Hmm. 
+
+00:25:30,151 --> 00:25:33,492 [Speaker 1]
+So you remember the first conversation that we had with Ashish? 
+
+00:25:33,752 --> 00:25:34,072 [Speaker 0]
+Yeah. 
+
+00:25:34,072 --> 00:25:38,272 [Speaker 1]
+Wherein we said that, okay, we can use integrated gradients to decipher a prediction. 
+
+00:25:38,552 --> 00:25:39,012 [Speaker 0]
+Mm-hmm. 
+
+00:25:39,012 --> 00:25:41,312 [Speaker 1]
+Because we have already trained on the sequences. 
+
+00:25:41,532 --> 00:25:41,672 [Speaker 0]
+Yeah. 
+
+00:25:41,672 --> 00:25:46,712 [Speaker 1]
+And now based on the trained sequences, we know that, okay, what exactly is happening- 
+
+00:25:47,192 --> 00:25:47,592 [Speaker 0]
+Mm-hmm. 
+
+00:25:47,592 --> 00:25:48,872 [Speaker 1]
+-in, uh, 
+
+00:25:49,892 --> 00:25:57,632 [Speaker 1]
+in each and every prediction. And we have an integrated gradient approach which tells me how much each and every attribute is contributing. 
+
+00:25:57,932 --> 00:25:58,512 [Speaker 0]
+Yes. 
+
+00:25:58,512 --> 00:25:58,912 [Speaker 1]
+Correct? 
+
+00:25:58,932 --> 00:25:59,152 [Speaker 0]
+Mm-hmm. 
+
+00:26:00,472 --> 00:26:13,592 [Speaker 1]
+So her question was, can I get to know within the golden vector, within the golden audiences or select card members, which particular attribute is contributing to what level in terms of GCM prediction? 
+
+00:26:14,912 --> 00:26:16,592 [Speaker 0]
+Yeah. That we can do. 
+
+00:26:16,632 --> 00:26:18,772 [Speaker 1]
+We can-- That we can do, right? 
+
+00:26:18,852 --> 00:26:19,132 [Speaker 0]
+Yeah. 
+
+00:26:20,872 --> 00:26:23,832 [Speaker 1]
+That's what we can get. That we can get with even like our approach- 
+
+00:26:23,992 --> 00:26:24,112 [Speaker 0]
+Yes. 
+
+00:26:24,112 --> 00:26:24,712 [Speaker 1]
+-that we have. 
+
+00:26:24,812 --> 00:26:25,072 [Speaker 0]
+Mm-hmm. 
+
+00:26:26,472 --> 00:26:32,432 [Speaker 1]
+Okay? So put that as a pointer. Like this was one question that she had, ki which signals- 
+
+00:26:32,732 --> 00:26:33,792 [Speaker 0]
+Mm-hmm. Are affecting- 
+
+00:26:33,792 --> 00:26:34,652 [Speaker 1]
+-of a select way. 
+
+00:26:35,812 --> 00:26:38,932 [Speaker 1]
+Yes. Are more-- are contributing towards golden GCM. 
+
+00:26:39,112 --> 00:26:39,232 [Speaker 0]
+Yeah. 
+
+00:26:39,232 --> 00:26:40,972 [Speaker 1]
+So like through integrated gradients- 
+
+00:26:41,132 --> 00:26:41,352 [Speaker 0]
+Mm-hmm. 
+
+00:26:41,352 --> 00:26:42,112 [Speaker 1]
+-can we get that? 
+
+00:26:42,312 --> 00:26:52,132 [Speaker 0]
+Yeah. So because we were dealing with a case when like not dealing when to know about golden, but we are try-- we were trying to do it with the distance thing only. So we didn't- 
+
+00:26:52,512 --> 00:26:52,732 [Speaker 1]
+Yeah, yeah, yeah. 
+
+00:26:52,732 --> 00:26:54,432 [Speaker 0]
+-actually do that. Yeah. 
+
+00:26:54,452 --> 00:26:55,332 [Speaker 1]
+Mm-hmm. 
+
+00:26:55,412 --> 00:26:56,972 [Speaker 0]
+Okay. I'll let them know that. 
+
+00:26:57,012 --> 00:26:57,352 [Speaker 1]
+Okay. 
+
+00:26:57,432 --> 00:26:58,012 [Speaker 0]
+Okay. 
+
+00:26:58,012 --> 00:26:59,392 [Speaker 1]
+Yep. Cool. 
+
+00:26:59,392 --> 00:27:00,652 [Speaker 0]
+Cool. Okay, Nitesh. 
+
+00:27:00,812 --> 00:27:04,072 [Speaker 1]
+Done. So if they can have this view on select Monday- 
+
+00:27:04,312 --> 00:27:04,592 [Speaker 0]
+Mm-hmm. 
+
+00:27:04,592 --> 00:27:06,632 [Speaker 1]
+-then essentially we can have select some progress- 
+
+00:27:06,852 --> 00:27:07,032 [Speaker 0]
+Yes. 
+
+00:27:07,032 --> 00:27:07,772 [Speaker 1]
+-over that. 
+
+00:27:07,812 --> 00:27:07,952 [Speaker 0]
+Yeah. 
+
+00:27:08,572 --> 00:27:08,712 [Speaker 1]
+Done? 
+
+00:27:08,712 --> 00:27:08,792 [Speaker 0]
+Done. 
+
+00:27:10,352 --> 00:27:10,732 [Speaker 1]
+Cool. 
+
+00:27:10,792 --> 00:27:11,472 [Speaker 0]
+Okay, Nitesh. 
+
+00:27:11,472 --> 00:27:12,752 [Speaker 1]
+Okay. Thanks, Ima. 
+
+00:27:12,752 --> 00:27:13,432 [Speaker 0]
+Thank you. 
+
+00:27:13,432 --> 00:27:13,952 [Speaker 1]
+Take care. 
+
+00:27:13,992 --> 00:27:14,112 [Speaker 0]
+Yeah. 
+
+00:27:14,112 --> 00:27:14,392 [Speaker 1]
+Bye. 
+
+00:27:14,392 --> 00:27:19,692 [Speaker 0]
+Bye. [notification tone chiming]
