@@ -1,2597 +1,1871 @@
-00:00:02,140 --> 00:00:04,860 [Speaker 0]
-[notification sound] Hi, Nitish. 
+00:00:00,520 --> 00:00:33,440 [Speaker 0]
+[notification sound] 
 
-00:00:06,280 --> 00:00:07,840 [Speaker 1]
-Hey, hi, Divang. How are you doing? 
+00:00:33,440 --> 00:00:34,060 [Speaker 1]
+Will you join the- 
 
-00:00:08,160 --> 00:00:10,700 [Speaker 0]
-Good, good. How are you? Are you able to sit now normally? 
+00:00:34,080 --> 00:00:35,020 [Speaker 2]
+Hi, Sonal. Yeah, I think- 
 
-00:00:10,700 --> 00:00:10,700 [Speaker 1]
-I'm also... 
+00:00:37,300 --> 00:00:38,100 [Speaker 1]
+I'll join this one. 
 
-00:00:12,400 --> 00:00:15,360 [Speaker 1]
-Not normally, but abnormally I'm sitting. [chuckling] 
+00:00:38,100 --> 00:00:38,420 [Speaker 3]
+You should. 
 
-00:00:16,520 --> 00:00:17,000 [Speaker 0]
-Oh, yeah. 
+00:00:39,500 --> 00:00:40,340 [Speaker 1]
+Some representation. 
 
-00:00:17,000 --> 00:00:20,160 [Speaker 1]
-Yeah. We are like double couch. [chuckling] I'm like sitting on that. Yeah. 
+00:00:41,060 --> 00:00:41,880 [Speaker 3]
+Do you join every time? 
 
-00:00:20,200 --> 00:00:20,320 [Speaker 0]
-Yeah. 
+00:00:42,800 --> 00:00:43,980 [Speaker 1]
+Uh, mostly, yes. 
 
-00:00:22,160 --> 00:00:25,260 [Speaker 1]
-Okay. So we have a meeting with Sonal in like in 40 minutes. 
+00:00:44,260 --> 00:00:44,860 [Speaker 3]
+Are you serious? 
 
-00:00:25,380 --> 00:00:25,600 [Speaker 0]
-Mm-hmm. 
+00:00:45,120 --> 00:00:48,580 [Speaker 1]
+Yeah, yeah, because, uh, you also joined once. 
 
-00:00:25,720 --> 00:00:25,900 [Speaker 1]
-Okay. 
+00:00:48,580 --> 00:00:49,660 [Speaker 3]
+I only joined once. 
 
-00:00:25,900 --> 00:00:28,360 [Speaker 0]
-Is it only with us? I mean, Nitish, you and me? 
+00:00:49,660 --> 00:00:49,980 [Speaker 1]
+I joined- 
 
-00:00:29,580 --> 00:00:36,780 [Speaker 1]
-Yeah, yeah. You and me only, man. Like Uma is not there. She's on PTO. And like rest of the team in India is already on off right now. 
+00:00:49,980 --> 00:00:52,600 [Speaker 3]
+At Target IQ. No, Target IQ also I was not able to join. 
 
-00:00:36,980 --> 00:00:37,180 [Speaker 0]
-Okay. 
-
-00:00:37,440 --> 00:00:37,660 [Speaker 1]
-Right? 
-
-00:00:37,960 --> 00:00:38,040 [Speaker 0]
-Mm-hmm. 
-
-00:00:38,040 --> 00:00:38,940 [Speaker 1]
-So it is just you and me. 
-
-00:00:39,880 --> 00:00:39,940 [Speaker 0]
-Okay. 
-
-00:00:39,940 --> 00:00:42,640 [Speaker 1]
-So yeah, I was actually going through the deck, okay? 
-
-00:00:42,840 --> 00:00:43,080 [Speaker 0]
-Mm-hmm. 
-
-00:00:43,340 --> 00:00:44,660 [Speaker 1]
-Which these guys have created. 
-
-00:00:45,120 --> 00:00:45,540 [Speaker 0]
-Okay. 
-
-00:00:45,540 --> 00:00:48,720 [Speaker 1]
-I think it is very confusing like what these guys have put, 
-
-00:00:49,800 --> 00:01:04,920 [Speaker 1]
-like from start to like different setups, right, that they are putting across. Like so many graphs are there, and then like all of a sudden like our counterfactuals and Shapley comes into play, and then there is approach three, broader behavioral simulation. 
-
-00:01:04,940 --> 00:01:05,420 [Speaker 0]
-Mm-hmm. 
-
-00:01:05,420 --> 00:01:13,160 [Speaker 1]
-So what exactly is the overarching message like that I want to put across and want to explain it to them as to what exactly are we doing? 
-
-00:01:13,980 --> 00:01:27,920 [Speaker 0]
-Yeah. So the main thing here is like, uh, first we-- they are trying to tell the overall approaches that we tried. So initially, the first approach, uh, we, we mentioned here is like we're only introducing a day level pattern on a particular- 
-
-00:01:28,020 --> 00:01:28,960 [Speaker 1]
-Okay. 
-
-00:01:28,960 --> 00:01:29,300 [Speaker 0]
-That is the- 
-
-00:01:29,320 --> 00:01:33,560 [Speaker 1]
-So let's say, uh, this is the approach one, right? This we have. 
-
-00:01:33,600 --> 00:01:33,840 [Speaker 0]
-Mm-hmm. 
-
-00:01:35,400 --> 00:01:36,280 [Speaker 1]
-This is the first slide. 
-
-00:01:36,280 --> 00:01:36,820 [Speaker 0]
-First time, yeah. 
-
-00:01:36,820 --> 00:01:39,860 [Speaker 1]
-This is the, this is the first approach that we're putting across, right? 
-
-00:01:40,140 --> 00:01:40,320 [Speaker 0]
-Mm-hmm. 
-
-00:01:40,320 --> 00:01:42,340 [Speaker 1]
-So let me put this one 
-
-00:01:43,640 --> 00:01:46,060 [Speaker 1]
-and put this as a placeholder yahan pe. 
-
-00:01:48,460 --> 00:01:48,960 [Speaker 1]
-Approach 
-
-00:01:51,740 --> 00:01:52,780 [Speaker 1]
-one. Okay? 
-
-00:01:52,820 --> 00:01:53,460 [Speaker 0]
-Mm-hmm. 
-
-00:01:53,460 --> 00:01:54,580 [Speaker 1]
-So now what it does is 
-
-00:01:55,660 --> 00:01:57,860 [Speaker 1]
-that we have 77K B-Plat card members- 
-
-00:01:58,020 --> 00:01:58,160 [Speaker 0]
-Yeah. 
-
-00:01:58,160 --> 00:01:59,900 [Speaker 1]
--opportunity and golden. Okay? 
-
-00:01:59,920 --> 00:02:00,680 [Speaker 0]
-Mm-hmm. 
-
-00:02:00,680 --> 00:02:03,800 [Speaker 1]
-Then we are doing some transaction-based simulation. 
-
-00:02:04,280 --> 00:02:04,500 [Speaker 0]
-Yeah. 
-
-00:02:04,500 --> 00:02:14,800 [Speaker 1]
-And we have select persistent activation or broader simulation, like transaction, persistent, and yeah. Okay. So these are the different approaches that we are doing. Okay? 
-
-00:02:14,800 --> 00:02:15,120 [Speaker 0]
-Yeah. 
-
-00:02:15,120 --> 00:02:17,660 [Speaker 1]
-So approach one, let me color this. 
-
-00:02:19,500 --> 00:02:26,540 [Speaker 1]
-Okay, this is approach one. Then this is your approach two, and then this is your approach three. 
-
-00:02:26,780 --> 00:02:27,320 [Speaker 0]
-Yeah. 
-
-00:02:27,320 --> 00:02:27,760 [Speaker 1]
-Okay? 
-
-00:02:27,780 --> 00:02:28,020 [Speaker 0]
-Mm-hmm. 
-
-00:02:28,040 --> 00:02:30,440 [Speaker 1]
-These are the three approaches that we are taking. Correct? 
-
-00:02:32,480 --> 00:02:36,640 [Speaker 1]
-One-- Add one realistic transaction to the customer's original journey. 
-
-00:02:36,980 --> 00:02:37,940 [Speaker 0]
-Yeah. 
-
-00:02:37,960 --> 00:02:40,660 [Speaker 1]
-Okay. Yeah. So what they are doing here is 
-
-00:02:41,700 --> 00:02:49,980 [Speaker 1]
-you have transaction level data for the first three days. You train a transformer to predict actual year to GCM, preserve original transaction sequence as a baseline. Okay? 
-
-00:02:50,360 --> 00:02:50,580 [Speaker 0]
-Mm-hmm. 
-
-00:02:51,100 --> 00:02:56,260 [Speaker 1]
-Six attributes we have taken and 90% coverage and 11 features. What does this mean essentially? 
-
-00:02:57,480 --> 00:03:02,320 [Speaker 0]
-So yeah, I was about to ask, like first time when we int-- did this, so, 
-
-00:03:03,480 --> 00:03:15,700 [Speaker 0]
-so we were basically-- Did we like, uh-- I don't remember this part clearly. So are we adding only-- So it says basically like we are adding the day level pattern on a particular day for each days- 
-
-00:03:15,720 --> 00:03:15,920 [Speaker 1]
-Yeah. 
-
-00:03:15,920 --> 00:03:18,420 [Speaker 0]
--and we are checking what is the improvement, keeping everything same. 
-
-00:03:18,500 --> 00:03:19,940 [Speaker 1]
-Yep. Yep. 
-
-00:03:19,940 --> 00:03:27,880 [Speaker 0]
-So during that, uh-- So what we are finding is like day 30 or something like that, we are getting, uh, more GCM and like more cosine improvement. 
-
-00:03:27,920 --> 00:03:28,140 [Speaker 1]
-Yeah. 
-
-00:03:28,840 --> 00:03:45,520 [Speaker 0]
-Then we, then we move to combinations. That is approach two. So approach one, basically what we are finding is like due to-- because we are introducing as one transaction, the model is learning like day end wise, uh, as we get farther from the day. Like, uh, since we are training only on 30 days- 
-
-00:03:46,440 --> 00:03:46,600 [Speaker 1]
-Mm-hmm. 
-
-00:03:46,600 --> 00:03:50,960 [Speaker 0]
--till close to day 30, it is giving us more GCM and cosine distance. 
-
-00:03:52,680 --> 00:04:03,800 [Speaker 1]
-Okay. So essentially, if this is happening, so I have-- if I have to visualize, how will I visualize? Okay. So if I say that, okay, this was something that I did as a visualization earlier, right? 
-
-00:04:03,960 --> 00:04:04,480 [Speaker 0]
-Yeah. 
-
-00:04:04,480 --> 00:04:12,520 [Speaker 1]
-Wherein like supposedly for a particular combination, this is the sequence pattern, and we were testing like, okay, what if we introduce one earlier? Correct? 
-
-00:04:12,520 --> 00:04:12,640 [Speaker 0]
-Yeah. 
-
-00:04:13,660 --> 00:04:14,600 [Speaker 1]
-This is what we were doing. 
-
-00:04:15,100 --> 00:04:15,160 [Speaker 0]
-Right. 
-
-00:04:15,160 --> 00:04:21,420 [Speaker 1]
-Now they are also doing a testing and introduction of a transaction, but here, what exactly are we introducing first? 
-
-00:04:22,600 --> 00:04:27,980 [Speaker 1]
-When they say like, okay, identify historical observed transaction pattern for each target spend category. 
-
-00:04:28,300 --> 00:04:28,600 [Speaker 0]
-Mm-hmm. 
-
-00:04:30,620 --> 00:04:31,020 [Speaker 0]
-So- 
-
-00:04:31,060 --> 00:04:33,840 [Speaker 1]
-So they are essentially like if the-- 
-
-00:04:35,060 --> 00:04:38,040 [Speaker 1]
-this is 11 features. Okay. 
-
-00:04:39,420 --> 00:04:40,800 [Speaker 1]
-11 features. 
-
-00:04:44,120 --> 00:04:49,100 [Speaker 1]
-Okay, okay, okay, okay. Understood. So what they are doing is these are all the 11 features that we have? 
-
-00:04:49,160 --> 00:04:49,360 [Speaker 0]
-Yeah. 
-
-00:04:50,500 --> 00:04:52,420 [Speaker 1]
-Okay. Top 10 cert, non-top 10 cert. 
-
-00:04:52,700 --> 00:04:53,060 [Speaker 0]
-Yeah. 
-
-00:04:53,060 --> 00:04:53,240 [Speaker 1]
+00:00:53,140 --> 00:00:53,280 [Speaker 1]
 No. 
 
-00:04:54,380 --> 00:04:55,920 [Speaker 1]
-He hasn't even taken the 
+00:00:53,280 --> 00:00:55,320 [Speaker 3]
+I have joined only once, and that took what, half an hour? 
 
-00:04:57,340 --> 00:04:59,420 [Speaker 1]
-other side of things, right? Here. 
+00:00:56,220 --> 00:01:00,920 [Speaker 1]
+Because sometimes they, uh, I want to ensure that what they represent to Heather is, 
 
-00:04:59,500 --> 00:05:03,900 [Speaker 0]
-Okay. We have only taken normal ones, like not, uh, non-top 10 and non-bonus. 
+00:01:02,020 --> 00:01:07,380 [Speaker 1]
+yeah, is correct. Like, the EC risk discussion happened, and they, 
 
-00:05:04,440 --> 00:05:07,000 [Speaker 1]
-Exactly, exactly. We haven't taken the complementary set. 
+00:01:08,880 --> 00:01:19,860 [Speaker 1]
+they thought that they were telling that there is no impact due to it. And I clarified to Heather that there is impact. Just that risk is saying there isn't an impact. So then Heather said, "Anuj, can you then help us?" Right? 
 
-00:05:07,000 --> 00:05:07,240 [Speaker 0]
-Yes. 
+00:01:22,400 --> 00:01:23,600 [Speaker 3]
+I should be joining these sessions. 
 
-00:05:07,980 --> 00:05:12,480 [Speaker 1]
-If we take the exact behaviors, because that's what he's saying, right? 11 features. 
+00:01:24,300 --> 00:01:25,040 [Speaker 1]
+Yeah, it's fine. 
 
-00:05:12,760 --> 00:05:13,160 [Speaker 0]
-Mm-hmm. 
+00:01:27,040 --> 00:01:29,060 [Speaker 4]
+You only join this session, you can leave later. 
 
-00:05:13,180 --> 00:05:23,520 [Speaker 1]
-Applying pattern support filter. Okay. So if we take only these behaviors, which is like top 10 cert, bonusable, fixed COGS, admin. Okay? 
+00:01:29,160 --> 00:01:29,560 [Speaker 3]
+No, no, no. 
 
-00:05:23,600 --> 00:05:23,760 [Speaker 0]
-Mm-hmm. 
+00:01:29,600 --> 00:01:32,900 [Speaker 1]
+There's still time for this one, but 10:15, that's fine. I'll let you know. 
 
-00:05:24,680 --> 00:05:28,740 [Speaker 1]
-Then within the type of that, you have like CNP, physical, and others. 
+00:01:32,900 --> 00:01:33,660 [Speaker 3]
+Oh, but 10:40. 
 
-00:05:30,120 --> 00:05:30,260 [Speaker 0]
+00:01:36,000 --> 00:01:38,240 [Speaker 3]
+But then any which way we cannot, right? 2 o'clock we have to meet her. 
+
+00:01:38,240 --> 00:01:39,380 [Speaker 1]
+Second half, we can whatever. 
+
+00:01:39,380 --> 00:01:42,140 [Speaker 3]
+It's only 20 minutes. So then my loss is only 20 minutes. 
+
+00:01:42,140 --> 00:01:43,200 [Speaker 1]
+[laughing] 
+
+00:01:43,200 --> 00:01:43,740 [Speaker 3]
+I'll join then. 
+
+00:01:44,200 --> 00:01:44,400 [Speaker 1]
+That's 
+
+00:01:46,180 --> 00:01:46,320 [Speaker 1]
+fine. 
+
+00:01:56,800 --> 00:01:59,240 [Speaker 3]
+Guys, what, what are we, uh, doing here? 
+
+00:02:00,220 --> 00:02:15,200 [Speaker 4]
+Uh, we can share the... First, we have done two things, but it's not complete. One is the deck. We want to show the flow and the results. Second is, uh, we also did some preliminary sizing, which we're still refining, but just wanted to talk with you for that. 
+
+00:02:15,220 --> 00:02:16,880 [Speaker 3]
+Preliminary sizing about the markers? 
+
+00:02:17,040 --> 00:02:22,980 [Speaker 4]
+Yes. Basically, your question is like, we run harder the markers. Uh, how do you want to do that? 
+
+00:02:22,980 --> 00:02:25,140 [Speaker 3]
+So I think for Ashish's conversation, right? 
+
+00:02:25,340 --> 00:02:25,720 [Speaker 4]
 Yeah. 
 
-00:05:30,260 --> 00:05:31,900 [Speaker 1]
-Existing merchant and so on. 
+00:02:25,720 --> 00:02:29,320 [Speaker 3]
+Like, of course, we can show the storyline that we will put for Heather. 
 
-00:05:31,900 --> 00:05:32,700 [Speaker 0]
+00:02:29,340 --> 00:02:29,560 [Speaker 4]
 Yeah. 
 
-00:05:32,720 --> 00:05:38,100 [Speaker 1]
-Okay. So essentially, this is what he is doing. Six attributes, comics category. 
+00:02:29,580 --> 00:02:32,500 [Speaker 3]
+That is fine. I don't expect us to go with perfect pages. 
 
-00:05:39,820 --> 00:05:40,280 [Speaker 1]
-Okay. 
-
-00:05:43,260 --> 00:05:44,120 [Speaker 1]
-So this is 
-
-00:05:45,360 --> 00:05:45,780 [Speaker 1]
-COGS, 
-
-00:05:47,080 --> 00:05:51,760 [Speaker 1]
-admin, fixed. Okay. There is no others that has been taken. 
-
-00:05:52,140 --> 00:05:52,700 [Speaker 0]
-Mm-hmm. 
-
-00:05:52,700 --> 00:05:55,100 [Speaker 1]
-Channel, which is online, 
-
-00:05:56,980 --> 00:05:57,500 [Speaker 1]
-CNP, 
-
-00:05:58,680 --> 00:05:59,940 [Speaker 1]
-others. Okay. 
-
-00:06:01,020 --> 00:06:07,032 [Speaker 1]
-This was considered. 
-
-00:06:07,032 --> 00:06:07,272 [Speaker 1]
-Then 
-
-00:06:08,492 --> 00:06:09,432 [Speaker 1]
-top 10 cert, 
-
-00:06:11,712 --> 00:06:17,452 [Speaker 1]
-recurring, new merchant, bonus. Okay, so this gives me 3, 3, 6, 
-
-00:06:18,772 --> 00:06:20,672 [Speaker 1]
-7, 8, 9, 10. 
-
-00:06:21,772 --> 00:06:22,472 [Speaker 1]
-Where is 11? 
-
-00:06:23,432 --> 00:06:25,292 [Speaker 0]
-COGS, admin, fixed, 3. 
-
-00:06:27,072 --> 00:06:32,932 [Speaker 0]
-1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11. Admin, online, recurring, others is also taken here. 
-
-00:06:34,052 --> 00:06:34,632 [Speaker 1]
-Ah. 
-
-00:06:34,672 --> 00:06:34,912 [Speaker 0]
-Hmm. 
-
-00:06:36,612 --> 00:06:39,212 [Speaker 1]
-So this others and COGS is also taken here, right? 
-
-00:06:39,452 --> 00:06:43,392 [Speaker 0]
-Yeah. So comics, I think others is from the comics thing. COGS, admin, fixed, and others. 
-
-00:06:44,832 --> 00:06:45,132 [Speaker 1]
-Okay. 
-
-00:06:46,772 --> 00:06:51,572 [Speaker 1]
-This is there. Then CNP and online is taken from here, right? 
-
-00:06:51,812 --> 00:06:52,272 [Speaker 0]
-Mm-hmm. 
-
-00:06:52,292 --> 00:06:53,932 [Speaker 1]
-Then top 10 cert, recurring. 
-
-00:06:55,652 --> 00:06:56,072 [Speaker 0]
-New merchant. 
-
-00:06:56,152 --> 00:06:56,832 [Speaker 1]
-New merchant. 
-
-00:06:57,872 --> 00:07:00,892 [Speaker 1]
-There is new merchant here. There's no new merchant here, right? 
-
-00:07:02,872 --> 00:07:04,212 [Speaker 0]
-Existing merchant is there. 
-
-00:07:04,232 --> 00:07:04,872 [Speaker 1]
-Top 10 cert, bonusable, fixed. 
-
-00:07:04,872 --> 00:07:09,052 [Speaker 0]
-Okay, I think they're taking everything, but I think why is it 10 of 11 behaviors then? 
-
-00:07:10,772 --> 00:07:13,932 [Speaker 1]
-Recurring, admin, online. So okay, top 10 cert, done. 
-
-00:07:14,132 --> 00:07:14,352 [Speaker 0]
-Mm-hmm. 
-
-00:07:14,632 --> 00:07:18,372 [Speaker 1]
-Bonusable, done. Fixed, COGS, admin, others, done. 
-
-00:07:18,612 --> 00:07:19,472 [Speaker 0]
-Physical and everything. 
-
-00:07:19,472 --> 00:07:19,692 [Speaker 1]
-CNP and- 
-
-00:07:19,752 --> 00:07:24,132 [Speaker 0]
-Only thing is new merchant we are telling, we are-- here we are showing existing merchant. 
-
-00:07:25,452 --> 00:07:30,572 [Speaker 1]
-Okay, so 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11. 
-
-00:07:31,912 --> 00:07:33,512 [Speaker 1]
-Okay, so online 
-
-00:07:34,832 --> 00:07:39,152 [Speaker 1]
-and CNP is considered. So 4 to 6, 
-
-00:07:40,372 --> 00:07:40,472 [Speaker 1]
-7, 
-
-00:07:41,572 --> 00:07:41,592 [Speaker 1]
-8, 
-
-00:07:42,632 --> 00:07:44,412 [Speaker 1]
-9, and 10. Where is the 
-
-00:07:45,932 --> 00:07:47,212 [Speaker 1]
-next one that is coming, man? 
-
-00:07:48,012 --> 00:07:49,292 [Speaker 0]
-We have 11, right? Go above. 
-
-00:07:50,332 --> 00:07:50,692 [Speaker 1]
-Yeah, yeah. 
-
-00:07:51,072 --> 00:07:51,252 [Speaker 0]
-Okay. 
-
-00:07:51,352 --> 00:07:52,432 [Speaker 1]
-11 how? 4- 
-
-00:07:52,432 --> 00:07:52,432 [Speaker 0]
-4- 
-
-00:07:53,572 --> 00:07:54,032 [Speaker 1]
-2, 6- 
-
-00:07:54,332 --> 00:07:54,332 [Speaker 0]
-6, 
-
-00:07:55,872 --> 00:07:55,892 [Speaker 0]
-7- 
-
-00:07:55,892 --> 00:07:57,492 [Speaker 1]
-7, 8, 9, and 10. 
-
-00:07:57,912 --> 00:07:58,472 [Speaker 0]
-Okay, okay. 
-
-00:08:04,132 --> 00:08:09,412 [Speaker 0]
-Just a second. 2.4 padipoyindi. 
-
-00:08:10,592 --> 00:08:18,912 [Speaker 1]
-Top 10 cert done, bonusable done. Comics 4 to 6 done. CNP and physical 
-
-00:08:20,852 --> 00:08:24,572 [Speaker 1]
-4 to 6 and 2, 8 done. 
-
-00:08:26,712 --> 00:08:27,232 [Speaker 1]
-Recurring 
-
-00:08:28,712 --> 00:08:30,332 [Speaker 1]
-9, existing merchant 
-
-00:08:31,372 --> 00:08:31,692 [Speaker 1]
-10. 
-
-00:08:32,792 --> 00:08:36,352 [Speaker 1]
-Haan, toh matlab yeh sum kyun nahi ho paa raha? That's what I'm thinking. 
-
-00:08:36,372 --> 00:08:45,572 [Speaker 0]
-1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11. Okay. Online, admin, recurring, others, existing merchant, physical, CNP, COGS, fixed. 
-
-00:08:59,412 --> 00:08:59,932 [Speaker 1]
-Online, 
-
-00:09:01,072 --> 00:09:01,632 [Speaker 1]
-recurring. 
-
-00:09:02,152 --> 00:09:04,092 [Speaker 0]
-Okay, we didn't take physical thing. 
-
-00:09:07,132 --> 00:09:09,072 [Speaker 1]
-Oh, online, CNP, and physical. 
-
-00:09:09,092 --> 00:09:09,532 [Speaker 0]
-Physical, yeah. 
-
-00:09:09,572 --> 00:09:09,972 [Speaker 1]
-Okay. 
-
-00:09:12,632 --> 00:09:13,152 [Speaker 1]
-Theek hai, done. 
-
-00:09:14,212 --> 00:09:24,392 [Speaker 1]
-Toh hum bol rahe hain ki humne yahi attributes liye, okay? And we looked at for card member, how are these patterns showing up? Like, we are taking exactly these rows. 
-
-00:09:24,552 --> 00:09:24,932 [Speaker 0]
-Yes. 
-
-00:09:24,952 --> 00:09:25,352 [Speaker 1]
-Okay? 
-
-00:09:25,352 --> 00:09:25,492 [Speaker 0]
+00:02:32,500 --> 00:02:33,100 [Speaker 4]
 Yeah. 
 
-00:09:25,772 --> 00:09:29,012 [Speaker 1]
-Within the data. Okay. And we are looking at their behavior. 
+00:02:33,100 --> 00:02:36,560 [Speaker 3]
+But most importantly, what content we will be showing, right? 
 
-00:09:30,172 --> 00:09:34,312 [Speaker 1]
-12 simulation days. Additionally, one has-- 12 simulation days as in kya hua yeh? 
-
-00:09:36,252 --> 00:09:43,732 [Speaker 0]
-Uh, so transaction on each of the 12 selected simulation days. Uh, is this-- is this an example of one thing? Like, because- 
-
-00:09:43,852 --> 00:09:45,072 [Speaker 1]
-I think it's an example. 
-
-00:09:45,112 --> 00:09:45,332 [Speaker 0]
+00:02:36,560 --> 00:02:36,820 [Speaker 4]
 Yeah. 
 
-00:09:50,912 --> 00:09:53,392 [Speaker 1]
-That's why na GPT se slide toh bana liya. 
+00:02:36,820 --> 00:02:42,680 [Speaker 3]
+Like, the question is, should we be showing traditional AI approach and gen- like Sage, Sage both? Or, 
 
-00:09:54,572 --> 00:09:56,552 [Speaker 0]
-Example, we can just reference. 
+00:02:44,100 --> 00:02:44,700 [Speaker 3]
+or just one? 
 
-00:09:56,592 --> 00:09:57,832 [Speaker 1]
-Haan, haan. 
+00:02:45,780 --> 00:02:47,540 [Speaker 4]
+Did he give some hint? 
 
-00:09:59,192 --> 00:09:59,892 [Speaker 1]
-Reference. 
+00:02:48,180 --> 00:02:50,340 [Speaker 3]
+I think we showed Yin to Yin both. 
 
-00:10:04,012 --> 00:10:05,032 [Speaker 1]
-Yahan par let's not 
+00:02:50,360 --> 00:02:55,240 [Speaker 4]
+Yeah. And Yin actually is, I would say, very interested about the, the JIPs. 
 
-00:10:06,152 --> 00:10:07,052 [Speaker 1]
-put simulate, 
+00:02:55,240 --> 00:02:57,520 [Speaker 3]
+Correct, correct, correct. So we can show both the approaches. 
 
-00:10:08,092 --> 00:10:08,272 [Speaker 1]
-haan, 
-
-00:10:09,672 --> 00:10:11,272 [Speaker 1]
-simulate days. 
-
-00:10:13,112 --> 00:10:15,392 [Speaker 1]
-Historically observed transaction pattern 
-
-00:10:16,512 --> 00:10:17,292 [Speaker 1]
-on each of 
-
-00:10:19,192 --> 00:10:21,872 [Speaker 1]
-selected simulation days. Okay. 
-
-00:10:24,132 --> 00:10:24,572 [Speaker 1]
-Rather 
-
-00:10:25,592 --> 00:10:27,052 [Speaker 1]
-to actual 
-
-00:10:28,671 --> 00:10:29,372 [Speaker 1]
-instance. 
-
-00:10:30,532 --> 00:10:31,732 [Speaker 1]
-That's what these guys are doing, right? 
-
-00:10:31,812 --> 00:10:32,012 [Speaker 0]
-Yeah, yeah. 
-
-00:10:32,012 --> 00:10:33,672 [Speaker 1]
-Keep the original transactions unchanged. 
-
-00:10:33,792 --> 00:10:33,912 [Speaker 0]
+00:02:57,800 --> 00:02:57,920 [Speaker 4]
 Yeah. 
 
-00:10:34,372 --> 00:10:34,672 [Speaker 1]
-Okay. 
+00:02:58,320 --> 00:03:02,440 [Speaker 3]
+We can keep our storylines similar to how we showed Yin. It says that we can add more color now. 
 
-00:10:35,712 --> 00:10:50,792 [Speaker 1]
-Score predicted using golden similarity. Give greater weight to patterns supported by more historical customers. Calculate predicted GCM, golden distance changes against baseline, summarized by target. Okay. So then essentially we are aggregating these behaviors- 
+00:03:03,320 --> 00:03:05,160 [Speaker 4]
+And we are more comprehensive. 
 
-00:10:51,012 --> 00:10:51,172 [Speaker 0]
+00:03:05,160 --> 00:03:09,340 [Speaker 3]
+More comprehensive, like we, like kept our, uh, focus on M1. 
+
+00:03:09,760 --> 00:03:09,920 [Speaker 4]
 Yeah. 
 
-00:10:51,172 --> 00:10:58,332 [Speaker 1]
--by doing a weighted average of the changes that are happening with respect to prediction or select changes in the cosine distance. 
+00:03:09,920 --> 00:03:12,100 [Speaker 3]
+We can talk about M2 to M14 also now. 
 
-00:10:58,372 --> 00:10:58,492 [Speaker 0]
-Yes. 
-
-00:10:58,492 --> 00:10:58,892 [Speaker 1]
-Correct? 
-
-00:10:58,892 --> 00:10:59,052 [Speaker 0]
+00:03:12,100 --> 00:03:12,280 [Speaker 4]
 Yeah. 
 
-00:11:00,212 --> 00:11:00,392 [Speaker 1]
-Okay. 
-
-00:11:01,532 --> 00:11:04,952 [Speaker 1]
-What that does is that we are seeing that these behaviors- 
-
-00:11:05,112 --> 00:11:05,332 [Speaker 0]
-Mm-hmm. 
-
-00:11:05,332 --> 00:11:08,392 [Speaker 1]
--and model predicted changes adding one realistic. 
-
-00:11:08,792 --> 00:11:09,112 [Speaker 0]
-Mm-hmm. 
-
-00:11:09,112 --> 00:11:13,872 [Speaker 1]
-Now, how-- the-- which are these card members? These are like all opportunity card members? 
-
-00:11:14,032 --> 00:11:15,472 [Speaker 0]
-Yes, these are opportunity card members. 
-
-00:11:16,532 --> 00:11:20,912 [Speaker 1]
-Okay. Across all opportunity card members, we are saying how many had top 10 cert. 
-
-00:11:21,252 --> 00:11:21,932 [Speaker 0]
-Mm-hmm. 
-
-00:11:21,932 --> 00:11:22,112 [Speaker 1]
-Okay. 
-
-00:11:22,292 --> 00:11:22,992 [Speaker 0]
-Bonusable, things like that. 
-
-00:11:22,992 --> 00:11:23,852 [Speaker 1]
-We looked at-- 
-
-00:11:24,932 --> 00:11:25,172 [Speaker 1]
-hmm. 
-
-00:11:26,892 --> 00:11:29,292 [Speaker 1]
-How to read this particular table, if I have to ask? 
-
-00:11:30,412 --> 00:11:34,852 [Speaker 0]
-That's what. We are not giving any days here, so but we are just saying like, uh... 
-
-00:11:35,972 --> 00:11:36,132 [Speaker 1]
-Hmm. 
-
-00:11:38,092 --> 00:11:39,912 [Speaker 1]
-When we are saying that top 10 cert- 
-
-00:11:40,772 --> 00:11:40,992 [Speaker 0]
-Mm-hmm. 
-
-00:11:40,992 --> 00:11:43,012 [Speaker 1]
--if activated earlier- 
-
-00:11:43,452 --> 00:11:43,672 [Speaker 0]
-Yeah. 
-
-00:11:43,672 --> 00:11:43,932 [Speaker 1]
--okay, 
-
-00:11:44,952 --> 00:11:48,612 [Speaker 1]
-contributes to 952 dollars in the GCM prediction. 
-
-00:11:48,812 --> 00:11:49,032 [Speaker 0]
-Yes. 
-
-00:11:49,052 --> 00:11:49,232 [Speaker 1]
+00:03:12,620 --> 00:03:12,820 [Speaker 3]
 Right? 
 
-00:11:49,452 --> 00:11:49,552 [Speaker 0]
+00:03:13,100 --> 00:03:13,720 [Speaker 4]
+Mm-hmm. 
+
+00:03:13,720 --> 00:03:16,440 [Speaker 3]
+So I want to see... I asked for a couple of pages, right? 
+
+00:03:16,660 --> 00:03:16,800 [Speaker 4]
 Yeah. 
 
-00:11:50,332 --> 00:11:55,072 [Speaker 1]
-And it brings me closer to my golden by 1.6 magnitude. 
+00:03:18,040 --> 00:03:26,020 [Speaker 4]
+So I don't think we have done that, uh, like ready, but Jay, do you want to bring the pages or put? I think the details are still coming. 
 
-00:11:55,232 --> 00:11:55,512 [Speaker 0]
-Yes. 
+00:03:27,520 --> 00:03:46,560 [Speaker 2]
+And just to add on to that, Sonal, like last week when we had our discussion, you mentioned out that we should have select integrated gradients also within the Sage. We did that as well. Like, we have the results based on IG as well that we have added. So I have added like a few slides on that within this deck as well. 
 
-00:11:55,512 --> 00:11:55,692 [Speaker 1]
-Okay? 
+00:03:47,640 --> 00:03:49,120 [Speaker 2]
+But we can discuss through. Yeah. 
 
-00:11:55,912 --> 00:11:56,712 [Speaker 0]
-Mm-hmm. 
-
-00:11:56,712 --> 00:11:58,892 [Speaker 1]
-Okay. That's what we are saying. This is the 
-
-00:12:00,332 --> 00:12:08,752 [Speaker 1]
-top five indicators which are telling me that I am bringing, adding more towards the GCM contribution- 
-
-00:12:09,092 --> 00:12:09,412 [Speaker 0]
-Mm-hmm. 
-
-00:12:09,412 --> 00:12:12,812 [Speaker 1]
--and I'm also bringing myself closer to the- 
-
-00:12:13,152 --> 00:12:14,632 [Speaker 0]
-Cosine, I mean, golden distance.
-
-00:12:15,336 --> 00:12:23,056 [Speaker 1]
-Golden, okay? These are the ones. And when it comes to distance, cosine distance across days- 
-
-00:12:23,276 --> 00:12:23,656 [Speaker 0]
-Yeah. 
-
-00:12:23,656 --> 00:12:26,616 [Speaker 1]
-So this doesn't give me temporal view of like GCM. 
-
-00:12:26,896 --> 00:12:27,036 [Speaker 0]
-Yeah. 
-
-00:12:27,036 --> 00:12:27,096 [Speaker 1]
-Right? 
-
-00:12:27,096 --> 00:12:30,396 [Speaker 0]
-This just says like if early activation happens, this is the improvement. 
-
-00:12:30,476 --> 00:12:30,616 [Speaker 1]
-Yeah. 
-
-00:12:30,836 --> 00:12:31,396 [Speaker 0]
-Yeah. 
-
-00:12:31,436 --> 00:12:44,616 [Speaker 1]
-This is the improvement. This tells me across days, which are the days on which if this happens, it adds value. So what it is telling me, the longer I wait to activate, the closer I get closer to golden. 
-
-00:12:44,696 --> 00:12:44,876 [Speaker 0]
-Yes. 
-
-00:12:45,076 --> 00:12:45,496 [Speaker 1]
-Correct? 
-
-00:12:45,496 --> 00:12:45,616 [Speaker 0]
-Yeah. 
-
-00:12:46,116 --> 00:12:47,255 [Speaker 1]
-It doesn't make any sense. 
-
-00:12:47,296 --> 00:12:48,716 [Speaker 0]
-Mm-hmm. Correct. 
-
-00:12:48,716 --> 00:12:49,096 [Speaker 1]
-Okay. 
-
-00:12:49,116 --> 00:12:50,876 [Speaker 0]
-Yeah. This is the graph for this. Yeah. 
-
-00:12:51,176 --> 00:12:55,876 [Speaker 1]
-So these are the graphs, like where it was showing that, okay, our GCM prediction is increasing by the day. 
-
-00:12:56,016 --> 00:12:56,156 [Speaker 0]
-Mm-hmm. 
-
-00:12:56,156 --> 00:12:57,696 [Speaker 1]
-So it is not learning correctly. 
-
-00:12:57,696 --> 00:12:58,176 [Speaker 0]
-Yeah. 
-
-00:12:58,176 --> 00:12:58,336 [Speaker 1]
-Okay? 
-
-00:12:59,636 --> 00:13:03,696 [Speaker 1]
-And temporal is telling the later activation, the better it is. Make sense? 
-
-00:13:03,696 --> 00:13:03,956 [Speaker 0]
-Yes. 
-
-00:13:05,236 --> 00:13:05,516 [Speaker 1]
-Okay. 
-
-00:13:07,956 --> 00:13:16,316 [Speaker 1]
-So hence, we are moving away from approach one. Why approach one favors late activation, how approach two corrects it. Okay, late activation looks best. 
-
-00:13:16,796 --> 00:13:16,956 [Speaker 0]
-Mm-hmm. 
-
-00:13:16,956 --> 00:13:26,996 [Speaker 1]
-Okay? Activated day and day, okay? Both get the same single one digit, and the model can't see past day 30. So late activation looks as good or better. 
-
-00:13:27,176 --> 00:13:27,376 [Speaker 0]
-Mm-hmm. 
-
-00:13:27,516 --> 00:13:27,716 [Speaker 1]
-Okay? 
-
-00:13:28,876 --> 00:13:29,996 [Speaker 1]
-So what we are doing is 
-
-00:13:31,876 --> 00:13:39,696 [Speaker 1]
-approach to fix daily level aggregation, event data, one sequence indicator per customer per day. 
-
-00:13:39,696 --> 00:13:39,956 [Speaker 0]
-These are the- 
-
-00:13:39,996 --> 00:13:40,836 [Speaker 1]
-Persistent flag. 
-
-00:13:41,076 --> 00:13:42,736 [Speaker 0]
-You're taking the combinations from here. 
-
-00:13:43,956 --> 00:13:46,296 [Speaker 1]
-Okay, so now we are creating combinations. 
-
-00:13:46,936 --> 00:13:46,976 [Speaker 0]
-Yeah. 
-
-00:13:46,996 --> 00:13:47,196 [Speaker 1]
-Okay? 
-
-00:13:48,756 --> 00:13:52,676 [Speaker 1]
-Seven variables. So essentially, six transaction fields. 
-
-00:13:52,956 --> 00:13:56,576 [Speaker 0]
-Mm-hmm. 
-
-00:13:56,576 --> 00:13:58,156 [Speaker 1]
-But we have product usage also, right? 
-
-00:14:00,436 --> 00:14:02,156 [Speaker 1]
-That is also here, player and everything. 
-
-00:14:02,236 --> 00:14:06,576 [Speaker 0]
-Yes, yes. That is there. They didn't mention it, I guess. Seven we add, like, right? 
-
-00:14:07,956 --> 00:14:09,256 [Speaker 1]
-That's why I'm saying, like- 
-
-00:14:09,416 --> 00:14:10,216 [Speaker 0]
-Mm-hmm. 
-
-00:14:10,216 --> 00:14:12,836 [Speaker 1]
-These decks, they get created very quickly- 
-
-00:14:13,216 --> 00:14:13,416 [Speaker 0]
-Yeah. 
-
-00:14:13,416 --> 00:14:14,796 [Speaker 1]
--using GPT. 
-
-00:14:22,996 --> 00:14:27,356 [Speaker 0]
-So Nitish, so for you, they didn't, uh, tell any reason for this, for what happened to you? 
-
-00:14:28,976 --> 00:14:46,456 [Speaker 1]
-Yeah, they asked me when, like, something of this sort has happened earlier, and I told them that something of this sort similar happened last year, but it was not to such pain. So then they were like, okay, because the injury was there earlier. This time around, it came back pretty hard on me. That's why. 
-
-00:14:48,016 --> 00:14:50,496 [Speaker 1]
-So this, this was an older injury which led to this. 
-
-00:14:51,036 --> 00:14:54,136 [Speaker 0]
-This was-- The last year also you were in US only, not Indian thing. 
-
-00:14:54,456 --> 00:14:54,956 [Speaker 1]
-Yeah, yeah. 
-
-00:14:55,056 --> 00:14:55,556 [Speaker 0]
-Yeah. Okay. 
-
-00:14:57,376 --> 00:14:57,756 [Speaker 1]
-Seven 
-
-00:14:59,776 --> 00:15:02,416 [Speaker 1]
-categories. It's about seven categories. 
-
-00:15:03,896 --> 00:15:04,416 [Speaker 0]
-Mm-hmm. 
-
-00:15:04,496 --> 00:15:04,696 [Speaker 1]
-Okay? 
-
-00:15:09,236 --> 00:15:13,676 [Speaker 1]
-Input seven categories, approach two, input seven- 
-
-00:15:13,776 --> 00:15:16,236 [Speaker 0]
-Combination use, uh, categories of seven variables. 
-
-00:15:16,236 --> 00:15:16,616 [Speaker 1]
-Variables. 
-
-00:15:17,756 --> 00:15:18,436 [Speaker 1]
-Uh, input 
-
-00:15:20,416 --> 00:15:21,396 [Speaker 1]
-combination of... 
-
-00:15:29,036 --> 00:15:29,396 [Speaker 1]
-Okay. 
-
-00:15:30,796 --> 00:15:32,076 [Speaker 1]
-So now approach one. 
-
-00:15:33,196 --> 00:15:33,376 [Speaker 0]
-Mm-hmm. 
-
-00:15:34,276 --> 00:15:39,316 [Speaker 1]
-Future transactions are unchanged. Seven categories, okay? One event added. 
-
-00:15:39,596 --> 00:15:40,996 [Speaker 0]
-And remaining we keep zero. 
-
-00:15:42,436 --> 00:15:42,796 [Speaker 1]
-Okay. 
-
-00:15:44,056 --> 00:15:50,156 [Speaker 1]
-Customer activates on day six. Okay. We keep day six only the first activation. 
-
-00:15:50,376 --> 00:15:50,456 [Speaker 0]
-Yeah. 
-
-00:15:50,536 --> 00:15:50,916 [Speaker 1]
-Okay? 
-
-00:15:50,956 --> 00:15:51,136 [Speaker 0]
-Mm-hmm. 
-
-00:15:52,196 --> 00:15:57,616 [Speaker 1]
-One event added. Approach one. So then essentially keep only first activation, right? 
-
-00:15:57,796 --> 00:15:57,916 [Speaker 0]
-Yes. 
-
-00:15:57,916 --> 00:15:58,876 [Speaker 1]
-That is what we are saying? 
-
-00:15:58,876 --> 00:15:59,016 [Speaker 0]
-Yeah. 
-
-00:15:59,556 --> 00:16:02,096 [Speaker 1]
-Keep only first instance. 
-
-00:16:04,336 --> 00:16:11,316 [Speaker 1]
-And this is like more of an activated state. Like on day six, activates on day six, then we'll make it like one afterwards. 
-
-00:16:12,556 --> 00:16:12,596 [Speaker 0]
-Mm-hmm. 
-
-00:16:12,596 --> 00:16:12,976 [Speaker 1]
-Right? 
-
-00:16:13,016 --> 00:16:13,996 [Speaker 0]
-Mm-hmm. 
-
-00:16:13,996 --> 00:16:14,216 [Speaker 1]
-Done. 
-
-00:16:16,756 --> 00:16:17,456 [Speaker 1]
-Approach... 
-
-00:16:21,056 --> 00:16:22,576 [Speaker 1]
-Eh? Ab approach one kahan gaya? 
-
-00:16:24,216 --> 00:16:25,436 [Speaker 1]
-This is approach two directly. 
-
-00:16:25,856 --> 00:16:30,796 [Speaker 0]
-Yeah, approach one ka ho gaya na. Approach one ka we, we're telling like the limitation we are getting, so we're shifting to approach two. 
-
-00:16:33,696 --> 00:16:33,736 [Speaker 1]
-Okay. 
-
-00:16:33,736 --> 00:16:36,076 [Speaker 0]
-This is approach two only. Combinations we are- 
-
-00:16:36,196 --> 00:16:41,676 [Speaker 1]
-Okay, this one. Okay. Activated by day. Okay. So then essentially... 
-
-00:16:44,096 --> 00:16:44,536 [Speaker 1]
-Okay. 
-
-00:16:45,696 --> 00:16:47,976 [Speaker 1]
-Lekin wahan pe toh product usage use hi nahi kiya tha na humne? 
-
-00:16:49,116 --> 00:16:49,436 [Speaker 0]
-Kiya tha. 
-
-00:16:49,476 --> 00:16:50,336 [Speaker 1]
-Approach one mein. 
-
-00:16:50,416 --> 00:16:59,516 [Speaker 0]
-Approach one mein, yeh poora slide approach two ka hai. Just saying like we have taken this. Approach two ka introduction nahi kiya, par what we are taking for approach two is being mentioned here. 
-
-00:17:00,756 --> 00:17:02,156 [Speaker 1]
-Theek hai. Toh essentially... 
-
-00:17:03,436 --> 00:17:08,956 [Speaker 0]
-Okay, approach one inputs likha hai idhar. Okay. Okay, okay. Approach one inputs mein, yeah, product usage nahi hai, sorry, yeah. 
-
-00:17:10,196 --> 00:17:12,236 [Speaker 1]
-Theek hai na, wahi main bol raha hoon. 
-
-00:17:12,236 --> 00:17:17,016 [Speaker 0]
-Nahi toh idhar approach two inputs karke likh do agar bas uska categories pata chal jayega humko. 
-
-00:17:17,156 --> 00:17:18,416 [Speaker 1]
-Exactly, exactly. 
-
-00:17:19,536 --> 00:17:21,356 [Speaker 1]
-Let's do this. Approach two 
-
-00:17:22,976 --> 00:17:23,456 [Speaker 1]
-inputs. 
-
-00:17:24,336 --> 00:17:26,756 [Speaker 0]
-Seven categories, approach combination. 
-
-00:17:26,836 --> 00:17:30,396 [Speaker 1]
-Uh, approach combination of seven variables. Okay? 
-
-00:17:30,416 --> 00:17:30,576 [Speaker 0]
-Mm-hmm. 
-
-00:17:33,396 --> 00:17:37,756 [Speaker 1]
-Toh approach two mein keep only... Toh phir yeh mereko dikhane ki zaroorat hi nahi hai na yeh? 
-
-00:17:37,816 --> 00:17:38,436 [Speaker 0]
-Yeah, nahi. 
-
-00:17:39,496 --> 00:17:45,356 [Speaker 0]
-I was thinking within approach two, we have tried two different approaches. I think they were mentioning that, but I think... Mm-hmm. 
-
-00:17:47,736 --> 00:17:48,336 [Speaker 1]
-Done. 
-
-00:17:48,356 --> 00:17:48,996 [Speaker 0]
-Mm-hmm. 
-
-00:17:48,996 --> 00:17:49,536 [Speaker 1]
-Okay? 
-
-00:17:49,616 --> 00:17:50,176 [Speaker 0]
-Yeah. 
-
-00:17:50,176 --> 00:17:51,356 [Speaker 1]
-We keep this activated. 
-
-00:17:52,636 --> 00:18:01,956 [Speaker 1]
-Persistent combination activation. So like again, we did the same thing, like 1170. No, it was 1344, right? 
-
-00:18:02,036 --> 00:18:02,596 [Speaker 0]
-Yes. 
-
-00:18:02,596 --> 00:18:03,956 [Speaker 1]
-Those were the combinations. 
-
-00:18:06,016 --> 00:18:07,756 [Speaker 1]
-940 retained, okay? 
-
-00:18:07,756 --> 00:18:08,296 [Speaker 0]
-With clicks. 
-
-00:18:08,296 --> 00:18:16,076 [Speaker 1]
-2K opportunity, uh, on 45s of data. Again, we did this, all of this, and this is what we are getting. 
-
-00:18:16,076 --> 00:18:16,216 [Speaker 0]
-Yeah. 
-
-00:18:16,956 --> 00:18:20,516 [Speaker 1]
-Scored 860 randomly selected opportunity CMs. 
-
-00:18:20,756 --> 00:18:20,976 [Speaker 0]
-Mm-hmm.
-
-00:18:22,512 --> 00:18:26,632 [Speaker 1]
-Approximately 850 kar dete hain, 800 plus. 
-
-00:18:26,792 --> 00:18:41,532 [Speaker 0]
-I think the 1160 number, uh, 1340 humne jab saare combinations liye the, without they had like filter, right? For the 1344, they were not taking 1344 combinations. They had like two levels of filters. One is 50 CMS at least they should have, or 100 CMS. 
-
-00:18:41,692 --> 00:18:42,212 [Speaker 1]
-Haan. 
-
-00:18:42,212 --> 00:18:44,892 [Speaker 0]
-And again, 90% they were doing. They didn't mention that. 
-
-00:18:44,912 --> 00:18:50,972 [Speaker 1]
-Haan, toh woh-- haan, woh yahan pe nahi likha na, toh main phir woh daalna nahi chahta because somebody can make that math behind. 
-
-00:18:51,172 --> 00:18:51,932 [Speaker 0]
-Yes, yes. Yeah. 
-
-00:18:51,952 --> 00:18:52,132 [Speaker 1]
-Right? 
-
-00:18:52,412 --> 00:18:53,012 [Speaker 0]
-Yeah. 
-
-00:18:53,012 --> 00:18:59,652 [Speaker 1]
-So this is what they did, that if we retain and historical support and everything, then we end up close to this is the impact. 
-
-00:18:59,972 --> 00:19:00,092 [Speaker 0]
-Yeah. 
-
-00:19:00,112 --> 00:19:00,532 [Speaker 1]
-Okay? 
-
-00:19:00,572 --> 00:19:01,192 [Speaker 0]
-Mm-hmm. 
-
-00:19:01,192 --> 00:19:05,952 [Speaker 1]
-So scored approximately 800 plus randomly selected opportunity CMS. 
-
-00:19:06,192 --> 00:19:06,392 [Speaker 0]
-Mm-hmm. 
-
-00:19:06,772 --> 00:19:10,232 [Speaker 1]
-And figured out the GCM and this. 
-
-00:19:10,232 --> 00:19:10,412 [Speaker 0]
-Yeah. 
-
-00:19:11,572 --> 00:19:22,412 [Speaker 1]
-Okay, CNPN bonus room, more strong model GCM with broader historical support. Indeed has the highest model gain, but it's limited historical warrants for the validation. Theek hai. Done. 
-
-00:19:22,592 --> 00:19:23,252 [Speaker 0]
-Mm-hmm. 
-
-00:19:23,292 --> 00:19:24,952 [Speaker 1]
-And these are the temporal views. 
-
-00:19:25,232 --> 00:19:25,432 [Speaker 0]
-Yeah. 
-
-00:19:25,432 --> 00:19:27,852 [Speaker 1]
-So we are seeing increasing and then it tapers down. 
-
-00:19:28,072 --> 00:19:28,312 [Speaker 0]
-Yeah. 
-
-00:19:29,952 --> 00:19:31,232 [Speaker 1]
-Okay? Across days. 
-
-00:19:31,292 --> 00:19:31,452 [Speaker 0]
-Mm-hmm. 
-
-00:19:34,772 --> 00:19:37,392 [Speaker 1]
-Okay, this is the temporal view cosine distance. 
-
-00:19:37,632 --> 00:19:37,832 [Speaker 0]
-Mm-hmm. 
-
-00:19:39,012 --> 00:19:42,932 [Speaker 1]
-Okay. Feature combination and customer support by dimension. 
-
-00:19:44,072 --> 00:19:44,472 [Speaker 1]
-Okay. 
-
-00:19:45,552 --> 00:19:47,312 [Speaker 1]
-Ta-ta-ta-ta-ta-ta-ta-ta-ta. 
-
-00:19:48,412 --> 00:19:48,812 [Speaker 1]
-Okay. 
-
-00:19:50,032 --> 00:19:52,532 [Speaker 1]
-Within 77K, within 10K. 
-
-00:19:53,872 --> 00:19:56,392 [Speaker 1]
-Feature combinations. Okay. 
-
-00:19:56,512 --> 00:20:00,112 [Speaker 0]
-So how many customers have within like B2 and then this. 
-
-00:20:01,312 --> 00:20:03,152 [Speaker 1]
-Okay, this doesn't make much of here. 
-
-00:20:03,192 --> 00:20:03,612 [Speaker 0]
-Yeah. 
-
-00:20:03,612 --> 00:20:04,012 [Speaker 1]
-Theek hai? 
-
-00:20:04,052 --> 00:20:04,572 [Speaker 0]
-Mm-hmm. 
-
-00:20:04,572 --> 00:20:06,812 [Speaker 1]
-So now essentially this comes our approach. 
-
-00:20:06,872 --> 00:20:07,192 [Speaker 0]
-Yeah. 
-
-00:20:07,212 --> 00:20:07,572 [Speaker 1]
-Okay? 
-
-00:20:07,612 --> 00:20:08,292 [Speaker 0]
-Mm-hmm. Sure. 
-
-00:20:08,292 --> 00:20:09,072 [Speaker 1]
-Which we did. 
-
-00:20:09,072 --> 00:20:09,192 [Speaker 0]
-Yeah. 
-
-00:20:09,632 --> 00:20:10,552 [Speaker 1]
-Shapley and everything. 
-
-00:20:10,732 --> 00:20:10,952 [Speaker 0]
-Mm-hmm. 
-
-00:20:11,372 --> 00:20:16,812 [Speaker 1]
-So here, essentially instead of doing-- removing those 940, right? 
-
-00:20:16,812 --> 00:20:17,292 [Speaker 0]
-Mm-hmm. 
-
-00:20:17,292 --> 00:20:18,832 [Speaker 1]
-What we did is we retained everything. 
-
-00:20:19,052 --> 00:20:19,752 [Speaker 0]
-Everything, yes. 
-
-00:20:20,852 --> 00:20:21,252 [Speaker 1]
-Right? 
-
-00:20:21,272 --> 00:20:22,812 [Speaker 0]
-Mm-hmm. 
-
-00:20:22,832 --> 00:20:26,012 [Speaker 1]
-We retained everything. So essentially if I copy this, right? 
-
-00:20:26,072 --> 00:20:26,272 [Speaker 0]
-Mm-hmm. 
-
-00:20:27,752 --> 00:20:28,672 [Speaker 1]
-And I put it here. 
-
-00:20:30,932 --> 00:20:32,652 [Speaker 1]
-Okay. Or should I 
-
-00:20:33,812 --> 00:20:36,752 [Speaker 1]
-remove this and I put these two slides, 
-
-00:20:38,132 --> 00:20:39,372 [Speaker 1]
-which I had from here? 
-
-00:20:40,192 --> 00:20:40,892 [Speaker 0]
-Yeah, that would be better. 
-
-00:20:40,932 --> 00:20:42,872 [Speaker 1]
-Right? These were-- that would be better, right? 
-
-00:20:50,652 --> 00:20:50,752 [Speaker 0]
-Yeah. 
-
-00:20:50,752 --> 00:20:51,112 [Speaker 1]
-Okay. 
-
-00:20:53,772 --> 00:20:56,572 [Speaker 1]
-Add incremental event. Mm-hmm. 
-
-00:20:58,352 --> 00:20:58,812 [Speaker 1]
-Version 
-
-00:21:00,592 --> 00:21:01,272 [Speaker 1]
-1.1. 
-
-00:21:04,872 --> 00:21:05,532 [Speaker 1]
-And this is 
-
-00:21:07,612 --> 00:21:08,112 [Speaker 1]
-version 
-
-00:21:09,152 --> 00:21:09,692 [Speaker 1]
-1.2. 
-
-00:21:10,972 --> 00:21:11,212 [Speaker 1]
-Okay? 
-
-00:21:13,952 --> 00:21:15,952 [Speaker 0]
-And these are the Shapley things, right? Yeah. 
-
-00:21:16,632 --> 00:21:18,152 [Speaker 1]
-Uh, these are for the Shapley. 
-
-00:21:18,152 --> 00:21:18,832 [Speaker 0]
-Mm-hmm. 
-
-00:21:18,832 --> 00:21:23,132 [Speaker 1]
-So what we are saying is that if we retain everything. 
-
-00:21:23,432 --> 00:21:23,792 [Speaker 0]
-Yeah. 
-
-00:21:23,792 --> 00:21:24,012 [Speaker 1]
-Okay? 
-
-00:21:25,832 --> 00:21:26,152 [Speaker 1]
+00:03:51,380 --> 00:03:51,740 [Speaker 4]
 So, 
 
-00:21:28,852 --> 00:21:30,512 [Speaker 1]
-essentially I should put something 
+00:03:52,920 --> 00:03:58,080 [Speaker 4]
+uh, I think maybe I would suggest, can we go through the original deck and then flip through the pages? 
 
-00:21:31,712 --> 00:21:35,692 [Speaker 1]
-in between that I have retained everything, right? 
+00:03:58,180 --> 00:04:00,120 [Speaker 3]
+Yes, yes. He has not seen this deck, I think. 
 
-00:21:35,832 --> 00:21:35,912 [Speaker 0]
-Mm-hmm. 
+00:04:00,120 --> 00:04:02,080 [Speaker 4]
+Yeah. Oh, you have to share with, with him, right? 
 
-00:21:35,932 --> 00:21:37,152 [Speaker 1]
-We are not putting out... 
+00:04:02,080 --> 00:04:03,180 [Speaker 3]
+I don't think so. He would have seen it. 
 
-00:21:37,652 --> 00:21:39,992 [Speaker 0]
-We need-- removing any patterns with based on support. 
+00:04:04,400 --> 00:04:08,060 [Speaker 4]
+Got it. So maybe we can, we can show quickly, and then we can, uh, double think- 
 
-00:21:40,092 --> 00:21:40,292 [Speaker 1]
-Right. 
+00:04:08,260 --> 00:04:09,320 [Speaker 3]
+Okay, then. Let's do that. 
 
-00:21:40,572 --> 00:21:41,312 [Speaker 0]
+00:04:09,320 --> 00:04:10,920 [Speaker 4]
+-on markers. So Jay, can we go through- 
+
+00:04:10,940 --> 00:04:13,620 [Speaker 3]
+So basically, you are going to make edits on that same deck? 
+
+00:04:13,820 --> 00:04:14,180 [Speaker 4]
 Yes. 
 
-00:21:41,312 --> 00:21:42,772 [Speaker 1]
-So let's put it here. 
+00:04:14,180 --> 00:04:14,720 [Speaker 3]
+The Yin deck? 
 
-00:21:45,632 --> 00:21:49,372 [Speaker 1]
-Okay. And let's remove this, all of this. 
+00:04:14,780 --> 00:04:15,020 [Speaker 2]
+Yes. 
 
-00:21:50,892 --> 00:21:51,292 [Speaker 1]
+00:04:15,580 --> 00:04:19,220 [Speaker 3]
+On Yin deck. So if I have to, let's say, reference a document late in the night, I can just- 
+
+00:04:19,399 --> 00:04:22,600 [Speaker 4]
+Uh, we are... This is a copy. We don't want to interrupt. 
+
+00:04:22,600 --> 00:04:24,940 [Speaker 3]
+Okay, fine. So can you share then? I will share with you. Okay. 
+
+00:04:27,280 --> 00:04:29,060 [Speaker 2]
+Yeah. Yeah, is my, is my screen visible, right? 
+
+00:04:29,860 --> 00:04:31,400 [Speaker 4]
+No, no, no. You stopped sharing. 
+
+00:04:32,180 --> 00:04:33,160 [Speaker 2]
+Uh, just a minute. Sorry. 
+
+00:04:34,720 --> 00:04:35,420 [Speaker 2]
+Is it visible now? 
+
+00:04:35,700 --> 00:04:35,780 [Speaker 1]
+Yeah. 
+
+00:04:36,420 --> 00:04:36,620 [Speaker 2]
+Yep. 
+
+00:04:37,180 --> 00:04:37,460 [Speaker 4]
+Yes. 
+
+00:04:38,240 --> 00:04:38,500 [Speaker 2]
+Yes. 
+
+00:04:40,220 --> 00:04:57,320 [Speaker 4]
+So, uh, I think the color coding for the section is not correct now, but the sections are the four sections we planned last time. In fact, last time we actually, uh, simplified on the early results and execution, but this is a agenda for last time as well. So let's move to the next page with Jay. So just... 
+
+00:04:57,320 --> 00:05:02,120 [Speaker 3]
+See guys, I'm familiar with this deck. It's not based on this. Like, show me, let me know what content you have. 
+
+00:05:02,120 --> 00:05:07,360 [Speaker 4]
+Okay, sure. So, uh, Jay, let's bring the markers, which is the new ones you have added. 
+
+00:05:08,320 --> 00:05:43,240 [Speaker 2]
+Yeah. So one thing to add, Sonal, uh, on this page, we are just updating these things, like in product use, the feature engineering part. We have spent like five weeks in product benefit features. Uh, the ma- the point which we have highlighted on that day, right, uh, that product usage has taken us like four or five weeks, uh, means two or three weeks to work at, right? So something of that we are trying to highlight it here because this, this below section is the depth of analysis which we are doing, and also why we are taking this much amount of time. That is what we wanted to highlight from here. Okay? 
+
+00:05:43,840 --> 00:05:46,720 [Speaker 3]
+But are you not talking about those 4 trillion combinations anyway? 
+
+00:05:48,460 --> 00:05:52,120 [Speaker 4]
+We talk... Yeah, we can add that, but this is basically the original one, which is- 
+
+00:05:52,200 --> 00:05:56,220 [Speaker 3]
+I know, but I thought so. That's the work that you have to do, right? 
+
+00:05:56,360 --> 00:05:56,500 [Speaker 4]
+Yeah. 
+
+00:05:58,540 --> 00:05:58,720 [Speaker 2]
 Okay. 
 
-00:21:54,592 --> 00:21:56,292 [Speaker 1]
-Just transaction, let's remove. 
+00:05:59,180 --> 00:06:02,360 [Speaker 4]
+We'll add it. Basically, the, the, the number from the Raymond deck. 
 
-00:22:06,812 --> 00:22:08,712 [Speaker 1]
-Hmm. Transaction 
-
-00:22:10,232 --> 00:22:11,312 [Speaker 1]
-combinations 
-
-00:22:12,712 --> 00:22:13,272 [Speaker 1]
-approach 
-
-00:22:14,292 --> 00:22:14,552 [Speaker 1]
-with 
-
-00:22:16,452 --> 00:22:18,332 [Speaker 1]
-Shapley interpretation. 
-
-00:22:23,292 --> 00:22:26,832 [Speaker 1]
-Interpretation ki spelling galat hai kya? Interpretation. 
-
-00:22:26,852 --> 00:22:28,112 [Speaker 0]
-Interpretation. Yeah. 
-
-00:22:29,452 --> 00:22:30,872 [Speaker 0]
-Spelling after ChatGPT. 
-
-00:22:33,072 --> 00:22:37,632 [Speaker 1]
-Hmm. I'll just check this, like whether I can do a better than this one. 
-
-00:22:45,952 --> 00:22:46,892 [Speaker 1]
-Seven dimension, 
-
-00:22:48,172 --> 00:22:48,792 [Speaker 1]
-30 days. 
-
-00:22:50,272 --> 00:22:50,332 [Speaker 0]
-Yes. 
-
-00:22:50,332 --> 00:22:51,012 [Speaker 1]
-Theek hai? 
-
-00:22:51,032 --> 00:22:54,412 [Speaker 0]
-Hmm. All retained 940, zara all retain kar denge. 
-
-00:22:54,872 --> 00:23:02,332 [Speaker 1]
-Haan. So yahan pe koi support combination nahi hai na. I think main iska ek yeh wala nikal loon jo hamare paas tha. Humne kya banaya tha ek? 
-
-00:23:03,752 --> 00:23:08,192 [Speaker 1]
-Humne combinations banaye the aur humne iske baad bola tha ki train kar liya humne. 
-
-00:23:08,272 --> 00:23:08,512 [Speaker 0]
-Hmm. 
-
-00:23:10,252 --> 00:23:10,472 [Speaker 1]
-Hmm. 
-
-00:23:12,952 --> 00:23:17,492 [Speaker 1]
-Toh effectively seven dimensions, 30 days. 
-
-00:23:19,452 --> 00:23:25,552 [Speaker 1]
-Theek hai? Convert transaction into seven combination features, train a separate transformer, Genie 
-
-00:23:28,092 --> 00:23:30,092 [Speaker 1]
-approximately 40%. 
-
-00:23:30,092 --> 00:23:31,212 [Speaker 0]
-40%. Hmm. 
-
-00:23:31,252 --> 00:23:31,432 [Speaker 1]
+00:06:02,640 --> 00:06:02,800 [Speaker 3]
 Yeah. 
 
-00:23:32,512 --> 00:23:36,472 [Speaker 1]
-Theek hai? There was no support or something that was needed, right? 
+00:06:03,620 --> 00:06:03,720 [Speaker 2]
+Oh.
 
-00:23:36,632 --> 00:23:37,072 [Speaker 0]
-Hmm. 
+00:06:05,948 --> 00:06:10,608 [Speaker 4]
+So Jay, let's show the additional pages, which is you identify the new markers. 
 
-00:23:37,112 --> 00:23:37,332 [Speaker 1]
+00:06:12,108 --> 00:06:12,288 [Speaker 2]
+Yep. 
+
+00:06:14,028 --> 00:06:36,188 [Speaker 2]
+Yes. So in this page, we will highlight that which all markers are being selected when we are doing the entire analysis of value going 14. Okay? So the same structure we have followed, only thing is we have highlighted it with boxes that which all marker has been selected. We can change the color or highlighting. Uh, it is work in progress, but yeah, this is something which we are trying to show here. 
+
+00:06:37,508 --> 00:06:44,768 [Speaker 2]
+Continuation of the p-- uh, step two, where we have the marker universe. And after doing the evaluation, these are the marker which has been selected. 
+
+00:06:48,548 --> 00:06:51,548 [Speaker 4]
+And we have a visualized version, a version next page. 
+
+00:06:51,548 --> 00:06:52,668 [Speaker 3]
+Show me the visualized version. 
+
+00:06:53,668 --> 00:07:16,728 [Speaker 2]
+Yeah. So in this way, we will try to showcase that which all marker, uh, are coming up in which month. Okay? So if you see this top section, the-these are the marker which are consistent across month one to month 14. Then later on what we are doing, uh, we are adding a marker which is coming in that month. For example, in M2 wireless spend- 
+
+00:07:16,768 --> 00:07:20,508 [Speaker 3]
+Jay, it's very hard to read, guys. Like, let me, like, give you the feedback straight here, right? 
+
+00:07:20,848 --> 00:07:21,128 [Speaker 2]
 Yeah. 
 
-00:23:39,252 --> 00:23:39,512 [Speaker 1]
+00:07:21,128 --> 00:07:21,328 [Speaker 3]
+You're- 
+
+00:07:23,588 --> 00:07:23,968 [Speaker 2]
+Yes, ma'am. 
+
+00:07:27,788 --> 00:07:31,508 [Speaker 3]
+No new intermittent markers? What does it mean, no new intermittent markers? 
+
+00:07:31,928 --> 00:07:40,628 [Speaker 2]
+Yeah, so no, it is work in progress. That means because we have these four markers in this, only these four markers are popping up, not anything other than that. 
+
+00:07:40,828 --> 00:07:42,888 [Speaker 3]
+Okay. Here is what I want you to do. 
+
+00:07:43,588 --> 00:07:43,648 [Speaker 2]
+Yeah. 
+
+00:07:43,788 --> 00:07:47,928 [Speaker 3]
+M1, right? Whatever markers you are getting, I want you to list all those markers. 
+
+00:07:48,128 --> 00:07:48,328 [Speaker 4]
+Okay. 
+
+00:07:48,708 --> 00:07:51,608 [Speaker 3]
+M2, all markers that I'm-- you are getting, list all of them. 
+
+00:07:51,848 --> 00:07:52,108 [Speaker 4]
+Okay. 
+
+00:07:52,108 --> 00:07:54,648 [Speaker 3]
+And then which-- the common ones, you can highlight in a different color. 
+
+00:07:54,848 --> 00:07:55,848 [Speaker 4]
+Okay. Sure. 
+
+00:07:55,848 --> 00:08:01,768 [Speaker 3]
+Right? The ones that are, uh, uh, present in more than six months, you can highlight in different color. 
+
+00:08:01,768 --> 00:08:01,968 [Speaker 4]
+Sure. 
+
+00:08:02,968 --> 00:08:03,148 [Speaker 2]
+Okay. 
+
+00:08:03,148 --> 00:08:06,428 [Speaker 3]
+Make, make your, like, leaders' life easy, guys. I'm, I'm telling you that. 
+
+00:08:08,068 --> 00:08:08,228 [Speaker 2]
+Yeah. 
+
+00:08:08,348 --> 00:08:08,608 [Speaker 3]
+Can we-- 
+
+00:08:09,628 --> 00:08:17,088 [Speaker 3]
+Jay, you, you guys have to move a little faster here, right? And you have, like, access to all your co-pilots and other ChatGPTs and 
+
+00:08:18,948 --> 00:08:19,048 [Speaker 3]
+you- 
+
+00:08:19,068 --> 00:08:19,328 [Speaker 2]
+Yeah, sorry. 
+
+00:08:19,328 --> 00:08:21,528 [Speaker 3]
+You want to then really accelerate your work here. 
+
+00:08:22,868 --> 00:08:23,228 [Speaker 2]
+Yeah, so actually I- 
+
+00:08:23,228 --> 00:08:24,248 [Speaker 3]
+Don't make it hard for us. 
+
+00:08:24,688 --> 00:08:31,348 [Speaker 2]
+Yeah, my bad. Actually, I went to hospital today, uh, for three hours. That is why I was unable to, but I will make sure I will complete this today. 
+
+00:08:32,428 --> 00:08:32,548 [Speaker 2]
+Yeah. 
+
+00:08:32,768 --> 00:08:33,008 [Speaker 3]
+Okay. 
+
+00:08:33,848 --> 00:08:33,968 [Speaker 2]
+Yeah. 
+
+00:08:34,448 --> 00:08:36,188 [Speaker 3]
+I hope everything is fine at your end. 
+
+00:08:37,328 --> 00:08:41,988 [Speaker 2]
+Yeah, actually there was some issue with my kid, but now a doctor mentioned that he is normal, so- 
+
+00:08:42,568 --> 00:08:42,948 [Speaker 3]
+Okay. 
+
+00:08:42,948 --> 00:08:43,088 [Speaker 2]
+It's good. 
+
+00:08:43,088 --> 00:08:43,788 [Speaker 3]
+Good to know that. 
+
+00:08:44,468 --> 00:08:44,568 [Speaker 2]
+Yeah. 
+
+00:08:44,568 --> 00:08:56,688 [Speaker 3]
+Okay, good, good, good. So Jay, I think if it-- even if it requires you to, like, spend a little bit more time today, please finish, finish a version so that tomorrow we can do enhancements to the messaging, et cetera, right? 
+
+00:08:57,328 --> 00:08:57,968 [Speaker 2]
+Yeah, yeah, certainly. 
+
+00:08:59,228 --> 00:09:02,588 [Speaker 2]
+Yeah, so yeah, that is what we wanted to show you the-- we can 
+
+00:09:03,648 --> 00:09:13,168 [Speaker 2]
+definitely, such that everything is clear. Just wanted to take your thoughts on the flow if we are going in the right way or you want us to add anything else in this flow. 
+
+00:09:13,928 --> 00:09:21,968 [Speaker 3]
+Okay. Now I want you to, let's say, take example of two markers here and go deeper into it, right? For example, you'd said COGS and top 10 cert. 
+
+00:09:22,848 --> 00:09:23,188 [Speaker 2]
+Okay. 
+
+00:09:23,188 --> 00:09:27,748 [Speaker 3]
+COGS and top 10 cert means what? You have to start translating it into English language now. 
+
+00:09:28,068 --> 00:09:28,288 [Speaker 4]
+Okay. 
+
+00:09:29,468 --> 00:09:31,648 [Speaker 4]
+So, uh, is the 
+
+00:09:33,888 --> 00:09:36,488 [Speaker 4]
+COGS cluster is basically the COGS of- 
+
+00:09:37,268 --> 00:09:43,788 [Speaker 3]
+We, we had a very nice, uh, illustration in the way we were putting things for Raymond deck. I'm just trying to look for that. 
+
+00:09:46,688 --> 00:09:46,708 [Speaker 4]
 Uh, 
 
-00:23:41,032 --> 00:23:41,612 [Speaker 1]
-so actually- 
+00:09:48,288 --> 00:09:49,008 [Speaker 4]
+I'll find that. 
 
-00:23:41,612 --> 00:23:43,832 [Speaker 0]
-Selected all combinations kar denge, yeah. 
+00:10:17,308 --> 00:10:20,928 [Speaker 3]
+Hmm. CMs who spend on specific merchant industries, 
 
-00:23:43,872 --> 00:23:47,612 [Speaker 1]
-Haan. Haan, actually woh bhi kar sakte hain. Control Z. 
+00:10:22,608 --> 00:10:23,588 [Speaker 3]
+such as raw material. 
 
-00:23:49,252 --> 00:23:51,512 [Speaker 1]
-Selected all combinations. 
+00:10:30,368 --> 00:10:32,248 [Speaker 3]
+See, when you-- when we say like that, right? 
 
-00:23:55,272 --> 00:23:56,452 [Speaker 1]
-1344. 
-
-00:24:07,752 --> 00:24:09,692 [Speaker 1]
-So essentially yeh wala mujhe chahiye hi nahi. 
-
-00:24:09,692 --> 00:24:10,072 [Speaker 0]
-Hmm. 
-
-00:24:10,072 --> 00:24:10,692 [Speaker 1]
-Theek hai? 
-
-00:24:10,692 --> 00:24:11,012 [Speaker 0]
-Yeah. 
-
-00:24:11,012 --> 00:24:15,132 [Speaker 1]
-Yahan se isko agar main hata doon and I bring this, okay? 
-
-00:24:15,172 --> 00:24:15,832 [Speaker 0]
-Hmm. 
-
-00:24:15,912 --> 00:24:17,472 [Speaker 1]
-And I bring this here. 
-
-00:24:22,032 --> 00:24:22,712 [Speaker 1]
-Theek hai? 
-
-00:24:22,752 --> 00:24:22,892 [Speaker 0]
-Hmm. 
-
-00:24:24,232 --> 00:24:24,532 [Speaker 1]
-Toh... 
-
-00:24:26,212 --> 00:24:26,712 [Speaker 0]
-40 days. 
-
-00:24:28,152 --> 00:24:28,672 [Speaker 1]
-Theek hai? 
-
-00:24:29,752 --> 00:24:32,562 [Speaker 1]
-Hmm. 
-
-00:24:32,562 --> 00:24:33,322 [Speaker 1]
-Function. 
-
-00:24:37,722 --> 00:24:38,502 [Speaker 1]
-Caps lock. 
-
-00:24:40,282 --> 00:24:45,402 [Speaker 1]
-Then call 1344 combinations. 
-
-00:24:48,022 --> 00:24:50,262 [Speaker 1]
-Simulate and score. Okay? 
-
-00:24:50,282 --> 00:24:50,422 [Speaker 0]
+00:10:32,908 --> 00:10:33,128 [Speaker 2]
 Mm-hmm. 
 
-00:24:51,522 --> 00:24:52,062 [Speaker 1]
-30 days. 
+00:10:33,148 --> 00:10:40,908 [Speaker 3]
+Then it's easy to understand. My question to you is, right, when people are spending on top 10 cert on-- or specific merchant industries, 
 
-00:24:54,002 --> 00:25:02,622 [Speaker 1]
-Activate one selected combination at a time on eligible proposed days, preserve existing activations and carry the new activation forward. ठीक है? Existing 
+00:10:42,868 --> 00:10:47,008 [Speaker 3]
+we'll, we'll have to give an example. You can take an example of a construction company. 
 
-00:25:04,042 --> 00:25:08,502 [Speaker 1]
-activations, ठीक है? Score predicted, otherwise remain unchanged within each simulation. Done? 
+00:10:48,288 --> 00:10:49,568 [Speaker 4]
+You want to do case study? 
 
-00:25:08,742 --> 00:25:08,862 [Speaker 0]
-Mm-hmm. 
+00:10:49,808 --> 00:10:53,888 [Speaker 3]
+Yes. I want you to show what, what I want, uh, what do I mean by this metric. 
 
-00:25:08,882 --> 00:25:09,342 [Speaker 1]
-ठीक है ना? 
+00:11:03,708 --> 00:11:04,048 [Speaker 3]
+And then- 
 
-00:25:09,362 --> 00:25:09,542 [Speaker 0]
-Mm-hmm. 
+00:11:04,088 --> 00:11:05,608 [Speaker 4]
+It's better. Yeah, we have the cases. 
 
-00:25:10,482 --> 00:25:11,362 [Speaker 1]
-This goes off. 
+00:11:05,828 --> 00:11:06,408 [Speaker 3]
+Yes, I know. 
 
-00:25:12,242 --> 00:25:16,942 [Speaker 0]
-Preserve existing activations and carry the new activations forward. 
+00:11:06,428 --> 00:11:08,108 [Speaker 4]
+We have it available, yeah. We will just add it in. 
 
-00:25:19,422 --> 00:25:28,202 [Speaker 0]
-What does that imply? Preserve existing activations? [notification tone chiming] Yeah, the second line, what the problem is? 
+00:11:08,188 --> 00:11:11,968 [Speaker 3]
+Yeah. So you should specifically put an example of a construction customer. 
 
-00:25:29,002 --> 00:25:30,282 [Speaker 1]
-हाँ, ये छोड़ देता है। 
-
-00:25:31,882 --> 00:25:31,962 [Speaker 0]
-Yeah. 
-
-00:25:31,982 --> 00:25:32,362 [Speaker 1]
-Okay? 
-
-00:25:32,422 --> 00:25:32,602 [Speaker 0]
-Mm-hmm. 
-
-00:25:34,342 --> 00:25:34,942 [Speaker 1]
-Done? 
-
-00:25:34,962 --> 00:25:35,262 [Speaker 0]
-Yeah. 
-
-00:25:35,302 --> 00:25:36,582 [Speaker 1]
-And then this becomes three. 
-
-00:25:36,942 --> 00:25:37,122 [Speaker 0]
-Mm-hmm. 
-
-00:25:40,042 --> 00:25:41,062 [Speaker 1]
-Uh, all 
-
-00:25:43,202 --> 00:25:46,562 [Speaker 1]
-generated counterfactuals. 
-
-00:25:51,162 --> 00:25:51,862 [Speaker 1]
-And score. 
-
-00:25:54,922 --> 00:25:56,222 [Speaker 1]
-Simulate counterfactuals. 
-
-00:25:59,882 --> 00:26:00,462 [Speaker 1]
-And score? 
-
-00:26:00,782 --> 00:26:01,022 [Speaker 0]
-Yeah. 
-
-00:26:01,062 --> 00:26:01,122 [Speaker 1]
+00:11:12,168 --> 00:11:12,668 [Speaker 4]
 Okay. 
 
-00:26:01,142 --> 00:26:02,602 [Speaker 0]
-Counterfactuals. 
+00:11:12,668 --> 00:11:14,388 [Speaker 3]
+That they, they are spending in, uh... 
 
-00:26:03,742 --> 00:26:04,902 [Speaker 1]
-On, on generated. 
+00:11:20,748 --> 00:11:21,388 [Speaker 3]
+What is it called? 
 
-00:26:05,002 --> 00:26:05,822 [Speaker 0]
-Shapley contribution. 
+00:11:22,408 --> 00:11:23,288 [Speaker 3]
+Their merchant industry? 
 
-00:26:05,962 --> 00:26:06,222 [Speaker 1]
-Done. 
+00:11:24,148 --> 00:11:25,228 [Speaker 2]
+Lumber, lumber and- 
 
-00:26:07,182 --> 00:26:07,622 [Speaker 0]
-Shapley. 
+00:11:25,488 --> 00:11:25,908 [Speaker 3]
+Lumber. 
 
-00:26:07,622 --> 00:26:08,262 [Speaker 1]
-Shapley contribution. 
+00:11:25,908 --> 00:11:26,228 [Speaker 2]
+Something. 
 
-00:26:11,202 --> 00:26:11,422 [Speaker 1]
-Done? 
+00:11:26,348 --> 00:11:26,668 [Speaker 3]
+Yes. 
 
-00:26:11,702 --> 00:26:11,882 [Speaker 0]
+00:11:26,668 --> 00:11:27,048 [Speaker 2]
 Yeah. 
 
-00:26:13,402 --> 00:26:14,882 [Speaker 1]
-Key concept to... 
+00:11:27,048 --> 00:11:32,368 [Speaker 3]
+Yes. Lumber, transportation and logistics, uh, bui-building equipment, right? 
 
-00:26:17,182 --> 00:26:17,382 [Speaker 1]
+00:11:34,288 --> 00:11:35,208 [Speaker 3]
+Show that example. 
+
+00:11:35,508 --> 00:11:35,648 [Speaker 2]
+Yeah. 
+
+00:11:35,888 --> 00:11:37,628 [Speaker 3]
+Plumbing. Show that example, right? 
+
+00:11:38,248 --> 00:11:38,348 [Speaker 2]
+Yeah. 
+
+00:11:38,508 --> 00:11:43,288 [Speaker 3]
+That these are the top, and show a real example that this is a customer and this is where they are spending majority. 
+
+00:11:45,728 --> 00:11:50,408 [Speaker 3]
+And we have seen that customers who spend on specific merchant industries such as this, they signal 
+
+00:11:52,148 --> 00:11:54,408 [Speaker 3]
+high GCM. Show, show the difference in GCM. 
+
+00:11:54,928 --> 00:11:55,048 [Speaker 4]
+Mm-hmm. 
+
+00:11:56,108 --> 00:11:59,348 [Speaker 3]
+And then you show the sizing. You see what I'm saying? 
+
+00:11:59,348 --> 00:11:59,648 [Speaker 4]
+Yeah. 
+
+00:11:59,648 --> 00:12:02,368 [Speaker 3]
+You can create two, three pages of your most prominent markers. 
+
+00:12:03,888 --> 00:12:06,568 [Speaker 4]
+I can create one for spend, one for product usage. 
+
+00:12:06,688 --> 00:12:07,028 [Speaker 3]
+Yes. 
+
+00:12:07,288 --> 00:12:07,788 [Speaker 4]
+Yeah. 
+
+00:12:07,788 --> 00:12:11,852 [Speaker 3]
+Absolutely. 
+
+00:12:11,852 --> 00:12:17,032 [Speaker 3]
+Those-- And, and the benefit sizing, of course, right? Those will become like the, uh, aha sites on your deck. 
+
+00:12:18,592 --> 00:12:26,372 [Speaker 4]
+So basically, just to summarize, we first need to just explain what is this marker. Second is we need to give the concrete case study example- 
+
+00:12:26,592 --> 00:12:26,772 [Speaker 3]
+Yes. 
+
+00:12:26,772 --> 00:12:30,592 [Speaker 4]
+-to show, uh, GCM lift, and then followed by the sizing. 
+
+00:12:30,812 --> 00:12:31,072 [Speaker 3]
+Yes. 
+
+00:12:33,432 --> 00:12:35,932 [Speaker 3]
+And then the question becomes, how would you operationalize this? 
+
+00:12:37,192 --> 00:12:37,492 [Speaker 4]
+Yeah. 
+
+00:12:37,492 --> 00:12:39,952 [Speaker 3]
+It's basically these sort recommendations in email, right? 
+
+00:12:40,272 --> 00:12:40,372 [Speaker 4]
+Yeah. 
+
+00:12:44,932 --> 00:12:47,592 [Speaker 3]
+We'll have to spend a lot of time in the deck, essentially, but... 
+
+00:12:50,492 --> 00:12:53,772 [Speaker 3]
+Uh, you remember, Stephanie, just to get this top half of the page for Raymond deck? 
+
+00:12:53,772 --> 00:12:54,792 [Speaker 4]
+That took a long time, I know. 
+
+00:12:54,832 --> 00:12:55,292 [Speaker 3]
+Yeah. 
+
+00:12:55,292 --> 00:12:55,392 [Speaker 4]
+So- 
+
+00:12:55,612 --> 00:12:58,472 [Speaker 3]
+Because it requires, like, thinking in terms of how you want to put it. 
+
+00:12:59,612 --> 00:13:00,492 [Speaker 4]
+Got it. 
+
+00:13:00,492 --> 00:13:01,792 [Speaker 3]
+So this is your traditional AI, right? 
+
+00:13:02,212 --> 00:13:02,412 [Speaker 4]
+Yes. 
+
+00:13:03,672 --> 00:13:04,552 [Speaker 3]
+Then, uh... 
+
+00:13:06,572 --> 00:13:07,272 [Speaker 3]
+Hey, Hima. Hi. 
+
+00:13:07,652 --> 00:13:07,792 [Speaker 5]
+Hi. 
+
+00:13:07,852 --> 00:13:08,292 [Speaker 3]
+Hey, Nitesh. 
+
+00:13:09,072 --> 00:13:09,992 [Speaker 6]
+Hey. Hey, Sonal. 
+
+00:13:10,072 --> 00:13:11,872 [Speaker 3]
+So then moving to your second approach, right? 
+
+00:13:12,412 --> 00:13:12,512 [Speaker 6]
+Yeah. 
+
+00:13:12,512 --> 00:13:16,032 [Speaker 3]
+How do you guys want to talk about your second approach? I think 
+
+00:13:17,072 --> 00:13:20,532 [Speaker 3]
+you'll have to put it in the light of how Sage accelerates discovery. 
+
+00:13:23,052 --> 00:13:24,592 [Speaker 6]
+Sage accelerates discovery. 
+
+00:13:26,152 --> 00:13:44,372 [Speaker 6]
+Uh, okay. So right now, Sonal, like we did it in the fashion, like we explained essentially what exactly are we doing in the first place when we are talking about, like, Sage, that we have select binary indicators of, like, spend and, uh, product usage. We are leveraging all of that to essentially come up with- 
+
+00:13:44,552 --> 00:13:45,152 [Speaker 3]
+Uh, Nitesh- 
+
+00:13:45,152 --> 00:13:45,532 [Speaker 6]
+-with the patterns. 
+
+00:13:45,532 --> 00:13:45,832 [Speaker 3]
+-this is- 
+
+00:13:46,032 --> 00:13:46,172 [Speaker 6]
+Yeah. 
+
+00:13:46,632 --> 00:13:47,792 [Speaker 3]
+Okay, so let me ask you this. 
+
+00:13:48,372 --> 00:13:48,492 [Speaker 6]
+Yeah. 
+
+00:13:48,492 --> 00:13:56,072 [Speaker 3]
+Um, from your perspective, what is the scope of work that you... Your scope of work is the same as what Stephanie has for traditional AI, right? 
+
+00:13:56,612 --> 00:13:57,572 [Speaker 6]
+Correct, correct, correct. 
+
+00:13:58,112 --> 00:14:03,972 [Speaker 3]
+So you are looking at activation, onboarding, spend-related product usage, servicing treatments, all those things you are looking at? 
+
+00:14:04,652 --> 00:14:07,152 [Speaker 6]
+No, no, not all of them, Sonal. Just only the spend- 
+
+00:14:07,172 --> 00:14:07,332 [Speaker 3]
+No, no. 
+
+00:14:07,332 --> 00:14:08,252 [Speaker 6]
+-and the product usage. 
+
+00:14:08,752 --> 00:14:11,832 [Speaker 3]
+No, no, I know, but your scope is everything, right? 
+
+00:14:11,852 --> 00:14:13,352 [Speaker 6]
+Ah, scope, scope is everything. 
+
+00:14:13,472 --> 00:14:16,632 [Speaker 3]
+Of that, of that, you have only looked at spend and product usage. 
+
+00:14:17,092 --> 00:14:18,272 [Speaker 6]
+Correct. Correct. 
+
+00:14:18,272 --> 00:14:19,512 [Speaker 3]
+So your first page should be that. 
+
+00:14:20,311 --> 00:14:20,552 [Speaker 6]
+Okay. 
+
+00:14:22,192 --> 00:14:25,212 [Speaker 3]
+That what are you looking at? So let's say you are looking at spend and product usage. 
+
+00:14:25,832 --> 00:14:26,972 [Speaker 6]
+Mm. Okay. 
+
+00:14:27,192 --> 00:14:32,872 [Speaker 3]
+So spend and product usage, exactly what are you doing? That needs to come out on the page, and what are your insights? 
+
+00:14:36,752 --> 00:14:37,212 [Speaker 6]
+Got it. 
+
+00:14:39,652 --> 00:14:45,072 [Speaker 3]
+You can take the example of COGS and top 10 cert, right? Because you are saying that is something you are getting on your end as well. 
+
+00:14:45,932 --> 00:14:52,452 [Speaker 6]
+Yes, yes. So we are getting that. So, uh, Jay, if you can move to this slide. Let me just tell you. 
+
+00:14:59,852 --> 00:15:01,172 [Speaker 6]
+Go to slide 22. 
+
+00:15:03,532 --> 00:15:39,612 [Speaker 6]
+Okay. So Sonal, herein what we are seeing is that earlier activations within the first two weeks for CNP, top 10 cert, bonusable, existing merchant recurring, and comics, all these show, like, promising signals within the first two weeks when it comes to GCM prediction. And similarly, we are seeing with respect to the cosine distance or select the distance to golden as well, because that was our premise last time when we showed it to Ian. We talked about that, okay, we are using dense vectors to come closer to golden. And based on that, on the subsequent slide as well, we are seeing that the cosine distance improves 
+
+00:15:40,752 --> 00:15:46,632 [Speaker 6]
+as and when we activate these particular, uh, features as soon as possible, select within the first two weeks itself. 
+
+00:15:48,092 --> 00:15:54,692 [Speaker 6]
+So these are the, like, the indicative results based on select what we are getting out of the transformer learning that we are doing. 
+
+00:15:54,752 --> 00:15:59,512 [Speaker 3]
+Yeah, in terms of educating Heather on what is Sage, I think the video should be good enough, right? 
+
+00:16:00,472 --> 00:16:05,372 [Speaker 6]
+That video that we, uh, posted in the Raymond deck, right? Yes, that should be good enough. 
+
+00:16:05,732 --> 00:16:05,812 [Speaker 3]
+Yeah. 
+
+00:16:05,812 --> 00:16:06,172 [Speaker 6]
+Yep. 
+
+00:16:06,252 --> 00:16:06,732 [Speaker 3]
+I think so. 
+
+00:16:07,412 --> 00:16:07,612 [Speaker 6]
+Yep. 
+
+00:16:08,472 --> 00:16:13,032 [Speaker 3]
+So maybe, like, the first page could be what is Sage, the video link, and then what is the scope. 
+
+00:16:14,412 --> 00:16:14,492 [Speaker 6]
+Okay. 
+
+00:16:14,492 --> 00:16:16,272 [Speaker 3]
+We'll be looking at all, all of these things, right? 
+
+00:16:17,132 --> 00:16:17,312 [Speaker 6]
+Yep. 
+
+00:16:17,912 --> 00:16:18,712 [Speaker 3]
+You agree? 
+
+00:16:18,712 --> 00:16:37,252 [Speaker 4]
+I agree. And I think last time Ian was a bit confused to understand. I mean, she's very interested, but she also, uh, said that she wanted to understand more about methodology. So I think that visualized way of video could help more than probably in your pages you can just show, like, what's the result or what, what does the result imply. 
+
+00:16:41,192 --> 00:16:50,092 [Speaker 6]
+Yeah, we can put across that, uh, page, Sonal, like that video link and the what is the scope that we are right now curtailing to, and what are the results that we are getting. 
+
+00:16:51,412 --> 00:16:56,332 [Speaker 3]
+Yeah, it's not about curtailing the scope. It's basically about the fact that you are just looking at product usage and spend- 
+
+00:16:56,352 --> 00:16:57,052 [Speaker 6]
+Product usage. 
+
+00:16:57,092 --> 00:16:58,552 [Speaker 3]
+And later you can do a vignette. 
+
+00:16:58,652 --> 00:16:59,592 [Speaker 6]
+Later on we can, yes. 
+
+00:17:00,372 --> 00:17:00,552 [Speaker 3]
+Yeah? 
+
+00:17:01,352 --> 00:17:01,432 [Speaker 6]
+Yeah. 
+
+00:17:01,452 --> 00:17:02,232 [Speaker 3]
+Cool. So 
+
+00:17:03,712 --> 00:17:07,472 [Speaker 3]
+product usage, product usage and, uh, spend. 
+
+00:17:08,352 --> 00:17:08,672 [Speaker 6]
+Yep. 
+
+00:17:08,672 --> 00:17:09,732 [Speaker 3]
+What markers are you getting? 
+
+00:17:10,612 --> 00:17:14,872 [Speaker 6]
+So it is like, uh, top 10 cert, bonusable, card not present, 
+
+00:17:16,212 --> 00:17:16,752 [Speaker 6]
+and the comics. 
+
+00:17:16,772 --> 00:17:17,772 [Speaker 3]
+What is card not present? 
+
+00:17:18,712 --> 00:17:27,132 [Speaker 6]
+So Sonal, like if you have added your card in your Apple Pay wallet, so you are going to do a spend on the go, essentially, like touch and pay. 
+
+00:17:28,192 --> 00:17:37,272 [Speaker 6]
+That is where the physical card is not present. And that what we are seeing is like, that is like one of the prominent markers that is showing up across golden segment as well. 
+
+00:17:39,852 --> 00:17:46,132 [Speaker 6]
+So if people have the ease to use the card, the sooner they do it, the quicker they can start spending on it. 
+
+00:17:48,672 --> 00:17:49,492 [Speaker 6]
+That's like one of the 
+
+00:17:50,592 --> 00:17:52,492 [Speaker 6]
+quicker ways to like enable like quicker spend. 
+
+00:17:52,572 --> 00:17:54,212 [Speaker 3]
+I keep confusing it with ICN. 
+
+00:17:56,752 --> 00:17:57,912 [Speaker 6]
+The instant card number- 
+
+00:17:57,932 --> 00:18:00,572 [Speaker 4]
+This is more relevant to online spend, which is 
+
+00:18:02,112 --> 00:18:07,312 [Speaker 4]
+in cash. I, I don't think this is a product usage, but I think this is one of the, uh- 
+
+00:18:07,312 --> 00:18:10,752 [Speaker 3]
+Sorry. Okay. So card not present is equal to online? 
+
+00:18:10,772 --> 00:18:11,852 [Speaker 4]
+No, no, not equal to. 
+
+00:18:11,852 --> 00:18:11,872 [Speaker 6]
+No. 
+
+00:18:11,872 --> 00:18:26,576 [Speaker 4]
+But when you consider different types of spend, you consider online spend or a customer have paid using the card, but not in person. For example, I provide a common, common number to the merchant. -the process, but I'm not presenting when I do the transaction. 
+
+00:18:26,576 --> 00:18:28,356 [Speaker 3]
+So that is not called online spend? 
+
+00:18:28,356 --> 00:18:31,576 [Speaker 4]
+It's not, but it's... Well, which... Yeah, but it's in spend category. 
+
+00:18:31,576 --> 00:18:32,956 [Speaker 3]
+But then what is online spend then? 
+
+00:18:33,296 --> 00:18:33,996 [Speaker 7]
+It's like maybe like- 
+
+00:18:34,076 --> 00:18:34,256 [Speaker 6]
+Online spend- 
+
+00:18:34,256 --> 00:18:38,056 [Speaker 7]
+-online transactions and where we enter the card details online on a website. 
+
+00:18:38,116 --> 00:18:39,636 [Speaker 6]
+Exactly, yes. 
+
+00:18:41,076 --> 00:18:45,476 [Speaker 4]
+I use the card versus the merchant use my card using the numbers I provided. 
+
+00:18:46,616 --> 00:18:46,776 [Speaker 7]
 Hmm. 
 
-00:26:18,182 --> 00:26:19,942 [Speaker 0]
-Key concept is 
+00:18:47,076 --> 00:18:58,576 [Speaker 4]
+So for example, there are some merchants, restaurants, they can place my order if I provided my card number and CVV to them, but I'm not present when I, when I make this purchase. 
 
-00:26:21,302 --> 00:26:22,822 [Speaker 0]
-historical customer support. 
+00:19:00,196 --> 00:19:04,796 [Speaker 4]
+Versus online spend is I place my order for myself online, so I'm the person paying for that. 
 
-00:26:24,382 --> 00:26:25,422 [Speaker 1]
-I don't need this, right? 
+00:19:08,796 --> 00:19:10,116 [Speaker 3]
+Is that what card not present is? 
 
-00:26:25,822 --> 00:26:29,362 [Speaker 0]
-Yeah. Taking all possible combinations, complete Shapley. 
+00:19:10,916 --> 00:19:18,496 [Speaker 6]
+Yes, card not present when you, you don't have the physical card available with you and you are doing that payment. So like, be it like Apple Pay that you're doing that payment. 
 
-00:26:29,402 --> 00:26:29,562 [Speaker 1]
-हाँ। 
+00:19:19,676 --> 00:19:20,576 [Speaker 3]
+Okay. So- 
 
-00:26:31,882 --> 00:26:39,942 [Speaker 2]
-[car honking] 
+00:19:20,676 --> 00:19:21,416 [Speaker 6]
+Apple Pay, Samsung Pay, Wallet. 
 
-00:26:43,722 --> 00:26:44,202 [Speaker 3]
-अम्मावा? 
+00:19:21,416 --> 00:19:24,656 [Speaker 3]
+You can just say card not... Yeah. Okay, so it's digital wallet? 
 
-00:26:47,902 --> 00:26:48,642 [Speaker 0]
-तू अम्मावा? 
+00:19:26,016 --> 00:19:26,156 [Speaker 3]
+No? 
 
-00:26:48,882 --> 00:26:49,782 [Speaker 3]
-मैं अम्मा हूं सर। 
+00:19:27,596 --> 00:19:27,716 [Speaker 7]
+I mean- 
 
-00:26:49,782 --> 00:26:50,702 [Speaker 0]
-इतने की? 
+00:19:27,836 --> 00:19:29,696 [Speaker 4]
+I mean, not card, not the same thing, yeah. 
 
-00:26:50,862 --> 00:26:52,302 [Speaker 3]
-2.97. 
+00:19:32,836 --> 00:19:35,916 [Speaker 3]
+So basically you are saying when they pay using Apple Pay and, uh- 
 
-00:26:52,562 --> 00:26:54,102 [Speaker 0]
-अम्मा ने 2.8 को खरीदा है। 
-
-00:26:54,142 --> 00:26:56,382 [Speaker 3]
-खरीद सकते थे ना। 
-
-00:26:56,462 --> 00:26:59,182 [Speaker 0]
-मैंने दूसरा 3.2 पर order place किया था। 
-
-00:26:59,422 --> 00:27:00,322 [Speaker 3]
-3.2 पर... 
-
-00:27:00,322 --> 00:27:01,322 [Speaker 1]
-Distance changes. 
-
-00:27:01,402 --> 00:27:03,982 [Speaker 0]
-अम्मा जी बहुत परेशान हैं। 
-
-00:27:03,982 --> 00:27:04,162 [Speaker 3]
-इसलिए... 
-
-00:27:04,162 --> 00:27:05,942 [Speaker 1]
-Across day windows. 
-
-00:27:10,422 --> 00:27:13,142 [Speaker 1]
-Aggregated results by attribute 
-
-00:27:14,802 --> 00:27:17,142 [Speaker 1]
-and proposed activation windows, right? 
-
-00:27:17,382 --> 00:27:17,482 [Speaker 0]
+00:19:36,176 --> 00:19:36,316 [Speaker 7]
 Yeah. 
 
-00:27:18,602 --> 00:27:19,462 [Speaker 1]
-This is what we have. 
+00:19:37,516 --> 00:19:38,256 [Speaker 6]
+Samsung Wallet. 
 
-00:27:20,802 --> 00:27:25,002 [Speaker 1]
-And then we don't have this Euclidean distance out of picture. 
+00:19:39,876 --> 00:19:42,516 [Speaker 3]
+I mean, there also you are present, you are swiping, right? 
 
-00:27:27,522 --> 00:27:27,882 [Speaker 1]
-Done? 
+00:19:42,936 --> 00:19:44,296 [Speaker 4]
+Yeah, that's my point. 
 
-00:27:29,082 --> 00:27:29,402 [Speaker 1]
-Done. 
+00:19:44,296 --> 00:19:48,196 [Speaker 3]
+So when you're, you're going to, you're going to Starbucks, you are showing Apple Pay. 
 
-00:27:32,702 --> 00:27:33,382 [Speaker 1]
-ये हटाओ, 
-
-00:27:35,262 --> 00:27:40,222 [Speaker 1]
-ये भी हटाओ। ठीक है? हमने यही वाला काम कर लिया। ठीक है ना? 
-
-00:27:40,262 --> 00:27:40,602 [Speaker 0]
-Mm-hmm. 
-
-00:27:40,602 --> 00:27:47,702 [Speaker 1]
-[notification tone chiming] So version 1.1, इसके अंदर हमने क्या किया कि effectively 
-
-00:27:49,102 --> 00:27:51,162 [Speaker 1]
-हमने सारे transactions रखे। 
-
-00:27:51,162 --> 00:27:52,222 [Speaker 0]
-Mm-hmm. 
-
-00:27:52,222 --> 00:27:53,982 [Speaker 1]
-Right? All the combinations we kept. 
-
-00:27:53,982 --> 00:27:54,282 [Speaker 0]
-Code. 
-
-00:27:55,262 --> 00:27:59,142 [Speaker 1]
-Yeah. And then essentially what we did is we ran a transformer over that- 
-
-00:27:59,322 --> 00:27:59,542 [Speaker 0]
-Mm-hmm. 
-
-00:27:59,542 --> 00:28:07,962 [Speaker 1]
--and created predictions, and then we created counterfactuals. Counterfactuals mean that essentially if for a sequence, 
-
-00:28:09,082 --> 00:28:09,322 [Speaker 1]
-right? 
-
-00:28:09,582 --> 00:28:09,782 [Speaker 0]
-Mm-hmm. 
-
-00:28:10,282 --> 00:28:12,962 [Speaker 1]
-If for a sequence... और sequence कहां गया? 
-
-00:28:14,302 --> 00:28:14,802 [Speaker 1]
-Original. 
-
-00:28:17,122 --> 00:28:21,442 [Speaker 1]
-हाँ? यहां रखा हुआ था sequence वाला। गायब हो गया। 
-
-00:28:21,442 --> 00:28:22,822 [Speaker 0]
-Yeah. कौन सा? 
-
-00:28:24,182 --> 00:28:31,682 [Speaker 1]
-मुझे लगा था एक example रखा था मैंने। ठीक है, छोड़ो। Not a point. Example combination one. अच्छा, मैंने लिख दिया ना combination one. 
-
-00:28:31,722 --> 00:28:31,902 [Speaker 0]
+00:19:48,556 --> 00:19:48,816 [Speaker 4]
 Yeah. 
 
-00:28:31,902 --> 00:28:39,682 [Speaker 1]
-ये वाला। ठीक है? First activates on day 12. Initiate persistent activation on an earlier day. Keep day 12 to 30 unchanged. 
+00:19:48,816 --> 00:19:50,136 [Speaker 3]
+So you are present in person. 
 
-00:28:39,742 --> 00:28:40,122 [Speaker 0]
+00:19:50,136 --> 00:19:52,336 [Speaker 4]
+Correct. I don't think that's card not present. 
+
+00:19:52,356 --> 00:19:53,076 [Speaker 7]
+I mean, maybe that's- 
+
+00:19:53,076 --> 00:19:53,776 [Speaker 3]
+So Nitesh, I, my next- 
+
+00:19:53,776 --> 00:20:14,916 [Speaker 7]
+-also the part of CNP as well, other things as well are there. What you're thinking physical is when you use the physical card. CNP is when you're not using the physical card, but you're transacting using you, you, you yourself are transacting it. Online is when you enter the details of the card somewhere on the online platform and you do a transaction. That is like simple differentiation we draw, like physical, CNP. 
+
+00:20:14,956 --> 00:20:22,576 [Speaker 3]
+Got it. So basically... Okay. So what I heard from you, Hema, is that online, there is an online spend similar to how we do it on Amazon. 
+
+00:20:22,776 --> 00:20:23,376 [Speaker 7]
+Yes, correct. 
+
+00:20:24,276 --> 00:20:25,056 [Speaker 3]
+Okay, got it. 
+
+00:20:25,236 --> 00:20:25,636 [Speaker 7]
 Mm-hmm. 
 
-00:28:40,142 --> 00:28:44,382 [Speaker 1]
-Okay? And यहां पे we are just adding one more event earlier. 
+00:20:25,636 --> 00:20:29,196 [Speaker 3]
+Then there is an offline spend. Offline spend you are saying can be two ways. 
 
-00:28:44,382 --> 00:28:44,602 [Speaker 0]
+00:20:29,396 --> 00:20:29,916 [Speaker 7]
+Mm-hmm. 
+
+00:20:29,916 --> 00:20:31,956 [Speaker 3]
+One way is I physically present my card- 
+
+00:20:32,075 --> 00:20:32,396 [Speaker 7]
 Yeah. 
 
-00:28:45,902 --> 00:28:50,342 [Speaker 1]
-ठीक है? Then we are checking what is the change in cosine distance. Okay? 
+00:20:32,396 --> 00:20:33,476 [Speaker 3]
+-when I go to Starbucks. 
 
-00:28:50,402 --> 00:28:50,942 [Speaker 0]
-Uh-huh. 
-
-00:28:50,942 --> 00:28:58,462 [Speaker 1]
-For day five, this is a predicted GCM. This is the change in-- this is the cosine distance. This is the date. Day five is the best date that is coming out. 
-
-00:28:58,822 --> 00:28:59,182 [Speaker 0]
+00:20:33,676 --> 00:20:33,795 [Speaker 7]
 Yeah. 
 
-00:28:59,182 --> 00:29:06,762 [Speaker 1]
-Okay? Similarly here, persistent, it is telling me, like day five brings me closer to golden. 
+00:20:34,195 --> 00:20:34,396 [Speaker 3]
+Or 
 
-00:29:06,802 --> 00:29:07,062 [Speaker 0]
-Mm-hmm. 
+00:20:35,616 --> 00:20:37,016 [Speaker 3]
+I present Apple Pay- 
 
-00:29:07,062 --> 00:29:07,642 [Speaker 1]
-Right? 
-
-00:29:07,642 --> 00:29:07,802 [Speaker 0]
+00:20:37,256 --> 00:20:37,536 [Speaker 7]
 Yeah. 
 
-00:29:09,482 --> 00:29:15,062 [Speaker 1]
-So now when we look at the Shapley contribution, wherein we had this view. 
+00:20:37,536 --> 00:20:38,656 [Speaker 3]
+-instead of presenting my card. 
 
-00:29:15,542 --> 00:29:16,202 [Speaker 0]
-Mm-hmm. 
-
-00:29:16,222 --> 00:29:23,182 [Speaker 1]
-Okay? Where we were just adding one. Essentially, we were seeing that we are getting this much contribution by GCM- 
-
-00:29:23,662 --> 00:29:23,802 [Speaker 0]
-Yeah. 
-
-00:29:23,802 --> 00:29:33,262 [Speaker 1]
--across different windows. Now, these are not additive. This is like the change in prediction that is happening because of introducing bonus within the first five days. 
-
-00:29:33,262 --> 00:29:33,662 [Speaker 0]
-Yes. 
-
-00:29:33,662 --> 00:29:35,342 [Speaker 1]
-Okay? Where it hasn't been introduced. 
-
-00:29:35,342 --> 00:29:35,482 [Speaker 0]
-Yeah. 
-
-00:29:36,682 --> 00:29:39,422 [Speaker 1]
-Okay? So this is like for people 
-
-00:29:40,542 --> 00:29:42,542 [Speaker 1]
-who are-- had an activation done- 
-
-00:29:42,862 --> 00:29:42,962 [Speaker 0]
-Mm-hmm. 
-
-00:29:42,962 --> 00:29:46,742 [Speaker 1]
--at any point in time, but if this would have been done earlier- 
-
-00:29:46,782 --> 00:29:47,022 [Speaker 0]
-Earlier. 
-
-00:29:47,022 --> 00:29:47,562 [Speaker 1]
--or sooner- 
-
-00:29:47,802 --> 00:29:48,362 [Speaker 0]
-Mm-hmm. 
-
-00:29:48,362 --> 00:29:54,562 [Speaker 1]
--this is what it is adding value. And this is for those people where they never had that particular combination, right? 
-
-00:29:54,822 --> 00:29:55,142 [Speaker 0]
-Yeah. 
-
-00:29:55,142 --> 00:29:58,842 [Speaker 1]
-If I would have introduced, what exactly is my contribution towards GCM? 
-
-00:29:58,902 --> 00:29:59,282 [Speaker 0]
-Mm-hmm. 
-
-00:29:59,482 --> 00:29:59,962 [Speaker 1]
-Right? 
-
-00:29:59,962 --> 00:30:00,062 [Speaker 0]
-Yeah. 
-
-00:30:01,562 --> 00:30:06,202 [Speaker 1]
-This is what it is adding value. [notification tone chiming] So we are seeing bonusable and CNP are strong, 
-
-00:30:07,762 --> 00:30:11,282 [Speaker 1]
-including like top 10 cert, COGS and airfare show promising contributions. 
-
-00:30:11,502 --> 00:30:11,642 [Speaker 0]
-Yes. 
-
-00:30:12,102 --> 00:30:17,162 [Speaker 1]
-Here also, B2B spend lead early activation, CNP and bonusable remain positive. 
-
-00:30:17,702 --> 00:30:18,222 [Speaker 0]
-Mm-hmm. 
-
-00:30:18,242 --> 00:30:18,422 [Speaker 1]
-Right? 
-
-00:30:18,702 --> 00:30:18,862 [Speaker 0]
-Yeah. 
-
-00:30:20,062 --> 00:30:31,162 [Speaker 1]
-And if you do this persistent activation, then essentially I see that CNP, bonus and airfare adds value within the first. Bonusable strong till, till day 25, right? 
-
-00:30:31,442 --> 00:30:31,462 [Speaker 0]
-Mm-hmm. 
-
-00:30:31,462 --> 00:30:32,322 [Speaker 1]
-It adds value. 
-
-00:30:32,342 --> 00:30:33,162 [Speaker 0]
-Mm-hmm. 
-
-00:30:33,182 --> 00:30:42,898 [Speaker 1]
-Till that one. CNP, airfare and top 10 cert are stronger early. And CNP is golden alignment weakens after 10. Okay, theek hai, we have good insights on this one. 
-
-00:30:43,078 --> 00:30:43,138 [Speaker 0]
-Yeah. 
-
-00:30:44,538 --> 00:30:49,138 [Speaker 1]
-We are saying prioritize early bonusable CNP activation and B2B spend, right? That is our 
-
-00:30:50,758 --> 00:30:57,718 [Speaker 1]
-outcome of here. And here it is saying bonusable airfare while CNP and B2B offers broader opportunities throughout the month. Correct? 
-
-00:30:57,718 --> 00:30:57,938 [Speaker 0]
-Yeah. 
-
-00:30:58,558 --> 00:31:02,338 [Speaker 1]
-Same. Now comes the approach three, okay? 
-
-00:31:02,358 --> 00:31:02,558 [Speaker 0]
-Hmm. 
-
-00:31:05,238 --> 00:31:06,638 [Speaker 1]
-Okay, so this was 
-
-00:31:09,697 --> 00:31:11,938 [Speaker 1]
-approach one that was taken, okay? 
-
-00:31:13,178 --> 00:31:13,398 [Speaker 1]
-Then 
-
-00:31:15,518 --> 00:31:16,418 [Speaker 1]
-we do the C, 
-
-00:31:17,858 --> 00:31:20,818 [Speaker 1]
-and then there is approach two, correct? 
-
-00:31:21,178 --> 00:31:21,438 [Speaker 0]
-Yeah. 
-
-00:31:23,558 --> 00:31:24,538 [Speaker 1]
-This is approach two, 
-
-00:31:25,678 --> 00:31:26,038 [Speaker 1]
-wherein 
-
-00:31:27,058 --> 00:31:29,418 [Speaker 1]
-we created this version, okay? 
-
-00:31:30,738 --> 00:31:31,518 [Speaker 1]
-Approach two. 
-
-00:31:36,358 --> 00:31:37,978 [Speaker 1]
-This is approach 2.1, 
-
-00:31:39,018 --> 00:31:40,118 [Speaker 1]
-wherein they did this, 
-
-00:31:41,178 --> 00:31:43,838 [Speaker 1]
-and this counterfactual is approach two. 
-
-00:31:44,438 --> 00:31:46,038 [Speaker 0]
-Yeah, approach 2.2. 
-
-00:31:47,218 --> 00:31:49,218 [Speaker 1]
-Approach 2.2. Okay, done. 
-
-00:31:55,678 --> 00:31:55,978 [Speaker 1]
-Done. 
-
-00:32:00,658 --> 00:32:01,298 [Speaker 1]
-This we did, 
-
-00:32:02,618 --> 00:32:03,538 [Speaker 1]
-and we created. 
-
-00:32:05,438 --> 00:32:07,778 [Speaker 1]
-Okay, let me name this version 1.1. 
-
-00:32:16,338 --> 00:32:16,938 [Speaker 1]
-And this is 
-
-00:32:19,558 --> 00:32:20,978 [Speaker 1]
-version 1.2. 
-
-00:32:22,718 --> 00:32:28,738 [Speaker 1]
-Done. Okay. Now this comes approach three, okay? Broader behavioral simulation. 
-
-00:32:32,558 --> 00:32:42,878 [Speaker 1]
-Okay, limitation, a narrow view of spending opportunities. A spending behavior can appear in several combinations, but each simulation changes only one, okay? 
-
-00:32:45,138 --> 00:32:46,938 [Speaker 1]
-Approach to limitation, okay. 
-
-00:32:48,358 --> 00:33:06,478 [Speaker 1]
-Each model feature represents a specific combination of seven spending attributes. During simulation, we activate one combination at a time. Example, activated, unchanged, unchanged, unchanged. But the example shows all three combinations containing bonus. Activating A on day five leaves B and C unchanged in this scenario. 
-
-00:33:07,718 --> 00:33:26,078 [Speaker 1]
-Okay? Testing one combination at a time captures its individual impact, but may overlook the broader impact of related spending indicators. This limits the range. Evaluating historically observed groups of spending indicators together could provide a more complete view of customer opportunities. Okay? 
-
-00:33:27,538 --> 00:33:34,218 [Speaker 1]
-Approach three. Okay? Now again, we do this 90% support, 22 indicators. 
-
-00:33:34,458 --> 00:33:36,098 [Speaker 0]
-Yeah. 
-
-00:33:36,098 --> 00:33:36,418 [Speaker 1]
-Okay. 
-
-00:33:37,438 --> 00:33:39,658 [Speaker 1]
-22 spending indicators that we have. 
-
-00:33:39,678 --> 00:33:49,438 [Speaker 0]
-We had like the existing activation as it is. We don't change, like for example, when we are doing for COGS, if the bonus is already activated, we keep the bonus as it is, and we just introduce a new COGS activity. 
-
-00:33:51,098 --> 00:33:51,318 [Speaker 1]
-Hmm. 
-
-00:33:54,358 --> 00:33:56,038 [Speaker 1]
-Okay, 500 random CMs. 
-
-00:33:57,238 --> 00:33:57,858 [Speaker 1]
-This one. 
-
-00:33:58,938 --> 00:33:59,978 [Speaker 1]
-This I think, Hema- 
-
-00:34:00,238 --> 00:34:00,338 [Speaker 0]
-Yeah. 
-
-00:34:00,338 --> 00:34:03,238 [Speaker 1]
--you are more familiar with this approach, right? 
-
-00:34:03,458 --> 00:34:03,578 [Speaker 0]
-Yes. 
-
-00:34:03,578 --> 00:34:05,818 [Speaker 1]
-What you are doing here. I would say like- 
-
-00:34:06,118 --> 00:34:06,298 [Speaker 0]
-Mm-hmm. 
-
-00:34:06,458 --> 00:34:09,378 [Speaker 1]
-Yeah, I would say like you should explain this one, okay? 
-
-00:34:09,398 --> 00:34:09,558 [Speaker 0]
-Okay. 
-
-00:34:10,598 --> 00:34:17,658 [Speaker 1]
-To Sonal, exactly what exactly are we doing. And see, I'll, I'll tell you where she will get stumped or select get confused. 
-
-00:34:17,698 --> 00:34:18,058 [Speaker 0]
-Mm-hmm. 
-
-00:34:18,078 --> 00:34:33,778 [Speaker 1]
-Okay? Thing is, all these three approaches are giving us like same behaviors, like CNP, COGS, admin fixed, recurring. These are the ones which are adding value, right? Indeed, Adobe, Hilton, even I was showing that. Here it also shown. 
-
-00:34:34,018 --> 00:34:34,598 [Speaker 0]
-Yes. 
-
-00:34:34,598 --> 00:34:36,998 [Speaker 1]
-But the only thing is this magnitude, right? 
-
-00:34:37,178 --> 00:34:38,018 [Speaker 0]
-Yeah, that differs. 
-
-00:34:39,098 --> 00:34:42,318 [Speaker 1]
-That differs. So now which one to take, which one to not take? 
-
-00:34:43,378 --> 00:34:50,318 [Speaker 1]
-I am a little bit skeptical on select taking these magnitudes. Reason being my overall average GCM is only 3500. 
-
-00:34:51,818 --> 00:34:53,597 [Speaker 0]
-Okay. 
-
-00:34:53,597 --> 00:34:57,918 [Speaker 1]
-Right? For 77. So if I go here, you remember between you, me, 
-
-00:34:59,718 --> 00:35:03,898 [Speaker 1]
-and, uh, between both of us, Uma shared one file 
-
-00:35:05,658 --> 00:35:11,518 [Speaker 1]
-which had-- wherein I asked like, "Okay, can you guys share with me the, huh, 77K predicted GCM and everything?" 
-
-00:35:11,638 --> 00:35:12,238 [Speaker 0]
-Mm-hmm. 
-
-00:35:13,038 --> 00:35:16,498 [Speaker 1]
-Theek hai? Sample data as well. The reason I asked for this is... 
-
-00:35:20,478 --> 00:35:21,918 [Speaker 1]
-If I look at this, right? 
-
-00:35:23,278 --> 00:35:24,598 [Speaker 1]
-Let it log in first. 
-
-00:35:27,478 --> 00:35:29,098 [Speaker 0]
-Just give me a second, Nitish, I'll be back. 
-
-00:35:29,838 --> 00:35:30,478 [Speaker 1]
-Uh-huh. 
-
-00:35:30,478 --> 00:36:38,578 [Speaker 4]
-[background chatter] [notification tone chiming]  [notification tone chiming] 
-
-00:36:38,578 --> 00:36:38,798 [Speaker 5]
-[background chatter] 
-
-00:36:38,798 --> 00:36:41,078 [Speaker 1]
-[background chatter]
-
-00:36:43,938 --> 00:36:44,738 [Speaker 0]
-Maybe put 2.0. 
-
-00:36:44,778 --> 00:36:46,238 [Speaker 1]
-You let me know when you are back. 
-
-00:36:47,078 --> 00:36:47,758 [Speaker 0]
-Yeah, Nitish, I'm back. 
-
-00:36:49,098 --> 00:36:51,318 [Speaker 1]
-Okay, okay, cool. Can you see my screen? 
-
-00:36:51,658 --> 00:36:51,917 [Speaker 0]
-Yeah. 
-
-00:36:53,658 --> 00:36:55,258 [Speaker 1]
-This is the Excel that you guys shared, right? 
-
-00:36:55,398 --> 00:36:55,638 [Speaker 0]
-Yes, yes. 
-
-00:36:55,678 --> 00:36:56,758 [Speaker 1]
-What is the average GCM? 
-
-00:36:56,978 --> 00:36:57,698 [Speaker 0]
-Mm-hmm. 
-
-00:36:57,698 --> 00:37:01,638 [Speaker 1]
-So these are like all equal deciles, so I can take a simple average of all this, right? 
-
-00:37:01,938 --> 00:37:02,398 [Speaker 0]
-Okay. 
-
-00:37:02,398 --> 00:37:04,238 [Speaker 1]
-Because even the weighted average would be the same- 
-
-00:37:04,458 --> 00:37:04,798 [Speaker 0]
-Mm-hmm. 
-
-00:37:04,798 --> 00:37:05,438 [Speaker 1]
--that I will get. 
-
-00:37:05,518 --> 00:37:05,698 [Speaker 0]
-Yes. 
-
-00:37:06,178 --> 00:37:13,238 [Speaker 1]
-So I am getting 3347 as the overall average GCM that I'm getting for 77K population, right? 
-
-00:37:13,298 --> 00:37:13,858 [Speaker 0]
-Okay, yeah. 
-
-00:37:15,558 --> 00:37:19,178 [Speaker 1]
-So am I telling that I'm gonna get... 
-
-00:37:21,018 --> 00:37:21,958 [Speaker 1]
-Where exactly this one? 
-
-00:37:22,018 --> 00:37:24,718 [Speaker 0]
-Then that would be a wrong assumption that we're getting 1980. 
-
-00:37:24,778 --> 00:37:29,858 [Speaker 1]
-Yeah, 2,000 dollars, I'm saying that I'm gonna add value just by incorporating CNP. Who will buy this? 
-
-00:37:30,098 --> 00:37:39,818 [Speaker 0]
-Yes, yes. So that day also you were mentioning that when we were discussing with Katke. First, when we were discussing with Katke, that made sense. But when you told like we are testing only adding a, 
-
-00:37:41,658 --> 00:37:50,138 [Speaker 0]
-uh, transaction of this thing, whether that could increase and that would impact this. We're not taking magnitude into consideration. That's why we are getting a 100s in this thing. 
-
-00:37:50,878 --> 00:37:51,698 [Speaker 1]
-Yeah, exactly. 
-
-00:37:52,998 --> 00:38:00,158 [Speaker 1]
-So if-- See, right now, even here, right, in this transformer, what he has taken, he is taking spending indicators. 
-
-00:38:00,478 --> 00:38:00,838 [Speaker 0]
-Mm-hmm. 
-
-00:38:00,838 --> 00:38:05,798 [Speaker 1]
-So am I telling that, okay, just by introducing something like few days earlier- 
-
-00:38:06,338 --> 00:38:06,938 [Speaker 0]
-Mm-hmm. 
-
-00:38:06,938 --> 00:38:10,218 [Speaker 1]
--I'm gonna increase my GCM by 2,000 dollars? 
-
-00:38:10,598 --> 00:38:10,738 [Speaker 0]
-Yeah. 
-
-00:38:12,538 --> 00:38:14,658 [Speaker 1]
-On a 35-- 3300 base. 
-
-00:38:15,718 --> 00:38:15,858 [Speaker 0]
-Mm-hmm. 
-
-00:38:15,898 --> 00:38:17,758 [Speaker 1]
-That is like more than 70% increase. 
-
-00:38:17,878 --> 00:38:18,278 [Speaker 0]
-Yes. 
-
-00:38:19,698 --> 00:38:20,598 [Speaker 1]
-That can't happen, right? 
-
-00:38:20,878 --> 00:38:21,158 [Speaker 0]
-Yeah. 
-
-00:38:23,438 --> 00:38:26,198 [Speaker 1]
-And even if I go to say like your opportunity here, 
-
-00:38:28,078 --> 00:38:28,578 [Speaker 1]
-this one. 
-
-00:38:29,258 --> 00:38:29,378 [Speaker 0]
-Mm-hmm. 
-
-00:38:29,458 --> 00:38:31,898 [Speaker 1]
-Say like this 15K deciles that we had. 
-
-00:38:31,938 --> 00:38:32,078 [Speaker 0]
-Yeah. 
-
-00:38:32,078 --> 00:38:35,538 [Speaker 1]
-Even if I take say like an average GCM, 6,800, right? 
-
-00:38:35,818 --> 00:38:36,378 [Speaker 0]
-Yeah. 
-
-00:38:36,378 --> 00:38:39,058 [Speaker 1]
-30% increase in GCM just by introducing CNP. 
-
-00:38:41,898 --> 00:38:42,798 [Speaker 0]
-Doesn't make sense. 
-
-00:38:43,798 --> 00:38:52,958 [Speaker 1]
-Doesn't make sense. And his counterargument could be, you know, we are looking at predicted GCM, then so this impact is even higher. You're seeing 50% increment. 
-
-00:38:53,318 --> 00:38:53,578 [Speaker 0]
-Yeah. 
-
-00:38:55,158 --> 00:38:55,718 [Speaker 1]
-Right? 
-
-00:38:55,818 --> 00:38:56,058 [Speaker 0]
-Mm-hmm. 
-
-00:38:56,078 --> 00:38:59,998 [Speaker 1]
-This is a predicted GCM. I go predicted GCM, it is again like 3,000 only. 
-
-00:39:00,338 --> 00:39:00,418 [Speaker 0]
-Mm-hmm. 
-
-00:39:00,478 --> 00:39:01,378 [Speaker 1]
-On 3,000, 
-
-00:39:02,458 --> 00:39:08,138 [Speaker 1]
-I'm gonna add 2,000. That is 60% here and almost 45% here- 
-
-00:39:08,538 --> 00:39:08,858 [Speaker 0]
-Yeah. 
-
-00:39:08,858 --> 00:39:10,678 [Speaker 1]
--as an impact. That can't happen. 
-
-00:39:10,698 --> 00:39:10,918 [Speaker 0]
-Mm-hmm. 
-
-00:39:11,038 --> 00:39:12,198 [Speaker 1]
-Just by introducing CNP. 
-
-00:39:14,398 --> 00:39:14,798 [Speaker 0]
+00:20:38,796 --> 00:20:39,056 [Speaker 7]
 Correct. 
 
-00:39:14,798 --> 00:39:17,818 [Speaker 1]
-So that is why I was like a bit skeptical on these volumes. 
+00:20:40,536 --> 00:20:44,096 [Speaker 3]
+So this, this ca-- this, this card not present is the same thing as? 
 
-00:39:17,878 --> 00:39:18,398 [Speaker 0]
-Mm-hmm. 
+00:20:44,396 --> 00:20:44,776 [Speaker 7]
+Apple Pay. 
 
-00:39:25,078 --> 00:39:28,398 [Speaker 1]
-I think nobody challenged it when this was getting created. 
+00:20:45,016 --> 00:20:45,736 [Speaker 3]
+Offline spend. 
 
-00:39:28,978 --> 00:39:29,278 [Speaker 0]
-Mm-hmm. 
-
-00:39:33,278 --> 00:39:49,178 [Speaker 0]
-So that day, the morning, Katke was discussing this thing. We wanted to dive, deep dive into it. But again, Anchal and Katke discussed and were like, "No, this is all because of this." So that made sense to me because, uh, when we are taking the combinations into place, what we are doing is like 
-
-00:39:51,158 --> 00:39:56,298 [Speaker 0]
-we are, uh, telling like this particular combination impact on the GCM, right? On a way. 
-
-00:39:56,638 --> 00:39:57,518 [Speaker 1]
-Yeah. Yeah, yeah. 
-
-00:39:57,518 --> 00:40:00,978 [Speaker 0]
-And that is-- that would be limited, uh, lesser than the normal one only. 
-
-00:40:01,998 --> 00:40:02,498 [Speaker 1]
+00:20:45,996 --> 00:20:46,116 [Speaker 7]
 Yeah. 
 
-00:40:02,498 --> 00:40:12,278 [Speaker 0]
-And even when we're aggregating it, then it would be even much lesser. Okay, so that made sense. Like, okay, that is why maybe we are getting lesser there, and because we are not taking individual here, we are getting- 
+00:20:46,116 --> 00:20:49,616 [Speaker 3]
+Apple-- Offline spend using, uh, uh, no card. 
 
-00:40:12,318 --> 00:40:17,138 [Speaker 1]
-But if you, if you think about it, if you think about it, very simply put, the Shapley, right? 
+00:20:49,716 --> 00:20:51,856 [Speaker 7]
+No card, yes. So the theory- 
 
-00:40:17,218 --> 00:40:17,398 [Speaker 0]
-Yeah. 
+00:20:51,896 --> 00:20:55,176 [Speaker 3]
+Okay, now I will not... I, I will, I will always remember this now. This is very helpful. 
 
-00:40:18,518 --> 00:40:22,518 [Speaker 1]
-What exactly it is doing? It is looking at for a particular CM- 
+00:20:55,916 --> 00:21:02,636 [Speaker 7]
+Yeah. So it could be like a theory that ease of transacting would be more if you are doing it on CNP getting Apple Pay- 
 
-00:40:22,818 --> 00:40:22,998 [Speaker 0]
+00:21:02,656 --> 00:21:02,956 [Speaker 3]
+100%. 
+
+00:21:02,956 --> 00:21:04,656 [Speaker 7]
+-you add, you adding it to your wallet. So- 
+
+00:21:04,776 --> 00:21:08,476 [Speaker 3]
+If I'm paying using Apple Pay, of course that is going to be because that's a sticky habit, right? 
+
+00:21:08,636 --> 00:21:14,436 [Speaker 7]
+Yes. Yeah. So that is one marker. So we, that way we can align with that being a important marker. 
+
+00:21:16,136 --> 00:21:19,956 [Speaker 3]
+Okay, get it. So that is something which we did not see in your analysis then. 
+
+00:21:19,956 --> 00:21:25,416 [Speaker 4]
+Uh, we only see online spend. That seems to be one type of CNP spend, but in later months. 
+
+00:21:29,216 --> 00:21:31,076 [Speaker 3]
+Okay, I'm not con-con-- uh, confused. 
+
+00:21:31,096 --> 00:21:31,376 [Speaker 4]
+Basically- 
+
+00:21:31,376 --> 00:21:35,636 [Speaker 3]
+I'm, I'm looking at offline CNP. Offline spend CNP is what- 
+
+00:21:35,756 --> 00:21:43,096 [Speaker 4]
+So this is card not present, right? That actually could include online spend, phone orders, digital wallet transactions. 
+
+00:21:45,636 --> 00:21:53,476 [Speaker 4]
+So I think my point is, I think Nitesh and Hema, you probably want to confirm this definition because I have a little bit different understanding in the definition. 
+
+00:21:53,756 --> 00:21:57,096 [Speaker 3]
+Let's clarify it right now. How are you getting this, uh, card not present? 
+
+00:22:00,416 --> 00:22:02,816 [Speaker 7]
+It was from Shailendra's data only. 
+
+00:22:03,856 --> 00:22:05,316 [Speaker 7]
+We had this... 
+
+00:22:06,136 --> 00:22:07,776 [Speaker 6]
+It is from the transaction tables only. 
+
+00:22:07,796 --> 00:22:12,396 [Speaker 7]
+Transaction table only. There's CNP and physical online CNP categories in there. 
+
+00:22:14,556 --> 00:22:16,896 [Speaker 3]
+So can you... In, in that transaction table, 
+
+00:22:18,256 --> 00:22:20,176 [Speaker 3]
+there are only three, three modes of 
+
+00:22:21,576 --> 00:22:25,156 [Speaker 3]
+transacting, right? One is online where you fill in the number, other is 
+
+00:22:26,276 --> 00:22:33,676 [Speaker 3]
+online, not online, other, other is basically where you show Apple Pay, and the third is basically where you put, give your card in person. 
+
+00:22:33,856 --> 00:22:34,116 [Speaker 7]
 Mm-hmm. 
 
-00:40:22,998 --> 00:40:28,918 [Speaker 1]
--for a particular combination, if activated earlier, this is the change in the delta GCM or delta cosine distance, right? 
+00:22:35,676 --> 00:22:37,076 [Speaker 3]
+Is there a fourth mechanism? 
 
-00:40:28,958 --> 00:40:29,998 [Speaker 0]
+00:22:39,076 --> 00:22:39,376 [Speaker 3]
+No, right? 
+
+00:22:39,396 --> 00:22:39,516 [Speaker 7]
+No. 
+
+00:22:40,036 --> 00:22:40,156 [Speaker 6]
+No. 
+
+00:22:40,156 --> 00:22:41,356 [Speaker 7]
+Only three categories are there. 
+
+00:22:41,596 --> 00:22:42,856 [Speaker 6]
+Only these three are present. 
+
+00:22:42,856 --> 00:22:45,296 [Speaker 3]
+So if there's... So you are good with the three categories? 
+
+00:22:45,416 --> 00:22:45,636 [Speaker 4]
+Yes. 
+
+00:22:46,476 --> 00:22:49,616 [Speaker 3]
+Your category was specifically the Amazon online spend kind of thing. 
+
+00:22:50,316 --> 00:22:51,856 [Speaker 4]
+Yeah, I consider only online spend. 
+
+00:22:51,856 --> 00:22:52,836 [Speaker 3]
+Yeah, now I understand that. 
+
+00:22:52,876 --> 00:22:53,356 [Speaker 4]
+Yeah. 
+
+00:22:53,356 --> 00:22:54,696 [Speaker 3]
+Their category is basically- 
+
+00:22:55,456 --> 00:22:55,956 [Speaker 4]
+Card not present. 
+
+00:22:55,956 --> 00:22:58,616 [Speaker 3]
+Card is not present and people are using Apple Pay kind of things, 
+
+00:23:00,696 --> 00:23:01,616 [Speaker 3]
+which is different from your online. 
+
+00:23:01,616 --> 00:23:02,176 [Speaker 4]
+Yeah, yeah, yeah. 
+
+00:23:02,636 --> 00:23:03,076 [Speaker 3]
+Fair? 
+
+00:23:03,076 --> 00:23:03,396 [Speaker 4]
+Yeah. 
+
+00:23:03,396 --> 00:23:05,256 [Speaker 3]
+Okay, good. So we are all on the same page. 
+
+00:23:06,036 --> 00:23:06,256 [Speaker 6]
+Yep. 
+
+00:23:06,256 --> 00:23:08,436 [Speaker 3]
+And this is an incremental marker that you are looking at, fair? 
+
+00:23:08,776 --> 00:23:08,896 [Speaker 7]
+Yeah. 
+
+00:23:09,436 --> 00:23:09,716 [Speaker 6]
+Yes. 
+
+00:23:10,636 --> 00:23:17,616 [Speaker 3]
+Cool. That's good. So for your incremental marker also, you will have to create a case study page for CNP. 
+
+00:23:19,016 --> 00:23:19,256 [Speaker 6]
+Okay. 
+
+00:23:20,576 --> 00:23:23,316 [Speaker 3]
+Similar to how I told Jay, Shailendra, and Stephanie on- 
+
+00:23:23,576 --> 00:23:24,876 [Speaker 4]
+Yeah, the, the case study. 
+
+00:23:24,876 --> 00:23:27,556 [Speaker 3]
+So you can create a template and everybody can follow that. 
+
+00:23:27,556 --> 00:23:35,876 [Speaker 4]
+Sure, sure. I have a question though. So, uh, Nitesh, you told me your analysis is only for, uh, first two months, right? 
+
+00:23:36,336 --> 00:23:37,356 [Speaker 6]
+Yes, yes, yes. 
+
+00:23:38,056 --> 00:23:42,556 [Speaker 4]
+So how will your result talk with the 14 months results we have? 
+
+00:23:45,576 --> 00:23:48,236 [Speaker 6]
+How does our result talk with the 14-month results? 
+
+00:23:49,116 --> 00:23:52,496 [Speaker 4]
+Yeah, because we are, we will put in how 14 months markers. 
+
+00:23:53,676 --> 00:24:18,476 [Speaker 6]
+Yeah, so this will be from the execution lens if I want to say that essentially we want to run or select push for a particular marker at what point in time within select month one itself or select should that happen within select the first two months. This can tell me that, okay, within the first two weeks or select first three weeks, I should be pushing up these markers because these add value in terms of GCM incrementality between my goal and our select opportunity. 
+
+00:24:18,636 --> 00:24:26,976 [Speaker 4]
+Got it. So is that right in saying then when if I identify marker in, in first two months, your analysis will tell me what exact week or what exact day in- 
+
+00:24:27,096 --> 00:24:28,076 [Speaker 6]
+Yeah, potentially, but- 
+
+00:24:28,076 --> 00:24:28,476 [Speaker 4]
+-first two months. 
+
+00:24:28,496 --> 00:24:35,156 [Speaker 6]
+Yes, first, uh, first two weeks or, or select within second or third week or select towards the end of the month, which makes more sense. 
+
+00:24:35,256 --> 00:24:42,080 [Speaker 4]
+I see. So how to solve if some of your markers are not showing in the cross tab? 
+
+00:24:42,080 --> 00:24:44,780 [Speaker 4]
+So should we keep them or should we only keep the overlapping ones? 
+
+00:24:45,899 --> 00:24:49,720 [Speaker 4]
+For example, here the, uh, CNP one, that is not something we consider. 
+
+00:24:51,700 --> 00:24:53,420 [Speaker 6]
+Oh, okay. That you didn't consider. 
+
+00:24:57,860 --> 00:25:13,620 [Speaker 6]
+This we can just put as in like an additional layer that, okay, we want to put, say, like, more of ease of payment to be as like a first as additional thing. And I do-- I won't say like CNP as the first in this one. I can put it towards the end, like CNP also adds value, 
+
+00:25:15,200 --> 00:25:16,220 [Speaker 6]
+just to keep it consistent. 
+
+00:25:18,160 --> 00:25:19,440 [Speaker 4]
+Got it. 
+
+00:25:19,440 --> 00:25:36,320 [Speaker 6]
+Yep. And you can put that as a feature set within, say, like, within your set of attributes as well, that, okay, CN-- uh, online, physical, or select CNP. And it didn't show as like a prominent marker when it comes to event rates, but when it comes to, say, like GCM prediction, it is showing some value. That, that's how we can position it. 
+
+00:25:37,220 --> 00:25:37,620 [Speaker 4]
+Got it. 
+
+00:25:38,140 --> 00:25:40,120 [Speaker 6]
+There are incremental learnings that we are also getting. 
+
+00:25:40,840 --> 00:25:41,060 [Speaker 7]
+Okay. 
+
+00:25:41,080 --> 00:25:50,420 [Speaker 6]
+Otherwise, if we get the same set of learnings from both of them, then essentially there is no incrementality in what we are doing, right? That won't add any value. Yeah. 
+
+00:25:50,620 --> 00:26:02,880 [Speaker 4]
+So, uh, maybe can we talk after about how to connect these two sections? I know it's actually two different approaches, but I just want to make sure we are not sharing some contradictory information, or at least they should be connected. 
+
+00:26:03,800 --> 00:26:05,040 [Speaker 6]
+Yes, we should, we should. 
+
+00:26:06,360 --> 00:26:06,900 [Speaker 6]
+We can do that. 
+
+00:26:07,280 --> 00:26:07,440 [Speaker 7]
+Mm-hmm. 
+
+00:26:07,540 --> 00:26:07,720 [Speaker 6]
+Yep. 
+
+00:26:08,920 --> 00:26:10,020 [Speaker 6]
+Ima, you wanted to add something? 
+
+00:26:10,180 --> 00:26:10,280 [Speaker 7]
+Yeah. 
+
+00:26:10,400 --> 00:26:10,760 [Speaker 6]
+Go ahead. 
+
+00:26:10,760 --> 00:26:15,400 [Speaker 7]
+So we are adding this or the IG approach. So we had a discussion. 
+
+00:26:17,020 --> 00:26:32,020 [Speaker 6]
+Yeah, yeah. So, Sonal, just one more thing. We had the integrated gradients as well because you mentioned that how GCM prediction, what attributes are actually adding value towards the GCM prediction for golden and opportunity. We have a view on that as well on slide 24. 
+
+00:26:33,360 --> 00:26:38,760 [Speaker 6]
+Just to tell you, like, if we would have done, say, like an IG approach, what exactly would have added value? 
+
+00:26:39,400 --> 00:26:44,260 [Speaker 3]
+So don't say if. You have already done the IG approach, right? So that's what you should tell Ashish on Wednesday. 
+
+00:26:44,520 --> 00:26:46,240 [Speaker 6]
+Yes, yes, yes. We have done the IG approach. 
+
+00:26:46,700 --> 00:26:56,520 [Speaker 3]
+Don't, don't keep it iffy because he'll be like, you are coming after three weeks, and you are saying if and then and else, right? Don't, don't do that. Say, this is the approach we have taken. 
+
+00:26:57,660 --> 00:26:59,440 [Speaker 3]
+Approach we have taken is integrated gradient. 
+
+00:27:01,200 --> 00:27:10,120 [Speaker 3]
+Based on these, we are looking at product usage and spend transaction data, and these are the markers we are getting. These are the incremental markers. 
+
+00:27:12,240 --> 00:27:13,140 [Speaker 7]
+Good. Okay. 
+
+00:27:14,980 --> 00:27:15,260 [Speaker 6]
+Okay. 
+
+00:27:15,580 --> 00:27:18,720 [Speaker 3]
+Is there anything else you are planning, you are planning to talk about? 
+
+00:27:19,360 --> 00:27:44,000 [Speaker 6]
+Integrated gradients is a support, uh, here, Sonal. It's not the absolute approach that we have taken. Integrated gradient is a support here, which is also showing the same direction because it cannot give us, say, like, these activation timelines correctly. We have just used that to tell that, okay, how much prediction variation is happening between golden and opportunity. Because I told you last time- 
+
+00:27:44,060 --> 00:27:45,020 [Speaker 3]
+Between golden and opportunity, right? 
+
+00:27:45,060 --> 00:27:47,200 [Speaker 6]
+Yes, yes. Because last time I told you, right? 
+
+00:27:47,280 --> 00:27:54,580 [Speaker 3]
+So you are saying as long as-- You are saying as long as there is delta between golden and oppor-- more delta between golden and opportunity, it's a prominent marker. 
+
+00:27:54,860 --> 00:27:54,880 [Speaker 7]
+Yes. 
+
+00:27:54,880 --> 00:28:02,780 [Speaker 6]
+It's a prominent marker. And the second thing, if you remember last time when I said that IG takes hypotheticals, uh, jumps between the- 
+
+00:28:02,780 --> 00:28:03,580 [Speaker 3]
+Baseline. 
+
+00:28:03,580 --> 00:28:25,660 [Speaker 6]
+Between, yeah, baseline. And like points in between the prediction. So those points are actually not even part of the actual journeys that can happen. So that is also a problem. Like IG can be a supporting, uh, approach to help this, but it cannot be the absolute way to do it because it takes like intermediate steps between the journey while explaining prediction, and those are not the actual journeys that happen. 
+
+00:28:25,760 --> 00:28:28,560 [Speaker 3]
+So what is-- You, you and I had a conversation on Friday. 
+
+00:28:29,060 --> 00:28:30,760 [Speaker 6]
+Yes, yes, yes. It is the same thing. 
+
+00:28:30,760 --> 00:28:32,880 [Speaker 3]
+So what is the outcome of that conversation? 
+
+00:28:33,340 --> 00:29:19,120 [Speaker 6]
+So you mentioned out that wherein I explained that IG cannot be used directly, but it can be used as a supporting document here. So that's what we did. We created like IG as a supporting document. The approach is that we have used the counterfactuals, and we have used the simulation to come up with that, okay, if these particular behaviors activated earlier, can they add value to the incremental GCM? And that is what we are showing here. What IG tells me is that, okay, we have run a transformer, you have done a prediction, but which particular feature for golden and opportunity are the more prominent ones? And if there is a difference between them, then these particular features where the difference is showing high, then those are the ones which we should be prioritizing, and that's what we are getting from IG. 
+
+00:29:21,260 --> 00:29:22,260 [Speaker 3]
+So I'm very confused. 
+
+00:29:24,100 --> 00:29:25,320 [Speaker 6]
+Okay. So- 
+
+00:29:25,500 --> 00:29:28,120 [Speaker 3]
+I'm not able to understand what are you proposing here. 
+
+00:29:29,900 --> 00:29:33,520 [Speaker 7]
+Yeah, I think it would better if you move to slide 24 once, if you can show that. 
+
+00:29:37,020 --> 00:29:39,960 [Speaker 6]
+Who is presenting? Uh, if not, let me... Ah, it is. 
+
+00:29:42,120 --> 00:29:43,920 [Speaker 6]
+This one's only. So integrated- 
+
+00:29:44,140 --> 00:29:44,900 [Speaker 3]
+Okay, got it. 
+
+00:29:44,900 --> 00:30:02,200 [Speaker 6]
+Integrated gradients, what it tells me is that if my GCM prediction happened, right, for golden and opportunity, which particular feature is explaining what level of or is contributing how much towards the GCM prediction? So your card not present is contributing the max, followed by bonusable spend, existing merchant. 
+
+00:30:02,200 --> 00:30:07,360 [Speaker 3]
+So this, what is this 914 dollar? What is this value? Is this incremental GCM? 
+
+00:30:08,860 --> 00:30:13,420 [Speaker 6]
+This is incremental GCM in prediction, predicted incremental GCM. 
+
+00:30:14,000 --> 00:30:16,680 [Speaker 3]
+This is basically your 1614 minus 700 there? 
+
+00:30:17,560 --> 00:30:18,240 [Speaker 7]
+Yeah, 1614. 
+
+00:30:18,240 --> 00:30:18,960 [Speaker 6]
+Yes, 1614. 
+
+00:30:19,620 --> 00:30:27,680 [Speaker 3]
+Okay. But what is 1614? Is, is it the average year two GCM? For people, like, I want to understand what is this metric that you have put there. 
+
+00:30:28,380 --> 00:30:33,220 [Speaker 6]
+So 1614 is the predicted year two GCM change that would happen 
+
+00:30:34,280 --> 00:30:37,780 [Speaker 6]
+because of card not present for a golden card member. 
+
+00:30:40,160 --> 00:30:50,004 [Speaker 6]
+So think of it as a Shapley contribution, Sonal, like from top to bottom. So all of this- Is a change in the GCM prediction, whether it is positive or negative. 
+
+00:30:50,444 --> 00:30:50,624 [Speaker 3]
+So- 
+
+00:30:50,624 --> 00:30:51,484 [Speaker 6]
+So card not present is positive- 
+
+00:30:51,504 --> 00:31:01,484 [Speaker 3]
+Nitesh, you got to be specific with me, right? When you say change in GCM prediction, are you meaning-- are you basically saying for card not present, basically people who were using Apple Pay- 
+
+00:31:01,644 --> 00:31:01,884 [Speaker 6]
+Mm-hmm. 
+
+00:31:01,884 --> 00:31:06,764 [Speaker 3]
+-to Hema's point, right? Let's say there are 100 people who were using Apple Pay in month one. 
+
+00:31:07,404 --> 00:31:08,084 [Speaker 6]
+Yep, yep, yep. 
+
+00:31:08,444 --> 00:31:17,124 [Speaker 3]
+For those 100 people, you are saying the difference between actual year two GCM minus day zero predicted GCM is 1614. Is that what it is? 
+
+00:31:18,424 --> 00:31:27,184 [Speaker 7]
+It's like earlier activation, if the card not present is being activated early by those golden customers, then this is the impact of, uh, 
+
+00:31:28,484 --> 00:31:31,904 [Speaker 7]
+what we are getting as per IG. And for opportunity, it would give an impact of 700. 
+
+00:31:33,744 --> 00:31:34,284 [Speaker 7]
+Maybe we can, 
+
+00:31:35,704 --> 00:31:38,964 [Speaker 7]
+like, tell in that way, if I'm not wrong with Nitesh. 
+
+00:31:40,344 --> 00:31:41,104 [Speaker 6]
+Yeah, it is that. 
+
+00:31:41,364 --> 00:31:41,604 [Speaker 7]
+Yeah. 
+
+00:31:41,604 --> 00:31:48,184 [Speaker 6]
+So, Sonal, let me take a stab. I think this is confusing. Let me put this in a more cleaner way so that it is more understandable. 
+
+00:31:48,184 --> 00:31:51,004 [Speaker 3]
+You can-- Actually, I do want to understand the metric. Let's-- First of all- 
+
+00:31:51,163 --> 00:31:51,344 [Speaker 6]
+Yeah. 
+
+00:31:51,344 --> 00:31:54,244 [Speaker 3]
+-you are saying, you, you are saying I'm doing Sage, right? 
+
+00:31:54,604 --> 00:31:54,704 [Speaker 7]
+Mm-hmm. 
+
+00:31:54,704 --> 00:31:57,844 [Speaker 3]
+Now you are saying I'm-- Is this your final answer from Sage? 
+
+00:31:59,624 --> 00:31:59,984 [Speaker 3]
+This slide? 
+
+00:32:01,964 --> 00:32:07,144 [Speaker 6]
+The final answer is the previous two slides, Sonal. Slide 22 and 23, the previous two slides. 
+
+00:32:07,244 --> 00:32:08,064 [Speaker 3]
+Okay. 
+
+00:32:08,064 --> 00:32:08,364 [Speaker 6]
+That is from Sage. 
+
+00:32:08,364 --> 00:32:17,624 [Speaker 3]
+Previous two slides are the final answer. So basically those are the markers that you are saying, which are showing promise-- difference between opportunity and golden group, right? So go back to your previous page. 
+
+00:32:21,544 --> 00:32:21,884 [Speaker 3]
+I see. 
+
+00:32:23,044 --> 00:32:25,984 [Speaker 3]
+So you, you have to go in a little bit linear manner here. 
+
+00:32:26,404 --> 00:32:26,564 [Speaker 6]
+Mm-hmm. 
+
+00:32:26,564 --> 00:32:36,424 [Speaker 3]
+You show the video, you show the scope, then basically you are saying, I'm taking transaction-- spend transaction data, and I'm converting that data into a vector. So I want a page on that also. 
+
+00:32:37,664 --> 00:32:37,864 [Speaker 6]
+Okay. 
+
+00:32:37,924 --> 00:32:42,164 [Speaker 3]
+You have encoded, encoded into a vector, 128-bit or whatever bit vector. 
+
+00:32:42,864 --> 00:32:43,044 [Speaker 6]
+Mm-hmm. 
+
+00:32:43,364 --> 00:32:48,324 [Speaker 3]
+Now, that vector you are creating for both your golden and your opportunity groups, fair? 
+
+00:32:48,624 --> 00:32:48,944 [Speaker 6]
+Correct. 
+
+00:32:49,964 --> 00:32:50,504 [Speaker 6]
+Yep. 
+
+00:32:50,504 --> 00:32:55,104 [Speaker 3]
+Put that on the page so that people don't harass you with these kind of questions the way I'm asking you. 
+
+00:32:55,824 --> 00:32:56,024 [Speaker 6]
+Okay. 
+
+00:32:58,044 --> 00:32:58,944 [Speaker 3]
+Hema, does that make sense? 
+
+00:32:59,844 --> 00:33:01,844 [Speaker 7]
+Yeah, yeah. Yes, Sonal. Yeah. 
+
+00:33:02,064 --> 00:33:09,204 [Speaker 3]
+Cool. Cool. So you, you have a encoded, uh, spend vector for your golden, you have a encoded spend vector for your- 
+
+00:33:09,424 --> 00:33:09,764 [Speaker 7]
+Opportunity. 
+
+00:33:09,764 --> 00:33:10,884 [Speaker 3]
+-opportunity. 
+
+00:33:10,884 --> 00:33:11,144 [Speaker 6]
+Correct. 
+
+00:33:11,624 --> 00:33:17,884 [Speaker 3]
+Now, what are you doing after that? How-- From that step, how are you getting to this view that you have in front of me? 
+
+00:33:18,464 --> 00:33:18,684 [Speaker 6]
+Okay. Okay. 
+
+00:33:19,904 --> 00:33:24,084 [Speaker 6]
+Let me do one thing. Let me take control of the screen. That would be helpful. 
+
+00:33:26,044 --> 00:33:26,564 [Speaker 6]
+Okay. 
+
+00:33:26,584 --> 00:33:26,784 [Speaker 7]
+Mm-hmm. 
+
+00:33:29,264 --> 00:33:41,604 [Speaker 6]
+So, Sonal, what you said, right, that how exactly are we doing? We wrote that in, like, simple language, like what exactly are we doing, but we'll put that into the sliders. Now, what is happening here is that this is 
+
+00:33:42,704 --> 00:33:48,424 [Speaker 6]
+the journey that how it looks like for a particular card member. So for example, 
+
+00:33:49,644 --> 00:34:52,064 [Speaker 6]
+this is the encoded journey that we have put across within the transformer itself, wherein like for first day one to day 60, we are looking different features that are available for a card member, whether they did a COGS or the bonus or they did an online. And what we are saying is the moment you do the first instance of it, we are creating, say, like a one indicator that, okay, you did COGS activity for the first time on, say, like on day eight. Okay? And after that, I'm putting everything as one. I'm not considering the fact that, okay, you might have done in between, but I'm saying that the first instance that happened, that was on day eight. For bonus, it was day 20. For online, it was day 14. Okay? So this is how it gets input within the transformer itself. Now, what it does is based on these type of patterns, it learns with the actual year two GCM. We get predicted year two GCM customer journey embeddings, as you mentioned out, that we get golden and opportunity. We create a golden reference wherein, like, we accumulate all the golden card members together and create one reference point. Okay? And then we compare those- 
+
+00:34:52,084 --> 00:34:56,064 [Speaker 3]
+So you are saying your golden, golden vector is the bench-- uh, baseline vector? 
+
+00:34:56,724 --> 00:34:59,244 [Speaker 6]
+Yes, it's the baseline-- it's the point which- 
+
+00:34:59,284 --> 00:35:03,064 [Speaker 3]
+This is the point which I was making to Anjur. Remember? You remember that? 
+
+00:35:03,283 --> 00:35:03,304 [Speaker 6]
+Yes. 
+
+00:35:03,304 --> 00:35:07,264 [Speaker 3]
+The integrated gradient when you were-- guys were wondering about fictitious baseline, right? 
+
+00:35:08,944 --> 00:35:09,024 [Speaker 6]
+So- 
+
+00:35:09,064 --> 00:35:13,044 [Speaker 3]
+My question was, what is stopping us from using golden as a baseline vector? 
+
+00:35:13,704 --> 00:35:20,564 [Speaker 6]
+Okay. So, Sonal, when we do integrated gradients, right, it actually compares these patterns, not the exact vectors. 
+
+00:35:21,824 --> 00:36:02,004 [Speaker 6]
+Okay? So what it does is when, when we look at integrated gradients, it looks at essentially whe-whether this particular feature got activated on which day or not, and it tries to come up from that particular lens. When I say golden vector, right, it's a small eight-dimensional or a one time-- 128-dimensional vector that we have created. Now, when we do select IG prediction, we have to go back to the direct level of GCM prediction itself, like which particular feature is adding how much value. Golden is a benchmark or select-- is a benchmark for cosine distance, because you can create vector-level distances using cosine distance. That is something which we are using. 
+
+00:36:02,024 --> 00:36:05,024 [Speaker 3]
+Okay. So Nitesh, maybe let me avoid going off track here, right? 
+
+00:36:05,284 --> 00:36:05,484 [Speaker 6]
+Yeah. 
+
+00:36:05,484 --> 00:36:15,944 [Speaker 3]
+So we are-- Tell me, uh, which part of this page is telling me that I've created vectors for my, uh, transaction spend? The first, the first one, right? 
+
+00:36:16,524 --> 00:36:17,264 [Speaker 6]
+Uh-huh. Yes. 
+
+00:36:18,584 --> 00:36:20,704 [Speaker 3]
+The first section, construct daily indicator sequence. 
+
+00:36:21,364 --> 00:36:22,344 [Speaker 6]
+Yes, yes. 
+
+00:36:22,904 --> 00:36:23,864 [Speaker 3]
+So that is your vector? 
+
+00:36:24,364 --> 00:36:32,064 [Speaker 7]
+No, that is the pattern of each thing. Vector is like we'll use this pattern to form the vector, which we are explaining in the CM level outputs section here. 
+
+00:36:32,384 --> 00:36:33,744 [Speaker 6]
+This one, customer journey embedding. 
+
+00:36:33,764 --> 00:36:34,224 [Speaker 7]
+Embedding. 
+
+00:36:34,224 --> 00:36:35,404 [Speaker 6]
+This is the vector, yeah. 
+
+00:36:35,504 --> 00:36:37,184 [Speaker 7]
+So for each CM level, we'll be getting one. 
+
+00:36:37,184 --> 00:36:37,744 [Speaker 3]
+So you have to write it specifically that- 
+
+00:36:38,044 --> 00:36:38,324 [Speaker 6]
+Oh, okay. 
+
+00:36:38,824 --> 00:36:44,564 [Speaker 3]
+Yeah. So then write explicitly that this is where I'm get-- creating encoded vectors. You see what I'm saying? 
+
+00:36:45,184 --> 00:36:46,044 [Speaker 6]
+Okay. Okay. 
+
+00:36:46,944 --> 00:36:53,124 [Speaker 3]
+You, you guys have to be clear in your communication, because otherwise it's very hard to figure out where you are in your mental journey. 
+
+00:36:53,604 --> 00:36:53,684 [Speaker 7]
+Mm-hmm.
+
+00:36:55,812 --> 00:36:56,412 [Speaker 6]
+Definitely, Sonal. 
+
+00:36:56,412 --> 00:37:00,512 [Speaker 3]
+Once you have created those vectors, once you have created those vectors, what are you doing after that? 
+
+00:37:01,572 --> 00:37:08,332 [Speaker 6]
+So once we create those vectors, so we have vectors for 2K golden, we have vectors for 4K opportunity as well. That is our- 
+
+00:37:08,352 --> 00:37:09,132 [Speaker 3]
+Write that clearly. 
+
+00:37:09,732 --> 00:37:10,252 [Speaker 6]
+Yeah. Okay. 
+
+00:37:10,252 --> 00:37:14,052 [Speaker 3]
+Write that clearly. Because it, like, right now, very theoretical, not able to understand anything. 
+
+00:37:15,132 --> 00:37:16,092 [Speaker 6]
+Okay, cool. 
+
+00:37:16,512 --> 00:37:17,832 [Speaker 3]
+Then what do you do after that? 
+
+00:37:18,472 --> 00:37:25,552 [Speaker 6]
+After that, we compress all the 2,000 golden card members, that is their 2,000 vectors into a single vector, 
+
+00:37:26,712 --> 00:37:36,412 [Speaker 6]
+and that becomes our golden reference point, which is like the centroid. Think of it in like a two-dimensional space, there are like multiple points. We create a central point of that. That is the centroid. 
+
+00:37:36,412 --> 00:37:39,572 [Speaker 3]
+So you have-- Whatever you are saying, have you put it on the page or no? 
+
+00:37:43,472 --> 00:37:44,712 [Speaker 7]
+Not at that clear level. 
+
+00:37:44,712 --> 00:37:44,752 [Speaker 3]
+Is it like- 
+
+00:37:44,752 --> 00:37:48,212 [Speaker 7]
+We're just mentioning like we'll take a reference embedding from golden customer. 
+
+00:37:48,652 --> 00:37:49,212 [Speaker 6]
+Golden cus- 
+
+00:37:50,112 --> 00:37:50,432 [Speaker 7]
+Because- 
+
+00:37:50,632 --> 00:37:55,372 [Speaker 3]
+But guys, you see why I'm pushing you now, right? This is where we are losing the conversation with our leadership. 
+
+00:37:59,991 --> 00:38:02,132 [Speaker 7]
+Like, would we be getting that much of time like- 
+
+00:38:02,212 --> 00:38:02,912 [Speaker 3]
+You have to put the steps exactly. 
+
+00:38:02,912 --> 00:38:11,772 [Speaker 7]
+Mentioning that clearly, like what the any-- the backend approach, the more stress on black-backend approach more than the result. Is it like... 
+
+00:38:15,612 --> 00:38:19,432 [Speaker 3]
+No, the thing is like when you go to Ashish, right, you will have to explain what you have done. 
+
+00:38:19,712 --> 00:38:19,992 [Speaker 7]
 Yeah, yeah. 
 
-00:40:29,998 --> 00:40:33,918 [Speaker 1]
-Now that becomes an independent observation for that particular combination for it. 
-
-00:40:34,198 --> 00:40:34,378 [Speaker 0]
-Yeah. 
-
-00:40:34,378 --> 00:40:35,418 [Speaker 1]
-Okay? On that day. 
-
-00:40:35,458 --> 00:40:35,878 [Speaker 0]
-Mm-hmm. 
-
-00:40:35,878 --> 00:40:42,478 [Speaker 1]
-So combination cross day, it becomes an observation. Now that combination cross day would be available for other CM also- 
-
-00:40:42,818 --> 00:40:42,938 [Speaker 0]
-Yes. 
-
-00:40:42,938 --> 00:40:44,198 [Speaker 1]
--for some other CM and so on. 
-
-00:40:44,318 --> 00:40:44,658 [Speaker 0]
-Mm-hmm. 
-
-00:40:44,658 --> 00:40:47,078 [Speaker 1]
-Supposedly out of 500 CMs that we did- 
-
-00:40:47,338 --> 00:40:47,718 [Speaker 0]
-Mm-hmm. 
-
-00:40:47,718 --> 00:40:51,518 [Speaker 1]
--okay, it was available for... Right now, this is for all the CMs, right? 
-
-00:40:51,518 --> 00:40:51,638 [Speaker 0]
-Yeah. 
-
-00:40:52,798 --> 00:40:54,258 [Speaker 1]
-This is for full opportunity. 
-
-00:40:54,258 --> 00:40:55,278 [Speaker 0]
-Yes, 4K CMs. 
-
-00:40:55,278 --> 00:40:55,638 [Speaker 1]
-4K. 
-
-00:40:55,678 --> 00:40:56,318 [Speaker 0]
-Mm-hmm. 
-
-00:40:56,358 --> 00:41:01,858 [Speaker 1]
-So let's say like in 4K CM, this thing got a change or select this particular day combination- 
-
-00:41:02,178 --> 00:41:02,498 [Speaker 0]
-Mm-hmm. 
-
-00:41:02,498 --> 00:41:05,478 [Speaker 1]
--was available for select 3,000 card members. Okay? 
-
-00:41:06,038 --> 00:41:06,078 [Speaker 0]
-Yeah. 
-
-00:41:06,078 --> 00:41:15,178 [Speaker 1]
-What it will do is across those 3,000 people, it will aggregate what is the change in contribution that is happening in this combination on this day, correct? 
-
-00:41:15,178 --> 00:41:15,738 [Speaker 0]
-Yes. 
-
-00:41:15,738 --> 00:41:16,998 [Speaker 1]
-Keeping everything constant. 
-
-00:41:17,178 --> 00:41:17,698 [Speaker 0]
-Yeah. 
-
-00:41:17,698 --> 00:41:23,858 [Speaker 1]
-Then it will look for, say, like this particular attribute. If something else changes, what exactly is the change in the contribution, right? 
-
-00:41:24,138 --> 00:41:24,358 [Speaker 0]
-Yeah. 
-
-00:41:24,358 --> 00:41:26,918 [Speaker 1]
-And then it will compare, and it will create like Shapley out of that. 
-
-00:41:27,098 --> 00:41:27,338 [Speaker 0]
-Yes. 
-
-00:41:27,978 --> 00:41:28,438 [Speaker 1]
-Fair? 
-
-00:41:28,498 --> 00:41:28,958 [Speaker 0]
-Yeah. 
-
-00:41:28,958 --> 00:41:37,758 [Speaker 1]
-So it is in an essence trying to assess what is the change on an average that you will see by doing this activity within this particular day, right? 
-
-00:41:37,778 --> 00:41:38,918 [Speaker 0]
-Mm-hmm. Yeah. 
-
-00:41:38,918 --> 00:41:41,978 [Speaker 1]
-Now 132 over 3300 if I do, 
-
-00:41:43,158 --> 00:41:43,498 [Speaker 1]
-okay? 
-
-00:41:45,238 --> 00:41:47,598 [Speaker 0]
-It's 130, Nitish. 
-
-00:41:47,698 --> 00:41:49,238 [Speaker 1]
-Uh-huh. We'll go, we'll go, we'll go. 
-
-00:41:52,058 --> 00:41:54,778 [Speaker 1]
-It is like 4 to 5% by just introducing this. 
-
-00:41:55,018 --> 00:41:55,158 [Speaker 0]
-Yes. 
-
-00:41:55,158 --> 00:41:57,418 [Speaker 1]
-Like 4 to 5% improvement in GCM- 
-
-00:41:57,758 --> 00:41:58,478 [Speaker 0]
-Mm-hmm. 
-
-00:41:58,478 --> 00:42:03,518 [Speaker 1]
--in a particular card member, and that too like person who's already going towards a lower GCM trajectory- 
-
-00:42:03,738 --> 00:42:03,858 [Speaker 0]
-Mm-hmm. 
-
-00:42:03,858 --> 00:42:06,798 [Speaker 1]
--I think is a decent push that we are putting across. 
-
-00:42:06,898 --> 00:42:07,278 [Speaker 0]
-Mm-hmm. 
-
-00:42:07,318 --> 00:42:09,458 [Speaker 1]
-And all of this, I know it's not additable- 
-
-00:42:09,778 --> 00:42:10,078 [Speaker 0]
-Mm-hmm. 
-
-00:42:10,078 --> 00:42:14,498 [Speaker 1]
--but essentially if bonus, CNP, and top 10 cert would have been like combined- 
-
-00:42:14,758 --> 00:42:15,178 [Speaker 0]
-Mm-hmm. 
-
-00:42:15,178 --> 00:42:19,538 [Speaker 1]
--I'm not saying that, okay, it's gonna sum up, but it's gonna-- might go to say like 200 dollars or so. 
-
-00:42:19,678 --> 00:42:19,998 [Speaker 0]
-Mm-hmm. 
-
-00:42:20,018 --> 00:42:20,438 [Speaker 1]
-Right? 
-
-00:42:20,478 --> 00:42:21,658 [Speaker 0]
-Mm-hmm. 
-
-00:42:21,658 --> 00:42:22,158 [Speaker 1]
-Fair? 
-
-00:42:22,178 --> 00:42:22,398 [Speaker 0]
-Yeah. 
-
-00:42:24,118 --> 00:42:27,278 [Speaker 1]
-Okay. Okay, let's go to final and see like- 
-
-00:42:27,298 --> 00:42:34,198 [Speaker 0]
-Like, three wala getting in thousands doesn't make sense. We would just focus on like with three approaches we should be getting, we are getting these things. 
-
-00:42:35,258 --> 00:42:38,538 [Speaker 1]
-Yeah, yeah. We were just focused on the fact that, okay, we are get-- the signals are the same. 
-
-00:42:38,758 --> 00:42:39,058 [Speaker 0]
-Yeah. 
-
-00:42:39,078 --> 00:42:41,518 [Speaker 1]
-The magnitude, we were not looking at it, right? 
-
-00:42:41,678 --> 00:42:41,898 [Speaker 0]
-Mm-hmm. Yeah. 
-
-00:42:42,958 --> 00:42:50,158 [Speaker 1]
-But this also, in this approach, there is no temporal view that we have. The temporal view tells me like the later the be- better, right? 
-
-00:42:50,838 --> 00:42:52,818 [Speaker 0]
-I mean, in the middle, somewhere in the middle we are getting.
-
-00:42:53,706 --> 00:42:54,466 [Speaker 6]
-Somewhere in the middle. 
-
-00:42:54,846 --> 00:42:56,166 [Speaker 0]
-Yeah, across on that. 
-
-00:42:56,166 --> 00:42:56,486 [Speaker 6]
+00:38:21,052 --> 00:38:21,272 [Speaker 6]
 Okay. 
 
-00:42:57,706 --> 00:42:58,526 [Speaker 6]
-Theek hai, let's go there. 
+00:38:21,332 --> 00:38:25,212 [Speaker 3]
+And I'm struggling, how will you ex-- how will you explain that to him? 
 
-00:42:58,766 --> 00:42:58,906 [Speaker 0]
-Yeah. 
+00:38:25,212 --> 00:38:32,592 [Speaker 7]
+[whispering] 
 
-00:43:00,266 --> 00:43:01,386 [Speaker 6]
-Okay, man. Thank you so much. 
+00:38:32,592 --> 00:38:32,812 [Speaker 6]
+Okay. 
 
-00:43:01,566 --> 00:43:01,786 [Speaker 0]
-Thank you. 
+00:38:34,192 --> 00:38:41,432 [Speaker 6]
+This is helpful, Sonal. That, that was the reason I wanted to get in depth with you to understand like, okay, where exactly are we missing the context? 
 
-00:43:03,126 --> 00:43:03,386 [Speaker 6]
-Thank you. 
+00:38:41,472 --> 00:38:52,692 [Speaker 3]
+This is the-- See, I'll tell you. I'm, I'm losing you guys when, when you are telling me that I have my spend data, right? For spend data, first of all, you have to show the total number of combinations you are considering, 
 
-00:43:03,386 --> 00:43:07,226 [Speaker 7]
-[కంప్యూటర్ బెల్ సౌండ్] 
+00:38:54,092 --> 00:38:54,312 [Speaker 3]
+right? 
 
-00:43:07,346 --> 00:43:09,686 [Speaker 3]
-రేయ్ ఇది పడుతుంది, లేస్తుంది, నాకు tension పెడుతుందిరా ఇది. 
+00:38:55,092 --> 00:38:55,832 [Speaker 6]
+Okay. Yes. 
 
-00:43:10,946 --> 00:43:12,906 [Speaker 3]
-నేను ఎందుకు వెళ్తున్నా? అరేయ్ నువ్వు food రా. 
+00:38:55,832 --> 00:39:05,011 [Speaker 3]
+You have, you-- You have like 500 million plus transactions, whatever the data is, that's your starting point. Then you say how many vectors are you creating 
 
-00:43:14,466 --> 00:43:19,046 [Speaker 3]
-నాకు meeting అవుతుంది, వెళ్దాం. Order అందుకే, ఇంకోటి ఉంది ఇప్పుడు. 
+00:39:06,952 --> 00:39:10,432 [Speaker 3]
+for opportunity for golden. Then you are saying I'm combining the vectors. 
 
-00:43:22,446 --> 00:43:28,406 [Speaker 3]
-అందుకే order పెట్టేద్దాం అనుకున్నా. Five others joined ఆ? Five others ఎవర్రా? ఉన్నాయేమిటిరా అన్నాడు. 
-
-00:43:29,006 --> 00:43:31,086 [Speaker 6]
-And you'll use that same criteria across the board? 
-
-00:43:31,846 --> 00:43:32,066 [Speaker 8]
+00:39:11,052 --> 00:39:11,292 [Speaker 6]
 Yes. 
 
-00:43:33,366 --> 00:43:40,086 [Speaker 8]
-So basically, event rate in opportunity group should be lower than 50%, and also more than, um, 
+00:39:12,732 --> 00:39:15,392 [Speaker 3]
+Combining the vectors ke baad what are you doing after that? 
 
-00:43:41,226 --> 00:43:45,446 [Speaker 8]
-50% of the bands should have significant difference between gold and opportunity. 
+00:39:16,552 --> 00:39:24,332 [Speaker 6]
+So essentially that becomes like your centroid or select a golden reference point. Okay? So now what we do is... 
 
-00:43:46,526 --> 00:43:54,286 [Speaker 8]
-And, uh, in some spend rate, if you also apply the threshold of both binary and continuous variable should meet this criteria to be considered as a marker. 
+00:39:26,492 --> 00:40:42,932 [Speaker 6]
+Sorry. So essentially we have the opportunity card members now. We want to identify those opportunity card members, they have done some actions, right? So if those actions that they have done, if we could have activated those actions earlier, could we have brought them closer to our golden segment or not? So what we look at is, like for example, the combination would be select COGS, bonus, online and fixed, for example. This bonus got activated on day 20, right? So what we look at is, for those combinations, what if, if we activate earlier? So pattern activated on select day five. If I would do this on day five, then essentially I would-- I have actually moved everything sooner rather than later for that particular card member. We then put this new vector back into the transformer and see that, okay, what exactly is the prediction that is coming out of based on this new pattern that we are simulating? Then it tells me that, okay, because you did a day five activation, your GCM or select predicted GCM has gone up by 1,000 dollars, and your cosine distance to your golden has improved by 0.235 as a magnitude. 
 
-00:43:57,646 --> 00:43:57,806 [Speaker 6]
-Hmm. 
+00:40:42,932 --> 00:40:44,672 [Speaker 3]
+Excellent. This is excellent. 
 
-00:43:59,366 --> 00:44:05,286 [Speaker 6]
-Hmm. Hey, Nitesh, um, I, I know we have set up time and I said early January plus Sage. So- 
+00:40:45,832 --> 00:40:50,832 [Speaker 3]
+This is excellent. But the way you are representing can-- you can make it more logical. 
 
-00:44:05,386 --> 00:44:05,926 [Speaker 3]
-Yeah. 
+00:40:50,932 --> 00:40:51,792 [Speaker 6]
+Okay. Okay. 
 
-00:44:05,926 --> 00:44:06,086 [Speaker 6]
-Uh, 
+00:40:52,112 --> 00:40:53,372 [Speaker 3]
+The way you are representing is all 
 
-00:44:07,166 --> 00:44:11,726 [Speaker 6]
-this will take some time, like the cross tab. So I want to be mindful of Hema's time. I know, 
+00:40:54,452 --> 00:40:58,952 [Speaker 3]
+muddled up essentially. It's like I have to do interrogation to get to the right things. Make it linear. 
 
-00:44:12,746 --> 00:44:26,046 [Speaker 6]
-I mean, you would be interested in listening to this given the, uh, meeting that will happen in January. But from Hema's perspective, I want to be mindful of his time. So if you want to Slack him once we move to Sage, that's fine too. 
+00:40:59,612 --> 00:41:00,632 [Speaker 6]
+Okay. Okay. 
 
-00:44:27,526 --> 00:44:27,846 [Speaker 3]
+00:41:00,632 --> 00:41:02,352 [Speaker 3]
+Don't make the other person interrogate you. 
+
+00:41:02,812 --> 00:41:03,012 [Speaker 6]
+Mm-hmm. 
+
+00:41:04,752 --> 00:41:04,992 [Speaker 6]
 Okay. 
 
-00:44:27,846 --> 00:44:28,326 [Speaker 6]
-Your call. 
+00:41:06,372 --> 00:41:12,112 [Speaker 3]
+I get it. Basically, you are saying that I'm manually tweaking, manually tweaking the inputs. 
 
-00:44:28,326 --> 00:44:29,346 [Speaker 3]
-That works. That works. 
-
-00:44:29,986 --> 00:44:30,546 [Speaker 6]
-Just trying to be- 
-
-00:44:30,626 --> 00:44:30,966 [Speaker 3]
-Yeah, okay. 
-
-00:44:31,386 --> 00:44:34,126 [Speaker 6]
-Yeah, just trying to be, like, not waste anybody's time here. 
-
-00:44:34,186 --> 00:44:35,066 [Speaker 3]
-Yeah, yeah. Thank you. Thank you. 
-
-00:44:35,066 --> 00:44:35,286 [Speaker 8]
+00:41:12,812 --> 00:41:12,972 [Speaker 6]
 Yeah. 
 
-00:44:35,286 --> 00:44:36,926 [Speaker 3]
-That's a very good call-out, Soni. Thank you. 
+00:41:12,972 --> 00:41:20,712 [Speaker 3]
+Bringing them ahead in the day and then rerunning my transformer. And if my GCM goes up, if my cosine distance reduces- 
 
-00:44:38,066 --> 00:44:38,246 [Speaker 6]
+00:41:21,332 --> 00:41:21,752 [Speaker 6]
+Yes. 
+
+00:41:21,752 --> 00:41:27,972 [Speaker 3]
+-then it is-- I consider it as a strong method. Very clear. This is like conceptually making a lot of sense to me. But put it in that light. 
+
+00:41:28,592 --> 00:41:29,232 [Speaker 6]
+Okay. Okay. 
+
+00:41:29,232 --> 00:41:36,972 [Speaker 3]
+And the thing is, how will you-- how can you manually continue to make these tweaks? Will you make these tweaks for every type of, uh- 
+
+00:41:37,072 --> 00:42:22,112 [Speaker 6]
+So, so what we have done, we have done this programmatically, Sonal. So essentially we are checking like for all the possible combinations, right, that exist. We are seeing that, okay, what was the earliest activation done by a card member? If there are select blanks or select zeros available earlier, we test for each and every day. So I will test for day one, day two, day three, up till day 19 for all the activations. So that's what we are doing programmatically. So essentially it tests for everything prior to this, prior to the first activation that is available. It tests and then it gives me predictions for each and every counterfactual. So like whether day one, if I do a day one, two, three or five, for each and every day, I get those GCM predictions out of this. 
+
+00:42:25,152 --> 00:42:26,172 [Speaker 6]
+So I'm not doing manually. 
+
+00:42:26,252 --> 00:42:28,372 [Speaker 3]
+Okay. I think you can fix this page, Nitesh and Hemanth. 
+
+00:42:28,412 --> 00:42:28,612 [Speaker 6]
+Yes. 
+
+00:42:28,732 --> 00:42:28,832 [Speaker 7]
+Yeah. 
+
+00:42:29,352 --> 00:42:30,352 [Speaker 6]
+Yeah, we can definitely do that. 
+
+00:42:30,872 --> 00:42:33,812 [Speaker 3]
+Okay, cool. So now I understand your methodology, right? 
+
+00:42:33,912 --> 00:42:34,072 [Speaker 6]
+Yeah. 
+
+00:42:36,252 --> 00:42:44,552 [Speaker 3]
+But your transformer, you, you have to very clearly say what is your dependent variable here for the transformer, what is independent variable, and how many vectors are you like... 
+
+00:42:45,652 --> 00:42:45,752 [Speaker 7]
+Yeah. 
+
+00:42:46,352 --> 00:42:50,012 [Speaker 3]
+The second row is very weak right now, the way it comes across. 
+
+00:42:53,172 --> 00:42:59,632 [Speaker 6]
+So Sonal, we were actually struggling like how much information to put versus how much not to put. So 
+
+00:43:00,792 --> 00:43:12,192 [Speaker 6]
+now, now you're telling us essentially like that helps that, okay, we have to keep it like simpler, but essentially keep all the info to ensure that, okay, it gets encapsulated that, okay, these are the steps that we are actually following to get it to here. 
+
+00:43:14,852 --> 00:43:15,112 [Speaker 3]
+Cool. 
+
+00:43:15,112 --> 00:43:15,112 [Speaker 6]
+Cool. 
+
+00:43:16,752 --> 00:43:16,952 [Speaker 6]
+Yep. 
+
+00:43:18,732 --> 00:43:22,752 [Speaker 3]
+I'm good. So you create a page, uh, on what markers are you seeing? 
+
+00:43:23,392 --> 00:43:23,532 [Speaker 6]
+Yeah. 
+
+00:43:23,552 --> 00:43:27,532 [Speaker 3]
+And, and, uh, markers that are similar to traditional analysis. 
+
+00:43:28,812 --> 00:43:31,992 [Speaker 6]
+Okay. Okay. We'll put that. We'll put that page. 
+
+00:43:32,092 --> 00:43:45,952 [Speaker 3]
+Right? And I think even the traditional markers that Stephanie has, right? For example, um, uh, you have COGS plus stopped insert also as a marker on your side, right? Where you will add value is on the timing of it. 
+
+00:43:46,512 --> 00:43:46,672 [Speaker 6]
+Yeah. 
+
+00:43:47,652 --> 00:43:50,832 [Speaker 3]
+So you call out Nitesh very clearly that this is the precise timing. 
+
+00:43:51,692 --> 00:43:51,912 [Speaker 6]
 Okay. 
 
-00:44:38,246 --> 00:44:41,466 [Speaker 7]
-[కంప్యూటర్ బెల్ సౌండ్] 
+00:43:53,172 --> 00:44:01,612 [Speaker 3]
+Guys, I'm telling you, let's like stretch today and finish this deck because otherwise like we will continue to go back and forth basically on it. 
 
-00:44:41,766 --> 00:44:47,206 [Speaker 3]
-ఇందాక అంతా 1.8లు, 1.7 నొక్కినప్పుడు పడలేదు దొంగ మొహం ది. ఇప్పుడు పడిపోతుంది. 
+00:44:01,652 --> 00:44:03,912 [Speaker 6]
+No, no, no. Definitely, Sonal. We'll do that. 
 
-00:44:48,406 --> 00:44:49,206 [Speaker 3]
-నీ యంకమ్మ. 
+00:44:03,912 --> 00:44:17,092 [Speaker 3]
+Just like make it your first priority today and just be done with it. Because tomorrow then we'll, we'll meet with Anju, we'll show her, show her this, and then day after tomorrow to Ashish. At least whatever we take need not be comprehensive, but at least like 
 
-00:44:51,606 --> 00:44:53,726 [Speaker 3]
-ఎక్కడ లేదు 0.8 దగ్గర స్టార్ట్ అయింది ఇది. 
+00:44:18,492 --> 00:44:20,432 [Speaker 3]
+jo hum daal rahe hain uska thought process clear hona chahiye. 
 
-00:44:55,426 --> 00:44:55,826 [Speaker 3]
-ఉమ్. 
+00:44:21,192 --> 00:44:21,912 [Speaker 6]
+Yep, yep, yep. 
 
-00:44:59,306 --> 00:45:10,266 [Speaker 3]
-నువ్వు 1.9 దగ్గర వచ్చినప్పుడు అమ్మేసేయ్ అని రాసింది, meeting లో ఉన్నావు కదా అన్నావు. 1.9 కాదు 2.9. అదే 2.9. 2.8. ఇప్పుడు అది ఎక్కడికి వెళ్తదో ఏంటో అది 1.5 పడిపోయింది. ఆ screenshot నాకు పెట్టు, వాడు అడుగుతాడు. 
+00:44:22,292 --> 00:44:26,032 [Speaker 3]
+Machine machine hona chahiye. That's my... Theek hai? Chalo. Good work, guys. Bye. 
 
-00:45:13,086 --> 00:45:14,406 [Speaker 3]
-ఇప్పుడు ఇది ఏం చేయాలిరా నేను?
+00:44:26,032 --> 00:44:27,772 [Speaker 6]
+Thank you, Sonal. Thank you so much for your time. 
+
+00:44:27,832 --> 00:44:29,012 [Speaker 3]
+Thanks a lot, guys. Bye. 
+
+00:44:29,012 --> 00:44:34,532 [Speaker 6]
+Thank you. Bye. [notification tone chiming]
